@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Trinité – démo motion</title>
+<style>
+  @font-face { font-family: P; font-weight: 500; src: url(../fonts/p500.woff2); }
+  @font-face { font-family: P; font-weight: 700; src: url(../fonts/p700.woff2); }
+  @font-face { font-family: P; font-weight: 800; src: url(../fonts/p800.woff2); }
+  @font-face { font-family: P; font-weight: 900; src: url(../fonts/p900.woff2); }
+  :root { --cyan:#22e5ff; --gold:#ffc83d; --pink:#ff4fd8; --green:#a6ff3d; --violet:#8b5cff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #04060c; font-family: P, sans-serif; color: #fff; }
+  #bg { position: absolute; inset: 0; }
+  #cam { position: absolute; inset: 0; transform-origin: 540px 900px; }
+  .abs { position: absolute; }
+  .layer { position: absolute; inset: 0; transform-origin: 540px 860px; }
+  .pill { left: 90px; width: 900px; height: 120px; border-radius: 60px; display: flex; align-items: center; justify-content: center;
+          font-weight: 800; font-size: 40px; letter-spacing: 1px; background: rgba(10,14,24,.85); }
+  .neon-c { border: 5px solid var(--cyan); box-shadow: 0 0 18px var(--cyan), 0 0 50px rgba(34,229,255,.45), inset 0 0 22px rgba(34,229,255,.25); color: #bff8ff; text-shadow: 0 0 14px var(--cyan); }
+  .neon-g { border: 5px solid var(--gold); box-shadow: 0 0 18px var(--gold), 0 0 50px rgba(255,200,61,.45), inset 0 0 22px rgba(255,200,61,.2); color: #ffe9b0; text-shadow: 0 0 14px var(--gold); }
+  .title { width: 1080px; text-align: center; font-weight: 900; font-size: 128px; letter-spacing: -2px; white-space: nowrap; }
+  .title span { display: inline-block; text-shadow: 0 0 30px rgba(255,255,255,.55), 0 0 80px rgba(34,229,255,.45); }
+  .brace { font-weight: 500; font-size: 600px; line-height: 1; color: var(--cyan); text-shadow: 0 0 25px var(--cyan), 0 0 80px var(--cyan); }
+  .card { width: 230px; height: 128px; border-radius: 26px; border: 4px solid var(--cyan); background: rgba(8,20,34,.9);
+          box-shadow: 0 0 16px rgba(34,229,255,.8), inset 0 0 18px rgba(34,229,255,.25); text-align: center; }
+  .card b { display: block; font-size: 52px; font-weight: 800; margin-top: 8px; }
+  .card i { display: block; font-style: normal; font-size: 26px; font-weight: 700; color: #bff8ff; }
+  .ring { width: 300px; height: 300px; margin-left: -150px; margin-top: -150px; }
+  .ring .lbl { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; font-size: 40px; }
+  .ring .pct { font-size: 34px; }
+  .eq { font-weight: 800; font-size: 46px; color: var(--gold); text-shadow: 0 0 16px var(--gold); width: 300px; margin-left: -150px; text-align: center; }
+  .step { left: 52px; width: 54px; height: 54px; border-radius: 50%; border: 4px solid var(--cyan); display: flex; align-items: center; justify-content: center;
+          font-weight: 800; font-size: 26px; color: var(--cyan); background: #050a12; }
+  .box { left: 90px; width: 900px; height: 140px; border-radius: 34px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 48px; overflow: hidden; }
+  #sub { left: 60px; width: 960px; top: 1560px; text-align: center; font-weight: 800; font-size: 62px; line-height: 1.25; }
+  #sub span { display: inline-block; margin: 0 8px; }
+  #flash { position: absolute; inset: 0; background: #fff; opacity: 0; mix-blend-mode: screen; }
+  #vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(0,0,0,.75) 100%); }
+  #rays { left: 40px; top: 300px; width: 1000px; height: 1000px; border-radius: 50%;
+          background: repeating-conic-gradient(from 0deg, rgba(255,215,120,.22) 0deg 6deg, transparent 6deg 18deg);
+          -webkit-mask: radial-gradient(circle, #000 0%, transparent 68%); mask: radial-gradient(circle, #000 0%, transparent 68%); }
+  .big { width: 1080px; text-align: center; font-weight: 900; }
+</style>
+</head>
+<body>
+<canvas id="bg" width="1080" height="1920"></canvas>
+<div id="cam">
+  <!-- barre de progression -->
+  <div class="abs" style="left:110px;top:62px;width:860px;height:10px;border-radius:5px;background:rgba(255,255,255,.08)"></div>
+  <div id="prog" class="abs" style="left:110px;top:62px;height:10px;border-radius:5px;background:var(--cyan);box-shadow:0 0 14px var(--cyan)"></div>
+
+  <!-- SCÈNE 1 : la question -->
+  <div id="s1" class="layer">
+    <div id="s1pill" class="abs pill neon-c" style="top:130px">QU’EST-CE QUE LA TRINITÉ ?</div>
+    <div id="s1title" class="abs title" style="top:265px"></div>
+    <div id="braceL" class="abs brace" style="left:70px;top:470px">{</div>
+    <div id="braceR" class="abs brace" style="left:805px;top:470px">}</div>
+    <div id="unset" class="abs big" style="top:560px;font-size:72px;text-shadow:0 0 20px #fff">UN SET</div>
+    <div id="cards"></div>
+    <div id="arrow" class="abs big" style="top:1180px;font-size:60px;color:var(--pink);text-shadow:0 0 18px var(--pink)">▼</div>
+    <div id="bot" class="abs big" style="top:1260px;font-size:120px;color:var(--pink)">⊥ ?</div>
+  </div>
+
+  <!-- SCÈNES 2 → 4 : les trois personnes -->
+  <div id="s2" class="layer">
+    <div id="rays" class="abs"></div>
+    <div id="s2pill" class="abs pill neon-g" style="top:130px">BLOC 1 · LA DIVINITÉ</div>
+    <div id="steps"></div>
+    <div id="rings"></div>
+    <div id="box" class="abs box neon-g" style="top:1270px"><div id="boxtxt"></div></div>
+    <div id="seul" class="abs box" style="top:1250px;border:4px solid rgba(255,255,255,.5);background:rgba(20,24,40,.8);box-shadow:0 0 40px rgba(255,220,140,.5)"></div>
+    <svg id="tri" class="abs" style="left:0;top:0" width="1080" height="1920">
+      <polygon id="triPoly" points="540,330 350,650 730,650" fill="none" stroke="#ffc83d" stroke-width="8" stroke-linejoin="round"
+               style="filter:drop-shadow(0 0 14px #ffc83d)"/>
+      <circle id="d1" cx="540" cy="330" r="26" fill="#22e5ff" style="filter:drop-shadow(0 0 18px #22e5ff)"/>
+      <circle id="d2" cx="350" cy="650" r="26" fill="#ff4fd8" style="filter:drop-shadow(0 0 18px #ff4fd8)"/>
+      <circle id="d3" cx="730" cy="650" r="26" fill="#a6ff3d" style="filter:drop-shadow(0 0 18px #a6ff3d)"/>
+    </svg>
+    <div id="one" class="abs big" style="top:700px;font-size:210px;color:#fff6dc;text-shadow:0 0 30px #ffc83d,0 0 90px #ffc83d">1 DIEU</div>
+    <div id="three" class="abs big" style="top:1010px;font-size:76px;color:#bff8ff;text-shadow:0 0 20px #22e5ff">3 PERSONNES</div>
+  </div>
+
+  <div id="sub" class="abs"></div>
+</div>
+<div id="vignette"></div>
+<div id="flash"></div>
+
+<script>
+// ---------- outils d'animation ----------
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, k) => a + (b - a) * k;
+const prog = (t, s, d) => clamp((t - s) / d);
+const E = {
+  out: k => 1 - Math.pow(1 - k, 3),
+  inOut: k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2,
+  back: k => { const c = 1.9; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); },
+  elastic: k => k === 0 || k === 1 ? k : Math.pow(2, -10 * k) * Math.sin((k * 10 - .75) * 2.094) + 1,
+  in: k => k * k * k,
+};
+const $ = id => document.getElementById(id);
+function set(el, { x = 0, y = 0, s = 1, r = 0, o = 1, b = 0, extra = '' }) {
+  el.style.transform = `translate(${x}px,${y}px) scale(${s}) rotate(${r}deg) ${extra}`;
+  el.style.opacity = o;
+  el.style.filter = b > 0.05 ? `blur(${b}px)` : '';
+}
+// pop standard : apparition avec rebond + flou
+function pop(el, t, start, dur = .5, from = { y: 60, s: .4 }) {
+  const k = prog(t, start, dur), e = E.back(k);
+  set(el, { y: lerp(from.y ?? 0, 0, e), x: lerp(from.x ?? 0, 0, e), s: lerp(from.s ?? 1, 1, e), o: clamp(k * 3), b: (1 - E.out(k)) * 14 });
+  return k;
+}
+function seeded(i) { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
+const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+
+// ---------- construction du DOM ----------
+const TITLE = 'LA TRINITÉ ?';
+$('s1title').innerHTML = [...TITLE].map(c => `<span>${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+const cardsEl = $('cards');
+for (let i = 0; i < 6; i++) {
+  const d = document.createElement('div');
+  d.className = 'abs card';
+  d.style.left = (i % 2 ? 575 : 275) + 'px';
+  d.style.top = (680 + Math.floor(i / 2) * 165) + 'px';
+  d.innerHTML = `<b>A${i + 1}</b><i>vrai ?</i>`;
+  cardsEl.appendChild(d);
+}
+const stepsEl = $('steps');
+for (let i = 0; i < 7; i++) {
+  const d = document.createElement('div');
+  d.className = 'abs step'; d.style.top = (330 + i * 100) + 'px'; d.textContent = i + 1;
+  stepsEl.appendChild(d);
+}
+const RINGS = [
+  { name: 'PÈRE', col: '#22e5ff', x: 540, y: 560, t: 5.0 },
+  { name: 'FILS', col: '#ff4fd8', x: 335, y: 900, t: 6.3 },
+  { name: 'ESPRIT', col: '#a6ff3d', x: 745, y: 900, t: 7.6 },
+];
+const ringsEl = $('rings');
+RINGS.forEach((R, i) => {
+  const w = document.createElement('div');
+  w.className = 'abs ring'; w.id = 'ring' + i;
+  w.innerHTML = `<svg width="300" height="300" style="position:absolute;inset:0;overflow:visible">
+      <circle cx="150" cy="150" r="140" fill="rgba(8,10,20,.75)" stroke="#ffc83d" stroke-width="8" opacity=".9" style="filter:drop-shadow(0 0 12px #ffc83d)"/>
+      <circle class="arc" cx="150" cy="150" r="112" fill="none" stroke="${R.col}" stroke-width="10" stroke-linecap="round"
+        stroke-dasharray="704" transform="rotate(-90 150 150)" style="filter:drop-shadow(0 0 14px ${R.col})"/>
+    </svg>
+    <div class="lbl" style="color:${R.col};text-shadow:0 0 14px ${R.col}"><div>${R.name}</div><div class="pct"></div></div>`;
+  ringsEl.appendChild(w);
+  const eq = document.createElement('div');
+  eq.className = 'abs eq'; eq.id = 'eq' + i; eq.textContent = '= DIEU';
+  ringsEl.appendChild(eq);
+});
+const BOX = [[5.0, 'P1 · Le Père est Dieu', '#22e5ff'], [6.3, 'P2 · Le Fils est Dieu', '#ff4fd8'], [7.6, 'P3 · Le Saint-Esprit est Dieu', '#a6ff3d']];
+const SEUL = ['…mais', 'UN', 'SEUL', 'Dieu'];
+$('seul').innerHTML = SEUL.map(w => `<span style="display:inline-block;margin:0 10px">${w}</span>`).join('');
+
+// ---------- sous-titres karaoké ----------
+const KEY = { 'Dieu': '#ffc83d', 'Dieu.': '#ffc83d', 'Dieu,': '#ffc83d', 'Père': '#22e5ff', 'Fils': '#ff4fd8', 'l’Esprit': '#a6ff3d', 'Trinité': '#22e5ff', 'seul': '#ffc83d', 'Trinité ?': '#22e5ff' };
+const PHRASES = [
+  [0.4, 2.2, 'Qu’est-ce que la Trinité ?'],
+  [2.3, 4.1, 'Six affirmations à vérifier.'],
+  [4.6, 6.2, 'D’abord : le Père est Dieu,'],
+  [6.3, 7.5, 'le Fils est Dieu,'],
+  [7.6, 9.3, 'l’Esprit est Dieu.'],
+  [9.6, 11.0, 'Trois personnes…'],
+  [11.0, 12.6, 'mais un seul Dieu.'],
+  [13.2, 15.0, 'Un Dieu. Trois personnes.'],
+];
+function subtitles(t) {
+  const el = $('sub');
+  const p = PHRASES.find(p => t >= p[0] && t < p[1] + .25);
+  if (!p) { el.innerHTML = ''; return; }
+  const words = p[2].split(' ');
+  const wd = (p[1] - p[0]) / words.length;
+  const outK = prog(t, p[1], .25);
+  el.innerHTML = words.map((w, i) => {
+    const ws = p[0] + i * wd, k = prog(t, ws, .22), e = E.back(k);
+    const active = t >= ws && t < ws + wd;
+    const col = KEY[w] || (active ? '#ffffff' : '#e8ecff');
+    const glow = active ? `0 0 24px ${KEY[w] || '#ffffff'}` : 'none';
+    return `<span style="opacity:${clamp(k * 3) * (active || t > ws ? 1 : .3) * (1 - outK)};color:${col};text-shadow:${glow},0 4px 0 rgba(0,0,0,.6);
+      transform:translateY(${lerp(30, 0, e) - outK * 20}px) scale(${lerp(.6, 1, e) * (active ? 1.08 : 1)})">${w}</span>`;
+  }).join(' ');
+}
+
+// ---------- fond animé (couleur pilotée par le propos) ----------
+const PAL = [[0, '#22e5ff'], [4.2, '#22e5ff'], [4.8, '#ffc83d'], [6.3, '#ff4fd8'], [7.6, '#a6ff3d'], [9.4, '#ffc83d'], [12.6, '#ffe7a8'], [13.4, '#8b5cff'], [15, '#ffc83d']];
+function palette(t) {
+  for (let i = 0; i < PAL.length - 1; i++) if (t < PAL[i + 1][0]) {
+    const k = E.inOut(prog(t, PAL[i][0], PAL[i + 1][0] - PAL[i][0]));
+    const a = hex(PAL[i][1]), b = hex(PAL[i + 1][1]);
+    return a.map((v, j) => Math.round(lerp(v, b[j], k)));
+  }
+  return hex(PAL[PAL.length - 1][1]);
+}
+const SYM = ['∀', '∃', '≠', '⊥', '∧', '∨', '¬', '→', '≡', 'V', '∴'];
+const ctx = $('bg').getContext('2d');
+function background(t, whoosh, burst) {
+  const [r, g, b] = palette(t);
+  ctx.fillStyle = '#04060c'; ctx.fillRect(0, 0, 1080, 1920);
+  // halos de couleur
+  for (let i = 0; i < 3; i++) {
+    const x = 540 + Math.sin(t * .5 + i * 2.1) * 320, y = 700 + i * 380 + Math.cos(t * .4 + i) * 160;
+    const gr = ctx.createRadialGradient(x, y, 0, x, y, 650);
+    gr.addColorStop(0, `rgba(${r},${g},${b},${.26 - i * .05})`); gr.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = gr; ctx.fillRect(0, 0, 1080, 1920);
+  }
+  // grille qui défile
+  ctx.strokeStyle = `rgba(${r},${g},${b},.07)`; ctx.lineWidth = 2;
+  const off = (t * 40) % 90;
+  ctx.beginPath();
+  for (let x = -off; x < 1080; x += 90) { ctx.moveTo(x, 0); ctx.lineTo(x, 1920); }
+  for (let y = -off; y < 1920; y += 90) { ctx.moveTo(0, y); ctx.lineTo(1080, y); }
+  ctx.stroke();
+  // symboles logiques flottants
+  ctx.textAlign = 'center';
+  for (let i = 0; i < 22; i++) {
+    const sx = seeded(i) * 1080, sp = 25 + seeded(i + 50) * 50;
+    const sy = ((seeded(i + 9) * 2200 - t * sp) % 2200 + 2200) % 2200 - 140;
+    ctx.font = `700 ${60 + seeded(i + 3) * 70}px P`;
+    ctx.fillStyle = `rgba(${r},${g},${b},${.06 + .08 * (.5 + .5 * Math.sin(t * 2 + i))})`;
+    ctx.fillText(SYM[i % SYM.length], sx, sy);
+  }
+  // poussière lumineuse
+  for (let i = 0; i < 70; i++) {
+    const px = (seeded(i + 200) * 1080 + Math.sin(t * .7 + i) * 30), py = ((seeded(i + 300) * 1920 - t * (10 + seeded(i) * 30)) % 1920 + 1920) % 1920;
+    const a = .2 + .5 * Math.max(0, Math.sin(t * 3 + i * 1.7));
+    ctx.fillStyle = `rgba(${Math.min(255, r + 80)},${Math.min(255, g + 80)},${Math.min(255, b + 80)},${a})`;
+    ctx.beginPath(); ctx.arc(px, py, 1.5 + seeded(i + 400) * 2.5, 0, 6.283); ctx.fill();
+  }
+  // traînées de vitesse pendant les transitions
+  if (whoosh > 0.01) {
+    ctx.strokeStyle = `rgba(255,255,255,${.5 * whoosh})`; ctx.lineWidth = 3;
+    for (let i = 0; i < 90; i++) {
+      const a = seeded(i + 500) * 6.283, d0 = 150 + seeded(i + 600) * 500, len = 200 + whoosh * 700;
+      ctx.beginPath(); ctx.moveTo(540 + Math.cos(a) * d0, 860 + Math.sin(a) * d0);
+      ctx.lineTo(540 + Math.cos(a) * (d0 + len), 860 + Math.sin(a) * (d0 + len)); ctx.stroke();
+    }
+  }
+  // explosion de particules
+  if (burst > 0 && burst < 1) {
+    for (let i = 0; i < 160; i++) {
+      const a = seeded(i + 700) * 6.283, sp = 300 + seeded(i + 800) * 900, d = E.out(burst) * sp;
+      const cols = ['#22e5ff', '#ff4fd8', '#a6ff3d', '#ffc83d'];
+      ctx.fillStyle = cols[i % 4]; ctx.globalAlpha = 1 - burst;
+      ctx.beginPath(); ctx.arc(540 + Math.cos(a) * d, 780 + Math.sin(a) * d, 3 + seeded(i) * 6, 0, 6.283); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+}
+
+// ---------- timeline ----------
+const DURATION = 15;
+const BEATS = [0.6, 2.1, 3.3, 4.35, 5.0, 6.3, 7.6, 9.6, 11.0, 11.6, 13.05];
+window.seek = function (t) {
+  // caméra : dérive douce + punch zoom sur les temps forts
+  let punch = 0;
+  for (const bt of BEATS) { const k = (t - bt) / .35; if (k > 0 && k < 1) punch += Math.sin(k * Math.PI) * (1 - k) * .05; }
+  const shakeK = Math.max(0, 1 - Math.abs(t - 3.35) / .25);
+  const sx = Math.sin(t * 90) * 14 * shakeK, sy = Math.cos(t * 77) * 10 * shakeK;
+  $('cam').style.transform = `translate(${sx + Math.sin(t * .6) * 6}px,${sy + Math.cos(t * .5) * 6}px) scale(${1 + punch + t * .002})`;
+
+  const whoosh = Math.max(0, 1 - Math.abs(t - 4.3) / .3) + Math.max(0, 1 - Math.abs(t - 13.0) / .3);
+  background(t, whoosh, prog(t, 13.0, 1.4));
+  $('flash').style.opacity = .85 * Math.max(0, 1 - Math.abs(t - 4.35) / .15) + .9 * Math.max(0, 1 - Math.abs(t - 13.0) / .2) + .25 * Math.max(0, 1 - Math.abs(t - 11.6) / .12);
+  $('prog').style.width = 860 * clamp(t / DURATION) + 'px';
+  const [r, g, b] = palette(t);
+  $('prog').style.background = `rgb(${r},${g},${b})`; $('prog').style.boxShadow = `0 0 14px rgb(${r},${g},${b})`;
+
+  // ===== SCÈNE 1 =====
+  const out1 = E.in(prog(t, 4.05, .4));
+  set($('s1'), { s: 1 + out1 * 1.8, o: 1 - out1, b: out1 * 30 });
+  pop($('s1pill'), t, .15, .55, { y: -120, s: .7 });
+  [...$('s1title').children].forEach((sp, i) => {
+    const k = prog(t, .55 + i * .06, .5), e = E.back(k);
+    sp.style.transform = `translateY(${lerp(120, 0, e)}px) scale(${lerp(.2, 1, e)}) rotate(${lerp(-25, 0, e)}deg)`;
+    sp.style.opacity = clamp(k * 3);
+    sp.style.filter = k < 1 ? `blur(${(1 - k) * 10}px)` : '';
+  });
+  const bk = E.out(prog(t, 1.5, .6));
+  set($('braceL'), { x: lerp(-400, 0, bk), o: bk, b: (1 - bk) * 20 });
+  set($('braceR'), { x: lerp(400, 0, bk), o: bk, b: (1 - bk) * 20 });
+  pop($('unset'), t, 1.85, .45, { y: -40, s: 1.6 });
+  [...cardsEl.children].forEach((c, i) => {
+    pop(c, t, 2.05 + i * .12, .45, { y: 50, s: .3 });
+    const pulse = Math.max(0, Math.sin((t - 2.9 - i * .08) * 5)) * prog(t, 2.9, .1);
+    c.style.boxShadow = `0 0 ${16 + pulse * 30}px rgba(34,229,255,${.6 + pulse * .4}), inset 0 0 18px rgba(34,229,255,.25)`;
+  });
+  pop($('arrow'), t, 3.05, .35, { y: -60 });
+  $('arrow').style.transform += ` translateY(${Math.sin(t * 8) * 8}px)`;
+  pop($('bot'), t, 3.3, .4, { s: 2.2 });
+  const gl = Math.max(0, 1 - Math.abs(t - 3.45) / .3);
+  const gx = Math.sin(t * 140) * 14 * gl;
+  $('bot').style.textShadow = `${gx}px 0 #22e5ff, ${-gx}px 0 #ff2a6d, 0 0 26px #ff4fd8`;
+
+  // ===== SCÈNE 2 =====
+  const in2 = E.out(prog(t, 4.25, .5));
+  set($('s2'), { s: lerp(.55, 1, in2), o: in2, b: (1 - in2) * 24 });
+  const out2 = E.inOut(prog(t, 9.3, .6)); // départ des éléments d'interface
+  pop($('s2pill'), t, 4.3, .5, { y: -120, s: .7 });
+  if (t > 9.3) set($('s2pill'), { y: -out2 * 260, o: 1 - out2 });
+  [...stepsEl.children].forEach((s, i) => {
+    const k = pop(s, t, 4.35 + i * .05, .4, { x: -120, s: .5 });
+    const done = i < 3 && t > RINGS[i].t;
+    s.style.background = done ? '#ffc83d' : '#050a12';
+    s.style.color = done ? '#1a1200' : (i === 6 ? '#8b5cff' : '#22e5ff');
+    s.style.borderColor = done ? '#ffc83d' : (i === 6 ? '#8b5cff' : '#22e5ff');
+    s.style.boxShadow = done ? '0 0 22px #ffc83d' : 'none';
+    if (t > 9.3) set(s, { x: -out2 * 200, o: 1 - out2 });
+  });
+
+  // anneaux : apparition → convergence → fusion en un point
+  const conv = E.inOut(prog(t, 9.5, 1.3));
+  const collapse = E.in(prog(t, 12.55, .45));
+  RINGS.forEach((R, i) => {
+    const w = $('ring' + i), eq = $('eq' + i);
+    const k = prog(t, R.t, .6), e = E.elastic(k);
+    const tx = [540, 470, 610][i], ty = [770, 880, 880][i];
+    let x = lerp(R.x, tx, conv), y = lerp(R.y, ty, conv);
+    x = lerp(x, 540, collapse); y = lerp(y, 780, collapse);
+    const breathe = 1 + Math.sin(t * 3 + i) * .015;
+    const sc = (k <= 0 ? 0 : lerp(.2, 1, e)) * lerp(1, .8, conv) * breathe * (1 - collapse);
+    w.style.left = x + 'px'; w.style.top = y + 'px';
+    set(w, { s: sc, o: clamp(k * 4) * (1 - collapse), r: (1 - E.out(k)) * -90 });
+    w.querySelector('.arc').style.strokeDashoffset = 704 * (1 - E.out(prog(t, R.t + .1, .9)));
+    const pc = prog(t, 10.0, 1.0);
+    w.querySelector('.pct').textContent = pc > 0 ? Math.round(E.out(pc) * 100) + ' %' : '';
+    eq.style.left = R.x + 'px'; eq.style.top = (R.y + 165) + 'px';
+    pop(eq, t, R.t + .45, .4, { y: 30, s: .5 });
+    if (t > 9.3) set(eq, { y: out2 * 40, o: 1 - out2, b: out2 * 10 });
+  });
+  // bandeau du bas : texte qui change à chaque personne
+  const boxIn = pop($('box'), t, 4.9, .5, { y: 160, s: .8 });
+  if (t > 9.3) set($('box'), { y: out2 * 300, o: 1 - out2 });
+  const cur = [...BOX].reverse().find(bx => t >= bx[0]) || BOX[0];
+  const tk = E.back(prog(t, cur[0], .4));
+  $('boxtxt').innerHTML = `<span style="color:${cur[2]};text-shadow:0 0 18px ${cur[2]}">${cur[1].split(' · ')[0]}</span> · ${cur[1].split(' · ')[1]}`;
+  $('boxtxt').style.transform = `translateY(${lerp(80, 0, tk)}px)`; $('boxtxt').style.opacity = clamp(tk * 2);
+
+  // ===== SCÈNE 3 : « mais UN SEUL Dieu » =====
+  const seulIn = pop($('seul'), t, 10.8, .5, { y: 80, s: .9 });
+  if (t > 12.5) set($('seul'), { o: 1 - prog(t, 12.5, .3), b: prog(t, 12.5, .3) * 20 });
+  [...$('seul').children].forEach((sp, i) => {
+    const k = prog(t, 11.0 + i * .22, .35), e = E.back(k);
+    const hot = i >= 1;
+    sp.style.opacity = clamp(k * 2);
+    sp.style.filter = k < 1 ? `blur(${(1 - k) * 12}px)` : '';
+    sp.style.transform = `scale(${lerp(1.8, 1, e)})`;
+    sp.style.color = hot ? '#ffe9a8' : '#cfd6ff';
+    sp.style.textShadow = hot ? '0 0 22px #ffc83d' : 'none';
+  });
+  $('rays').style.opacity = prog(t, 10.6, .8) * (1 - prog(t, 12.6, .3)) * .9 + prog(t, 13.1, .6) * .7;
+  $('rays').style.transform = `rotate(${t * 12}deg) scale(${1 + Math.sin(t * 2) * .05})`;
+
+  // ===== SCÈNE 4 : 1 DIEU / 3 PERSONNES =====
+  const tri = E.inOut(prog(t, 13.3, 1.0));
+  $('triPoly').style.strokeDasharray = 1100; $('triPoly').style.strokeDashoffset = 1100 * (1 - tri);
+  $('tri').style.opacity = prog(t, 13.25, .1);
+  ['d1', 'd2', 'd3'].forEach((d, i) => { const k = E.back(prog(t, 13.4 + i * .3, .35)); $(d).setAttribute('r', 26 * k); });
+  pop($('one'), t, 13.1, .55, { s: 2.6, y: 0 });
+  $('one').style.transform += ` scale(${1 + Math.sin(t * 4) * .015})`;
+  pop($('three'), t, 13.6, .5, { y: 60, s: .6 });
+  $('three').style.letterSpacing = lerp(30, 6, E.out(prog(t, 13.6, .9))) + 'px';
+
+  subtitles(t);
+};
+window.DURATION = DURATION;
+seek(0);
+</script>
+</body>
+</html>
