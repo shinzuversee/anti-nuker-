@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Patience – motion design</title>
+<style>
+  @font-face { font-family: P; font-weight: 500; src: url(../../fonts/p500.woff2); }
+  @font-face { font-family: P; font-weight: 700; src: url(../../fonts/p700.woff2); }
+  @font-face { font-family: P; font-weight: 800; src: url(../../fonts/p800.woff2); }
+  @font-face { font-family: P; font-weight: 900; src: url(../../fonts/p900.woff2); }
+  :root { --orange:#ff8a3d; --red:#ff3d5a; --gold:#ffcf5a; --emerald:#3dffb4; --teal:#22e5ff; --green:#7dff6b; --violet:#a66bff; --blue:#4d8dff; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: #05060b; font-family: P, sans-serif; color: #fff; }
+  canvas { position: absolute; inset: 0; }
+  #grain { mix-blend-mode: overlay; opacity: .09; }
+  #world { position: absolute; inset: 0; perspective: 1700px; perspective-origin: 540px 820px; }
+  #rig { position: absolute; inset: 0; transform-origin: 540px 820px; perspective: 1700px; perspective-origin: 540px 820px; }
+  .layer { position: absolute; inset: 0; transform-origin: 540px 820px; perspective: 1700px; perspective-origin: 540px 820px; }
+  #hud { position: absolute; inset: 0; }
+  .a { position: absolute; transform-style: preserve-3d; }
+  .txt { left: 0; width: 1080px; text-align: center; white-space: nowrap; }
+  .ico { position: absolute; overflow: visible; }
+  .ico * { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .chip { display: inline-block; padding: 10px 34px; border-radius: 60px; font-weight: 800; }
+  .card { border-radius: 40px; background: linear-gradient(160deg, rgba(30,34,56,.92), rgba(10,12,22,.95)); }
+  #pill { left: 190px; top: 112px; width: 700px; height: 92px; border-radius: 46px; display: flex; align-items: center; justify-content: center;
+          font-weight: 800; font-size: 38px; letter-spacing: 3px; background: rgba(8,10,18,.85); }
+  #sub { left: 50px; width: 980px; top: 1490px; text-align: center; font-weight: 900; font-size: 64px; line-height: 1.32; }
+  #sub span { display: inline-block; padding: 0 14px; border-radius: 16px; margin: 4px 0; }
+  #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+  #tint { position: absolute; inset: 0; opacity: 0; background: radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(255,30,60,.55) 100%); }
+  #vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, transparent 50%, rgba(0,0,0,.8) 100%); }
+  .rays { width: 1400px; height: 1400px; border-radius: 50%;
+          background: repeating-conic-gradient(from 0deg, rgba(255,220,140,.25) 0deg 5deg, transparent 5deg 15deg);
+          -webkit-mask: radial-gradient(circle, #000 0%, transparent 65%); }
+  .stamp { font-weight: 900; padding: 6px 40px; border: 8px solid; border-radius: 22px; letter-spacing: 4px; }
+</style>
+</head>
+<body>
+<canvas id="bg" width="1080" height="1920"></canvas>
+<div id="world"><div id="rig">
+
+  <!-- ===== 1 · L'ÊTRE HUMAIN ===== -->
+  <div id="L1" class="layer">
+    <div id="s1vous" class="a txt" style="top:290px;font-size:48px;font-weight:700;color:#ffd2b0"></div>
+    <div id="s1title" class="a txt" style="top:350px;font-size:128px;font-weight:900;color:#fff"></div>
+    <div id="s1ring" class="a" style="left:290px;top:560px;width:500px;height:500px"></div>
+    <svg id="s1human" class="ico a" style="left:390px;top:640px" width="300" height="300" viewBox="0 0 200 200"></svg>
+    <svg id="s1clock" class="ico a" style="left:690px;top:560px" width="170" height="170" viewBox="0 0 200 200"></svg>
+    <div id="s1imp" class="a txt" style="top:1110px"><span class="stamp" style="font-size:96px;color:#ff3d5a;border-color:#ff3d5a">IMPATIENT</span></div>
+    <div id="s1pre" class="a txt" style="top:1260px"><span class="stamp" style="font-size:80px;color:#ff8a3d;border-color:#ff8a3d">PRESSÉ</span></div>
+  </div>
+
+  <!-- ===== 2 · LA FAUTE ===== -->
+  <div id="L2" class="layer">
+    <svg id="s2warn" class="ico a" style="left:415px;top:270px" width="250" height="250" viewBox="0 0 200 200"></svg>
+    <div id="s2faute" class="a txt" style="top:540px;font-size:120px;font-weight:900;color:#ff6b80"></div>
+    <div id="s2scale" class="a" style="left:0;top:0;width:1080px;height:1400px"></div>
+    <svg id="s2bolt" class="ico a" style="left:700px;top:690px" width="170" height="170" viewBox="0 0 200 200"></svg>
+  </div>
+
+  <!-- ===== 3 · LA MISÉRICORDE ===== -->
+  <div id="L3" class="layer">
+    <div id="s3rays" class="a rays" style="left:-160px;top:-60px"></div>
+    <svg id="s3heart" class="ico a" style="left:390px;top:290px" width="300" height="300" viewBox="0 0 200 200"></svg>
+    <div id="s3mis" class="a txt" style="top:660px;font-size:116px;font-weight:900;color:#ffe08a"></div>
+    <div id="s3par" class="a txt" style="top:820px;font-size:110px;font-weight:900;color:#3dffb4"></div>
+    <div id="s3ch" class="a txt" style="top:1060px"><span class="chip" style="font-size:64px;color:#aab;background:rgba(255,255,255,.07);border:4px solid rgba(255,255,255,.25);position:relative">CHÂTIMENT<i id="s3strike" style="position:absolute;left:20px;top:50%;height:10px;border-radius:5px;background:#ff3d5a;box-shadow:0 0 20px #ff3d5a"></i></span></div>
+  </div>
+
+  <!-- ===== 4 · LA CRÉATURE ===== -->
+  <div id="L4" class="layer">
+    <svg id="s4human" class="ico a" style="left:150px;top:520px" width="300" height="300" viewBox="0 0 200 200"></svg>
+    <div id="s4btn" class="a" style="left:600px;top:560px;width:340px;height:300px"></div>
+    <svg id="s4link" class="ico a" style="left:0;top:0" width="1080" height="1400"></svg>
+    <div id="s4txt" class="a txt" style="top:330px;font-size:64px;font-weight:800;color:#c9f7ff"></div>
+    <div id="s4ok" class="a txt" style="top:1040px"><span class="stamp" style="font-size:84px;color:#22e5ff;border-color:#22e5ff">AUCUNE HÂTE</span></div>
+  </div>
+
+  <!-- ===== 5 · MAIS… / L'IMPATIENCE ===== -->
+  <div id="L5" class="layer">
+    <div id="s5mais" class="a txt" style="top:640px;font-size:250px;font-weight:900;color:#fff">MAIS…</div>
+    <div id="s5card" class="a card" style="left:240px;top:400px;width:600px;height:200px;border:5px solid #7dff6b;box-shadow:0 0 40px rgba(125,255,107,.5)">
+      <svg class="ico" style="left:30px;top:35px" width="130" height="130" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80" stroke="#7dff6b" stroke-width="14"/><path id="s5check" d="M60 102 L90 132 L145 70" stroke="#7dff6b" stroke-width="16" stroke-dasharray="140"/></svg>
+      <div style="position:absolute;left:180px;top:40px;font-size:58px;font-weight:900;color:#eaffe5;line-height:1.05">BONNE<br>ACTION</div>
+    </div>
+    <svg id="s5hands" class="ico a" style="left:365px;top:700px" width="350" height="350" viewBox="0 0 200 200"></svg>
+    <div id="s5sparks" class="a" style="left:0;top:0;width:1080px;height:1400px"></div>
+    <svg id="s5gift" class="ico a" style="left:415px;top:630px" width="250" height="250" viewBox="0 0 200 200"></svg>
+    <div id="s5bar" class="a" style="left:190px;top:1110px;width:700px;height:120px">
+      <div style="position:absolute;left:0;top:0;font-size:34px;font-weight:800;color:#c8d0ff" id="s5barlbl">EN ATTENTE…</div>
+      <div style="position:absolute;left:0;top:55px;width:700px;height:44px;border-radius:22px;background:rgba(255,255,255,.1);border:3px solid rgba(255,255,255,.25)"></div>
+      <div id="s5fill" style="position:absolute;left:6px;top:61px;height:32px;border-radius:16px"></div>
+      <div id="s5pct" style="position:absolute;right:0;top:0;font-size:34px;font-weight:900"></div>
+    </div>
+    <div id="s5now" class="a" style="left:0;top:0;width:1080px;height:1400px"></div>
+    <svg id="s5clock" class="ico a" style="left:440px;top:1080px" width="200" height="200" viewBox="0 0 200 200"></svg>
+    <div id="s5presse" class="a txt" style="top:520px"><span class="stamp" style="font-size:150px;color:#ff3d5a;border-color:#ff3d5a;border-width:12px">PRESSÉ</span></div>
+    <svg id="s5gift2" class="ico a" style="left:390px;top:800px" width="300" height="300" viewBox="0 0 200 200"></svg>
+  </div>
+
+  <!-- ===== 6 · LA LOGIQUE ===== -->
+  <div id="L6" class="layer">
+    <div id="s6l" class="a card" style="left:95px;top:430px;width:400px;height:560px;border:5px solid #7dff6b;box-shadow:0 0 50px rgba(125,255,107,.45)">
+      <svg class="ico" id="s6lgift" style="left:110px;top:50px" width="180" height="180" viewBox="0 0 200 200"></svg>
+      <div style="position:absolute;top:260px;width:100%;text-align:center;font-size:46px;font-weight:900;color:#eaffe5">RÉCOMPENSE</div>
+      <div id="s6ltag" style="position:absolute;top:380px;left:40px;width:320px;text-align:center;font-size:40px;font-weight:900;color:#0b0b12;background:#ffcf5a;border-radius:20px;padding:12px 0">PRESSÉ ⚡</div>
+    </div>
+    <div id="s6r" class="a card" style="left:585px;top:430px;width:400px;height:560px;border:5px solid #ff3d5a;box-shadow:0 0 50px rgba(255,61,90,.45)">
+      <svg class="ico" id="s6rbolt" style="left:110px;top:50px" width="180" height="180" viewBox="0 0 200 200"></svg>
+      <div style="position:absolute;top:260px;width:100%;text-align:center;font-size:46px;font-weight:900;color:#ffe2e6">CHÂTIMENT</div>
+      <div id="s6rtag" style="position:absolute;top:380px;left:40px;width:320px;text-align:center;font-size:40px;font-weight:900;color:#fff;border:4px dashed #ff8a9b;border-radius:20px;padding:8px 0"></div>
+    </div>
+    <div id="s6eq" class="a txt" style="top:620px;font-size:110px;font-weight:900;color:#d9c2ff">=</div>
+    <div id="s6q" class="a txt" style="top:1040px;font-size:120px;font-weight:900;color:#c9a6ff">LOGIQUE ?</div>
+  </div>
+
+  <!-- ===== 7 · LA RÈGLE ===== -->
+  <div id="L7" class="layer">
+    <div id="s7head" class="a txt" style="top:290px;font-size:66px;font-weight:900;color:#dbe6ff"></div>
+    <div id="s7scale" class="a" style="left:0;top:0;width:1080px;height:1400px"></div>
+    <div id="s7pat" class="a txt" style="top:1180px;font-size:110px;font-weight:900;color:#ffe08a"></div>
+  </div>
+
+  <!-- ===== 8 · LA LEÇON ===== -->
+  <div id="L8" class="layer">
+    <div id="s8rays" class="a rays" style="left:-160px;top:120px"></div>
+    <div id="s8l1" class="a txt" style="top:290px;font-size:54px;font-weight:800;color:#fff">PAS IMPATIENT FACE AU <span class="chip" style="font-size:54px;color:#fff;background:#ff3d5a">CHÂTIMENT</span></div>
+    <svg id="s8glass" class="ico a" style="left:360px;top:450px" width="360" height="560" viewBox="0 0 200 300"></svg>
+    <div id="s8l2" class="a txt" style="top:1080px;font-size:54px;font-weight:800;color:#fff">ALORS PATIENT POUR LA <span class="chip" style="font-size:54px;color:#0b0b12;background:#7dff6b">RÉCOMPENSE</span></div>
+    <div id="s8final" class="a txt" style="top:690px;font-size:190px;font-weight:900;color:#fff2c4"></div>
+    <div id="s8sub" class="a txt" style="top:950px;font-size:54px;font-weight:800;letter-spacing:10px;color:#ffe08a">DANS LES DEUX CAS</div>
+  </div>
+
+</div></div>
+<div id="hud">
+  <div id="pill" class="a"></div>
+  <div id="progbg" class="a" style="left:110px;top:58px;width:860px;height:10px;border-radius:5px;background:rgba(255,255,255,.1)"></div>
+  <div id="prog" class="a" style="left:110px;top:58px;height:10px;border-radius:5px"></div>
+  <div id="sub" class="a"></div>
+</div>
+<div id="tint"></div>
+<div id="vignette"></div>
+<canvas id="grain" width="1080" height="1920"></canvas>
+<div id="flash"></div>
+
+<script src="../../lib/engine.js"></script>
+<script src="words.js"></script>
+<script>
+const { $, show, prog, lerp, clamp, E, pulse, extrude, letters, seeded } = M;
+const WORDS = ALIGN.words, B = ALIGN.blocks;
+const F = (str, from = 0) => (WORDS.find(w => w.s >= from - 0.01 && w.w.toLowerCase().includes(str)) || { s: from }).s;
+const END = ALIGN.duration, DURATION = END + 1.9;
+
+// ---------- temps clés, calés sur la voix ----------
+const T = {
+  vous: B[0], etre: F("l'être"), crea: F('créature'), imp: F('impatiente'), pres: F('pressée'),
+  faute: F('faute', B[1]), chatie: F('châtie', B[1]),
+  seig: B[2], mis: F('miséricorde'), par: F('pardon'), nepas: F('châtier', B[2]),
+  cherche: F('cherche', B[3]), inciter: F('inciter'), chat4: F('châtier', B[3]),
+  mais: B[4], bonne: F('bonne', B[4]), dieu: F('dieu', B[4]), accorde: F('accorde'),
+  enerve: B[5], instant: F("l'instant"), presse6: B[6],
+  logic: B[7], simp7: F("s'impatiente", B[7]), alors: B[8], simp8: F("s'impatienter", B[8]), chatie8: F('châtié', B[8]),
+  regle: B[9], rec9: F('récompense', B[9]), chat10: F('châtiment', B[10]),
+  lecon: B[11], chat11: F('châtiment', B[11]), b12: B[12], rec12: F('récompense', B[12]),
+};
+T.outro = Math.max(T.rec12 + 0.55, END - 0.5);
+
+// ---------- couleurs pilotées par le propos ----------
+const PAL = [[0, '#ff8a3d'], [B[1], '#ff3d5a'], [B[2], '#ffcf5a'], [T.mis + 0.6, '#3dffb4'], [B[3], '#22e5ff'], [B[4], '#7dff6b'],
+  [B[5], '#ff3d5a'], [B[7], '#a66bff'], [B[9], '#4d8dff'], [B[11], '#ffcf5a'], [DURATION + 1, '#ffcf5a']];
+const CHAP = [[0, "L'ÊTRE HUMAIN"], [B[1], 'LA FAUTE'], [B[2], 'LA MISÉRICORDE'], [B[3], 'LA CRÉATURE'], [B[4], 'MAIS…'],
+  [B[5], "L'IMPATIENCE"], [B[7], 'LA LOGIQUE'], [B[9], 'LA RÈGLE'], [B[11], 'LA LEÇON']];
+const KEY = { 'impatiente': '#ff3d5a', 'pressée': '#ff8a3d', 'pressé': '#ff8a3d', 'faute': '#ff3d5a', 'châtie': '#ff3d5a', 'châtier': '#ff3d5a',
+  'châtié': '#ff3d5a', 'châtiment': '#ff3d5a', 'seigneur': '#ffcf5a', 'dieu': '#ffcf5a', 'miséricorde': '#ffcf5a', 'pardon': '#3dffb4',
+  'bonne': '#7dff6b', 'action': '#7dff6b', 'chose': '#7dff6b', "s'énerve": '#ff3d5a', "l'instant": '#ff8a3d', "s'impatiente": '#ff3d5a',
+  "s'impatienter": '#ff3d5a', 'impatienter': '#ff3d5a', 'impatient': '#ff3d5a', 'récompense': '#7dff6b', "l'être": '#ff8a3d', 'humain': '#ff8a3d' };
+
+// ---------- effets sonores (lus par le script de rendu) ----------
+const CUES = [];
+const cue = (t, fx, gain = 1) => CUES.push({ t: Math.max(0, +t.toFixed(3)), fx, gain });
+cue(0, 'whoosh_low', .7); cue(T.vous, 'typing', .6); cue(T.etre - .05, 'whoosh', .8); cue(T.etre + .1, 'impact', .6);
+cue(T.crea, 'pop', .8); cue(T.imp, 'impact', .55); cue(T.imp, 'glitch', .7); cue(T.pres, 'swipe', .8); cue(T.pres + .05, 'pop', .7);
+cue(B[1] - .3, 'whoosh', .9); cue(B[1] + .1, 'glitch', .8); cue(T.faute, 'pop', .8); cue(T.faute + .5, 'click', .8); cue(T.chatie, 'impact', .8); cue(T.chatie, 'glitch', .6);
+cue(B[2] - 1.2, 'riser', .7); cue(B[2], 'whoosh_low', .7); cue(B[2] + .2, 'pop', .6); cue(T.mis, 'shimmer', .9); cue(T.par, 'ding', .7); cue(T.nepas, 'swipe', .8);
+cue(B[3] - .5, 'wind', 1); cue(B[3] + .2, 'pop', .7); cue(B[3] + .5, 'pop_high', .6); cue(T.inciter, 'click', .9); cue(T.inciter + .1, 'glitch', .4); cue(T.chat4, 'ding', .7);
+cue(B[4] - .35, 'whoosh', 1); cue(B[4], 'impact', .9); cue(T.bonne, 'ding', .7); cue(T.bonne - .1, 'swipe', .6); cue(T.dieu - .2, 'shimmer', .9);
+cue(T.accorde, 'pop', .8); cue(T.accorde + .2, 'typing', .5);
+cue(B[5], 'impact', .9); cue(B[5] + .05, 'glitch', .9); cue(B[5] + .35, 'pop', .6); cue(B[5] + .6, 'pop', .6);
+for (let i = 0; i < 4; i++) cue(T.instant + i * .25, 'click', .9);
+cue(B[6] - .3, 'whoosh', 1); cue(B[6], 'impact', .8);
+cue(B[7] - .4, 'wind', 1); cue(B[7] + .1, 'swipe', .8); cue(T.simp7, 'pop_high', .7);
+cue(B[8], 'swipe', .8); cue(T.simp8, 'glitch', .7); cue(T.simp8 + .1, 'typing', .5); cue(T.chatie8, 'pop', .8);
+cue(B[9] - .35, 'whoosh_low', .9); cue(B[9] + .1, 'pop', .6); cue(T.chat10, 'whoosh', .5); cue(T.chat10 + .35, 'ding', .8); cue(T.chat10 + 1, 'shimmer', .7);
+cue(B[11] - .4, 'wind', 1); cue(B[11] + .1, 'pop', .7); cue(T.chat11, 'pop_high', .6); cue(B[12], 'swipe', .7); cue(T.rec12, 'pop_high', .7);
+cue(T.outro - 1.3, 'riser', .8); cue(T.outro, 'impact', 1); cue(T.outro, 'shimmer', 1);
+for (let i = 0; i < 8; i++) cue(T.outro + .15 + i * .07, 'pop_high', .3);
+
+// ---------- icônes néon ----------
+const glow = c => `filter:drop-shadow(0 0 10px ${c}) drop-shadow(0 0 26px ${c})`;
+const HUMAN = c => `<g style="${glow(c)}"><circle cx="100" cy="58" r="30" stroke="${c}" stroke-width="10"/><path d="M38 182 Q38 108 100 108 Q162 108 162 182" stroke="${c}" stroke-width="10"/></g>`;
+const CLOCK = c => `<g style="${glow(c)}"><circle cx="100" cy="100" r="80" stroke="${c}" stroke-width="10"/><line class="hh" x1="100" y1="100" x2="100" y2="58" stroke="${c}" stroke-width="10"/><line class="mh" x1="100" y1="100" x2="100" y2="38" stroke="#fff" stroke-width="7"/><circle cx="100" cy="100" r="7" fill="${c}" stroke="none" style="fill:${c}"/></g>`;
+const BOLT = c => `<g style="${glow(c)}"><polygon points="115,10 45,112 95,112 78,192 160,78 108,78 135,10" stroke="${c}" stroke-width="9" style="fill:${c}33"/></g>`;
+const GIFT = c => `<g style="${glow(c)}"><rect x="40" y="88" width="120" height="96" rx="10" stroke="${c}" stroke-width="9"/><rect x="30" y="62" width="140" height="30" rx="8" stroke="${c}" stroke-width="9"/><line x1="100" y1="62" x2="100" y2="184" stroke="${c}" stroke-width="9"/><path d="M100 60 C 70 20 45 45 70 60 M100 60 C 130 20 155 45 130 60" stroke="${c}" stroke-width="9"/></g>`;
+$('s1human').innerHTML = HUMAN('#ff8a3d');
+$('s1clock').innerHTML = CLOCK('#ff8a3d');
+$('s1ring').innerHTML = `<svg width="500" height="500" style="overflow:visible;${glow('#ff8a3d')}">${Array.from({ length: 60 }, (_, i) => {
+  const a = i / 60 * 6.283, r1 = i % 5 ? 228 : 210;
+  return `<line x1="${250 + Math.cos(a) * r1}" y1="${250 + Math.sin(a) * r1}" x2="${250 + Math.cos(a) * 245}" y2="${250 + Math.sin(a) * 245}" stroke="#ff8a3d" stroke-width="${i % 5 ? 4 : 9}" stroke-linecap="round"/>`;
+}).join('')}</svg>`;
+$('s2warn').innerHTML = `<g style="${glow('#ff3d5a')}"><path d="M100 18 L186 172 L14 172 Z" stroke="#ff3d5a" stroke-width="12" style="fill:#ff3d5a22"/><line x1="100" y1="72" x2="100" y2="122" stroke="#fff" stroke-width="14"/><circle cx="100" cy="148" r="5" stroke="#fff" stroke-width="12"/></g>`;
+$('s2bolt').innerHTML = BOLT('#ffcf5a');
+$('s3heart').innerHTML = `<g style="${glow('#ffcf5a')}"><path d="M100 172 C 22 120 14 62 54 46 C 80 36 95 50 100 66 C 105 50 120 36 146 46 C 186 62 178 120 100 172 Z" stroke="#ffcf5a" stroke-width="10" style="fill:#ffcf5a22"/></g>`;
+$('s4human').innerHTML = HUMAN('#22e5ff');
+$('s4btn').innerHTML = `<svg width="340" height="300" viewBox="0 0 340 300" style="overflow:visible">
+  <ellipse cx="170" cy="200" rx="150" ry="60" fill="#3a0a14" stroke="#ff3d5a" stroke-width="6"/>
+  <rect x="20" y="140" width="300" height="60" fill="#3a0a14"/>
+  <g id="s4cap"><ellipse cx="170" cy="140" rx="150" ry="60" fill="#ff3d5a" style="${glow('#ff3d5a')}"/>
+  <text x="170" y="154" text-anchor="middle" font-family="P" font-weight="900" font-size="40" fill="#fff">CHÂTIMENT</text></g></svg>`;
+$('s4link').innerHTML = `<path id="s4path" d="M330 680 Q 470 560 640 690" stroke="#22e5ff" stroke-width="7" stroke-dasharray="16 18" style="${glow('#22e5ff')}"/>
+  <g id="s4x" style="${glow('#ff3d5a')}"><line x1="455" y1="580" x2="525" y2="650" stroke="#ff3d5a" stroke-width="16"/><line x1="525" y1="580" x2="455" y2="650" stroke="#ff3d5a" stroke-width="16"/></g>`;
+$('s5hands').innerHTML = `<g style="${glow('#ffcf5a')}" stroke="#ffcf5a" stroke-width="7">
+  <path d="M96 182 C 70 176 52 156 46 128 L 34 74 Q 32 62 41 61 Q 50 60 53 72 L 60 104 M53 72 L 49 44 Q 48 34 57 33 Q 66 33 67 43 L 71 98 M67 43 L 68 32 Q 69 23 78 24 Q 87 25 86 35 L 84 98 M86 40 Q 87 32 95 33 Q 103 35 101 44 L 97 112 Q 96 150 96 182" transform="translate(-4 0)" style="fill:#ffcf5a18"/><path d="M96 182 C 70 176 52 156 46 128 L 34 74 Q 32 62 41 61 Q 50 60 53 72 L 60 104 M53 72 L 49 44 Q 48 34 57 33 Q 66 33 67 43 L 71 98 M67 43 L 68 32 Q 69 23 78 24 Q 87 25 86 35 L 84 98 M86 40 Q 87 32 95 33 Q 103 35 101 44 L 97 112 Q 96 150 96 182" transform="translate(204 0) scale(-1 1)" style="fill:#ffcf5a18"/></g>`;
+$('s5gift').innerHTML = GIFT('#7dff6b');
+$('s5gift2').innerHTML = GIFT('#ff8a3d');
+$('s5clock').innerHTML = CLOCK('#ff8a3d');
+$('s5now').innerHTML = [0, 1, 2].map(i => `<div class="txt" style="position:absolute;top:${700 + i * 10}px;font-size:${150 - i * 5}px;font-weight:900;color:${['#ff3d5a', '#ff8a3d', '#fff'][i]}">MAINTENANT !</div>`).join('');
+$('s5sparks').innerHTML = Array.from({ length: 26 }, () => `<i style="position:absolute;width:10px;height:10px;border-radius:50%;background:#ffe08a;box-shadow:0 0 16px #ffcf5a"></i>`).join('');
+$('s6lgift').innerHTML = GIFT('#7dff6b');
+$('s6rbolt').innerHTML = BOLT('#ff3d5a');
+$('s8glass').innerHTML = `<defs><clipPath id="top"><path d="M30 30 Q30 120 100 150 Q170 120 170 30 Z"/></clipPath><clipPath id="bot"><path d="M30 270 Q30 180 100 150 Q170 180 170 270 Z"/></clipPath></defs>
+  <g style="${glow('#ffcf5a')}"><line x1="15" y1="22" x2="185" y2="22" stroke="#ffcf5a" stroke-width="10"/><line x1="15" y1="278" x2="185" y2="278" stroke="#ffcf5a" stroke-width="10"/>
+  <path d="M30 30 Q30 120 100 150 Q30 180 30 270 M170 30 Q170 120 100 150 Q170 180 170 270" stroke="#ffcf5a" stroke-width="8"/></g>
+  <rect id="sandTop" x="20" width="160" clip-path="url(#top)" style="fill:#ffcf5a"/><rect id="sandBot" x="20" width="160" clip-path="url(#bot)" style="fill:#ffcf5a"/>
+  <line id="sandFlow" x1="100" y1="150" x2="100" y2="268" stroke="#ffe7a0" stroke-width="4" stroke-dasharray="6 8"/>`;
+
+// balance : fléau qui pivote, plateaux qui restent à la verticale
+function makeScale(el, cx, py, half, cl, cr, labL, labR, iconL = '', iconR = '') {
+  el.innerHTML = `<svg width="1080" height="1400" style="position:absolute;overflow:visible">
+    <g style="${glow('#c9d3ff')}"><line x1="${cx}" y1="${py}" x2="${cx}" y2="${py + 420}" stroke="#c9d3ff" stroke-width="12"/>
+    <path d="M${cx - 120} ${py + 430} L${cx + 120} ${py + 430}" stroke="#c9d3ff" stroke-width="14"/><circle cx="${cx}" cy="${py}" r="16" style="fill:#c9d3ff"/></g>
+    <g class="beam"><line x1="${cx - half}" y1="${py}" x2="${cx + half}" y2="${py}" stroke="#fff" stroke-width="12" style="${glow('#fff')}"/></g>
+    ${[['L', cl, labL, iconL], ['R', cr, labR, iconR]].map(([s, c, lab, ic]) => `<g class="pan${s}">
+      <line x1="0" y1="0" x2="-90" y2="170" stroke="${c}" stroke-width="5"/><line x1="0" y1="0" x2="90" y2="170" stroke="${c}" stroke-width="5"/>
+      <path d="M-120 170 Q0 240 120 170 Z" stroke="${c}" stroke-width="8" style="fill:${c}33;${glow(c)}"/>
+      <text x="0" y="285" text-anchor="middle" font-family="P" font-weight="900" font-size="44" style="fill:${c};${glow(c)}">${lab}</text>
+      <g transform="translate(-55 55) scale(.55)">${ic}</g></g>`).join('')}</svg>`;
+  return angle => {
+    const a = angle * Math.PI / 180;
+    el.querySelector('.beam').setAttribute('transform', `rotate(${angle} ${cx} ${py})`);
+    el.querySelector('.panL').setAttribute('transform', `translate(${cx - Math.cos(a) * half} ${py - Math.sin(a) * half})`);
+    el.querySelector('.panR').setAttribute('transform', `translate(${cx + Math.cos(a) * half} ${py + Math.sin(a) * half})`);
+  };
+}
+const scale2 = makeScale($('s2scale'), 540, 760, 260, '#9aa3c7', '#ff3d5a', '?', 'CHÂTIMENT');
+const scale7 = makeScale($('s7scale'), 540, 560, 300, '#7dff6b', '#ff3d5a', 'RÉCOMPENSE', 'CHÂTIMENT', GIFT('#7dff6b'), BOLT('#ff3d5a'));
+
+const L = {
+  vous: letters($('s1vous'), 'Vous savez…'), title: letters($('s1title'), "L'ÊTRE HUMAIN"), faute: letters($('s2faute'), 'UNE FAUTE'),
+  mis: letters($('s3mis'), 'MISÉRICORDE'), par: letters($('s3par'), '& PARDON'), s4: letters($('s4txt'), 'IL NE RÉCLAME PAS…'),
+  head7: letters($('s7head'), "NE PAS S'IMPATIENTER"), pat7: letters($('s7pat'), 'PATIENCE'), fin: letters($('s8final'), 'PATIENCE'),
+};
+$('s1title').style.textShadow = extrude('#ff8a3d', 12, 'rgba(255,138,61,.6)');
+$('s2faute').style.textShadow = extrude('#ff3d5a', 12, 'rgba(255,61,90,.6)');
+$('s3mis').style.textShadow = extrude('#ffcf5a', 12, 'rgba(255,207,90,.7)');
+$('s3par').style.textShadow = extrude('#3dffb4', 12, 'rgba(61,255,180,.6)');
+$('s5mais').style.textShadow = extrude('#7dff6b', 16, 'rgba(125,255,107,.6)');
+$('s6q').style.textShadow = extrude('#a66bff', 12, 'rgba(166,107,255,.7)');
+$('s7pat').style.textShadow = extrude('#ffcf5a', 12, 'rgba(255,207,90,.7)');
+$('s8final').style.textShadow = extrude('#ffcf5a', 18, 'rgba(255,207,90,.9)');
+['s5now'].forEach(id => [...$(id).children].forEach((c, i) => c.style.textShadow = extrude(['#ff3d5a', '#ff8a3d', '#ffffff'][i], 8)));
+
+// animation lettre par lettre (rotation 3D + rebond)
+function lettersIn(arr, t, start, step = .045, from = { y: 90, rx: -90, s: .3, b: 10 }, out = null) {
+  arr.forEach((sp, i) => {
+    const o = { i: start + i * step, id: .55, f: from };
+    if (out) Object.assign(o, { o: out.t + i * (out.step ?? .02), od: out.d ?? .35, to: out.to ?? { y: -60, o: 0, b: 10 } });
+    show(sp, t, o);
+  });
+}
+const chunks = M.chunks(WORDS, 4, 0.7);
+const bg = $('bg').getContext('2d'), gctx = $('grain').getContext('2d');
+
+// ---------- timeline ----------
+window.seek = function (t) {
+  // --- caméra 3D : dérive lente + punch sur les impacts ---
+  const hits = CUES.filter(c => c.fx === 'impact').map(c => c.t);
+  let punch = 0; for (const h of hits) { const k = (t - h) / .4; if (k > 0 && k < 1) punch += Math.sin(k * Math.PI) * (1 - k) * .06; }
+  const shake = pulse(t, T.imp, .25) + pulse(T.enerve, t, .5) + .6 * pulse(t, T.chatie, .2);
+  const sx = Math.sin(t * 93) * 16 * shake, sy = Math.cos(t * 71) * 12 * shake;
+  $('rig').style.transform = `translate(${sx}px,${sy}px) scale(${1 + punch}) rotateX(${Math.sin(t * .45) * 4}deg) rotateY(${Math.sin(t * .31) * 6}deg)`;
+
+  // --- transitions (vitesse, vent, flash) ---
+  const whoosh = pulse(t, B[1] - .1, .3) + pulse(t, B[4] - .1, .3) + pulse(t, B[6] - .1, .3) + pulse(t, T.outro, .3) + .6 * pulse(t, B[9] - .1, .3);
+  const wind = clamp(pulse(t, B[3] - .1, .5) * 1.5) + clamp(pulse(t, B[7] - .15, .5) * 1.5) + clamp(pulse(t, B[11] - .15, .5) * 1.5);
+  const col = M.palette(PAL, t);
+  const css = `rgb(${col})`;
+  M.background(bg, t, col, { whoosh, wind, bursts: [
+    { k: prog(t, T.outro, 1.6), x: 540, y: 800, seed: 0, cols: ['#ffcf5a', '#fff2c4', '#ff8a3d', '#7dff6b'] },
+    { k: prog(t, T.mis, 1.4), x: 540, y: 440, seed: 50, cols: ['#ffcf5a', '#3dffb4', '#fff'] },
+    { k: prog(t, B[5], 1.2), x: 540, y: 780, seed: 90, cols: ['#ff3d5a', '#ff8a3d'] },
+  ] });
+  M.grain(gctx, t);
+  $('flash').style.opacity = .8 * pulse(t, B[1] - .05, .12) + .9 * pulse(t, B[4], .14) + .5 * pulse(t, B[6], .1) + .9 * pulse(t, T.outro, .18) + .3 * pulse(t, T.mis, .12) + .25 * pulse(t, T.chat10 + .35, .1) + clamp((t - (DURATION - .5)) * 2);
+  $('flash').style.background = t > DURATION - .6 ? '#000' : '#fff';
+  $('tint').style.opacity = clamp(prog(t, B[5] - .05, .15) - prog(t, B[6] - .4, .5)) * (.6 + .4 * Math.sin(t * 9)) + .5 * pulse(t, T.chatie, .3);
+
+  // --- habillage : progression + chapitre ---
+  $('prog').style.width = 860 * clamp(t / END) + 'px';
+  $('prog').style.background = css; $('prog').style.boxShadow = `0 0 16px ${css}`;
+  const ci = CHAP.reduce((a, c, i) => (t >= c[0] - .15 ? i : a), 0);
+  const pill = $('pill'), kc = prog(t, CHAP[ci][0] - .15, .45);
+  pill.textContent = CHAP[ci][1];
+  pill.style.color = css; pill.style.border = `5px solid ${css}`;
+  pill.style.boxShadow = `0 0 20px ${css}, 0 0 60px rgba(${col},.35), inset 0 0 20px rgba(${col},.25)`;
+  pill.style.textShadow = `0 0 14px ${css}`;
+  show(pill, t, { i: ci === 0 ? .1 : CHAP[ci][0] - .15, id: .5, f: ci === 0 ? { y: -150, s: .7 } : { rx: -100, s: .9 }, ie: 'back', o: T.outro - .2, od: .3, to: { y: -200, o: 0 } });
+
+  // ===== 1 · L'ÊTRE HUMAIN =====
+  show($('L1'), t, { o: B[1] - .35, od: .35, to: { s: 2.6, o: 0, b: 30, z: 300 } });
+  lettersIn(L.vous, t, T.vous, .035, { y: 20, s: 1, b: 6 });
+  lettersIn(L.title, t, T.etre - .05, .04, { y: 100, rx: -100, s: .4, b: 12, z: -200 });
+  show($('s1human'), t, { i: T.crea - .1, id: .6, f: { s: .2, y: 100, b: 20 }, add: { y: Math.sin(t * 2) * 8 } });
+  show($('s1ring'), t, { i: T.crea, id: .7, f: { s: .4, r: -120, b: 10 }, ie: 'out', add: { r: t * 25 + Math.max(0, t - T.imp) * 260 } });
+  const clk = show($('s1clock'), t, { i: T.crea + .3, id: .5, f: { s: 0, r: -90 }, add: { r: Math.sin(t * 30) * 6 * clamp(t - T.imp) } });
+  $('s1clock').querySelector('.mh').setAttribute('transform', `rotate(${t * 90 + Math.max(0, t - T.imp) * 900} 100 100)`);
+  $('s1clock').querySelector('.hh').setAttribute('transform', `rotate(${t * 20 + Math.max(0, t - T.imp) * 120} 100 100)`);
+  show($('s1imp'), t, { i: T.imp, id: .35, f: { s: 3, r: -20, o: 0 }, ie: 'out5', add: { r: -6 } });
+  show($('s1pre'), t, { i: T.pres, id: .35, f: { s: 3, r: 20, o: 0 }, ie: 'out5', add: { r: 5 } });
+
+  // ===== 2 · LA FAUTE =====
+  show($('L2'), t, { i: B[1] - .2, id: .45, f: { s: .4, b: 25, z: -500 }, ie: 'out', o: B[2] - .3, od: .4, to: { y: -500, o: 0, b: 20 } });
+  const gl = pulse(t, B[1] + .15, .25);
+  show($('s2warn'), t, { i: B[1] + .05, id: .5, f: { s: 2, r: 30, b: 20 }, add: { x: Math.sin(t * 150) * 18 * gl, s: 1 + Math.sin(t * 6) * .03 } });
+  lettersIn(L.faute, t, T.faute, .04, { y: 0, ry: 90, s: 1.6, b: 15, z: 200 });
+  show($('s2scale'), t, { i: T.faute + .45, id: .6, f: { y: 200, o: 0 }, ie: 'out' });
+  scale2(lerp(-4, 18, E.elastic(prog(t, T.chatie - .1, 1))) + Math.sin(t * 2) * 1.5);
+  const flick = t > T.chatie ? (Math.sin(t * 47) > -.3 ? 1 : .3) : 0;
+  show($('s2bolt'), t, { i: T.chatie - .05, id: .25, f: { y: -300, s: 1.5, o: 0 }, ie: 'out5', add: { o: flick } });
+
+  // ===== 3 · LA MISÉRICORDE =====
+  show($('L3'), t, { i: B[2] - .15, id: .5, f: { y: 500, b: 20 }, ie: 'out', o: B[3] - .45, od: .45, to: { x: -1100, ry: 40, b: 25 }, oe: 'inOut' });
+  $('s3rays').style.opacity = .9 * prog(t, B[2], 1); $('s3rays').style.transform = `rotate(${t * 14}deg)`;
+  show($('s3heart'), t, { i: B[2] + .15, id: .7, f: { s: .1, b: 30, y: -200 }, add: { s: 1 + .06 * Math.max(0, Math.sin(t * 7)) } });
+  lettersIn(L.mis, t, T.mis - .05, .04, { y: 120, rx: -90, s: .3, b: 12 });
+  lettersIn(L.par, t, T.par - .05, .05, { y: 0, s: 2.5, b: 18 });
+  show($('s3ch'), t, { i: T.nepas - .6, id: .45, f: { y: 80, s: .7 } });
+  $('s3strike').style.width = 380 * E.out(prog(t, T.nepas, .35)) + 'px';
+
+  // ===== 4 · LA CRÉATURE =====
+  show($('L4'), t, { i: B[3] - .3, id: .5, f: { x: 1100, ry: -40, b: 25 }, ie: 'out', o: B[4] - .35, od: .35, to: { s: 2.5, o: 0, b: 30 } });
+  show($('s4human'), t, { i: B[3] + .1, id: .55, f: { x: -300, s: .5 }, add: { y: Math.sin(t * 1.5) * 10 } });
+  show($('s4btn'), t, { i: B[3] + .4, id: .55, f: { x: 300, s: .5, rx: 50 }, add: { rx: 25 } });
+  $('s4cap').setAttribute('transform', `translate(0 ${10 * pulse(t, T.inciter, .2)})`);
+  lettersIn(L.s4, t, T.cherche - .2, .03, { y: 50, s: .6, b: 8 });
+  const lk = E.out(prog(t, T.inciter - .5, .6));
+  $('s4path').style.strokeDashoffset = -t * 60; $('s4path').style.opacity = lk;
+  $('s4x').style.opacity = E.back(prog(t, T.inciter, .3)) ? clamp(prog(t, T.inciter, .15)) : 0;
+  $('s4x').setAttribute('transform', `rotate(${lerp(-90, 0, E.back(prog(t, T.inciter, .4)))} 490 615)`);
+  show($('s4ok'), t, { i: T.chat4 + .1, id: .35, f: { s: 3, r: -15, o: 0 }, ie: 'out5', add: { r: -3 } });
+
+  // ===== 5 · MAIS… / L'IMPATIENCE =====
+  show($('L5'), t, { i: B[4] - .15, id: .3, f: { s: .3, b: 30 }, ie: 'out', o: B[7] - .4, od: .4, to: { x: -1100, ry: 50, b: 25 }, oe: 'inOut' });
+  show($('s5mais'), t, { i: B[4] - .05, id: .35, f: { s: 3.5, o: 0, b: 25 }, ie: 'out5', o: T.bonne - .35, od: .35, to: { y: -900, s: .3, o: 0 } });
+  const cardOut = T.dieu - .4;
+  show($('s5card'), t, { i: T.bonne - .15, id: .5, f: { ry: -100, s: .6 }, o: cardOut, od: .4, to: { y: -120, s: .55, o: .0 }, oe: 'inOut' });
+  $('s5check').style.strokeDashoffset = 140 * (1 - E.out(prog(t, T.bonne + .2, .4)));
+  show($('s5hands'), t, { i: T.dieu - .35, id: .6, f: { y: 300, s: .6, b: 15 }, ie: 'out', o: B[5] - .1, od: .3, to: { y: 300, o: 0, b: 10 }, add: { y: Math.sin(t * 2) * 6 } });
+  [...$('s5sparks').children].forEach((sp, i) => {
+    const ph = ((t - T.dieu) * .55 + seeded(i + 5)) % 1, on = clamp((t - T.dieu) * 3) * (1 - prog(t, B[5] - .2, .3));
+    sp.style.transform = `translate(${470 + seeded(i) * 140 + Math.sin(t * 3 + i) * 20}px, ${760 - ph * 520}px) scale(${1 - ph})`;
+    sp.style.opacity = on * (1 - ph);
+  });
+  const giftShake = clamp(prog(t, B[5], .1) - prog(t, B[6] - .5, .3));
+  show($('s5gift'), t, { i: T.accorde, id: .5, f: { s: 0, y: 200, r: -30 }, ie: 'back', o: B[6] - .4, od: .3, to: { s: 0, o: 0 },
+    add: { y: -220 * E.out(prog(t, T.accorde, .6)) + Math.sin(t * 2.4) * 10, r: Math.sin(t * 60) * 8 * giftShake } });
+  show($('s5bar'), t, { i: T.accorde + .2, id: .45, f: { y: 100, s: .8 }, o: T.instant - .2, od: .3, to: { y: 200, o: 0 } });
+  const fill = Math.min(.87, E.out(prog(t, T.accorde + .3, 2.2)) * .87);
+  const angry = prog(t, B[5], .2);
+  $('s5fill').style.width = 688 * fill + 'px';
+  $('s5fill').style.background = angry ? `linear-gradient(90deg,#ff8a3d,#ff3d5a)` : `linear-gradient(90deg,#7dff6b,#3dffb4)`;
+  $('s5fill').style.boxShadow = `0 0 20px ${angry ? '#ff3d5a' : '#7dff6b'}`;
+  $('s5pct').textContent = Math.round(fill * 100) + ' %'; $('s5pct').style.color = angry ? '#ff3d5a' : '#7dff6b';
+  $('s5barlbl').textContent = angry ? 'TOUJOURS RIEN ?!' : 'EN ATTENTE…'; $('s5barlbl').style.color = angry ? '#ff8a9b' : '#c8d0ff';
+  [...$('s5now').children].forEach((c, i) => show(c, t, { i: B[5] + i * .3, id: .3, f: { s: 2.8, o: 0, b: 15, z: 300 }, ie: 'out5', o: T.instant - .3, od: .3, to: { o: 0, s: .6 },
+    add: { z: -i * 120, y: -i * 150 + 160, x: Math.sin(t * 40 + i) * 6 * angry, r: (i - 1) * -3 } }));
+  show($('s5clock'), t, { i: T.instant - .1, id: .4, f: { s: 0, r: 180 }, o: B[6] - .3, od: .3, to: { s: 2, o: 0 }, add: { y: -360 } });
+  $('s5clock').querySelector('.mh').setAttribute('transform', `rotate(${t * 1400} 100 100)`);
+  $('s5clock').querySelector('.hh').setAttribute('transform', `rotate(${t * 200} 100 100)`);
+  show($('s5presse'), t, { i: B[6] - .05, id: .3, f: { s: 3.5, r: -25, o: 0 }, ie: 'out5', add: { r: -5, s: 1 + .03 * Math.sin(t * 20) } });
+  show($('s5gift2'), t, { i: B[6] + .4, id: .5, f: { s: .2, z: -600 }, ie: 'out', add: { z: E.in(prog(t, B[6] + .6, 2.2)) * 700, r: Math.sin(t * 50) * 4 } });
+
+  // ===== 6 · LA LOGIQUE =====
+  show($('L6'), t, { i: B[7] - .35, id: .5, f: { x: 1100, ry: -50, b: 25 }, ie: 'out', o: B[9] - .4, od: .4, to: { z: -1500, o: 0, b: 15 } });
+  const sway = Math.sin(t * 1.3) * 5;
+  show($('s6l'), t, { i: B[7] + .05, id: .7, f: { ry: -110, x: -200, o: 0 }, add: { ry: 14 + sway, y: Math.sin(t * 1.7) * 10 } });
+  show($('s6ltag'), t, { i: T.simp7 - .05, id: .4, f: { s: 2, o: 0 }, ie: 'out5' });
+  show($('s6r'), t, { i: B[8] - .05, id: .7, f: { ry: 110, x: 200, o: 0 }, add: { ry: -14 + sway, y: Math.sin(t * 1.7 + 1) * 10 } });
+  const tg = 'PRESSÉ AUSSI ?', nt = Math.floor(clamp((t - T.simp8) / .7) * tg.length);
+  $('s6rtag').textContent = t < T.simp8 ? '…' : tg.slice(0, Math.max(1, nt));
+  const g6 = pulse(t, T.simp8 + .1, .3);
+  $('s6rtag').style.textShadow = `${Math.sin(t * 140) * 10 * g6}px 0 #22e5ff, ${-Math.sin(t * 140) * 10 * g6}px 0 #ff2a6d`;
+  show($('s6eq'), t, { i: B[8] + .4, id: .5, f: { s: 0, r: 180 }, add: { s: 1 + .08 * Math.sin(t * 5), z: 120 } });
+  show($('s6q'), t, { i: T.chatie8 - .1, id: .45, f: { s: 2.5, o: 0, b: 15 }, ie: 'out5', add: { s: 1 + .04 * Math.sin(t * 6) } });
+
+  // ===== 7 · LA RÈGLE =====
+  show($('L7'), t, { i: B[9] - .3, id: .55, f: { z: 900, o: 0, b: 25 }, ie: 'out', o: B[11] - .45, od: .45, to: { x: -1100, ry: 45, b: 25 }, oe: 'inOut' });
+  lettersIn(L.head7, t, B[9] + .1, .03, { y: -60, s: .5, b: 8 });
+  show($('s7scale'), t, { i: B[9] + .1, id: .7, f: { y: 300, o: 0 }, ie: 'out' });
+  scale7(lerp(-16, 0, E.elastic(prog(t, T.chat10 + .1, 1.3))) + Math.sin(t * 2.2) * 1.2 * (1 - prog(t, T.chat10 + .6, .6)));
+  lettersIn(L.pat7, t, T.chat10 + .9, .05, { y: 80, rx: -90, s: .4, b: 10 });
+
+  // ===== 8 · LA LEÇON =====
+  show($('L8'), t, { i: B[11] - .35, id: .5, f: { x: 1100, ry: -45, b: 25 }, ie: 'out' });
+  const outK = T.outro - .25;
+  show($('s8l1'), t, { i: B[11] + .05, id: .5, f: { y: -80, s: .7 }, o: outK, od: .3, to: { y: -300, o: 0, b: 10 } });
+  show($('s8l2'), t, { i: B[12] + .05, id: .5, f: { y: 80, s: .7 }, o: outK, od: .3, to: { y: 300, o: 0, b: 10 } });
+  show($('s8glass'), t, { i: B[11] + .2, id: .7, f: { s: .3, rx: 90 }, o: outK, od: .3, to: { s: 0, o: 0, r: 180 }, add: { ry: t * 30 } });
+  const sand = prog(t, B[11], END - B[11]);
+  $('sandTop').setAttribute('y', 30 + 120 * sand); $('sandTop').setAttribute('height', 120 * (1 - sand));
+  $('sandBot').setAttribute('y', 270 - 120 * sand); $('sandBot').setAttribute('height', 120 * sand);
+  $('sandFlow').style.strokeDashoffset = -t * 80;
+  $('s8rays').style.opacity = .5 * prog(t, B[11], 1) + .6 * prog(t, T.outro, .5); $('s8rays').style.transform = `rotate(${-t * 10}deg)`;
+  lettersIn(L.fin, t, T.outro + .1, .07, { z: 700, y: -40, s: 2.2, rx: 40, b: 20 });
+  show($('s8final'), t, { i: T.outro, id: .1, f: { o: 1 }, add: { s: 1 + (t - T.outro) * .02, rx: Math.sin(t * 1.5) * 6 } });
+  show($('s8sub'), t, { i: T.outro + .9, id: .5, f: { y: 40, s: .8 } });
+  $('s8sub').style.letterSpacing = lerp(40, 10, E.out(prog(t, T.outro + .9, 1))) + 'px';
+
+  // --- sous-titres karaoké ---
+  M.subtitles($('sub'), t, chunks, KEY, css, T.outro - .1);
+};
+window.DURATION = DURATION; window.CUES = CUES;
+seek(0);
+</script>
+</body>
+</html>

@@ -178,7 +178,7 @@ def load(path):
     return x
 
 
-def mix(voice_path, cues_path, out_path, sfx_gain=0.35, tail=1.5):
+def mix(voice_path, cues_path, out_path, sfx_gain=0.5, tail=1.5):
     voice = load(voice_path)
     cues = json.load(open(cues_path))
     out = np.zeros((len(voice) + int(tail * SR), 2))
