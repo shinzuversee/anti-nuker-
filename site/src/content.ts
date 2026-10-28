@@ -17,8 +17,8 @@ export const site = {
 export const nav = [
   { label: 'Accueil', href: '#accueil' },
   { label: 'Mission', href: '#mission' },
+  { label: 'Alphabet', href: '#alphabet' },
   { label: 'Parcours', href: '#parcours' },
-  { label: 'Méthode', href: '#methode' },
   { label: 'Rappels', href: '#rappels' },
   { label: 'FAQ', href: '#faq' },
 ]
@@ -69,8 +69,6 @@ export const programs = {
   kicker: 'Les parcours',
   title: 'Un chemin complet, étape par étape',
   intro: 'Choisis ton point de départ. Chaque parcours s’enchaîne naturellement avec le suivant.',
-  // Sourate Al-Alaq (96), verset 1, affiché sur la première carte.
-  featuredVerse: 'اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ',
   items: [
     {
       icon: 'alphabet' as ProgramIcon,
@@ -151,11 +149,75 @@ export const reminders = {
   ],
 }
 
-// Sourate Ta-Ha (20), verset 114 (extrait).
-export const quote = {
-  ar: 'وَقُلْ رَبِّ زِدْنِي عِلْمًا',
-  meaning: '« Et dis : Seigneur, accrois mes connaissances. »',
-  reference: 'Sourate Ta-Ha · 20 : 114',
+// Sourate An-Nur (24), verset 35 (extraits).
+export const lightVerse = {
+  kicker: 'Le verset de la Lumière',
+  ar: 'اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ',
+  meaning: '« Allah est la Lumière des cieux et de la terre. »',
+  arEnd: 'نُورٌ عَلَى نُورٍ',
+  meaningEnd: '« Lumière sur lumière. »',
+  reference: 'Sourate An-Nur · 24 : 35',
+  text: "Dans ce verset, la lumière d'Allah est comparée à une lampe posée dans une niche, la mishkât. C'est cette niche qui a inspiré notre emblème.",
+}
+
+// Chiffres réels sur le Coran et l'alphabet (décompte des versets selon Kûfa, lecture Hafs).
+export const stats = {
+  kicker: 'Ce qui t’attend',
+  title: 'Un océan de savoir, une lettre à la fois',
+  items: [
+    { value: 28, label: 'lettres', text: 'pour apprendre à lire' },
+    { value: 114, label: 'sourates', text: 'à découvrir et méditer' },
+    { value: 6236, label: 'versets', text: 'pour une vie d’étude' },
+  ],
+}
+
+export const words = [
+  { ar: 'العِلْم', fr: 'la science' },
+  { ar: 'النُّور', fr: 'la lumière' },
+  { ar: 'البَيَان', fr: 'la clarté' },
+  { ar: 'الحِكْمَة', fr: 'la sagesse' },
+  { ar: 'الصَّبْر', fr: 'la patience' },
+  { ar: 'التَّدَبُّر', fr: 'la méditation' },
+  { ar: 'القَلَم', fr: 'le calame' },
+  { ar: 'الهُدَى', fr: 'la guidance' },
+]
+
+// L'alphabet arabe : lettre, nom, son approché en français.
+// « joins: false » pour les six lettres qui ne s'attachent jamais à la lettre suivante.
+export const alphabet = {
+  kicker: 'Premier pas',
+  title: 'Touche une lettre, et commence à lire',
+  intro: 'Les 28 lettres de l’alphabet arabe. Choisis-en une pour voir son nom, son son et ses formes selon sa place dans le mot.',
+  letters: [
+    { l: 'ا', name: 'Alif', sound: 'a long, comme dans « papa »', joins: false },
+    { l: 'ب', name: 'Bâ', sound: 'b, comme dans « bon »', joins: true },
+    { l: 'ت', name: 'Tâ', sound: 't, comme dans « table »', joins: true },
+    { l: 'ث', name: 'Thâ', sound: 'th anglais, comme dans « think »', joins: true },
+    { l: 'ج', name: 'Jîm', sound: 'dj, comme dans « djinn »', joins: true },
+    { l: 'ح', name: 'Hâ', sound: 'h soufflé du fond de la gorge', joins: true },
+    { l: 'خ', name: 'Khâ', sound: 'kh, comme la jota espagnole', joins: true },
+    { l: 'د', name: 'Dâl', sound: 'd, comme dans « dos »', joins: false },
+    { l: 'ذ', name: 'Dhâl', sound: 'th anglais, comme dans « this »', joins: false },
+    { l: 'ر', name: 'Râ', sound: 'r roulé', joins: false },
+    { l: 'ز', name: 'Zây', sound: 'z, comme dans « zèbre »', joins: false },
+    { l: 'س', name: 'Sîn', sound: 's, comme dans « sel »', joins: true },
+    { l: 'ش', name: 'Shîn', sound: 'ch, comme dans « chat »', joins: true },
+    { l: 'ص', name: 'Sâd', sound: 's emphatique, la langue plus basse', joins: true },
+    { l: 'ض', name: 'Dâd', sound: 'd emphatique, propre à l’arabe', joins: true },
+    { l: 'ط', name: 'Tâ', sound: 't emphatique', joins: true },
+    { l: 'ظ', name: 'Dhâ', sound: 'th de « this », emphatique', joins: true },
+    { l: 'ع', name: 'ʿAyn', sound: 'son serré du milieu de la gorge', joins: true },
+    { l: 'غ', name: 'Ghayn', sound: 'r grasseyé, comme dans « Paris »', joins: true },
+    { l: 'ف', name: 'Fâ', sound: 'f, comme dans « fleur »', joins: true },
+    { l: 'ق', name: 'Qâf', sound: 'k prononcé au fond de la gorge', joins: true },
+    { l: 'ك', name: 'Kâf', sound: 'k, comme dans « kilo »', joins: true },
+    { l: 'ل', name: 'Lâm', sound: 'l, comme dans « lune »', joins: true },
+    { l: 'م', name: 'Mîm', sound: 'm, comme dans « mer »', joins: true },
+    { l: 'ن', name: 'Nûn', sound: 'n, comme dans « nuit »', joins: true },
+    { l: 'ه', name: 'Hâ', sound: 'h aspiré léger', joins: true },
+    { l: 'و', name: 'Wâw', sound: 'w, ou « ou » long', joins: false },
+    { l: 'ي', name: 'Yâ', sound: 'y, ou « i » long', joins: true },
+  ],
 }
 
 export const faq = {

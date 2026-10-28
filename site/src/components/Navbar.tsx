@@ -7,6 +7,7 @@ import Logo from './Logo'
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [active, setActive] = useState('#accueil')
   const { scrollYProgress } = useScroll()
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 })
 
@@ -20,6 +21,17 @@ export default function Navbar() {
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
   }, [open])
+
+  // Suit la section visible pour y placer la pastille dorée du menu.
+  useEffect(() => {
+    const sections = nav.map((n) => document.querySelector(n.href)).filter(Boolean) as Element[]
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && setActive(`#${e.target.id}`)),
+      { rootMargin: '-45% 0px -50% 0px' },
+    )
+    sections.forEach((s) => io.observe(s))
+    return () => io.disconnect()
+  }, [])
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
@@ -35,9 +47,18 @@ export default function Navbar() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="relative rounded-full px-4 py-2 text-sm text-ivory/75 transition-colors hover:text-ivory"
+                  className={`relative block rounded-full px-4 py-2 text-sm transition-colors hover:text-ivory ${
+                    active === item.href ? 'text-night' : 'text-ivory/75'
+                  }`}
                 >
-                  {item.label}
+                  {active === item.href && (
+                    <motion.span
+                      layoutId="nav-pill"
+                      className="absolute inset-0 rounded-full bg-gold"
+                      transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                    />
+                  )}
+                  <span className="relative">{item.label}</span>
                 </a>
               </li>
             ))}
