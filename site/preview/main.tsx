@@ -20,7 +20,10 @@ const router = createRouter({
   defaultPreloadStaleTime: 0,
 });
 
-createRoot(document.getElementById("root")!).render(
+// L'application est montée directement sur <body>, comme sur le vrai site où elle
+// englobe toute la page. Montée dans un <div>, les fenêtres et listes déroulantes
+// (qui s'affichent dans <body>) feraient tourner React en boucle au premier clic.
+createRoot(document.body).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>,
