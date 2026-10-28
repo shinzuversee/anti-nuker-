@@ -16,7 +16,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        gold: "bg-primary text-primary-foreground shadow-glow transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5",
+        gold: "btn-shine bg-primary text-primary-foreground shadow-glow transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97]",
         quiet:
           "glass text-foreground transition-all duration-300 hover:border-primary/40 hover:-translate-y-0.5",
       },
@@ -27,7 +27,6 @@ const buttonVariants = cva(
         xl: "h-12 rounded-md px-9 text-[0.95rem] tracking-wide",
         icon: "h-11 w-11",
       },
-
     },
     defaultVariants: {
       variant: "default",

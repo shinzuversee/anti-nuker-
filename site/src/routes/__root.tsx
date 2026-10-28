@@ -6,15 +6,18 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  useRouterState,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
+import { MotionConfig, motion } from "framer-motion";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
-
+import { Preloader } from "@/components/motion/Preloader";
+import { introScript } from "@/components/motion/intro";
 
 function NotFoundComponent() {
   return (
@@ -52,8 +55,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           Cette page n'a pas pu se charger
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Un incident est survenu de notre côté. Vous pouvez réessayer ou revenir à
-          l'accueil.
+          Un incident est survenu de notre côté. Vous pouvez réessayer ou revenir à l'accueil.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -99,19 +101,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
     scripts: [
+      { children: introScript },
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Nūr al-Bayān",
-          description:
-            "Études coraniques : articles, cours vidéo et séances d'étude privées.",
+          description: "Études coraniques : articles, cours vidéo et séances d'étude privées.",
         }),
       },
     ],
@@ -124,7 +126,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
@@ -136,19 +138,44 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+// Chaque changement de page fait monter le nouveau contenu en douceur.
+// Le premier affichage n'est pas animé, pour que la page arrive visible depuis le serveur.
+function PageTransition({ children }: { children: ReactNode }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const first = useRef(true);
+  useEffect(() => {
+    first.current = false;
+  }, []);
+
+  return (
+    <motion.div
+      key={pathname}
+      initial={first.current ? false : { opacity: 0, y: 24, filter: "blur(6px)" }}
+      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Header />
-      <main id="content">
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
-      </main>
-      <Footer />
-      <Toaster />
+      <MotionConfig reducedMotion="user">
+        <Preloader />
+        <Header />
+        <main id="content">
+          <PageTransition>
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+          </PageTransition>
+        </main>
+        <Footer />
+        <Toaster />
+      </MotionConfig>
     </QueryClientProvider>
   );
 }
-

@@ -1,9 +1,11 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Menu, X, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
+import { Mishkat } from "@/components/motion/Mishkat";
 
 const nav = [
   { to: "/actus", label: "Actus" },
@@ -15,12 +17,14 @@ const nav = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<null | { id: string }>(null);
   const [authReady, setAuthReady] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -49,38 +53,33 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link
-          to="/"
-          className="group flex items-center gap-3"
-          onClick={() => setOpen(false)}
-        >
-          <span className="grid size-9 place-items-center rounded-full border border-primary/40 text-primary transition-colors group-hover:bg-primary/10">
-            <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
-              <path
-                d="M12 2l2.6 6.6L21 11l-6.4 2.4L12 20l-2.6-6.6L3 11l6.4-2.4z"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.2"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
-          <span className="font-display text-xl leading-none tracking-tight">
-            Nūr al-Bayān
-          </span>
+        <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
+          <Mishkat className="h-9 w-auto text-primary transition-transform duration-500 group-hover:-translate-y-0.5" />
+          <span className="font-display text-xl leading-none tracking-tight">Nūr al-Bayān</span>
         </Link>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-1 md:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              activeProps={{ className: "text-foreground" }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const active = pathname === item.to || pathname.startsWith(item.to + "/");
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="relative rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                activeProps={{ className: "text-foreground" }}
+              >
+                {/* Pastille dorée qui glisse vers la page ouverte */}
+                {active ? (
+                  <motion.span
+                    layoutId="nav-pill"
+                    className="absolute inset-0 rounded-md border border-primary/30 bg-primary/10"
+                    transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                  />
+                ) : null}
+                <span className="relative">{item.label}</span>
+              </Link>
+            );
+          })}
           <Button asChild variant="gold" size="sm" className="ml-3 h-9 px-4">
             <Link to="/appointments">Réserver</Link>
           </Button>
@@ -110,8 +109,19 @@ export function Header() {
         </Button>
       </div>
 
+      <motion.div
+        className="absolute inset-x-0 bottom-0 h-px origin-left bg-primary/70"
+        style={{ scaleX: progress }}
+        aria-hidden="true"
+      />
+
       {open ? (
-        <div className="glass border-t md:hidden">
+        <motion.div
+          className="glass border-t md:hidden"
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25 }}
+        >
           <nav aria-label="Navigation mobile" className="flex flex-col px-5 py-3">
             {nav.map((item) => (
               <Link
@@ -142,7 +152,7 @@ export function Header() {
               {user ? "Mon espace assise" : "Se connecter"}
             </Link>
           </nav>
-        </div>
+        </motion.div>
       ) : null}
     </header>
   );
