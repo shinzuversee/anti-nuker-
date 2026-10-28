@@ -266,7 +266,7 @@ function put(el, s = {}) {
 function life(t, a, da, from, o, dout, to, ein = 'spring', eout = 'inExpo') {
   const ki = E[ein](K(t, a, da)), ko = o == null ? 0 : E[eout](K(t, o, dout));
   const s = {};
-  const keys = new Set([...Object.keys(from), ...Object.keys(to || {})]);
+  const keys = new Set(['o', ...Object.keys(from), ...Object.keys(to || {})]);
   for (const k of keys) {
     const rest = k === 's' ? 1 : k === 'o' ? 1 : 0;
     const v0 = from[k] ?? rest, v1 = (to || {})[k] ?? rest;
