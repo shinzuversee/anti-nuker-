@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { Ornament } from "@/components/motion/Ornament";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NomsSchema } from "@/components/site/NomsSchema";
@@ -16,13 +17,7 @@ import { Objection } from "@/components/site/Objection";
 import { Spectre } from "@/components/site/Spectre";
 import { Chronologie } from "@/components/site/Chronologie";
 
-
-import {
-  findSujetLocation,
-  getSujet,
-  sujetIndex,
-  type SujetBlock,
-} from "@/data/sujets";
+import { findSujetLocation, getSujet, sujetIndex, type SujetBlock } from "@/data/sujets";
 
 export const Route = createFileRoute("/sujet/$slug")({
   loader: ({ params }) => {
@@ -70,7 +65,9 @@ function RichText({ text }: { text: string }) {
   );
 }
 
-const isArabic = (s: string) => /[\u0600-\u06FF]/.test(s.slice(0, 40));
+// Un paragraphe s'écrit de droite à gauche seulement s'il commence par une lettre arabe :
+// un mot arabe cité au début d'une phrase française ne doit pas en inverser le sens.
+const isArabic = (s: string) => /^[^A-Za-zÀ-ÿ\u0600-\u06FF]*[\u0600-\u06FF]/.test(s);
 
 function Block({ block }: { block: SujetBlock }) {
   switch (block.type) {
@@ -136,16 +133,12 @@ function Block({ block }: { block: SujetBlock }) {
             className="w-full rounded-xl border border-border/60"
           />
           {block.caption ? (
-            <figcaption className="mt-3 text-sm text-muted-foreground">
-              {block.caption}
-            </figcaption>
+            <figcaption className="mt-3 text-sm text-muted-foreground">{block.caption}</figcaption>
           ) : null}
         </figure>
       );
     case "audio":
-      return (
-        <AudioPlayer src={block.src} title={block.title} caption={block.caption} />
-      );
+      return <AudioPlayer src={block.src} title={block.title} caption={block.caption} />;
     case "noms-schema":
       return <NomsSchema />;
     case "schema":
@@ -160,11 +153,7 @@ function Block({ block }: { block: SujetBlock }) {
       );
     case "experiment":
       return (
-        <ThoughtExperiment
-          title={block.title}
-          steps={block.steps}
-          conclusion={block.conclusion}
-        />
+        <ThoughtExperiment title={block.title} steps={block.steps} conclusion={block.conclusion} />
       );
     case "lexique":
       return (
@@ -220,13 +209,7 @@ function Block({ block }: { block: SujetBlock }) {
         />
       );
     case "objection":
-      return (
-        <Objection
-          objection={block.objection}
-          reponse={block.reponse}
-          suite={block.suite}
-        />
-      );
+      return <Objection objection={block.objection} reponse={block.reponse} suite={block.suite} />;
     case "spectre":
       return (
         <Spectre
@@ -238,9 +221,7 @@ function Block({ block }: { block: SujetBlock }) {
         />
       );
     case "chronologie":
-      return (
-        <Chronologie title={block.title} events={block.events} caption={block.caption} />
-      );
+      return <Chronologie title={block.title} events={block.events} caption={block.caption} />;
     case "p":
       return (
         <>
@@ -255,8 +236,6 @@ function Block({ block }: { block: SujetBlock }) {
       return null;
   }
 }
-
-
 
 function SujetPage() {
   const { location, sujet } = Route.useLoaderData();
@@ -286,16 +265,18 @@ function SujetPage() {
         </div>
         <h1 className="mt-6 text-4xl leading-[1.12] sm:text-5xl">{entry.title}</h1>
         {entry.arabic ? (
-          <p dir="rtl" lang="ar" className="gold-text mt-4 font-display text-2xl">
+          <p
+            dir="rtl"
+            lang="ar"
+            className="gold-text mt-5 text-left text-4xl leading-[1.6] drop-shadow-[0_2px_14px_color-mix(in_oklab,var(--gold)_25%,transparent)] sm:text-5xl"
+          >
             {entry.arabic}
           </p>
         ) : null}
         {sujet ? (
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            {sujet.intro}
-          </p>
+          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{sujet.intro}</p>
         ) : null}
-        <div className="hairline mt-10 h-px w-full" aria-hidden="true" />
+        <Ornament className="mt-10" />
       </header>
 
       {sujet ? (
@@ -312,9 +293,9 @@ function SujetPage() {
               Ce développement n'est pas encore publié.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Le sujet est inscrit au sommaire ; le texte complet, avec ses versets
-              et ses références, paraîtra ici. Vous pouvez d'ici là poser une
-              question précise sur ce point.
+              Le sujet est inscrit au sommaire ; le texte complet, avec ses versets et ses
+              références, paraîtra ici. Vous pouvez d'ici là poser une question précise sur ce
+              point.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild variant="gold">

@@ -54,6 +54,7 @@ function AboutPage() {
           <div>
             <SectionHeading
               eyebrow="À propos"
+              arabic="عن الكاتب"
               title="Sidi"
               description="Un jeune musulman, citoyen français vivant en France, profondément attaché à la transmission du savoir."
             />

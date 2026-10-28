@@ -56,6 +56,7 @@ function ActusPage() {
     <Section className="pt-36">
       <SectionHeading
         eyebrow="Fil d'actualités"
+        arabic="الأخبار"
         title="Actus"
         description="Les nouvelles de la maison, publiées au fil des jours et classées par hashtags."
       />

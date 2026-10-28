@@ -8,7 +8,7 @@ export function PostCard({ post, featured = false }: { post: Post; featured?: bo
     <TiltCard className="rounded-xl">
       <article
         className={
-          "glass grain group relative flex h-full flex-col rounded-xl p-7 transition-all duration-500 hover:border-primary/30 hover:shadow-glow " +
+          "glass grain gold-edge group relative flex h-full flex-col rounded-xl p-7 transition-all duration-500 hover:border-primary/30 hover:shadow-glow " +
           (featured ? "sm:p-10" : "")
         }
       >

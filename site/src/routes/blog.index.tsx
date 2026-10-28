@@ -51,6 +51,7 @@ function BlogIndex() {
     <Section className="pt-36">
       <SectionHeading
         eyebrow="Écrits"
+        arabic="المقالات"
         title="Articles"
         description="Traitements détaillés des passages difficiles du Coran et des méthodes qui permettent de les lire."
       />

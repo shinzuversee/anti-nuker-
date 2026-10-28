@@ -233,7 +233,7 @@ function Home() {
           ].map((item) => (
             <motion.div key={item.title} variants={rise3d}>
               <TiltCard className="rounded-xl">
-                <div className="glass grain group relative h-full rounded-xl p-8 transition-all duration-500 hover:border-primary/30 hover:shadow-glow">
+                <div className="glass grain gold-edge group relative h-full rounded-xl p-8 transition-all duration-500 hover:border-primary/30 hover:shadow-glow">
                   <div className="relative z-10">
                     <item.icon
                       className="size-6 text-primary transition-transform duration-500 group-hover:-translate-y-1 group-hover:rotate-6"
@@ -263,7 +263,11 @@ function Home() {
         <SectionHeading eyebrow="Témoignages" title="Ce que disent les lecteurs" align="center" />
         <StaggerGrid className="mt-14 grid gap-6 md:grid-cols-3" gap={0.15}>
           {testimonials.map((t) => (
-            <motion.figure key={t.name} variants={rise3d} className="glass grain rounded-xl p-8">
+            <motion.figure
+              key={t.name}
+              variants={rise3d}
+              className="glass grain gold-edge relative rounded-xl p-8"
+            >
               <div className="relative z-10">
                 <Quote className="size-5 text-primary/70" aria-hidden="true" />
                 <blockquote className="mt-5 font-display text-xl leading-relaxed text-sand">

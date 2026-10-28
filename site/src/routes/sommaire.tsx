@@ -1,4 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import { Reveal } from "@/components/motion/Reveal";
+import { Ornament } from "@/components/motion/Ornament";
 import { ArrowUpRight, BookOpen } from "lucide-react";
 import { Section, SectionHeading } from "@/components/site/Section";
 import { SommaireSearch } from "@/components/site/SommaireSearch";
@@ -37,6 +40,7 @@ function Sommaire() {
       <Section className="pt-36 pb-10">
         <SectionHeading
           eyebrow="Sommaire"
+          arabic="الفهرس"
           title="L'index complet"
           description="Tout ce qui est publié ici, classé par thème plutôt que par date. Sept chapitres, divisés en sections, dans l'ordre où un lecteur les parcourrait raisonnablement."
         />
@@ -48,7 +52,6 @@ function Sommaire() {
             [String(sommaire.length), "Chapitres"],
             [String(sommaireEntryCount), "Entrées indexées"],
             [String(posts.length), "Articles en ligne"],
-
           ].map(([value, label]) => (
             <div key={label}>
               <dt className="font-display text-3xl text-sand">{value}</dt>
@@ -63,7 +66,7 @@ function Sommaire() {
       <Section className="py-0">
         <nav
           aria-label="Chapitres"
-          className="glass grain relative rounded-xl p-7 sm:p-9"
+          className="glass grain gold-edge relative rounded-xl p-7 sm:p-9"
         >
           <div className="relative z-10">
             <p className="eyebrow">Sur cette page</p>
@@ -75,9 +78,7 @@ function Sommaire() {
                     href={`#${chapter.id}`}
                     className="group flex items-baseline gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    <span className="font-display text-primary">
-                      {chapter.numeral}
-                    </span>
+                    <span className="font-display text-primary">{chapter.numeral}</span>
                     <span className="flex-1 border-b border-dotted border-border/70 pb-1 group-hover:border-primary/40">
                       {chapter.title}
                     </span>
@@ -94,25 +95,60 @@ function Sommaire() {
 
       {sommaire.map((chapter) => (
         <Section key={chapter.id} id={chapter.id} className="py-16 sm:py-20">
-          <div className="flex flex-wrap items-baseline justify-between gap-4">
-            <div className="max-w-2xl">
-              <p className="eyebrow">Chapitre {chapter.numeral}</p>
-              <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">
-                {chapter.title}
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                {chapter.summary}
-              </p>
+          <Reveal className="flex flex-wrap items-center justify-between gap-6">
+            <div className="flex max-w-2xl items-start gap-6">
+              {/* Médaillon à huit branches avec le numéro du chapitre */}
+              <div className="relative grid size-20 shrink-0 place-items-center text-primary">
+                <svg viewBox="0 0 80 80" className="absolute inset-0 size-full" aria-hidden="true">
+                  {[0, 45].map((r, i) => (
+                    <motion.rect
+                      key={r}
+                      x="16"
+                      y="16"
+                      width="48"
+                      height="48"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      transform={`rotate(${r} 40 40)`}
+                      initial={{ pathLength: 0 }}
+                      whileInView={{ pathLength: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.4, delay: i * 0.2, ease: [0.65, 0, 0.35, 1] }}
+                    />
+                  ))}
+                  <circle
+                    cx="40"
+                    cy="40"
+                    r="17"
+                    fill="var(--background)"
+                    stroke="currentColor"
+                    strokeOpacity="0.35"
+                  />
+                </svg>
+                <span className="relative font-display text-xl">{chapter.numeral}</span>
+              </div>
+              <div>
+                <p className="eyebrow">Chapitre {chapter.numeral}</p>
+                <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">{chapter.title}</h2>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  {chapter.summary}
+                </p>
+              </div>
             </div>
-            <p
+            <motion.p
               dir="rtl"
               lang="ar"
-              className="gold-text font-display text-2xl sm:text-3xl"
+              className="gold-text text-4xl leading-[1.6] sm:text-5xl"
+              initial={{ clipPath: "inset(0 0 0 100%)" }}
+              whileInView={{ clipPath: "inset(0 0 0 0%)" }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 1.4, delay: 0.3, ease: [0.65, 0, 0.35, 1] }}
             >
               {chapter.arabic}
-            </p>
-          </div>
-          <div className="hairline mt-8 h-px w-full" aria-hidden="true" />
+            </motion.p>
+          </Reveal>
+          <Ornament className="mt-8" />
 
           <div className="mt-10 space-y-12">
             {chapter.groups.map((group) => (
@@ -128,9 +164,7 @@ function Sommaire() {
                     const inner = (
                       <>
                         <span className="flex-1">
-                          <span className="block leading-snug text-foreground">
-                            {entry.title}
-                          </span>
+                          <span className="block leading-snug text-foreground">{entry.title}</span>
                           {entry.note ? (
                             <span className="mt-1.5 block text-sm leading-relaxed text-muted-foreground">
                               {entry.note}
@@ -164,7 +198,7 @@ function Sommaire() {
                           <Link
                             to="/blog/$slug"
                             params={{ slug: entry.slug }}
-                            className="group flex items-baseline gap-5 py-4 transition-colors hover:bg-primary/[0.04] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                            className="group relative flex items-baseline gap-5 py-4 transition-all duration-300 before:absolute before:inset-y-3 before:left-0 before:w-0.5 before:scale-y-0 before:rounded-full before:bg-primary before:transition-transform before:duration-300 hover:bg-primary/[0.04] hover:pl-4 hover:before:scale-y-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                           >
                             {inner}
                           </Link>
@@ -172,7 +206,7 @@ function Sommaire() {
                           <Link
                             to="/sujet/$slug"
                             params={{ slug: sujetSlug }}
-                            className="group flex items-baseline gap-5 py-4 transition-colors hover:bg-primary/[0.04] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                            className="group relative flex items-baseline gap-5 py-4 transition-all duration-300 before:absolute before:inset-y-3 before:left-0 before:w-0.5 before:scale-y-0 before:rounded-full before:bg-primary before:transition-transform before:duration-300 hover:bg-primary/[0.04] hover:pl-4 hover:before:scale-y-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                           >
                             {inner}
                           </Link>
@@ -195,15 +229,11 @@ function Sommaire() {
               Vous préférez parcourir par date ?
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-muted-foreground">
-              Le blog liste toutes les publications, de la plus récente à la plus
-              ancienne, avec recherche et filtres par catégorie.
+              Le blog liste toutes les publications, de la plus récente à la plus ancienne, avec
+              recherche et filtres par catégorie.
             </p>
-            <Link
-              to="/blog"
-              className="mt-7 inline-flex items-center gap-1.5 text-sm text-primary"
-            >
+            <Link to="/blog" className="mt-7 inline-flex items-center gap-1.5 text-sm text-primary">
               Aller aux articles <ArrowUpRight className="size-4" />
-
             </Link>
           </div>
         </div>

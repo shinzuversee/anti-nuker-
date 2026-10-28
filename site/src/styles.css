@@ -89,17 +89,10 @@
     oklch(0.985 0.006 85) 55%,
     oklch(0.97 0.01 82) 100%
   );
-  --gradient-gold: linear-gradient(
-    100deg,
-    oklch(0.74 0.1 86),
-    oklch(0.6 0.11 66)
-  );
-  --shadow-soft: 0 1px 0 oklch(1 0 0 / 80%) inset,
-    0 18px 44px -26px oklch(0.2 0.02 258 / 28%);
-  --shadow-glow: 0 0 0 1px oklch(0.68 0.11 80 / 26%),
-    0 24px 56px -28px oklch(0.68 0.11 80 / 40%);
+  --gradient-gold: linear-gradient(100deg, oklch(0.74 0.1 86), oklch(0.6 0.11 66));
+  --shadow-soft: 0 1px 0 oklch(1 0 0 / 80%) inset, 0 18px 44px -26px oklch(0.2 0.02 258 / 28%);
+  --shadow-glow: 0 0 0 1px oklch(0.68 0.11 80 / 26%), 0 24px 56px -28px oklch(0.68 0.11 80 / 40%);
 }
-
 
 @layer base {
   * {
@@ -115,7 +108,10 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-    background-image: var(--gradient-night);
+    /* Motif d'étoiles à huit branches, très discret, par-dessus le dégradé parchemin. */
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cg fill='none' stroke='%23b8923e' stroke-opacity='0.07' stroke-width='0.8'%3E%3Crect x='19' y='19' width='58' height='58'/%3E%3Crect x='19' y='19' width='58' height='58' transform='rotate(45 48 48)'/%3E%3Ccircle cx='48' cy='48' r='13'/%3E%3C/g%3E%3C/svg%3E"),
+      var(--gradient-night);
     background-attachment: fixed;
   }
 
@@ -130,6 +126,12 @@
 
   ::selection {
     background: oklch(0.68 0.11 80 / 22%);
+  }
+
+  /* Barre de défilement fine et dorée. */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in oklab, var(--gold) 55%, transparent) transparent;
   }
 
   /* Tout le texte arabe du site en Amiri, une police de tradition calligraphique. */
@@ -196,7 +198,6 @@
   border: 1px solid color-mix(in oklab, var(--foreground) 7%, transparent);
 }
 
-
 @utility gold-text {
   background: var(--gradient-gold);
   background-size: 200% auto;
@@ -242,12 +243,7 @@
 
 @utility shimmer {
   position: relative;
-  background: linear-gradient(
-    100deg,
-    var(--sand) 0%,
-    var(--gold) 50%,
-    var(--sand) 100%
-  );
+  background: linear-gradient(100deg, var(--sand) 0%, var(--gold) 50%, var(--sand) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -279,6 +275,34 @@
     color-mix(in oklab, var(--gold) 45%, transparent),
     transparent
   );
+}
+
+/* Liseré doré qui se dessine en haut d'une carte au survol. */
+@utility gold-edge {
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 1.25rem;
+    top: 0;
+    height: 2px;
+    z-index: 20;
+    border-radius: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      var(--gold-soft),
+      var(--gold),
+      transparent
+    );
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
 }
 
 /* Reflet lumineux qui traverse un bouton au survol. */
@@ -320,6 +344,19 @@
 }
 
 @utility prose-reading {
+  /* Lettrine dorée, comme dans un manuscrit enluminé. */
+  & > p:first-of-type:not([dir="rtl"])::first-letter {
+    float: left;
+    font-family: var(--font-display);
+    font-size: 4.4rem;
+    line-height: 0.85;
+    padding: 0.35rem 0.6rem 0 0;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   & p {
     margin-bottom: 1.5rem;
     line-height: 1.9;
@@ -409,7 +446,8 @@
 
 /* ---- Scintillement doux pour les noms divins ---- */
 @keyframes sparkle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.55;
     text-shadow: 0 0 0 transparent;
   }
@@ -426,10 +464,20 @@
 
 /* ---- Photo vivante : nuages, oiseaux, vent ---- */
 @keyframes cloud-drift {
-  0% { transform: translateX(-30%) ; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateX(160%); opacity: 0; }
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(160%);
+    opacity: 0;
+  }
 }
 
 @utility cloud-drift {
@@ -437,11 +485,23 @@
 }
 
 @keyframes bird-path {
-  0% { transform: translate(-10%, 0) scale(0.8); opacity: 0; }
-  8% { opacity: 0.9; }
-  50% { transform: translate(55%, -22px) scale(1); }
-  92% { opacity: 0.9; }
-  100% { transform: translate(120%, -46px) scale(0.85); opacity: 0; }
+  0% {
+    transform: translate(-10%, 0) scale(0.8);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(55%, -22px) scale(1);
+  }
+  92% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(120%, -46px) scale(0.85);
+    opacity: 0;
+  }
 }
 
 @utility bird-path {
@@ -449,8 +509,13 @@
 }
 
 @keyframes bird-wing {
-  0%, 100% { transform: scaleY(1); }
-  50% { transform: scaleY(0.35); }
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.35);
+  }
 }
 
 .bird-wing {
@@ -459,8 +524,13 @@
 }
 
 @keyframes breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.025); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
 }
 
 @utility animate-breathe {
@@ -468,10 +538,20 @@
 }
 
 @keyframes wind-sweep {
-  0% { transform: translateX(-60%) skewX(-8deg); opacity: 0; }
-  35% { opacity: 0.55; }
-  70% { opacity: 0.2; }
-  100% { transform: translateX(120%) skewX(-8deg); opacity: 0; }
+  0% {
+    transform: translateX(-60%) skewX(-8deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.55;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(120%) skewX(-8deg);
+    opacity: 0;
+  }
 }
 
 @utility wind-sweep {
@@ -520,7 +600,6 @@
   animation-iteration-count: infinite;
   filter: drop-shadow(-10px 8px 16px rgba(0, 0, 0, 0.22));
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   .quran-page,

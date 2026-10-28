@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/motion/Reveal";
+import { Ornament } from "@/components/motion/Ornament";
 
 export function Section({
   children,
@@ -23,15 +24,34 @@ export function SectionHeading({
   eyebrow,
   title,
   description,
+  arabic,
   align = "left",
 }: {
   eyebrow: string;
   title: string;
+  /** Mot arabe affiché en grand, en or, au-dessus du titre (en-têtes de page). */
+  arabic?: string;
   description?: ReactNode;
   align?: "left" | "center";
 }) {
   return (
     <Reveal className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
+      {arabic ? (
+        // Le mot s'écrit de droite à gauche, comme le trace un calame.
+        <motion.p
+          lang="ar"
+          dir="rtl"
+          className={cn(
+            "gold-text mb-4 text-6xl leading-[1.5] drop-shadow-[0_2px_18px_color-mix(in_oklab,var(--gold)_30%,transparent)] sm:text-7xl",
+            align === "left" && "text-left",
+          )}
+          initial={{ clipPath: "inset(0 0 0 100%)" }}
+          animate={{ clipPath: "inset(0 0 0 0%)" }}
+          transition={{ duration: 1.4, delay: 0.2, ease: [0.65, 0, 0.35, 1] }}
+        >
+          {arabic}
+        </motion.p>
+      ) : null}
       <motion.p
         className="eyebrow"
         initial={{ opacity: 0, letterSpacing: "0.5em" }}
@@ -41,22 +61,15 @@ export function SectionHeading({
       >
         {eyebrow}
       </motion.p>
-      <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">{title}</h2>
+      {arabic ? (
+        <h1 className="mt-4 text-4xl leading-tight sm:text-5xl">{title}</h1>
+      ) : (
+        <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">{title}</h2>
+      )}
       {description ? (
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">{description}</p>
       ) : null}
-      {/* Le filet doré se trace depuis le début du titre */}
-      <motion.div
-        className={cn(
-          "hairline mt-8 h-px w-28",
-          align === "center" ? "mx-auto origin-center" : "origin-left",
-        )}
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        aria-hidden="true"
-      />
+      <Ornament className="mt-8" align={align} />
     </Reveal>
   );
 }

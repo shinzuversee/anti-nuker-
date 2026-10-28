@@ -9,7 +9,7 @@ export function VideoCard({ video }: { video: Video }) {
 
   return (
     <TiltCard className="rounded-xl" max={5}>
-      <article className="glass grain group h-full overflow-hidden rounded-xl transition-all duration-500 hover:border-primary/30 hover:shadow-glow">
+      <article className="glass grain gold-edge group relative h-full overflow-hidden rounded-xl transition-all duration-500 hover:border-primary/30 hover:shadow-glow">
         <div className="relative z-10 aspect-video w-full overflow-hidden bg-ink">
           {playing ? (
             <iframe

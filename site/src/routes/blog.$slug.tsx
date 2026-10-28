@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { Ornament } from "@/components/motion/Ornament";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { allPosts, type Post } from "@/data/content";
 import { Button } from "@/components/ui/button";
@@ -75,10 +76,8 @@ function PostPage() {
           <span>{post.readingTime} de lecture</span>
         </div>
         <h1 className="mt-6 text-4xl leading-[1.12] sm:text-5xl">{post.title}</h1>
-        <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-          {post.excerpt}
-        </p>
-        <div className="hairline mt-10 h-px w-full" aria-hidden="true" />
+        <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{post.excerpt}</p>
+        <Ornament className="mt-10" />
       </header>
 
       <div className="prose-reading mt-10 text-[1.05rem]">
@@ -104,7 +103,8 @@ function PostPage() {
                 </div>
               </figure>
             );
-          const isArabic = /[\u0600-\u06FF]/.test(block.text);
+          // De droite à gauche seulement si le paragraphe commence par une lettre arabe.
+          const isArabic = /^[^A-Za-zÀ-ÿ\u0600-\u06FF]*[\u0600-\u06FF]/.test(block.text);
           if (block.type === "h2") return <h2 key={i}>{block.text}</h2>;
           if (block.type === "quote")
             return (
@@ -129,7 +129,6 @@ function PostPage() {
               <RichText text={autoEmphasize(block.text)} />
             </p>
           );
-
         })}
       </div>
 

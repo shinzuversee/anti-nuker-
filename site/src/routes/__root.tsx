@@ -18,6 +18,7 @@ import { Footer } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { Preloader } from "@/components/motion/Preloader";
 import { CursorGlow } from "@/components/motion/CursorGlow";
+import { PageBackdrop } from "@/components/motion/PageBackdrop";
 import { introScript } from "@/components/motion/intro";
 
 function NotFoundComponent() {
@@ -169,7 +170,8 @@ function RootComponent() {
         <Preloader />
         <CursorGlow />
         <Header />
-        <main id="content">
+        <main id="content" className="relative isolate">
+          <PageBackdrop />
           <PageTransition>
             {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
             <Outlet />

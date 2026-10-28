@@ -170,6 +170,7 @@ function AppointmentsPage() {
       <Section className="pt-36 pb-10">
         <SectionHeading
           eyebrow="Rendez-vous"
+          arabic="المجالسة"
           title="S'asseoir ensemble"
           description="Les séances privées se tiennent en visioconférence. Choisissez le format qui convient, puis proposez un créneau."
         />

@@ -99,6 +99,7 @@ function QAPage() {
       <Section className="pt-36 pb-10">
         <SectionHeading
           eyebrow="Questions & réponses"
+          arabic="الأسئلة"
           title="Posez votre question"
           description="Aucune question n'est trop élémentaire et aucune n'est interdite. Les réponses arrivent par e-mail ; certaines deviennent des articles ou des cours."
         />

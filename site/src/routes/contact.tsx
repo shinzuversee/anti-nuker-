@@ -75,6 +75,7 @@ function ContactPage() {
     <Section className="pt-36">
       <SectionHeading
         eyebrow="Contact"
+        arabic="التواصل"
         title="Prendre contact"
         description="Pour les invitations à intervenir, les collaborations, les corrections, ou tout ce qui n'entre pas dans les autres formulaires."
       />
@@ -104,9 +105,7 @@ function ContactPage() {
             <div className="space-y-2">
               <Label htmlFor="c-subject">Objet</Label>
               <Input id="c-subject" name="subject" maxLength={150} className="h-11 bg-surface/50" />
-              {errors.subject ? (
-                <p className="text-xs text-destructive">{errors.subject}</p>
-              ) : null}
+              {errors.subject ? <p className="text-xs text-destructive">{errors.subject}</p> : null}
             </div>
 
             <div className="space-y-2">
@@ -118,9 +117,7 @@ function ContactPage() {
                 maxLength={2000}
                 className="resize-none bg-surface/50"
               />
-              {errors.message ? (
-                <p className="text-xs text-destructive">{errors.message}</p>
-              ) : null}
+              {errors.message ? <p className="text-xs text-destructive">{errors.message}</p> : null}
             </div>
 
             <Button type="submit" variant="gold" size="lg" disabled={submitting}>
@@ -151,9 +148,7 @@ function ContactPage() {
               <div className="relative z-10">
                 <item.icon className="size-5 text-primary" aria-hidden="true" />
                 <h2 className="mt-4 text-xl">{item.title}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {item.body}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
               </div>
             </div>
           ))}

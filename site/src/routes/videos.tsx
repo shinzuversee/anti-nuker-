@@ -42,15 +42,12 @@ function VideosPage() {
       <div className="flex flex-wrap items-end justify-between gap-6">
         <SectionHeading
           eyebrow="Vidéothèque"
+          arabic="الدروس المرئية"
           title="Les cours à l'écran"
           description="Chaque cours parcourt les sources face caméra. Les playlists les regroupent par thème."
         />
         <Button asChild variant="quiet">
-          <a
-            href="https://www.youtube.com/@SidiLeMaliki"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://www.youtube.com/@SidiLeMaliki" target="_blank" rel="noreferrer">
             <Youtube /> Voir la chaîne
           </a>
         </Button>
