@@ -5,7 +5,14 @@ export const ease = [0.22, 1, 0.36, 1] as const;
 
 // Entrée en perspective : l'élément se redresse en arrivant à l'écran.
 export const rise3d = {
-  hidden: { opacity: 0, y: 48, rotateX: 22, transformPerspective: 1200 },
+  hidden: {
+    opacity: 0,
+    y: 70,
+    rotateX: 32,
+    scale: 0.95,
+
+    transformPerspective: 1200,
+  },
   show: {
     opacity: 1,
     y: 0,
@@ -23,10 +30,16 @@ export const stagger = (delay = 0.1) => ({
 export function Reveal({ delay = 0, ...props }: HTMLMotionProps<"div"> & { delay?: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 32, rotateX: 14, transformPerspective: 1200 }}
-      whileInView={{ opacity: 1, y: 0, rotateX: 0, transformPerspective: 1200 }}
+      initial={{ opacity: 0, y: 48, rotateX: 20, transformPerspective: 1200 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        rotateX: 0,
+
+        transformPerspective: 1200,
+      }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.9, ease, delay }}
+      transition={{ duration: 1, ease, delay }}
       {...props}
     />
   );

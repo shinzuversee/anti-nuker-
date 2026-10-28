@@ -1,6 +1,13 @@
 import { useEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
-import { motion, useMotionValue, useSpring, useTransform, type MotionValue } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useScroll,
+  useSpring,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
 
 // Décor du haut des pages intérieures, dans l'esprit de l'accueil mais sur fond clair :
 // lueur dorée, motif géométrique qui s'efface vers le bas, arc qui se trace,
@@ -18,28 +25,43 @@ const letters = [
   { l: "ك", x: "48%", y: "30%", size: 30, depth: 12 },
 ];
 
+// Positions fixes pour que le décor soit identique à chaque visite.
+const dust = Array.from({ length: 22 }, (_, i) => ({
+  x: `${(i * 37) % 100}%`,
+  y: `${40 + ((i * 53) % 55)}%`,
+  size: 2 + (i % 3),
+  duration: 6 + (i % 5),
+  delay: (i * 0.7) % 6,
+}));
+
 const ARCH = "M10 400 V180 C10 95 120 45 200 6 C280 45 390 95 390 180 V400";
 
 function Letter({
   item,
   mx,
   my,
+  sy,
   i,
 }: {
   item: (typeof letters)[number];
   mx: MotionValue<number>;
   my: MotionValue<number>;
+  sy: MotionValue<number>;
   i: number;
 }) {
   const x = useTransform(mx, (v) => -v * item.depth);
-  const y = useTransform(my, (v) => -v * item.depth);
+  // Souris et défilement : chaque lettre bouge selon sa profondeur, ce qui crée le relief.
+  const y = useTransform(
+    [my, sy],
+    ([m, s]: number[]) => -(m ?? 0) * item.depth - (s ?? 0) * item.depth * 0.012,
+  );
   return (
     <motion.span
       lang="ar"
       className="absolute leading-none text-primary"
       style={{ left: item.x, top: item.y, x, y, fontSize: item.size }}
       initial={{ opacity: 0, scale: 0.6 }}
-      animate={{ opacity: 0.22, scale: 1 }}
+      animate={{ opacity: 0.3, scale: 1 }}
       transition={{ delay: 0.2 + i * 0.07, duration: 1 }}
     >
       <motion.span
@@ -59,6 +81,7 @@ export function PageBackdrop() {
   const rawY = useMotionValue(0);
   const mx = useSpring(rawX, { stiffness: 60, damping: 18 });
   const my = useSpring(rawY, { stiffness: 60, damping: 18 });
+  const { scrollY } = useScroll();
 
   useEffect(() => {
     const onMove = (e: PointerEvent) => {
@@ -132,8 +155,18 @@ export function PageBackdrop() {
           transition={{ delay: 1.8 }}
         />
       </svg>
+      {/* Poussière d'or qui monte lentement */}
+      {dust.map((d, i) => (
+        <motion.span
+          key={i}
+          className="absolute rounded-full bg-primary"
+          style={{ left: d.x, top: d.y, width: d.size, height: d.size }}
+          animate={{ y: [0, -80, -160], opacity: [0, 0.7, 0] }}
+          transition={{ duration: d.duration, delay: d.delay, repeat: Infinity, ease: "easeOut" }}
+        />
+      ))}
       {letters.map((item, i) => (
-        <Letter key={item.l + i} item={item} mx={mx} my={my} i={i} />
+        <Letter key={item.l + i} item={item} mx={mx} my={my} sy={scrollY} i={i} />
       ))}
     </div>
   );

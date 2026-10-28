@@ -19,6 +19,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { Preloader } from "@/components/motion/Preloader";
 import { CursorGlow } from "@/components/motion/CursorGlow";
 import { PageBackdrop } from "@/components/motion/PageBackdrop";
+import { RouteCurtain } from "@/components/motion/RouteCurtain";
+import { Sparkles } from "@/components/motion/Sparkles";
 import { introScript } from "@/components/motion/intro";
 
 function NotFoundComponent() {
@@ -140,7 +142,7 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
-// Chaque changement de page fait monter le nouveau contenu en douceur.
+// Chaque changement de page fait monter le nouveau contenu quand le rideau se lève.
 // Le premier affichage n'est pas animé, pour que la page arrive visible depuis le serveur.
 function PageTransition({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -152,9 +154,9 @@ function PageTransition({ children }: { children: ReactNode }) {
   return (
     <motion.div
       key={pathname}
-      initial={first.current ? false : { opacity: 0, y: 24, filter: "blur(6px)" }}
-      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      initial={first.current ? false : { opacity: 0, y: 70, scale: 0.97 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.9, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
@@ -169,6 +171,8 @@ function RootComponent() {
       <MotionConfig reducedMotion="user">
         <Preloader />
         <CursorGlow />
+        <Sparkles />
+        <RouteCurtain />
         <Header />
         <main id="content" className="relative isolate">
           <PageBackdrop />
