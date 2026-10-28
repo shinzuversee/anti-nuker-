@@ -1,31 +1,29 @@
-# Nour El Bayan — site web
+# Welcome to your Lovable project
 
-Site vitrine de Nour El Bayan, construit avec React, Vite, TypeScript, Tailwind CSS et framer-motion.
+This project was built with [Lovable](https://lovable.dev).
 
-## Lancer le site
+## Build with Lovable
 
-```bash
-cd site
-npm install
-npm run dev      # site en local sur http://localhost:5173
-npm run build    # version de production dans dist/
+Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
+- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
+npm run dev
 ```
 
-## Modifier le contenu
+## Built with
 
-Tous les textes (titres, parcours, rappels, FAQ, liens, e-mail) sont dans **`src/content.ts`**.
-Change-les à cet endroit : aucun composant n'a besoin d'être modifié.
-
-À remplacer avant la mise en ligne :
-- `site.email` et `site.socials` (TikTok, Instagram, YouTube) ;
-- les liens `href: '#'` des rappels vers tes vidéos.
-
-## Structure
-
-- `src/components/` : une section du site par fichier (Hero, Verse, Mission, Programs, Method, Reminders, Quote, Faq, FinalCta, Footer).
-- `src/index.css` : couleurs et polices du thème (`@theme`).
-- `public/favicon.svg` : icône de l'onglet.
-
-## Mise en ligne
-
-Le dossier est prêt pour Vercel, Netlify ou Cloudflare Pages : dossier racine `site`, commande `npm run build`, dossier publié `dist`.
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS

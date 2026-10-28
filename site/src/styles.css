@@ -1,0 +1,488 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system: "Nur" — scholarly, premium, dark editorial.
+ * Deep navy / charcoal grounds, warm gold accents, parchment off-white text.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-sand: var(--sand);
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --background: oklch(0.99 0.004 85);
+  --foreground: oklch(0.19 0.008 258);
+  --ink: oklch(0.16 0.01 258);
+  --surface: oklch(1 0 0);
+  --surface-2: oklch(0.97 0.006 85);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.19 0.008 258);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.19 0.008 258);
+
+  --primary: oklch(0.68 0.11 80);
+  --primary-foreground: oklch(0.99 0.004 85);
+  --gold: oklch(0.68 0.11 80);
+  --gold-soft: oklch(0.8 0.08 84);
+  --sand: oklch(0.26 0.012 258);
+
+  --secondary: oklch(0.96 0.006 85);
+  --secondary-foreground: oklch(0.22 0.008 258);
+  --muted: oklch(0.96 0.006 85);
+  --muted-foreground: oklch(0.48 0.01 258);
+  --accent: oklch(0.95 0.014 85);
+  --accent-foreground: oklch(0.22 0.008 258);
+  --destructive: oklch(0.58 0.19 25);
+  --destructive-foreground: oklch(0.99 0.004 85);
+
+  --border: oklch(0.2 0.01 258 / 12%);
+  --input: oklch(0.2 0.01 258 / 18%);
+  --ring: oklch(0.68 0.11 80 / 45%);
+
+  --gradient-night: linear-gradient(
+    170deg,
+    oklch(1 0 0) 0%,
+    oklch(0.985 0.006 85) 55%,
+    oklch(0.97 0.01 82) 100%
+  );
+  --gradient-gold: linear-gradient(
+    100deg,
+    oklch(0.74 0.1 86),
+    oklch(0.6 0.11 66)
+  );
+  --shadow-soft: 0 1px 0 oklch(1 0 0 / 80%) inset,
+    0 18px 44px -26px oklch(0.2 0.02 258 / 28%);
+  --shadow-glow: 0 0 0 1px oklch(0.68 0.11 80 / 26%),
+    0 24px 56px -28px oklch(0.68 0.11 80 / 40%);
+}
+
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background-image: var(--gradient-night);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: oklch(0.68 0.11 80 / 22%);
+  }
+
+  a,
+  button {
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease,
+      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+/* Subtle film grain overlay for tactile depth */
+@utility grain {
+  position: relative;
+  isolation: isolate;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.16;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+}
+
+@utility glass {
+  background: color-mix(in oklab, var(--surface) 78%, transparent);
+  backdrop-filter: blur(18px) saturate(130%);
+  border: 1px solid color-mix(in oklab, var(--foreground) 9%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility glass-soft {
+  background: color-mix(in oklab, var(--surface) 72%, transparent);
+  backdrop-filter: blur(24px) saturate(120%);
+  border: 1px solid color-mix(in oklab, var(--foreground) 7%, transparent);
+}
+
+
+@utility gold-text {
+  background: var(--gradient-gold);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 7s ease-in-out infinite;
+}
+
+@utility gold-wave {
+  background: linear-gradient(
+    110deg,
+    oklch(0.6 0.11 66) 0%,
+    oklch(0.78 0.12 85) 25%,
+    oklch(0.6 0.11 66) 50%,
+    oklch(0.78 0.12 85) 75%,
+    oklch(0.6 0.11 66) 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  animation: gold-wave 4s ease-in-out infinite;
+}
+
+@utility emerald-wave {
+  background: linear-gradient(
+    110deg,
+    oklch(0.5 0.12 158) 0%,
+    oklch(0.68 0.15 152) 25%,
+    oklch(0.5 0.12 158) 50%,
+    oklch(0.68 0.15 152) 75%,
+    oklch(0.5 0.12 158) 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  animation: gold-wave 4.5s ease-in-out infinite;
+}
+
+@utility shimmer {
+  position: relative;
+  background: linear-gradient(
+    100deg,
+    var(--sand) 0%,
+    var(--gold) 50%,
+    var(--sand) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+@utility france-text {
+  background: linear-gradient(
+    90deg,
+    oklch(0.55 0.14 255) 0%,
+    oklch(0.55 0.14 255) 33%,
+    oklch(0.99 0.004 85) 33%,
+    oklch(0.99 0.004 85) 66%,
+    oklch(0.58 0.19 25) 66%,
+    oklch(0.58 0.19 25) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  text-shadow: 0 1px 2px oklch(0.2 0.01 258 / 25%);
+}
+
+@utility hairline {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--gold) 45%, transparent),
+    transparent
+  );
+}
+
+@utility shadow-elegant {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+@utility prose-reading {
+  & p {
+    margin-bottom: 1.5rem;
+    line-height: 1.9;
+    color: color-mix(in oklab, var(--foreground) 86%, transparent);
+  }
+
+  & h2 {
+    font-size: 1.9rem;
+    margin: 2.75rem 0 1rem;
+  }
+
+  & h3 {
+    font-size: 1.4rem;
+    margin: 2rem 0 0.75rem;
+  }
+
+  & blockquote {
+    border-left: 2px solid var(--gold);
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    margin: 2rem 0;
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    line-height: 1.75;
+    color: var(--sand);
+  }
+
+  & blockquote p[dir="rtl"] {
+    font-size: 1.05rem;
+    line-height: 2.1;
+    text-align: right;
+  }
+
+  & ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & li {
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+    opacity: 0.92;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    background-position: -200% center;
+    opacity: 0.92;
+  }
+}
+
+@keyframes gold-wave {
+  0% {
+    background-position: 200% center;
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.15);
+  }
+  100% {
+    background-position: -200% center;
+    filter: brightness(1);
+  }
+}
+
+/* ---- Scintillement doux pour les noms divins ---- */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.55;
+    text-shadow: 0 0 0 transparent;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 10px color-mix(in oklab, var(--gold) 55%, transparent);
+  }
+}
+
+@utility divine-sparkle {
+  animation: sparkle 3.5s ease-in-out infinite;
+  will-change: opacity, text-shadow;
+}
+
+/* ---- Photo vivante : nuages, oiseaux, vent ---- */
+@keyframes cloud-drift {
+  0% { transform: translateX(-30%) ; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(160%); opacity: 0; }
+}
+
+@utility cloud-drift {
+  animation: cloud-drift 40s linear infinite;
+}
+
+@keyframes bird-path {
+  0% { transform: translate(-10%, 0) scale(0.8); opacity: 0; }
+  8% { opacity: 0.9; }
+  50% { transform: translate(55%, -22px) scale(1); }
+  92% { opacity: 0.9; }
+  100% { transform: translate(120%, -46px) scale(0.85); opacity: 0; }
+}
+
+@utility bird-path {
+  animation: bird-path 30s linear infinite;
+}
+
+@keyframes bird-wing {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.35); }
+}
+
+.bird-wing {
+  transform-origin: center;
+  animation: bird-wing 0.42s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+
+@utility animate-breathe {
+  animation: breathe 18s ease-in-out infinite;
+}
+
+@keyframes wind-sweep {
+  0% { transform: translateX(-60%) skewX(-8deg); opacity: 0; }
+  35% { opacity: 0.55; }
+  70% { opacity: 0.2; }
+  100% { transform: translateX(120%) skewX(-8deg); opacity: 0; }
+}
+
+@utility wind-sweep {
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    color-mix(in oklab, var(--gold) 22%, transparent) 45%,
+    transparent 100%
+  );
+  animation: wind-sweep 11s ease-in-out infinite;
+}
+
+@keyframes quran-page-turn {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+    z-index: 10;
+  }
+  25% {
+    transform: rotateY(0deg);
+    opacity: 1;
+    z-index: 10;
+  }
+  45% {
+    transform: rotateY(-172deg);
+    opacity: 1;
+    z-index: 10;
+  }
+  46% {
+    transform: rotateY(-172deg);
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    transform: rotateY(-172deg);
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+@utility quran-page {
+  transform-origin: left center;
+  backface-visibility: hidden;
+  animation-name: quran-page-turn;
+  animation-timing-function: cubic-bezier(0.45, 0.05, 0.4, 1);
+  animation-iteration-count: infinite;
+  filter: drop-shadow(-10px 8px 16px rgba(0, 0, 0, 0.22));
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .quran-page,
+  .cloud-drift,
+  .bird-path,
+  .bird-wing,
+  .animate-breathe,
+  .wind-sweep {
+    animation: none !important;
+  }
+}
