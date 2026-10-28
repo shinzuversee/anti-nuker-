@@ -75,7 +75,8 @@ function Field({ still }: { still: boolean }) {
         }
       });
       const nearest = items[best];
-      if (nearest && best > i && bestD < 5.5) pts.push(...a.pos.toArray(), ...nearest.pos.toArray());
+      if (nearest && best > i && bestD < 5.5)
+        pts.push(...a.pos.toArray(), ...nearest.pos.toArray());
     });
     const lines = new THREE.BufferGeometry();
     lines.setAttribute("position", new THREE.Float32BufferAttribute(pts, 3));

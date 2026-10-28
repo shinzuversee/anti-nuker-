@@ -11,5 +11,5 @@ export function introPending() {
 
 // Délai à laisser aux animations de l'accueil pour qu'elles démarrent après l'ouverture.
 export function introDelay() {
-  return introPending() ? 2.6 : 0.2;
+  return introPending() ? 2.9 : 0.2;
 }

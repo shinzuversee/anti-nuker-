@@ -17,6 +17,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { Preloader } from "@/components/motion/Preloader";
+import { CursorGlow } from "@/components/motion/CursorGlow";
 import { introScript } from "@/components/motion/intro";
 
 function NotFoundComponent() {
@@ -166,6 +167,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <MotionConfig reducedMotion="user">
         <Preloader />
+        <CursorGlow />
         <Header />
         <main id="content">
           <PageTransition>

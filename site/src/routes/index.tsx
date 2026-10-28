@@ -20,6 +20,7 @@ import { VerseInterlude } from "@/components/motion/VerseInterlude";
 import { LightVerse } from "@/components/motion/LightVerse";
 import { HeroConstellation } from "@/components/motion/HeroConstellation";
 import { Mishkat } from "@/components/motion/Mishkat";
+import { HeroOrnaments } from "@/components/motion/HeroOrnaments";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -59,6 +60,7 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative isolate overflow-hidden border-b border-border/60">
+        <HeroOrnaments />
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pt-32 pb-16 sm:px-8 lg:min-h-[760px] lg:grid-cols-[1.04fr_0.96fr] lg:gap-16 lg:pt-28 lg:pb-12">
           <motion.div
             initial="hidden"
