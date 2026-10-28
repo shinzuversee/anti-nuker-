@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Nūr al-Bayān — Présentation</title>
+<style>
+@font-face { font-family: Amiri; font-weight: 400; src: url(../../fonts/amiri-normal-arabic-400.woff2); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200E; }
+@font-face { font-family: Amiri; font-weight: 700; src: url(../../fonts/amiri-normal-arabic-700.woff2); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200E; }
+@font-face { font-family: Corm; font-weight: 300 700; src: url(../../fonts/cormorant-normal-latin-400.woff2); unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: Corm; font-weight: 300 700; src: url(../../fonts/cormorant-normal-latin-ext-400.woff2); unicode-range: U+0100-02AF, U+1E00-1EFF; }
+@font-face { font-family: Corm; font-style: italic; src: url(../../fonts/cormorant-italic-latin-400.woff2); unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: Corm; font-style: italic; src: url(../../fonts/cormorant-italic-latin-ext-400.woff2); unicode-range: U+0100-02AF, U+1E00-1EFF; }
+:root {
+  --gold: oklch(68% .11 80); --gold-soft: oklch(80% .08 84); --gold-hi: oklch(90% .07 88);
+  --ink: oklch(16% .01 258); --sand: oklch(26% .012 258);
+  --grad: linear-gradient(100deg, oklch(74% .1 86), oklch(86% .09 88) 40%, oklch(66% .12 76) 70%, oklch(80% .1 84));
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+body { font-family: Inter, sans-serif; color: #f3efe6; }
+#bg, #grain { position: absolute; inset: 0; }
+#grain { opacity: .07; mix-blend-mode: overlay; }
+#cam { position: absolute; inset: 0; perspective: 1700px; perspective-origin: 50% 46%; }
+#world { position: absolute; inset: 0; transform-style: preserve-3d; }
+.sc { position: absolute; inset: 0; transform-style: preserve-3d; display: none; }
+.abs { position: absolute; }
+.c { position: absolute; left: 50%; top: 50%; transform-style: preserve-3d; }
+.c > * { transform: translate(-50%, -50%); }
+.ar { font-family: Amiri, serif; direction: rtl; }
+.serif { font-family: Corm, serif; }
+.goldtxt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cap { font: 500 15px Inter; letter-spacing: .42em; text-transform: uppercase; color: var(--gold-soft); }
+#flash { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 50% 50%, #fffaf0 0%, oklch(88% .08 86) 30%, oklch(70% .11 80 / .6) 60%, transparent 85%); opacity: 0; }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(0,0,0,.65) 100%); pointer-events: none; }
+#fade { position: absolute; inset: 0; background: #000; opacity: 0; }
+
+/* ---------- S1 anneaux ---------- */
+.ring { position: absolute; left: 960px; top: 540px; border-radius: 50%; border: 3px solid var(--gold-soft); box-shadow: 0 0 40px oklch(80% .08 84 / .35), inset 0 0 40px oklch(80% .08 84 / .25); }
+#dot { position: absolute; left: 960px; top: 540px; width: 22px; height: 22px; margin: -11px; border-radius: 50%; background: var(--gold-hi); box-shadow: 0 0 30px 8px oklch(80% .1 84 / .8), 0 0 120px 30px oklch(70% .11 80 / .5); }
+svg .draw { fill: none; stroke: var(--gold); stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- S3 champ de question ---------- */
+#qwrap { width: 1080px; }
+#qlabel { font: 500 22px Inter; color: #cfc8b8; margin: 0 0 18px 28px; display: flex; gap: 12px; align-items: center; }
+#qlabel b { color: #fff; font-weight: 600; }
+#qcard { position: relative; height: 210px; border-radius: 34px; background: linear-gradient(180deg, #1d1f24, #141519); border: 1px solid oklch(68% .11 80 / .28); box-shadow: 0 40px 120px rgba(0,0,0,.7), 0 0 80px oklch(68% .11 80 / .12), inset 0 1px 0 rgba(255,255,255,.06); }
+#qtext { position: absolute; left: 44px; top: 42px; right: 60px; font: 400 40px Inter; color: #f5f1e8; white-space: nowrap; }
+#caret { display: inline-block; width: 3px; height: 44px; background: var(--gold-hi); vertical-align: -8px; margin-left: 3px; }
+#qplus { position: absolute; left: 36px; bottom: 30px; width: 52px; height: 52px; border-radius: 50%; border: 1px solid #3a3c42; color: #bdb6a6; font: 300 34px/48px Inter; text-align: center; }
+.chip { position: absolute; bottom: 32px; height: 48px; padding: 0 22px; border-radius: 24px; background: #26282e; border: 1px solid #3a3c42; font: 500 20px/46px Inter; color: #d9d2c2; white-space: nowrap; }
+.chip b { color: var(--gold-hi); font-weight: 600; }
+#send { position: absolute; width: 68px; height: 68px; border-radius: 20px; background: var(--grad); box-shadow: 0 0 40px oklch(74% .1 86 / .55); display: grid; place-items: center; }
+#send svg { width: 30px; height: 30px; }
+#spin { position: absolute; left: 960px; top: 540px; width: 120px; height: 120px; margin: -60px; }
+
+/* ---------- S4 cartes article ---------- */
+.card { position: absolute; width: 620px; height: 400px; margin: -200px -310px; padding: 46px 50px; border-radius: 22px; background: linear-gradient(160deg, #1b1d22, #121317 70%); border: 1px solid oklch(68% .11 80 / .3); box-shadow: 0 50px 120px rgba(0,0,0,.75), inset 0 1px 0 rgba(255,255,255,.07); backface-visibility: hidden; }
+.card .meta { font: 500 17px Inter; color: #9d968a; display: flex; gap: 12px; }
+.card .meta b { color: var(--gold-soft); font-weight: 600; }
+.card h3 { font: 600 44px/1.08 Corm; color: #f6f1e6; margin: 22px 0 18px; }
+.card p { font: 400 19px/1.55 Inter; color: #b2ab9e; }
+.card .lnk { position: absolute; left: 50px; bottom: 38px; font: 600 18px Inter; color: var(--gold-soft); }
+.card .shine { position: absolute; inset: 0; border-radius: 22px; background: linear-gradient(115deg, transparent 35%, rgba(255,240,210,.14) 50%, transparent 65%); background-size: 300% 100%; }
+#count4 { position: absolute; left: 140px; top: 120px; }
+.bignum { font: 600 120px/1 Corm; letter-spacing: -.01em; }
+.biglab { font: 500 22px Inter; color: #b7b0a2; letter-spacing: .04em; margin-top: 8px; }
+
+/* ---------- S5 navigateur ---------- */
+#win { position: absolute; left: 960px; top: 540px; width: 1280px; height: 800px; margin: -400px -640px; border-radius: 18px; overflow: hidden; background: #0e0f12; border: 1px solid #34363c; box-shadow: 0 80px 160px rgba(0,0,0,.85), 0 0 120px oklch(68% .11 80 / .15); transform-style: preserve-3d; }
+#bar { height: 46px; background: #1b1c20; border-bottom: 1px solid #2a2c31; display: flex; align-items: center; padding: 0 18px; gap: 9px; }
+#bar i { width: 13px; height: 13px; border-radius: 50%; display: block; }
+#url { margin-left: 120px; flex: 0 0 560px; height: 28px; border-radius: 8px; background: #111215; font: 500 14px/28px Inter; color: #9a958b; text-align: center; }
+#view { position: absolute; top: 46px; left: 0; right: 0; bottom: 0; overflow: hidden; }
+#shot { position: absolute; left: 0; top: 0; width: 1280px; }
+#refl { position: absolute; left: 960px; top: 1000px; width: 1280px; height: 260px; margin-left: -640px; background: radial-gradient(ellipse at 50% 0, oklch(68% .11 80 / .22), transparent 70%); filter: blur(20px); }
+.tag { position: absolute; height: 64px; padding: 0 30px 0 22px; border-radius: 32px; background: rgba(20,21,25,.88); border: 1px solid oklch(68% .11 80 / .45); box-shadow: 0 20px 50px rgba(0,0,0,.6), 0 0 30px oklch(68% .11 80 / .2); font: 600 26px/62px Inter; color: #f3eee3; white-space: nowrap; display: flex; gap: 14px; align-items: center; }
+.tag .d { width: 12px; height: 12px; transform: rotate(45deg); background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+
+/* ---------- S6 chiffres ---------- */
+.stat { position: absolute; top: 540px; width: 420px; margin-left: -210px; text-align: center; }
+.stat .n { font: 600 150px/1 Corm; }
+.stat .l { font: 500 22px Inter; color: #c2bbad; margin-top: 18px; letter-spacing: .05em; }
+.stat .ln { height: 2px; width: 220px; margin: 26px auto 0; background: linear-gradient(90deg, transparent, var(--gold), transparent); transform-origin: 50% 50%; }
+.dia { position: absolute; top: 590px; width: 14px; height: 14px; margin: -7px; transform: rotate(45deg); background: var(--gold); box-shadow: 0 0 16px var(--gold); }
+
+/* ---------- S7 carrousel des mots ---------- */
+#drum { position: absolute; left: 960px; top: 560px; transform-style: preserve-3d; }
+.word { position: absolute; width: 520px; height: 300px; margin: -150px -260px; text-align: center; backface-visibility: hidden; }
+.word .a { font: 700 150px/1.2 Amiri; direction: rtl; }
+.word .f { font: italic 400 46px Corm; color: #d8cfbd; margin-top: -6px; }
+
+/* ---------- S8 verset ---------- */
+.vl { position: absolute; left: 960px; white-space: nowrap; font: 400 96px/1.2 Amiri; direction: rtl; color: #f4efe4; }
+.vtr { position: absolute; left: 960px; transform: translateX(-50%); width: 1500px; text-align: center; font: italic 400 40px/1.4 Corm; color: #d6cebe; }
+
+/* ---------- S9 rendez-vous ---------- */
+.pil { position: absolute; top: 540px; width: 400px; height: 300px; margin: -150px -200px; padding: 44px 40px; border-radius: 22px; background: linear-gradient(160deg, #1b1d22, #121317); border: 1px solid oklch(68% .11 80 / .28); box-shadow: 0 40px 100px rgba(0,0,0,.7); }
+.pil .ico { width: 54px; height: 54px; border-radius: 14px; border: 1px solid oklch(68% .11 80 / .5); display: grid; place-items: center; }
+.pil h4 { font: 600 42px Corm; margin: 26px 0 10px; color: #f6f1e6; }
+.pil p { font: 400 19px/1.5 Inter; color: #aea799; }
+#rdv { position: absolute; left: 960px; top: 540px; width: 1240px; height: 560px; margin: -280px -620px; border-radius: 30px; text-align: center; padding-top: 86px; background: radial-gradient(ellipse at 50% 0, oklch(68% .11 80 / .18), transparent 60%), linear-gradient(180deg, #1a1b20, #111216); border: 1px solid oklch(68% .11 80 / .4); box-shadow: 0 60px 140px rgba(0,0,0,.8); }
+#rdv h2 { font: 500 78px/1.05 Corm; color: #f7f2e7; margin: 26px auto 26px; width: 980px; }
+#rdv p { font: 400 23px/1.5 Inter; color: #b9b2a4; }
+#btn { position: absolute; left: 50%; bottom: 70px; width: 380px; height: 82px; margin-left: -190px; border-radius: 41px; background: var(--grad); color: #1b1408; font: 600 26px/82px Inter; box-shadow: 0 0 50px oklch(74% .1 86 / .45); }
+#ripple { position: absolute; left: 50%; top: 50%; width: 40px; height: 40px; margin: -20px; border-radius: 50%; border: 3px solid #fff; }
+#cursor { position: absolute; left: 0; top: 0; width: 46px; height: 46px; filter: drop-shadow(0 6px 10px rgba(0,0,0,.6)); }
+
+/* ---------- S10 fin ---------- */
+#endring { position: absolute; left: 960px; top: 400px; width: 330px; height: 330px; margin: -165px; }
+</style>
+</head>
+<body>
+<canvas id="bg" width="1920" height="1080"></canvas>
+<div id="cam"><div id="world">
+
+  <!-- S1 : anneaux, point de lumière, lampe -->
+  <div class="sc" id="s1">
+    <div class="ring" id="r0"></div><div class="ring" id="r1"></div><div class="ring" id="r2"></div>
+    <div id="dot"></div>
+    <div class="c" id="lampWrap"><svg id="lamp1" width="220" height="300" viewBox="0 0 100 136"></svg></div>
+    <div class="c" id="bism" style="top:250px"><div class="ar goldtxt" style="font:400 64px Amiri;white-space:nowrap">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div></div>
+    <div class="c" id="brand1" style="top:820px"><div class="cap" id="brand1t" style="font-size:30px;white-space:nowrap;color:#efe6d2">NŪR AL-BAYĀN</div></div>
+  </div>
+
+  <!-- S2 : titre calligraphié -->
+  <div class="sc" id="s2">
+    <svg id="arch" class="abs" style="left:560px;top:20px" width="800" height="1100" viewBox="0 0 800 1100">
+      <path class="draw" pathLength="1" d="M60,1100 V520 C60,330 250,230 400,40 C550,230 740,330 740,520 V1100" stroke-width="3"/>
+      <path class="draw" pathLength="1" d="M100,1100 V530 C100,360 270,270 400,100 C530,270 700,360 700,530 V1100" stroke-width="1.5" style="opacity:.5"/>
+      <path pathLength="1" d="M400,18 L420,40 L400,62 L380,40 Z" style="fill:var(--gold)" id="archGem"/>
+    </svg>
+    <div class="c" id="calli" style="top:330px"><div class="ar goldtxt" style="font:700 230px/1.3 Amiri;white-space:nowrap;padding:0 40px">نور البيان</div></div>
+    <div class="c" id="calliShine" style="top:330px"><div class="ar" style="font:700 230px/1.3 Amiri;white-space:nowrap;padding:0 40px;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(100deg,transparent 40%,rgba(255,252,240,.95) 50%,transparent 60%);background-size:300% 100%" id="shineTxt">نور البيان</div></div>
+    <div class="abs serif" id="h1" style="perspective:900px;left:0;right:0;top:560px;text-align:center;font:500 104px/1.05 Corm;color:#f8f4ea"></div>
+    <div class="abs serif" id="h2" style="perspective:900px;left:0;right:0;top:672px;text-align:center;font:italic 400 104px/1.05 Corm;color:#cfc5ae"></div>
+    <div class="abs" id="h3" style="left:0;right:0;top:830px;text-align:center;font:400 30px/1.5 Inter;color:#bdb6a8">Articles approfondis, cours vidéo et séances d’étude,<br>à la lumière du Coran et des sources.</div>
+  </div>
+
+  <!-- S3 : question -->
+  <div class="sc" id="s3">
+    <div class="c" id="qpos" style="top:520px"><div id="qwrap">
+      <div id="qlabel"><svg width="26" height="34" viewBox="0 0 100 136" id="lampMini"></svg><b>Nūr al-Bayān</b><span>· Questions &amp; réponses</span></div>
+      <div id="qcard">
+        <div id="qtext"><span id="qt"></span><span id="caret"></span></div>
+        <div id="qplus">+</div>
+        <div class="chip" id="chip1" style="left:110px">Thème · <b>Méthode</b></div>
+        <div class="chip" id="chip2" style="left:330px">Réponse <b>dans la semaine</b></div>
+      </div>
+    </div></div>
+    <div id="send"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="#1b1408" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <svg id="spin" viewBox="0 0 120 120"><circle cx="60" cy="60" r="44" fill="none" stroke="oklch(68% .11 80 / .18)" stroke-width="8"/><circle id="spinArc" cx="60" cy="60" r="44" fill="none" stroke="var(--gold-hi)" stroke-width="8" stroke-linecap="round" pathLength="100" stroke-dasharray="28 72"/></svg>
+  </div>
+
+  <!-- S4 : articles -->
+  <div class="sc" id="s4">
+    <div id="count4"><div class="bignum goldtxt" id="n4">0+</div><div class="biglab">articles publiés</div></div>
+    <div class="c" id="deck" style="top:570px;left:1080px"></div>
+  </div>
+
+  <!-- S5 : le site dans un navigateur -->
+  <div class="sc" id="s5">
+    <div id="refl"></div>
+    <div id="win">
+      <div id="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><div id="url">🔒 Nūr al-Bayān — Accueil</div></div>
+      <div id="view"><img id="shot" src="img/full.jpg"></div>
+    </div>
+    <div class="tag" id="tag"><span class="d"></span><span id="tagt">Accueil</span></div>
+  </div>
+
+  <!-- S6 : chiffres -->
+  <div class="sc" id="s6">
+    <div class="abs cap" id="cap6" style="left:0;right:0;top:250px;text-align:center;font-size:20px">Une étude attentive, déjà partagée</div>
+  </div>
+
+  <!-- S7 : mots -->
+  <div class="sc" id="s7">
+    <div class="abs cap" id="cap7" style="left:0;right:0;top:150px;text-align:center;font-size:20px">Les mots qui éclairent le chemin</div>
+    <div id="drum"></div>
+  </div>
+
+  <!-- S8 : verset -->
+  <div class="sc" id="s8">
+    <div class="abs cap" id="cap8" style="left:0;right:0;top:150px;text-align:center;font-size:20px">L’origine du nom</div>
+    <div class="vl" id="v0" style="top:250px">الرَّحْمَنُ</div>
+    <div class="vl" id="v1" style="top:250px">عَلَّمَ الْقُرْآنَ</div>
+    <div class="vl" id="v2" style="top:400px">خَلَقَ الْإِنْسَانَ</div>
+    <div class="vl" id="v3" style="top:400px">عَلَّمَهُ <span id="bayan" class="goldtxt">الْبَيَانَ</span></div>
+    <div class="vtr" id="vt" style="top:610px">Le Tout Miséricordieux. Il a enseigné le Coran.<br>Il a créé l’homme. Il lui a enseigné l’expression claire.</div>
+    <div class="abs cap" id="vref" style="left:0;right:0;top:760px;text-align:center;font-size:18px">Sourate Ar-Raḥmān · 55 : 1-4</div>
+    <div class="abs serif" id="vname" style="left:0;right:0;top:850px;text-align:center;font:500 46px Corm;color:#f3ecdc">C’est de ce dernier mot, <i class="goldtxt">al-bayān</i>, que Nūr al-Bayān tire son nom.</div>
+  </div>
+
+  <!-- S9 : rendez-vous -->
+  <div class="sc" id="s9">
+    <div id="pils"></div>
+    <div id="rdv">
+      <div class="cap">En tête-à-tête</div>
+      <h2>Apportez la question que vous portez depuis longtemps.</h2>
+      <p>Les séances privées sont limitées chaque mois. Le premier échange est offert.</p>
+      <div id="btn">Prendre rendez-vous<div id="ripple"></div></div>
+    </div>
+    <svg id="cursor" viewBox="0 0 24 24"><path d="M4 2l16 10-7 1.5L9.5 21z" fill="#fff" stroke="#111" stroke-width="1.2" stroke-linejoin="round"/></svg>
+  </div>
+
+  <!-- S10 : fin -->
+  <div class="sc" id="s10">
+    <svg id="endring" viewBox="0 0 330 330"><circle class="draw" id="eRing" cx="165" cy="165" r="150" pathLength="1" stroke-width="4" style="stroke:var(--gold-soft);transform:rotate(-90deg);transform-origin:50% 50%;filter:drop-shadow(0 0 12px oklch(80% .08 84))"/></svg>
+    <div class="c" id="lampEnd" style="top:400px"><svg id="lamp2" width="150" height="204" viewBox="0 0 100 136"></svg></div>
+    <div class="c" id="eAr" style="top:640px"><div class="ar goldtxt" style="font:700 120px/1.3 Amiri;white-space:nowrap;padding:0 30px">نور البيان</div></div>
+    <div class="c" id="eLat" style="top:760px"><div class="serif" style="font:500 66px Corm;white-space:nowrap;color:#f7f2e7">Nūr al-Bayān</div></div>
+    <div class="c" id="eTag" style="top:840px"><div style="font:400 26px Inter;white-space:nowrap;color:#bfb8aa">Comprendre les questions difficiles, à votre rythme.</div></div>
+    <div class="c" id="eAya" style="top:960px"><div style="white-space:nowrap;text-align:center"><span class="ar goldtxt" style="font:400 44px Amiri">وَقُل رَّبِّ زِدْنِي عِلْمًا</span><span class="serif" style="font:italic 400 28px Corm;color:#a9a294;margin-left:24px">« Et dis : Seigneur, accrois mes connaissances. » · Ṭā-Hā, 20 : 114</span></div></div>
+  </div>
+
+</div></div>
+<div id="flash"></div>
+<div id="vig"></div>
+<canvas id="grain" width="1920" height="1080"></canvas>
+<div id="fade"></div>
+
+<script>
+// ================= outils de mouvement =================
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, k) => a + (b - a) * k;
+const K = (t, a, d) => clamp((t - a) / d);
+const seeded = i => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+// Ressort amorti : z = amortissement, f = oscillations sur la durée. Dépassement léger par défaut.
+const spring = (z = 6, f = 1.4) => k => k <= 0 ? 0 : k >= 1 ? 1 : 1 - Math.exp(-z * k) * Math.cos(k * Math.PI * 2 * f);
+const E = {
+  lin: k => k,
+  out: k => 1 - Math.pow(1 - k, 3),
+  out5: k => 1 - Math.pow(1 - k, 5),
+  expo: k => k >= 1 ? 1 : 1 - Math.pow(2, -10 * k),
+  in: k => k * k * k,
+  inExpo: k => k <= 0 ? 0 : Math.pow(2, 10 * k - 10),
+  io: k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2,
+  io5: k => k < .5 ? 16 * k ** 5 : 1 - Math.pow(-2 * k + 2, 5) / 2,
+  back: k => { const c = 1.5; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); },
+  anticip: k => { const c = 1.6; return (c + 1) * k * k * k - c * k * k; },       // recul avant de partir
+  spring: spring(6.5, 1.35),    // ressort standard, ~10 % de dépassement
+  soft: spring(8, 1.05),        // ressort doux, dépassement discret
+  bouncy: spring(5, 2.1),       // ressort vif, deux rebonds
+};
+const tw = (t, a, d, v0, v1, e = 'out') => lerp(v0, v1, E[e](K(t, a, d)));
+const pulse = (t, at, up = .08, down = .5) => t < at - up ? 0 : t < at ? E.out((t - at + up) / up) : Math.max(0, 1 - E.out((t - at) / down));
+const $ = id => document.getElementById(id);
+
+// Pose un état 3D complet sur un élément.
+function put(el, s = {}) {
+  const x = s.x || 0, y = s.y || 0, z = s.z || 0;
+  let tr = `translate3d(${x}px,${y}px,${z}px)`;
+  if (s.rx) tr += ` rotateX(${s.rx}deg)`;
+  if (s.ry) tr += ` rotateY(${s.ry}deg)`;
+  if (s.r) tr += ` rotate(${s.r}deg)`;
+  if (s.sk) tr += ` skewX(${s.sk}deg)`;
+  const sc = s.s ?? 1;
+  tr += ` scale(${sc * (s.sx ?? 1)},${sc * (s.sy ?? 1)})`;
+  el.style.transform = tr;
+  const o = s.o ?? 1;
+  el.style.opacity = o;
+  el.style.visibility = o < .002 ? 'hidden' : 'visible';
+  const b = s.b || 0;
+  el.style.filter = (b > .15 ? `blur(${b.toFixed(2)}px)` : '') + (s.f ? ' ' + s.f : '');
+}
+// Entrée sur ressort puis sortie accélérée : renvoie un état mélangé from → repos → to.
+function life(t, a, da, from, o, dout, to, ein = 'spring', eout = 'inExpo') {
+  const ki = E[ein](K(t, a, da)), ko = o == null ? 0 : E[eout](K(t, o, dout));
+  const s = {};
+  const keys = new Set([...Object.keys(from), ...Object.keys(to || {})]);
+  for (const k of keys) {
+    const rest = k === 's' ? 1 : k === 'o' ? 1 : 0;
+    const v0 = from[k] ?? rest, v1 = (to || {})[k] ?? rest;
+    s[k] = k === 's' ? lerp(v0, 1, ki) * lerp(1, v1, ko) : k === 'o' ? clamp(lerp(v0, 1, clamp(K(t, a, da) * 2.2))) * lerp(1, v1, ko) : lerp(v0, rest, ki) + lerp(0, v1 - rest, ko);
+  }
+  if (t < a) s.o = 0;
+  return s;
+}
+// Flou de mouvement : flou proportionnel à la vitesse + étirement dans l'axe du mouvement.
+function smear(fn, t, axis = 'x', gain = .006) {
+  const dt = 1 / 120, p0 = fn(t - dt), p1 = fn(t + dt);
+  const v = (p1 - p0) / (2 * dt);
+  const sp = Math.abs(v);
+  return { b: Math.min(28, sp * gain), st: 1 + Math.min(.6, sp * .00018), axis };
+}
+const show = (id, on) => { $(id).style.display = on ? 'block' : 'none'; };
+
+// ================= lampe (icône du site) =================
+const LAMP = `<path class="draw" pathLength="1" d="M12,134 V58 C12,36 34,24 50,4 C66,24 88,36 88,58 V134" stroke-width="3.2"/>
+  <path class="draw" pathLength="1" d="M50,4 V34" stroke-width="2"/>
+  <path class="draw" pathLength="1" d="M33,62 Q50,84 67,62 Z" stroke-width="2.6"/>
+  <path class="flame" d="M50,36 C43,46 43,55 50,60 C57,55 57,46 50,36 Z" style="fill:oklch(86% .1 86);filter:drop-shadow(0 0 6px oklch(86% .12 86))"/>
+  <path class="draw" pathLength="1" d="M42,84 H58" stroke-width="2.4"/>`;
+for (const id of ['lamp1', 'lamp2', 'lampMini']) $(id).innerHTML = LAMP;
+function drawLamp(svg, k, flame = 1) {
+  const paths = svg.querySelectorAll('.draw');
+  paths.forEach((p, i) => { const kk = clamp(k * paths.length - i * .6); p.style.strokeDasharray = '1 1'; p.style.strokeDashoffset = 1 - E.io(kk); });
+  const f = svg.querySelector('.flame');
+  f.style.opacity = flame; f.style.transformOrigin = '50px 60px'; f.style.transform = `scale(${.3 + .7 * flame})`;
+}
+
+// ================= contenus =================
+const Q = 'Comment lire un verset difficile, sans le trahir ?';
+const ARTICLES = [
+  { cat: 'Herméneutique', date: '28 juillet 2026', min: '11 min', t: 'Muḥkam et mutashābih : lire le clair à côté de l’ambigu', p: 'La sourate Āl ʿImrān trace une ligne entre les versets décisifs et ceux qui restent ouverts.' },
+  { cat: 'Uṣūl al-tafsīr', date: '11 juillet 2026', min: '14 min', t: 'Le naskh reconsidéré : ce que l’abrogation affirme réellement', p: 'Regard rapproché sur l’usage qu’en faisaient les premiers savants.' },
+  { cat: 'Contexte', date: '19 juin 2026', min: '9 min', t: 'Asbāb al-nuzūl : quand le contexte éclaire et quand il restreint', p: 'De l’usage responsable des circonstances de la révélation.' },
+];
+$('deck').innerHTML = ARTICLES.map((a, i) => `<div class="card" id="card${i}"><div class="meta"><b>${a.cat}</b>·<span>${a.date}</span>·<span>${a.min}</span></div><h3>${a.t}</h3><p>${a.p}</p><div class="lnk">Lire l’article →</div><div class="shine"></div></div>`).join('');
+
+const STATS = [
+  { v: 120, f: n => `${Math.round(n)}+`, l: 'articles publiés' },
+  { v: 1.2, f: n => `${n.toFixed(1).replace('.', ',')} M`, l: 'vues des cours' },
+  { v: 900, f: n => `${Math.round(n)}+`, l: 'questions traitées' },
+  { v: 100, f: n => `${Math.round(n)}+`, l: 'personnes accompagnées' },
+];
+$('s6').insertAdjacentHTML('beforeend', STATS.map((s, i) => `<div class="stat" id="st${i}" style="left:${330 + i * 420}px"><div class="n goldtxt" id="stn${i}"></div><div class="l">${s.l}</div><div class="ln" id="stl${i}"></div></div>`).join('') +
+  [0, 1, 2].map(i => `<div class="dia" id="dia${i}" style="left:${540 + i * 420}px"></div>`).join(''));
+
+const WORDS = [['العِلْم', 'la science'], ['النُّور', 'la lumière'], ['البَيَان', 'la clarté'], ['الحِكْمَة', 'la sagesse'], ['التَّدَبُّر', 'la méditation'], ['الصَّبْر', 'la patience'], ['القَلَم', 'le calame'], ['الهُدَى', 'la guidance']];
+$('drum').innerHTML = WORDS.map((w, i) => `<div class="word" id="w${i}"><div class="a goldtxt">${w[0]}</div><div class="f">${w[1]}</div></div>`).join('');
+
+const PILS = [['Lire', 'Commencez par les articles : ils éclairent tout le reste.', 'M4 5h7v14H4zM13 5h7v14h-7z'], ['Demander', 'Envoyez une question, réponse dans la semaine.', 'M12 3a8 8 0 1 1-4 15l-4 1 1-4A8 8 0 0 1 12 3z'], ['S’asseoir ensemble', 'Une séance privée, pour une lecture sans hâte.', 'M3 7h18v12H3zM8 3v6M16 3v6']];
+$('pils').innerHTML = PILS.map((p, i) => `<div class="pil" id="pil${i}" style="left:${540 + i * 420}px"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24"><path d="${p[2]}" fill="none" stroke="oklch(80% .08 84)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h4>${p[0]}</h4><p>${p[1]}</p></div>`).join('');
+
+// Titre : mots séparés pour une entrée mot à mot.
+const H1 = 'Comprendre les questions difficiles,'.split(' ');
+const H2 = 'à votre rythme.'.split(' ');
+$('h1').innerHTML = H1.map(w => `<span style="display:inline-block;margin:0 .14em">${w}</span>`).join('');
+$('h2').innerHTML = H2.map(w => `<span class="goldtxt" style="display:inline-block;margin:0 .14em;padding:0 .05em">${w}</span>`).join('');
+
+// Arrêts du défilement du site (px de la capture pleine page, 1440 de large) + étiquette.
+const SCALE = 1280 / 1440;
+const STOPS = [[0, 'Accueil'], [1150, 'Le parcours de l’auteur'], [2620, 'Le sens du nom'], [3180, 'Articles approfondis'], [4120, 'La vidéothèque'], [5260, 'Lire · Demander · S’asseoir'], [6620, 'Le verset de la lumière'], [7360, 'Prendre rendez-vous']];
+
+// ================= fond =================
+const bg = $('bg').getContext('2d');
+const LET = ['ش', 'د', 'م', 'س', 'ا', 'ح', 'ن', 'ب', 'ع', 'ق'];
+function star(ctx, x, y, r) {
+  ctx.beginPath();
+  for (let q = 0; q < 2; q++) {
+    for (let i = 0; i < 4; i++) {
+      const a = q * Math.PI / 4 + i * Math.PI / 2;
+      const px = x + Math.cos(a) * r, py = y + Math.sin(a) * r;
+      i ? ctx.lineTo(px, py) : ctx.moveTo(px, py);
+    }
+    ctx.closePath();
+  }
+  ctx.stroke();
+}
+function drawBg(t, o) {
+  const W = 1920, H = 1080;
+  const g = bg.createRadialGradient(960, 500, 0, 960, 540, 1150);
+  g.addColorStop(0, '#17181d'); g.addColorStop(.6, '#0c0d10'); g.addColorStop(1, '#050506');
+  bg.fillStyle = g; bg.fillRect(0, 0, W, H);
+  // halo doré central
+  if (o.glow > .01) {
+    const h = bg.createRadialGradient(960, o.gy ?? 500, 0, 960, o.gy ?? 500, 760);
+    h.addColorStop(0, `rgba(196,154,78,${.28 * o.glow})`); h.addColorStop(.5, `rgba(150,110,50,${.08 * o.glow})`); h.addColorStop(1, 'rgba(0,0,0,0)');
+    bg.fillStyle = h; bg.fillRect(0, 0, W, H);
+  }
+  // treillis d'étoiles à huit branches (motif du site), qui dérive lentement
+  if (o.pat > .01) {
+    bg.strokeStyle = `rgba(200,160,90,${.07 * o.pat})`; bg.lineWidth = 1.2;
+    const off = (t * 8) % 120;
+    for (let x = -120 + off; x < W + 120; x += 120) for (let y = -120 + off * .5; y < H + 120; y += 120) {
+      const d = Math.hypot(x - 960, y - 540) / 1100;
+      bg.globalAlpha = clamp(1.1 - d);
+      star(bg, x, y, 30); bg.beginPath(); bg.arc(x, y, 12, 0, 6.283); bg.stroke();
+    }
+    bg.globalAlpha = 1;
+  }
+  // lettres arabes flottantes en profondeur
+  bg.textAlign = 'center';
+  for (let i = 0; i < 14; i++) {
+    const z = .35 + seeded(i + 40) * .9;
+    const x = seeded(i + 2) * W + Math.sin(t * .3 + i) * 30;
+    const y = ((seeded(i + 11) * 1400 - t * (10 + 26 * z)) % 1400 + 1400) % 1400 - 160;
+    bg.font = `700 ${Math.round(60 + 90 * z)}px Amiri`;
+    bg.fillStyle = `rgba(205,165,95,${(.05 + .1 * z) * o.letters})`;
+    bg.fillText(LET[i % LET.length], x, y);
+  }
+  // poussière dorée
+  for (let i = 0; i < 140; i++) {
+    const z = seeded(i + 900);
+    const x = seeded(i + 200) * W + Math.sin(t * .6 + i) * 30 * z;
+    const y = ((seeded(i + 300) * H - t * (8 + z * 40)) % H + H) % H;
+    const a = (.15 + .6 * Math.max(0, Math.sin(t * 2 + i * 1.7))) * (.3 + z * .7) * o.dust;
+    bg.fillStyle = `rgba(240,210,150,${a})`;
+    bg.beginPath(); bg.arc(x, y, .8 + z * 2.6, 0, 6.283); bg.fill();
+  }
+  // traînées de vitesse lors des transitions
+  if (o.warp > .01) {
+    bg.lineWidth = 2;
+    for (let i = 0; i < 120; i++) {
+      const a = seeded(i + 500) * 6.283, d0 = 80 + seeded(i + 600) * 700, len = 80 + o.warp * 700 * (.4 + seeded(i));
+      bg.strokeStyle = `rgba(250,230,190,${.45 * o.warp * seeded(i + 7)})`;
+      bg.beginPath(); bg.moveTo(960 + Math.cos(a) * d0, 540 + Math.sin(a) * d0);
+      bg.lineTo(960 + Math.cos(a) * (d0 + len), 540 + Math.sin(a) * (d0 + len)); bg.stroke();
+    }
+  }
+}
+const grain = document.createElement('canvas'); grain.width = grain.height = 256;
+{ const g = grain.getContext('2d'), d = g.createImageData(256, 256);
+  for (let i = 0; i < d.data.length; i += 4) { const v = seeded(i * .37) * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; }
+  g.putImageData(d, 0, 0); }
+const gctx = $('grain').getContext('2d');
+function drawGrain(t) {
+  const f = Math.floor(t * 30), ox = (seeded(f) * 256) | 0, oy = (seeded(f + 7) * 256) | 0;
+  for (let x = -ox; x < 1920; x += 256) for (let y = -oy; y < 1080; y += 256) gctx.drawImage(grain, x, y);
+}
+
+// ================= montage =================
+// Transitions (flash + traînées) aux coupes principales.
+const CUTS = [6.35, 13.0, 20.1, 35.9, 48.2, 61.3];
+window.DURATION = 69;
+
+window.seek = function (t) {
+  // ---------- caméra : respiration lente + secousse aux impacts ----------
+  const shake = CUTS.reduce((a, c) => a + pulse(t, c, .02, .45), 0);
+  put($('world'), {
+    x: Math.sin(t * .37) * 6 + Math.sin(t * 41) * 7 * shake,
+    y: Math.cos(t * .29) * 5 + Math.cos(t * 37) * 5 * shake,
+    rx: Math.sin(t * .21) * .6, ry: Math.sin(t * .17) * .8,
+    s: 1 + .025 * shake,
+  });
+  $('flash').style.opacity = Math.min(1, CUTS.reduce((a, c) => a + pulse(t, c, .1, .55) * .9, 0));
+  $('fade').style.opacity = K(t, 0, .01) < 1 ? 1 : tw(t, 68.1, .9, 0, 1, 'io');
+
+  const warp = CUTS.reduce((a, c) => a + pulse(t, c, .25, .5), 0);
+  drawBg(t, {
+    glow: t < 2 ? tw(t, .3, 1.8, 0, .7) : t < 48 ? .7 + .3 * Math.sin(t * .8) : t < 61 ? 1 : .9,
+    gy: t > 61 ? 420 : 500,
+    pat: tw(t, 1.5, 3, 0, 1, 'io'), letters: tw(t, 6.5, 2, 0, 1, 'io'), dust: tw(t, 0, 3, .2, 1), warp,
+  });
+  drawGrain(t);
+
+  // =========== S1 : 0 → 6.6 — anneaux, point, lampe ===========
+  show('s1', t < 6.7);
+  if (t < 6.7) {
+    // point lumineux qui s'allume puis respire
+    const dk = E.spring(K(t, .25, .9));
+    const dotGone = E.inExpo(K(t, 3.1, .35));
+    put($('dot'), { s: dk * (1 + .15 * Math.sin(t * 7)) * (1 - dotGone) + 2.2 * pulse(t, 3.1, .3, .3), o: clamp(dk * 2) * (1 - dotGone) });
+    // trois anneaux qui s'ouvrent sur ressort, pulsent, puis se referment avec anticipation
+    [0, 1, 2].forEach(i => {
+      const R = [130, 230, 330][i];
+      const kin = E.spring(K(t, .7 + i * .18, 1.1));
+      const kout = E.anticip(K(t, 2.45 + (2 - i) * .08, .65));
+      const r = R * kin * (1 - kout) + Math.sin(t * 4 - i) * 4;
+      const el = $('r' + i);
+      el.style.width = el.style.height = Math.max(0, 2 * r) + 'px';
+      el.style.margin = -Math.max(0, r) + 'px';
+      el.style.borderWidth = [5, 3, 2][i] + 'px';
+      el.style.opacity = clamp(kin * 1.5) * (1 - clamp(kout * 1.2)) * [1, .7, .45][i];
+      el.style.filter = `blur(${(1 - kin) * 8 + kout * 6}px)`;
+    });
+    // lampe : arrive en profondeur, rotation 3D, tracé du dessin
+    const lk = K(t, 3.05, 1.4);
+    put($('lampWrap'), life(t, 3.05, 1.3, { z: -900, ry: -70, s: .4, b: 12 }, 6.0, .55, { z: 1400, s: 1.4, b: 20, o: 0 }));
+    drawLamp($('lamp1'), lk, E.bouncy(K(t, 3.9, .9)));
+    // bismillah : lettres floues qui se posent depuis le haut
+    put($('bism'), life(t, 4.15, 1.1, { y: -50, b: 16, s: 1.08, rx: 50 }, 5.8, .5, { y: -120, b: 18, o: 0 }, 'soft'));
+    // nom : interlettrage qui se resserre, ressort sur l'échelle
+    const bk = E.out5(K(t, 4.55, 1.4));
+    $('brand1t').style.letterSpacing = lerp(1.6, .5, bk) + 'em';
+    put($('brand1'), life(t, 4.55, 1, { y: 40, b: 10, s: .85 }, 5.8, .5, { y: 140, b: 18, o: 0 }));
+  }
+
+  // =========== S2 : 6.3 → 13.2 — calligraphie et titre ===========
+  show('s2', t > 6.2 && t < 13.3);
+  if (t > 6.2 && t < 13.3) {
+    const out2 = E.inExpo(K(t, 12.45, .6));
+    // la scène entière recule et bascule en sortie
+    put($('s2'), { z: -900 * out2, rx: 25 * out2, y: -120 * out2, o: 1 - out2, b: out2 * 10 });
+    const arch = $('arch').querySelectorAll('.draw');
+    arch.forEach((p, i) => { p.style.strokeDasharray = '1 1'; p.style.strokeDashoffset = 1 - E.io5(K(t, 6.4 + i * .25, 1.7)); });
+    put($('archGem'), { s: E.bouncy(K(t, 7.6, .9)), o: K(t, 7.6, .2) });
+    $('archGem').style.transformOrigin = '400px 40px';
+    put($('arch'), { y: tw(t, 6.4, 6, 30, -20, 'io'), o: tw(t, 6.35, .5, 0, 1) });
+    // calligraphie : révélée de droite à gauche (sens de l'écriture), arrive en 3D
+    const ck = E.out5(K(t, 7.0, 1.5));
+    const cal = $('calli').firstElementChild;
+    cal.style.clipPath = `inset(-20% 0 -20% ${100 - ck * 100}%)`;
+    put($('calli'), life(t, 7.0, 1.6, { z: -500, rx: 30, b: 14 }, null, 0, {}, 'soft'));
+    cal.style.filter = `drop-shadow(0 0 ${30 + 25 * pulse(t, 8.6, .4, 1.2)}px oklch(74% .1 86 / .55))`;
+    // reflet qui balaie le texte
+    const sh = $('shineTxt');
+    sh.style.backgroundPosition = `${lerp(110, -10, E.io(K(t, 8.6, 1.2)))}% 0`;
+    put($('calliShine'), life(t, 7.0, 1.6, { z: -500, rx: 30, b: 14 }, null, 0, {}, 'soft'));
+    // titre mot à mot : flou, montée, ressort, bascule X
+    [...$('h1').children].forEach((w, i) => put(w, life(t, 8.9 + i * .13, .9, { y: 70, rx: -80, b: 14, s: .9 }, null, 0, {})));
+    [...$('h2').children].forEach((w, i) => put(w, life(t, 9.6 + i * .15, 1, { y: 60, z: -200, b: 16 }, null, 0, {}, 'bouncy')));
+    put($('h3'), life(t, 10.4, 1, { y: 30, b: 10 }, null, 0, {}, 'soft'));
+  }
+
+  // =========== S3 : 13 → 20.3 — la question ===========
+  show('s3', t > 12.9 && t < 20.4);
+  if (t > 12.9 && t < 20.4) {
+    // carte qui monte en 3D depuis le flash
+    const cardFly = t => E.anticip(K(t, 17.05, .55)); // départ avec recul
+    const fx = t => -1900 * cardFly(t);
+    const sm = smear(fx, t, 'x', .012);
+    const base = life(t, 13.15, 1.2, { y: 160, rx: 55, z: -400, b: 12 }, null, 0, {});
+    put($('qpos'), { ...base, x: fx(t), b: (base.b || 0) + sm.b, sx: sm.st, sk: -sm.b * .4, o: base.o * (1 - K(t, 17.4, .2)) });
+    // frappe : vitesse irrégulière (naturelle)
+    const tk = K(t, 14.2, 2.3);
+    const n = Math.floor(Q.length * (tk < 1 ? Math.pow(tk, .92) + .02 * Math.sin(tk * 40) : 1));
+    $('qt').textContent = Q.slice(0, clamp(n, 0, Q.length));
+    $('caret').style.opacity = tk > 0 && tk < 1 ? 1 : (Math.floor(t * 2.2) % 2 ? 0 : 1);
+    put($('chip1'), life(t, 16.0, .7, { s: .3, y: 20, b: 8 }, null, 0, {}, 'bouncy'));
+    put($('chip2'), life(t, 16.25, .7, { s: .3, y: 20, b: 8 }, null, 0, {}, 'bouncy'));
+    // bouton d'envoi : posé dans la carte, il se détache, saute au centre, rebondit, devient spinner
+    const homeX = 1432, homeY = 582;
+    const jump = K(t, 17.15, .95);
+    const jx = lerp(homeX, 960, E.out5(jump)), jy = lerp(homeY, 540, E.bouncy(jump)) - Math.sin(Math.PI * clamp(jump * 1.15)) * 160;
+    const sendIn = life(t, 14.0, 1.0, { s: 0, r: -90 }, null, 0, {}, 'bouncy');
+    const press = 1 - .18 * pulse(t, 16.95, .08, .2);
+    const morph = E.inExpo(K(t, 18.2, .35));
+    $('send').style.left = (jx - 34) + 'px'; $('send').style.top = (jy - 34) + 'px';
+    const v = smear(tt => lerp(homeX, 960, E.out5(K(tt, 17.15, .95))), t, 'x', .004);
+    put($('send'), { s: (sendIn.s ?? 1) * press * (1 + .35 * Math.sin(Math.PI * jump)) * (1 - morph), r: (sendIn.r || 0) + 360 * E.out(jump), o: (sendIn.o ?? 1) * (1 - morph), b: v.b });
+    // spinner : apparaît sur ressort, tourne, puis explose en lumière
+    const spk = E.spring(K(t, 18.3, .7));
+    const boom = E.inExpo(K(t, 19.5, .6));
+    put($('spin'), { s: spk * (1 + boom * 6), o: clamp(spk * 2) * (1 - boom), r: (t - 18.3) * 420 + 200 * boom, b: boom * 10 });
+    $('spinArc').style.strokeDasharray = `${18 + 22 * (1 + Math.sin(t * 6)) / 2} 100`;
+  }
+
+  // =========== S4 : 20.1 → 27.2 — articles ===========
+  show('s4', t > 20.0 && t < 27.3);
+  if (t > 20.0 && t < 27.3) {
+    const out4 = E.inExpo(K(t, 26.4, .7));
+    put($('count4'), life(t, 20.5, 1, { x: -80, b: 12, ry: 40 }, 26.3, .6, { x: -300, b: 20, o: 0 }, 'soft'));
+    $('n4').textContent = Math.round(120 * E.expo(K(t, 20.6, 1.9))) + '+';
+    // éventail de cartes en 3D, posées une à une sur ressort
+    const deckRy = tw(t, 21, 5.4, -24, 14, 'io');
+    put($('deck'), { ry: deckRy, rx: 6, z: -1500 * out4, y: -200 * out4, o: 1 - out4 });
+    [0, 1, 2].forEach(i => {
+      const a = 20.35 + i * .55;
+      const pos = [{ x: -40, y: -10, z: 120, r: -2 }, { x: 250, y: 60, z: -120, r: 4 }, { x: 520, y: 130, z: -360, r: 9 }][i];
+      const st = life(t, a, 1.25, { y: 700, z: -300, rx: -70, r: -20, b: 10 }, null, 0, {});
+      const hover = Math.sin(t * 1.3 + i) * 8;
+      put($('card' + i), { x: pos.x + st.x, y: pos.y + (st.y || 0) + hover, z: pos.z + (st.z || 0), rx: st.rx, r: pos.r + (st.r || 0), o: st.o, b: st.b });
+      $('card' + i).querySelector('.shine').style.backgroundPosition = `${lerp(120, -20, E.io(K(t, 22.6 + i * .3, 1.4)))}% 0`;
+    });
+  }
+
+  // =========== S5 : 27 → 36 — le site, dans une fenêtre 3D ===========
+  show('s5', t > 26.9 && t < 36.1);
+  if (t > 26.9 && t < 36.1) {
+    // entrée : la fenêtre sort de la profondeur, bascule en avant, se pose avec dépassement
+    const ein = E.spring(K(t, 27.0, 1.6));
+    const eout = E.anticip(K(t, 34.95, .9));
+    const ry = lerp(-35, 0, ein) + Math.sin((t - 27) * .5) * 9 * ein + 50 * eout;
+    const rx = lerp(60, 8, ein) - 70 * eout;
+    put($('win'), { z: lerp(-1600, 0, ein) - 2400 * eout, y: lerp(500, 0, ein) - 300 * eout, rx, ry, o: clamp(K(t, 27, .3)) * (1 - E.in(K(t, 35.5, .4))), s: .86 });
+    put($('refl'), { o: ein * (1 - eout) });
+    // défilement d'arrêt en arrêt, chaque arrêt freine avec un léger dépassement
+    let sy = 0, idx = 0;
+    for (let i = 1; i < STOPS.length; i++) {
+      const at = 28.3 + (i - 1) * .93;
+      const k = K(t, at, .8);
+      if (k > 0) { sy = lerp(STOPS[i - 1][0], STOPS[i][0], E.soft(k)); idx = k > .35 ? i : i - 1; }
+    }
+    const vy = smear(tt => { let s = 0; for (let i = 1; i < STOPS.length; i++) { const k = K(tt, 28.3 + (i - 1) * .93, .8); if (k > 0) s = lerp(STOPS[i - 1][0], STOPS[i][0], E.soft(k)); } return s; }, t, 'y', .0025);
+    put($('shot'), { y: -sy * SCALE, b: vy.b, sy: 1 + (vy.st - 1) * .3 });
+    // étiquette qui change à chaque arrêt avec un petit saut
+    $('tagt').textContent = STOPS[idx][1];
+    const tagAt = idx === 0 ? 27.9 : 28.3 + (idx - 1) * .93 + .28;
+    const tk = E.bouncy(K(t, tagAt, .7));
+    const tg = $('tag'); tg.style.left = (960 - tg.offsetWidth / 2) + 'px';
+    put(tg, { x: 0, y: lerp(1010, 950, tk), z: 200, s: lerp(.6, 1, tk), r: lerp(-6, 0, tk), o: clamp(K(t, tagAt, .15)) * (1 - eout) * clamp(K(t, 27.9, .2)) });
+  }
+
+  // =========== S6 : 35.9 → 42 — chiffres ===========
+  show('s6', t > 35.8 && t < 42.2);
+  if (t > 35.8 && t < 42.2) {
+    put($('cap6'), life(t, 36.1, .9, { y: -30, b: 10 }, 41.3, .5, { y: -60, o: 0 }, 'soft'));
+    STATS.forEach((s, i) => {
+      const a = 36.2 + i * .28;
+      const st = life(t, a, 1.2, { y: 160, z: -300, rx: -60, b: 14 }, 41.2 + i * .08, .55, { y: -260, z: 300, rx: 40, b: 18, o: 0 });
+      put($('st' + i), st);
+      $('stn' + i).textContent = s.f(s.v * E.expo(K(t, a + .15, 1.8)));
+      put($('stl' + i), { sx: E.spring(K(t, a + .6, .9)), o: K(t, a + .6, .2) });
+    });
+    [0, 1, 2].forEach(i => put($('dia' + i), life(t, 37.2 + i * .15, .8, { s: 0, r: -180 }, 41.3, .4, { s: 0 }, 'bouncy')));
+  }
+
+  // =========== S7 : 41.8 → 48.4 — tambour des mots ===========
+  show('s7', t > 41.8 && t < 48.5);
+  if (t > 41.8 && t < 48.5) {
+    put($('cap7'), life(t, 42.1, .9, { y: -30, b: 10 }, 47.6, .5, { y: -60, o: 0 }, 'soft'));
+    const R = 640, n = WORDS.length;
+    // rotation par crans : chaque cran avance sur ressort (léger dépassement)
+    let step = 0;
+    for (let i = 0; i < 7; i++) step += E.spring(K(t, 42.9 + i * .62, .55));
+    const ent = E.spring(K(t, 41.9, 1.3)), ex = E.inExpo(K(t, 47.7, .7));
+    put($('drum'), { z: lerp(-1800, -R, ent) + 1800 * ex, rx: lerp(-40, -6, ent), o: clamp(K(t, 41.9, .4)) * (1 - ex) });
+    WORDS.forEach((w, i) => {
+      const ang = (i - step) * (360 / n);
+      const rad = ang * Math.PI / 180;
+      const front = Math.cos(rad);
+      const el = $('w' + i);
+      el.style.transform = `rotateY(${ang}deg) translateZ(${R}px) scale(${.75 + .3 * Math.max(0, front) ** 6})`;
+      el.style.opacity = clamp(.12 + .88 * Math.max(0, front) ** 3);
+      el.style.filter = `blur(${(1 - Math.max(0, front)) * 7}px)`;
+    });
+  }
+
+  // =========== S8 : 48.2 → 56.2 — le verset, origine du nom ===========
+  show('s8', t > 48.1 && t < 56.3);
+  if (t > 48.1 && t < 56.3) {
+    const out8 = E.inExpo(K(t, 55.6, .6));
+    put($('s8'), { o: 1 - out8, s: 1 + .08 * out8, b: out8 * 8 });
+    put($('cap8'), life(t, 48.5, .9, { y: -30, b: 10 }, null, 0, {}, 'soft'));
+    // quatre segments, révélés de droite à gauche, deux par ligne
+    const pos = [{ x: 260 }, { x: -230 }, { x: 260 }, { x: -230 }];
+    [0, 1, 2, 3].forEach(i => {
+      const a = 48.7 + i * .75;
+      const k = E.out5(K(t, a, 1.1));
+      const el = $('v' + i);
+      el.style.clipPath = `inset(-30% 0 -30% ${100 - k * 100}%)`;
+      const st = life(t, a, 1.2, { y: 30, z: -200, b: 12 }, null, 0, {}, 'soft');
+      el.style.transform = `translate(-50%,0) translate3d(${pos[i].x}px,${st.y || 0}px,${st.z || 0}px)`;
+      el.style.opacity = st.o; el.style.filter = st.b > .15 ? `blur(${st.b}px)` : '';
+    });
+    // « al-bayān » s'illumine
+    const glow = pulse(t, 52.2, .5, 2.5);
+    $('bayan').style.filter = `drop-shadow(0 0 ${8 + 40 * glow}px oklch(80% .12 86 / ${.4 + .6 * glow}))`;
+    put($('vt'), { ...life(t, 51.4, 1.2, { y: 30, b: 10 }, null, 0, {}, 'soft'), x: 0 });
+    $('vt').style.transform = `translateX(-50%) translateY(${tw(t, 51.4, 1.2, 30, 0, 'soft')}px)`;
+    put($('vref'), life(t, 52.1, .9, { y: 20, b: 8 }, null, 0, {}, 'soft'));
+    put($('vname'), life(t, 53.0, 1.2, { y: 50, rx: -50, b: 12 }, null, 0, {}));
+  }
+
+  // =========== S9 : 56 → 61.4 — rendez-vous ===========
+  show('s9', t > 55.9 && t < 61.5);
+  if (t > 55.9 && t < 61.5) {
+    // trois piliers puis ils s'écartent et laissent place à la carte
+    [0, 1, 2].forEach(i => {
+      const st = life(t, 56.0 + i * .18, 1, { y: 260, rx: -60, z: -200, b: 10 }, 57.75, .55, { x: (i - 1) * 900, z: -900, ry: (i - 1) * -50, b: 14, o: 0 });
+      put($('pil' + i), st);
+    });
+    const rk = life(t, 58.0, 1.2, { z: -1200, rx: 40, b: 14 }, 60.95, .45, { s: 1.6, o: 0, b: 20 });
+    put($('rdv'), rk);
+    // curseur : arrive en courbe, ralentit, clique
+    const ck = E.io(K(t, 58.8, 1.0));
+    const cx = lerp(1500, 975, ck) + Math.sin(ck * Math.PI) * 60, cy = lerp(1000, 706, ck) - Math.sin(ck * Math.PI) * 120;
+    const click = pulse(t, 59.95, .08, .25);
+    put($('cursor'), { x: cx, y: cy, s: 1 - .2 * click, o: clamp(K(t, 58.8, .2)) * (1 - K(t, 60.8, .2)) });
+    put($('btn'), { s: (1 - .07 * click) * (1 + .05 * E.bouncy(K(t, 60.05, .7)) * (1 - K(t, 60.05, .7))) });
+    const rp = K(t, 59.98, .7);
+    put($('ripple'), { s: 1 + rp * 14, o: rp > 0 ? (1 - rp) * .8 : 0 });
+  }
+
+  // =========== S10 : 61.3 → 69 — signature ===========
+  show('s10', t > 61.2);
+  if (t > 61.2) {
+    const rk = E.io5(K(t, 61.45, 1.3));
+    const ring = $('eRing');
+    ring.style.strokeDasharray = '1 1'; ring.style.strokeDashoffset = 1 - rk;
+    put($('endring'), { s: lerp(1.4, 1, E.spring(K(t, 61.4, 1.6))), r: -40 * (1 - rk), o: K(t, 61.4, .3) });
+    put($('lampEnd'), life(t, 61.6, 1.4, { s: .2, z: -500, ry: 120, b: 10 }, null, 0, {}, 'bouncy'));
+    drawLamp($('lamp2'), K(t, 61.6, 1.2), E.bouncy(K(t, 62.4, .8)) * (1 + .05 * Math.sin(t * 9)));
+    put($('eAr'), life(t, 62.5, 1.3, { y: 50, z: -300, b: 14, rx: 40 }, null, 0, {}));
+    $('eAr').firstElementChild.style.clipPath = `inset(-20% 0 -20% ${100 - 100 * E.out5(K(t, 62.5, 1.2))}%)`;
+    put($('eLat'), life(t, 63.2, 1.1, { y: 40, b: 12, s: .9 }, null, 0, {}, 'soft'));
+    $('eLat').firstElementChild.style.letterSpacing = lerp(.4, 0, E.out5(K(t, 63.2, 1.4))) + 'em';
+    put($('eTag'), life(t, 63.8, 1, { y: 24, b: 8 }, null, 0, {}, 'soft'));
+    put($('eAya'), life(t, 64.6, 1.2, { y: 24, b: 8 }, null, 0, {}, 'soft'));
+  }
+};
+seek(0);
+</script>
+</body>
+</html>
