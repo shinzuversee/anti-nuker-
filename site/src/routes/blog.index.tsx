@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
+import { FilterPills } from "@/components/motion/FilterPills";
+import { AnimatedGrid } from "@/components/motion/AnimatedGrid";
 import { Section, SectionHeading } from "@/components/site/Section";
 import { PostCard } from "@/components/site/PostCard";
 import { Input } from "@/components/ui/input";
@@ -57,24 +59,12 @@ function BlogIndex() {
       />
 
       <div className="mt-12 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrer par catégorie">
-          {categories.map((c) => (
-            <button
-              key={c}
-              type="button"
-              onClick={() => setCategory(c)}
-              aria-pressed={category === c}
-              className={cn(
-                "cursor-pointer rounded-full border px-4 py-2 text-xs tracking-wide transition-all duration-300",
-                category === c
-                  ? "border-primary/50 bg-primary/10 text-primary"
-                  : "border-border text-muted-foreground hover:border-primary/30 hover:text-foreground",
-              )}
-            >
-              {c}
-            </button>
-          ))}
-        </div>
+        <FilterPills
+          options={categories}
+          value={category}
+          onChange={setCategory}
+          label="Filtrer par catégorie"
+        />
 
         <div className="relative w-full lg:max-w-xs">
           <Search
@@ -93,11 +83,12 @@ function BlogIndex() {
       </div>
 
       {filtered.length > 0 ? (
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((post) => (
-            <PostCard key={post.slug} post={post} />
-          ))}
-        </div>
+        <AnimatedGrid
+          className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          items={filtered}
+          getKey={(post) => post.slug}
+          render={(post) => <PostCard post={post} />}
+        />
       ) : (
         <p className="mt-16 text-center text-muted-foreground">
           Aucun article ne correspond à cette recherche pour l'instant.

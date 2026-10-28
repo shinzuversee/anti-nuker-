@@ -1,11 +1,13 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { motion, useScroll, useSpring } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { Mishkat } from "@/components/motion/Mishkat";
+import { DARK_HERO_PATHS } from "@/components/motion/PageBackdrop";
 
 const nav = [
   { to: "/", label: "Accueil" },
@@ -18,6 +20,17 @@ const nav = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
+const navArabic: Record<string, string> = {
+  "/": "الرئيسية",
+  "/actus": "الأخبار",
+  "/blog": "المقالات",
+  "/sommaire": "الفهرس",
+  "/videos": "المرئيات",
+  "/qa": "الأسئلة",
+  "/about": "عن الكاتب",
+  "/contact": "التواصل",
+};
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -25,8 +38,8 @@ export function Header() {
   const [authReady, setAuthReady] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const { scrollYProgress } = useScroll();
-  // En haut de l'accueil, le menu passe en clair au-dessus du grand fond sombre.
-  const onDark = pathname === "/" && !scrolled && !open;
+  // En haut des pages à bandeau sombre, le menu passe en clair.
+  const onDark = (pathname === "/" || DARK_HERO_PATHS.includes(pathname)) && !scrolled && !open;
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   useEffect(() => {
@@ -34,6 +47,23 @@ export function Header() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.style.overflow = open ? "hidden" : "";
+  }, [open]);
+
+  // Conteneur dédié au menu mobile. Ne pas viser document.body directement : React
+  // tourne en boucle quand un portail vise un élément qui contient l'application.
+  const [portalTarget, setPortalTarget] = useState<HTMLElement | null>(null);
+  useEffect(() => {
+    let el = document.getElementById("menu-portal");
+    if (!el) {
+      el = document.createElement("div");
+      el.id = "menu-portal";
+      document.body.appendChild(el);
+    }
+    setPortalTarget(el);
   }, []);
 
   useEffect(() => {
@@ -52,7 +82,7 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "glass-soft border-b" : "border-b border-transparent",
+        scrolled || open ? "glass-soft border-b" : "border-b border-transparent",
       )}
     >
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
@@ -139,45 +169,93 @@ export function Header() {
         aria-hidden="true"
       />
 
-      {open ? (
-        <motion.div
-          className="glass border-t md:hidden"
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.25 }}
-        >
-          <nav aria-label="Navigation mobile" className="flex flex-col px-5 py-3">
-            {nav.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                activeProps={{ className: "text-foreground" }}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Button asChild variant="gold" className="mt-3 mb-2">
-              <Link to="/appointments" onClick={() => setOpen(false)}>
-                Réserver une séance
-              </Link>
-            </Button>
-            <Link
-              to={user ? "/assise" : "/auth"}
-              onClick={() => setOpen(false)}
-              className={cn(
-                "flex items-center justify-center gap-2 rounded-md border px-2 py-3 text-sm transition-all",
-                "border-primary/40 text-primary hover:border-primary hover:bg-primary/10",
-                !authReady && "opacity-60",
-              )}
-            >
-              <User className="size-4" strokeWidth={1.5} />
-              {user ? "Mon espace assise" : "Se connecter"}
-            </Link>
-          </nav>
-        </motion.div>
-      ) : null}
+      {/* Rendu hors de l'en-tête : son flou d'arrière-plan enfermerait le panneau
+          dans ses 72 pixels de hauteur et rendrait les liens impossibles à cliquer. */}
+      {portalTarget
+        ? createPortal(
+            <AnimatePresence>
+              {open ? (
+                // Menu mobile plein écran : il s'ouvre en cercle depuis le bouton,
+                // et chaque lien arrive à son tour avec son nom arabe.
+                <motion.div
+                  className="fixed inset-x-0 top-[4.5rem] bottom-0 z-40 overflow-y-auto bg-background md:hidden"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(ellipse at 80% 0%, color-mix(in oklab, var(--gold-soft) 35%, transparent), transparent 60%)",
+                  }}
+                  initial={{ clipPath: "circle(0% at 92% 0%)" }}
+                  animate={{ clipPath: "circle(150% at 92% 0%)" }}
+                  exit={{ clipPath: "circle(0% at 92% 0%)" }}
+                  transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                >
+                  <motion.nav
+                    aria-label="Navigation mobile"
+                    className="flex flex-col px-6 pt-4 pb-10"
+                    initial="hidden"
+                    animate="show"
+                    variants={{
+                      hidden: {},
+                      show: { transition: { staggerChildren: 0.05, delayChildren: 0.15 } },
+                    }}
+                  >
+                    {nav.map((item) => {
+                      const active = pathname === item.to || pathname.startsWith(item.to + "/");
+                      return (
+                        <motion.div
+                          key={item.to}
+                          variants={{ hidden: { opacity: 0, x: -30 }, show: { opacity: 1, x: 0 } }}
+                          transition={{ type: "spring", stiffness: 260, damping: 24 }}
+                        >
+                          <Link
+                            to={item.to}
+                            onClick={() => setOpen(false)}
+                            className={cn(
+                              "relative flex items-baseline justify-between border-b border-border/60 py-4 pl-4 font-display text-3xl transition-colors",
+                              active
+                                ? "text-foreground"
+                                : "text-foreground/70 hover:text-foreground",
+                            )}
+                          >
+                            {active ? (
+                              <span className="absolute top-4 bottom-4 left-0 w-0.5 rounded-full bg-primary" />
+                            ) : null}
+                            {item.label}
+                            <span lang="ar" className="gold-text text-xl">
+                              {navArabic[item.to]}
+                            </span>
+                          </Link>
+                        </motion.div>
+                      );
+                    })}
+                    <motion.div
+                      variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
+                      className="mt-8 flex flex-col gap-3"
+                    >
+                      <Button asChild variant="gold" size="lg">
+                        <Link to="/appointments" onClick={() => setOpen(false)}>
+                          Réserver une séance
+                        </Link>
+                      </Button>
+                      <Link
+                        to={user ? "/assise" : "/auth"}
+                        onClick={() => setOpen(false)}
+                        className={cn(
+                          "flex items-center justify-center gap-2 rounded-md border px-2 py-3 text-sm transition-all",
+                          "border-primary/40 text-primary hover:border-primary hover:bg-primary/10",
+                          !authReady && "opacity-60",
+                        )}
+                      >
+                        <User className="size-4" strokeWidth={1.5} />
+                        {user ? "Mon espace assise" : "Se connecter"}
+                      </Link>
+                    </motion.div>
+                  </motion.nav>
+                </motion.div>
+              ) : null}
+            </AnimatePresence>,
+            portalTarget,
+          )
+        : null}
     </header>
   );
 }

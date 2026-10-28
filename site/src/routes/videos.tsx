@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Youtube } from "lucide-react";
+import { FilterPills } from "@/components/motion/FilterPills";
+import { AnimatedGrid } from "@/components/motion/AnimatedGrid";
 import { Section, SectionHeading } from "@/components/site/Section";
 import { VideoCard } from "@/components/site/VideoCard";
 import { Button } from "@/components/ui/button";
@@ -53,30 +55,21 @@ function VideosPage() {
         </Button>
       </div>
 
-      <div className="mt-12 flex flex-wrap gap-2" role="group" aria-label="Filtrer par playlist">
-        {playlists.map((p) => (
-          <button
-            key={p}
-            type="button"
-            onClick={() => setPlaylist(p)}
-            aria-pressed={playlist === p}
-            className={cn(
-              "cursor-pointer rounded-full border px-4 py-2 text-xs tracking-wide transition-all duration-300",
-              playlist === p
-                ? "border-primary/50 bg-primary/10 text-primary"
-                : "border-border text-muted-foreground hover:border-primary/30 hover:text-foreground",
-            )}
-          >
-            {p}
-          </button>
-        ))}
+      <div className="mt-12">
+        <FilterPills
+          options={playlists}
+          value={playlist}
+          onChange={setPlaylist}
+          label="Filtrer par playlist"
+        />
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((video) => (
-          <VideoCard key={video.id} video={video} />
-        ))}
-      </div>
+      <AnimatedGrid
+        className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        items={filtered}
+        getKey={(video) => video.id}
+        render={(video) => <VideoCard video={video} />}
+      />
     </Section>
   );
 }

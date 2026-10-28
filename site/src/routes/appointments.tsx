@@ -149,6 +149,7 @@ function AppointmentsPage() {
         <Section className="pt-36 pb-24">
           <SectionHeading
             eyebrow="Paiement"
+            arabic="المجالسة"
             title="Régler votre séance"
             description="Carte bancaire ou paiement en plusieurs fois avec Klarna, selon votre pays. Dès le paiement validé, l'assise en direct s'ouvre dans votre espace."
           />

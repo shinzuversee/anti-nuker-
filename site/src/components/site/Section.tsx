@@ -35,7 +35,11 @@ export function SectionHeading({
   align?: "left" | "center";
 }) {
   return (
-    <Reveal className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
+    <Reveal
+      className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}
+      // Repère pour le bandeau sombre du haut de page (voir PageBackdrop).
+      data-page-hero={arabic ? "" : undefined}
+    >
       {arabic ? (
         // Le mot s'écrit de droite à gauche, comme le trace un calame.
         <motion.p
@@ -62,12 +66,19 @@ export function SectionHeading({
         {eyebrow}
       </motion.p>
       {arabic ? (
-        <h1 className="mt-4 text-4xl leading-tight sm:text-5xl">{title}</h1>
+        <h1 className="mt-4 text-4xl leading-tight text-primary-foreground sm:text-5xl">{title}</h1>
       ) : (
         <h2 className="mt-4 text-3xl leading-tight sm:text-4xl">{title}</h2>
       )}
       {description ? (
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground">{description}</p>
+        <p
+          className={cn(
+            "mt-4 text-base leading-relaxed",
+            arabic ? "text-primary-foreground/70" : "text-muted-foreground",
+          )}
+        >
+          {description}
+        </p>
       ) : null}
       <Ornament className="mt-8" align={align} />
     </Reveal>

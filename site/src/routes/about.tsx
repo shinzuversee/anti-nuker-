@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Section, SectionHeading } from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
+import { PortraitFrame } from "@/components/motion/PortraitFrame";
 import portraitAsset from "@/assets/portrait-sidi-studio.png.asset.json";
 
 export const Route = createFileRoute("/about")({
@@ -41,13 +42,9 @@ function AboutPage() {
         <div className="grid items-start gap-14 md:grid-cols-[1fr_1.15fr]">
           <div className="relative md:sticky md:top-28">
             <div className="absolute -inset-4 -z-10 rounded-2xl bg-primary/10 blur-3xl" aria-hidden="true" />
-            <img
+            <PortraitFrame
               src={portraitAsset.url}
               alt="Portrait de Sidi en studio d'enregistrement"
-              loading="lazy"
-              width={1920}
-              height={1080}
-              className="w-full rounded-xl border border-border object-cover shadow-elegant"
             />
           </div>
 
