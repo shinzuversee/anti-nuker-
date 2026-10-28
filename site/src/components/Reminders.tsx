@@ -2,7 +2,8 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight, Play } from 'lucide-react'
 import { reminders } from '../content'
 import SectionHeading from './SectionHeading'
-import Reveal, { fadeUp, stagger } from './Reveal'
+import Reveal, { fadeUp3d, stagger } from './Reveal'
+import TiltCard from './TiltCard'
 import { Star } from './Pattern'
 
 export default function Reminders() {
@@ -30,7 +31,8 @@ export default function Reminders() {
           variants={stagger(0.12)}
         >
           {reminders.items.map((r) => (
-            <motion.li key={r.title} variants={fadeUp}>
+            <motion.li key={r.title} variants={fadeUp3d}>
+              <TiltCard max={7} className="rounded-3xl">
               <a
                 href={r.href}
                 className="group block overflow-hidden rounded-3xl border border-ink/8 bg-white/50 transition-shadow duration-500 hover:shadow-[0_30px_70px_-40px_rgba(11,29,23,0.5)]"
@@ -51,6 +53,7 @@ export default function Reminders() {
                   <p className="mt-3 leading-relaxed text-muted">{r.text}</p>
                 </div>
               </a>
+              </TiltCard>
             </motion.li>
           ))}
         </motion.ul>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { mission } from '../content'
-import Reveal, { fadeUp, stagger } from './Reveal'
+import Reveal, { fadeUp3d, stagger } from './Reveal'
+import TiltCard, { Lift } from './TiltCard'
 import { Star } from './Pattern'
 
 export default function Mission() {
@@ -27,18 +28,19 @@ export default function Mission() {
           variants={stagger(0.12)}
         >
           {mission.pillars.map((p, i) => (
-            <motion.li
-              key={p.title}
-              variants={fadeUp}
-              className="group relative flex gap-6 rounded-3xl border border-ink/8 bg-white/60 p-7 transition-all duration-500 hover:border-gold/40 hover:bg-white hover:shadow-[0_20px_60px_-30px_rgba(11,29,23,0.35)]"
-            >
-              <span className="font-display text-5xl leading-none text-gold transition-transform duration-500 group-hover:-translate-y-1">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              <div>
-                <h3 className="font-display text-2xl font-semibold text-ink">{p.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted">{p.text}</p>
-              </div>
+            <motion.li key={p.title} variants={fadeUp3d}>
+              <TiltCard
+                max={6}
+                className="group flex gap-6 rounded-3xl border border-ink/8 bg-white/60 p-7 transition-[background-color,border-color,box-shadow] duration-500 hover:border-gold/40 hover:bg-white hover:shadow-[0_30px_60px_-30px_rgba(11,29,23,0.4)]"
+              >
+                <Lift z={50}>
+                  <span className="font-display text-5xl leading-none text-gold">{String(i + 1).padStart(2, '0')}</span>
+                </Lift>
+                <Lift z={25}>
+                  <h3 className="font-display text-2xl font-semibold text-ink">{p.title}</h3>
+                  <p className="mt-2 leading-relaxed text-muted">{p.text}</p>
+                </Lift>
+              </TiltCard>
             </motion.li>
           ))}
         </motion.ol>

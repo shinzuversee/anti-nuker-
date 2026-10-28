@@ -32,9 +32,15 @@ export default function Method() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
             >
-              <span className="relative z-10 grid size-14 shrink-0 place-items-center rounded-full border border-gold/50 bg-forest font-display text-2xl text-gold">
+              <motion.span
+                className="relative z-10 grid size-14 shrink-0 place-items-center rounded-full border border-gold/50 bg-forest font-display text-2xl text-gold shadow-[0_0_30px_-6px] shadow-gold/40"
+                initial={{ rotateY: 180, transformPerspective: 600 }}
+                whileInView={{ rotateY: 0, transformPerspective: 600 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 1, delay: 0.2 + i * 0.15, ease: [0.22, 1, 0.36, 1] }}
+              >
                 {i + 1}
-              </span>
+              </motion.span>
               <div>
                 <h3 className="font-display text-2xl font-semibold md:mt-6">{s.title}</h3>
                 <p className="mt-2 max-w-xs leading-relaxed text-ivory/65">{s.text}</p>

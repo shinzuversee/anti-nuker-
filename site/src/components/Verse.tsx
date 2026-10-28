@@ -19,10 +19,10 @@ export default function Verse() {
             <motion.span
               key={line}
               variants={{
-                hidden: { opacity: 0, y: 20, filter: 'blur(8px)' },
-                show: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 1 } },
+                hidden: { opacity: 0, y: 30, rotateX: 80, filter: 'blur(8px)', transformPerspective: 800 },
+                show: { opacity: 1, y: 0, rotateX: 0, filter: 'blur(0px)', transformPerspective: 800, transition: { duration: 1.1, ease: [0.22, 1, 0.36, 1] } },
               }}
-              className={`font-arabic text-4xl leading-[1.8] sm:text-5xl ${i === verse.lines.length - 1 ? 'text-gold' : 'text-ivory'}`}
+              className={`inline-block origin-bottom font-arabic text-4xl leading-[1.8] sm:text-5xl ${i === verse.lines.length - 1 ? 'text-gold' : 'text-ivory'}`}
             >
               {line}
             </motion.span>
