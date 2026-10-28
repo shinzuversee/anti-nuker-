@@ -41,7 +41,7 @@ function rng(seed: number) {
   };
 }
 
-function Field({ still }: { still: boolean }) {
+function Field({ still, avoidCenter }: { still: boolean; avoidCenter: boolean }) {
   const group = useRef<THREE.Group>(null);
   const sprites = useRef<THREE.Sprite[]>([]);
 
@@ -118,7 +118,15 @@ function Field({ still }: { still: boolean }) {
       const near = THREE.MathUtils.smoothstep(dz, 0.5, 3);
       const far = 1 - THREE.MathUtils.smoothstep(dz, 18, 32);
       const twinkle = still ? 1 : 0.7 + 0.3 * Math.sin(t * it.speed * 2 + it.phase);
-      mat.opacity = near * far * twinkle;
+      // En plein écran, les lettres qui passent derrière le titre s'effacent pour le garder lisible.
+      let behind = 1;
+      if (avoidCenter) {
+        const aspect = Math.min(1, state.size.width / state.size.height);
+        const sx = Math.abs(it.pos.x - cam.position.x) / dz;
+        const sy = Math.abs(it.pos.y - cam.position.y) / dz;
+        behind = sx < 0.42 * aspect && sy < 0.5 ? 0.1 : 1;
+      }
+      mat.opacity = near * far * twinkle * behind;
       if (!still) s.position.y = it.pos.y + Math.sin(t * it.speed + it.phase) * 0.12;
     });
   });
@@ -159,7 +167,7 @@ function Field({ still }: { still: boolean }) {
   );
 }
 
-export default function LetterField() {
+export default function LetterField({ avoidCenter = false }: { avoidCenter?: boolean }) {
   const still = useReducedMotion() ?? false;
   const [fontReady, setFontReady] = useState(false);
 
@@ -184,7 +192,7 @@ export default function LetterField() {
       aria-hidden="true"
     >
       <fog attach="fog" args={["#12151c", 10, 34]} />
-      <Field still={still} />
+      <Field still={still} avoidCenter={avoidCenter} />
     </Canvas>
   );
 }

@@ -5,7 +5,7 @@ import { introPending } from "./intro";
 // de la porte : la charger pendant l'animation la ferait saccader.
 const LetterField = lazy(() => import("./LetterField"));
 
-export function HeroConstellation() {
+export function HeroConstellation({ avoidCenter = false }: { avoidCenter?: boolean }) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     const t = setTimeout(() => setMounted(true), introPending() ? 4300 : 300);
@@ -14,7 +14,7 @@ export function HeroConstellation() {
   if (!mounted) return null;
   return (
     <Suspense fallback={null}>
-      <LetterField />
+      <LetterField avoidCenter={avoidCenter} />
     </Suspense>
   );
 }

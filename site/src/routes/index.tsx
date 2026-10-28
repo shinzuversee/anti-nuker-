@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowRight, BookOpen, MessageCircleQuestion, Quote, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,19 +7,14 @@ import { PostCard } from "@/components/site/PostCard";
 import { VideoCard } from "@/components/site/VideoCard";
 
 import { posts, testimonials, videos } from "@/data/content";
-import contemplationCosmos from "@/assets/contemplation-cosmos.jpeg.asset.json";
 import portrait from "@/assets/sunset-sidi.jpg.asset.json";
 import portraitVideo from "@/assets/sunset-sidi-loop.mp4.asset.json";
-import { introDelay } from "@/components/motion/intro";
-import { ease, rise3d, StaggerGrid } from "@/components/motion/Reveal";
+import { rise3d, StaggerGrid } from "@/components/motion/Reveal";
 import { TiltCard } from "@/components/motion/TiltCard";
-import { CountUp } from "@/components/motion/CountUp";
 import { Marquee } from "@/components/motion/Marquee";
+import { HomeHero } from "@/components/motion/HomeHero";
 import { VerseInterlude } from "@/components/motion/VerseInterlude";
 import { LightVerse } from "@/components/motion/LightVerse";
-import { HeroConstellation } from "@/components/motion/HeroConstellation";
-import { Mishkat } from "@/components/motion/Mishkat";
-import { HeroOrnaments } from "@/components/motion/HeroOrnaments";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -48,165 +42,43 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const featured = posts.slice(0, 3);
-  // Les animations de l'accueil attendent la fin de l'ouverture lors de la première visite.
-  const [d] = useState(introDelay);
-  const heroItem = {
-    hidden: { opacity: 0, y: 28, filter: "blur(8px)" },
-    show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.9, ease } },
-  };
-  const [photoOk, setPhotoOk] = useState(true);
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative isolate overflow-hidden border-b border-border/60">
-        <HeroOrnaments />
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pt-32 pb-16 sm:px-8 lg:min-h-[760px] lg:grid-cols-[1.04fr_0.96fr] lg:gap-16 lg:pt-28 lg:pb-12">
-          <motion.div
-            initial="hidden"
-            animate="show"
-            variants={{
-              hidden: {},
-              show: { transition: { staggerChildren: 0.12, delayChildren: d } },
-            }}
-          >
-            <motion.p
-              variants={heroItem}
-              className="eyebrow flex items-center gap-3 before:h-px before:w-7 before:bg-primary"
-            >
-              Nūr al-Bayān · Études coraniques
-            </motion.p>
-            <motion.h1
-              variants={heroItem}
-              className="mt-6 max-w-[720px] font-display text-[3.15rem] leading-[1.02] font-medium sm:text-7xl lg:text-[5rem]"
-            >
-              Comprendre les questions difficiles,
-              <span className="gold-text"> à votre rythme.</span>
-            </motion.h1>
-            <motion.p
-              variants={heroItem}
-              className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg"
-            >
-              Articles approfondis, cours vidéo et séances d’étude pour avancer avec méthode, à la
-              lumière du Coran et des sources.
-            </motion.p>
+      <HomeHero />
 
-            <motion.div variants={heroItem} className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild variant="gold" size="xl" className="sm:min-w-56">
-                <Link to="/sommaire">
-                  Explorer les matières <ArrowRight />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="xl" className="sm:min-w-56">
-                <Link to="/appointments">Réserver une séance</Link>
-              </Button>
-            </motion.div>
-
-            <motion.nav
-              variants={heroItem}
-              aria-label="Accès rapides"
-              className="mt-6 grid grid-cols-2 gap-2"
-            >
-              {[
-                { label: "Je débute", to: "/sommaire" as const, icon: ArrowRight },
-                { label: "Lire les articles", to: "/blog" as const, icon: ArrowRight },
-                { label: "Voir les cours", to: "/videos" as const, icon: ArrowDown },
-                { label: "Poser une question", to: "/qa" as const, icon: ArrowRight },
-              ].map((item) => (
+      {/* Accès rapides */}
+      <section id="acces" className="border-b border-border/60">
+        <StaggerGrid
+          className="mx-auto grid max-w-6xl gap-3 px-5 py-10 sm:grid-cols-2 sm:px-8 lg:grid-cols-4"
+          gap={0.08}
+        >
+          {[
+            { label: "Je débute", to: "/sommaire" as const, icon: ArrowRight },
+            { label: "Lire les articles", to: "/blog" as const, icon: ArrowRight },
+            { label: "Voir les cours", to: "/videos" as const, icon: ArrowDown },
+            { label: "Poser une question", to: "/qa" as const, icon: ArrowRight },
+          ].map((item) => (
+            <motion.div key={item.label} variants={rise3d}>
+              <TiltCard className="rounded-md" max={6}>
                 <Link
-                  key={item.label}
                   to={item.to}
-                  className="group flex min-h-12 items-center justify-between rounded-md border border-border bg-secondary/65 px-4 text-sm font-medium text-foreground hover:border-primary/40 hover:bg-accent"
+                  className="group flex min-h-14 items-center justify-between rounded-md border border-border bg-secondary/65 px-5 text-sm font-medium text-foreground hover:border-primary/40 hover:bg-accent hover:shadow-glow"
                 >
                   {item.label}
-                  <item.icon className="size-4 text-primary transition-transform group-hover:translate-x-0.5" />
+                  <item.icon className="size-4 text-primary transition-transform group-hover:translate-x-1" />
                 </Link>
-              ))}
-            </motion.nav>
-
-            <motion.div variants={heroItem}>
-              <Link
-                to="/about"
-                className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
-              >
-                Avec Sidi · Découvrir la démarche <ArrowRight className="size-4 text-primary" />
-              </Link>
+              </TiltCard>
             </motion.div>
-
-            <motion.dl
-              variants={heroItem}
-              className="mt-7 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-border pt-6 sm:grid-cols-4"
-            >
-              {[
-                ["120+", "articles publiés"],
-                ["1,2 M", "vues des cours"],
-                ["900+", "questions traitées"],
-                ["100+", "personnes accompagnées"],
-              ].map(([value, label]) => (
-                <div key={label}>
-                  <dt className="font-display text-3xl font-medium text-foreground">
-                    <CountUp value={value ?? ""} />
-                  </dt>
-                  <dd className="mt-1 text-[0.68rem] leading-snug text-muted-foreground uppercase">
-                    {label}
-                  </dd>
-                </div>
-              ))}
-            </motion.dl>
-          </motion.div>
-
-          <motion.div
-            className="relative mx-auto w-full max-w-[540px] lg:max-w-none"
-            initial={{ opacity: 0, scale: 0.92, rotateY: -14, transformPerspective: 1400 }}
-            animate={{ opacity: 1, scale: 1, rotateY: 0, transformPerspective: 1400 }}
-            transition={{ duration: 1.4, delay: d + 0.2, ease }}
+          ))}
+        </StaggerGrid>
+        <div className="mx-auto max-w-6xl px-5 pb-10 sm:px-8">
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
           >
-            <TiltCard className="rounded-2xl" max={5}>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-primary/25 bg-ink shadow-elegant">
-                {photoOk ? (
-                  <img
-                    src={contemplationCosmos.url}
-                    alt="Un homme contemplant le ciel étoilé depuis les montagnes"
-                    width={720}
-                    height={1280}
-                    onError={() => setPhotoOk(false)}
-                    className="animate-breathe absolute inset-0 size-full object-cover object-center"
-                  />
-                ) : null}
-                {/* Les 28 lettres de l'alphabet flottent comme des étoiles au-dessus du ciel */}
-                <div className="absolute inset-0" aria-hidden="true">
-                  <HeroConstellation />
-                </div>
-                <div
-                  className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent"
-                  aria-hidden="true"
-                />
-                <motion.div
-                  className="absolute top-8 left-1/2 -translate-x-1/2 text-primary"
-                  initial={{ opacity: 0, y: -16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: d + 1, duration: 1 }}
-                  aria-hidden="true"
-                >
-                  <div className="absolute inset-[-60%] rounded-full bg-primary/25 blur-2xl" />
-                  <Mishkat className="relative h-16 w-auto" />
-                </motion.div>
-                <motion.div
-                  className="absolute inset-x-6 bottom-6 rounded-xl border border-primary/35 bg-ink/90 p-5 text-primary-foreground shadow-elegant backdrop-blur-xl sm:inset-x-8 sm:bottom-8"
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: d + 1.1, duration: 0.9, ease }}
-                >
-                  <p className="font-display text-3xl font-medium text-primary">
-                    <CountUp value="12" /> disciplines
-                  </p>
-                  <p className="mt-1 text-sm leading-relaxed text-primary-foreground/80">
-                    Croyance, tafsīr, langue arabe, sciences du Coran, spiritualité…
-                  </p>
-                </motion.div>
-              </div>
-            </TiltCard>
-          </motion.div>
+            Avec Sidi · Découvrir la démarche <ArrowRight className="size-4 text-primary" />
+          </Link>
         </div>
       </section>
 

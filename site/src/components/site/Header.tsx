@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Mishkat } from "@/components/motion/Mishkat";
 
 const nav = [
+  { to: "/", label: "Accueil" },
   { to: "/actus", label: "Actus" },
   { to: "/blog", label: "Articles" },
   { to: "/sommaire", label: "Sommaire" },
@@ -24,6 +25,8 @@ export function Header() {
   const [authReady, setAuthReady] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const { scrollYProgress } = useScroll();
+  // En haut de l'accueil, le menu passe en clair au-dessus du grand fond sombre.
+  const onDark = pathname === "/" && !scrolled && !open;
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   useEffect(() => {
@@ -55,7 +58,14 @@ export function Header() {
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
         <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <Mishkat className="h-9 w-auto text-primary transition-transform duration-500 group-hover:-translate-y-0.5" />
-          <span className="font-display text-xl leading-none tracking-tight">Nūr al-Bayān</span>
+          <span
+            className={cn(
+              "font-display text-xl leading-none tracking-tight transition-colors duration-500",
+              onDark && "text-primary-foreground",
+            )}
+          >
+            Nūr al-Bayān
+          </span>
         </Link>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-1 md:flex">
@@ -65,14 +75,25 @@ export function Header() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="relative rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                activeProps={{ className: "text-foreground" }}
+                className={cn(
+                  "relative rounded-full px-3.5 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+                  onDark
+                    ? active
+                      ? "text-ink"
+                      : "text-primary-foreground/75 hover:text-primary-foreground"
+                    : active
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground",
+                )}
               >
                 {/* Pastille dorée qui glisse vers la page ouverte */}
                 {active ? (
                   <motion.span
                     layoutId="nav-pill"
-                    className="absolute inset-0 rounded-md border border-primary/30 bg-primary/10"
+                    className={cn(
+                      "absolute inset-0 rounded-full",
+                      onDark ? "bg-primary" : "border border-primary/30 bg-primary/10",
+                    )}
                     transition={{ type: "spring", stiffness: 380, damping: 32 }}
                   />
                 ) : null}
@@ -100,7 +121,10 @@ export function Header() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className={cn(
+            "md:hidden",
+            onDark && "text-primary-foreground hover:bg-white/10 hover:text-primary-foreground",
+          )}
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
