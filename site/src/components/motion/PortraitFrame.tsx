@@ -24,15 +24,19 @@ export function PortraitFrame({ src, alt }: { src: string; alt: string }) {
             </div>
           </div>
         ) : (
-          <img
-            src={src}
-            alt={alt}
-            loading="lazy"
-            width={1920}
-            height={1080}
-            onError={() => setFailed(true)}
-            className="w-full object-cover"
-          />
+          <>
+            <img
+              src={src}
+              alt={alt}
+              width={864}
+              height={1080}
+              onError={() => setFailed(true)}
+              className="aspect-[4/5] w-full object-cover"
+            />
+            {/* Voile doré en bas et liseré intérieur, pour fondre la photo dans le décor */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-3 rounded-lg border border-primary/30" />
+          </>
         )}
       </div>
     </TiltCard>

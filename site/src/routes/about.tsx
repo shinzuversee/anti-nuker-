@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Section, SectionHeading } from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
 import { PortraitFrame } from "@/components/motion/PortraitFrame";
-import portraitAsset from "@/assets/portrait-sidi-studio.png.asset.json";
+import portrait from "@/assets/portrait-sidi.webp";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -43,7 +43,7 @@ function AboutPage() {
           <div className="relative md:sticky md:top-28">
             <div className="absolute -inset-4 -z-10 rounded-2xl bg-primary/10 blur-3xl" aria-hidden="true" />
             <PortraitFrame
-              src={portraitAsset.url}
+              src={portrait}
               alt="Portrait de Sidi en studio d'enregistrement"
             />
           </div>
