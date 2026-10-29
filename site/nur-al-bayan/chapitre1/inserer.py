@@ -72,6 +72,20 @@ for path in sys.argv[2:]:
             j = obj.find('{type:`h2`', i + len(key))
             if j < 0: j = obj.rfind(']}')
             obj = obj[:j] + ','.join(js(x) for x in blks) + (',' if obj[j] == '{' else '') + obj[j:] if obj[j] == '{' else obj[:j] + ',' + ','.join(js(x) for x in blks) + obj[j:]
+        for btitle, blks in add.get('after', {}).items():  # juste après le bloc portant ce titre
+            key = 'title:`' + norm(btitle) + '`'
+            i = obj.index(key)
+            st = obj.rfind('{type:`', 0, i)
+            d, k = 0, st
+            while True:
+                c = obj[k]
+                if c == '`': k = obj.index('`', k + 1)
+                elif c == '{': d += 1
+                elif c == '}':
+                    d -= 1
+                    if d == 0: break
+                k += 1
+            obj = obj[:k + 1] + ',' + ','.join(js(x) for x in blks) + obj[k + 1:]
         if add.get('intro'):  # remplace le résumé
             i = obj.index(',intro:`') + len(',intro:`')
             j = obj.index('`', i)

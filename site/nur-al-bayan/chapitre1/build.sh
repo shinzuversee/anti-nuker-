@@ -1,0 +1,2 @@
+cd /tmp/claude-0/-home-user-anti-nuker-/776aa196-16ef-592f-8b24-f0d23f79ba36/scratchpad
+cp backup-v11/index-PmtvkTrY.js site-new/assets/ && python3 ch1/inserer.py site-new/assets/index-PmtvkTrY.js ch1/add_a.py ch1/add_a2.py ch1/add_b.py ch1/add_d.py ch1/add_ce.py ch1/add_a3.py ch1/add_obj.py ch1/add_m_a.py ch1/add_m_bd.py ch1/add_m_ce.py $(ls ch1/dev_*.py 2>/dev/null) | tail -1 && node --check site-new/assets/index-PmtvkTrY.js && echo BUILD-OK
