@@ -6,6 +6,9 @@ import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
+import { createServer } from 'node:http';
+import { readFile } from 'node:fs/promises';
+import { extname } from 'node:path';
 
 const args = process.argv.slice(2);
 const opt = (name, def) => { const i = args.indexOf(name); return i >= 0 ? args.splice(i, 2)[1] : def; };
@@ -19,15 +22,31 @@ if (!scene || !out) { console.error('usage: node render.mjs <scene.html> <out.mp
 
 const launch = () => chromium.launch({
   executablePath: process.env.CHROMIUM_PATH || '/opt/pw-browsers/chromium',
-  args: ['--allow-file-access-from-files', '--force-color-profile=srgb'],
+  args: ['--allow-file-access-from-files', '--force-color-profile=srgb', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'],
 });
+
+// Petit serveur statique : les modules ES (Three.js) ne se chargent pas depuis file://.
+const ROOT = resolve('.');
+const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.jpg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.otf': 'font/otf' };
+const server = createServer(async (req, res) => {
+  try {
+    const path = resolve(ROOT, '.' + decodeURIComponent(req.url.split('?')[0]));
+    if (!path.startsWith(ROOT)) throw new Error('hors racine');
+    const body = await readFile(path);
+    res.writeHead(200, { 'content-type': TYPES[extname(path)] || 'application/octet-stream' });
+    res.end(body);
+  } catch { res.writeHead(404); res.end(); }
+});
+await new Promise(r => server.listen(0, '127.0.0.1', r));
+const sceneUrl = `http://127.0.0.1:${server.address().port}/${scene.replace(/^\.\//, '')}`;
 
 async function openScene(browser) {
   const page = await browser.newPage({ viewport: { width, height } });
   const errors = [];
   page.on('pageerror', e => errors.push(String(e)));
-  await page.goto('file://' + resolve(scene));
+  await page.goto(sceneUrl);
   await page.evaluate(() => document.fonts.ready);
+  await page.waitForFunction(() => window.READY !== false, null, { timeout: 120000 });
   await page.evaluate(() => Promise.all([...document.images].map(i => i.decode().catch(() => {}))));
   return { page, errors };
 }
@@ -45,6 +64,7 @@ if (stills) {
     if (errors.length) { console.error(errors); process.exit(1); }
   }
   await browser.close();
+  server.close();
   process.exit(0);
 }
 
@@ -85,3 +105,4 @@ const ff = spawn('ffmpeg', [
 ], { stdio: 'inherit' });
 await new Promise(r => ff.on('close', r));
 rmSync(tmp, { recursive: true, force: true });
+server.close();

@@ -31,3 +31,18 @@ node render.mjs projets/nur-al-bayan/presentation.html out/avec-son.mp4 nasheed.
 ```
 
 Options de `render.mjs` : `--size LxH` (défaut 1080x1920), `--fps`, `--workers N` (rendu parallèle).
+
+## Nūr al-Bayān v3 — 3D (Three.js)
+
+`projets/nur-al-bayan/v3/nur3d.html` : vraie 3D WebGL (Three.js) — volumes dorés extrudés, ombres douces,
+sol miroir, faisceaux de lumière, poussière, bloom, profondeur de champ (réutilise la profondeur, sans second
+rendu), aberration chromatique, flous de fouetté et de zoom, flash. Le texte arabe reste en HTML (mise en forme
+correcte), la calligraphie 3D est une texture empilée en couches.
+
+`render.mjs` sert désormais les pages en HTTP local (les modules ES ne se chargent pas depuis file://) et
+attend `window.READY`. Le WebGL tourne en logiciel (SwiftShader) : ~1,4 s par image en 1080p.
+
+```bash
+npm install
+node render.mjs projets/nur-al-bayan/v3/nur3d.html out/nur-al-bayan-3d.mp4 --size 1920x1080 --fps 60 --workers 2
+```

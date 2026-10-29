@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Nūr al-Bayān — 3D</title>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+<style>
+@font-face { font-family: Amiri; font-weight: 400; src: url(/fonts/amiri-normal-arabic-400.woff2); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200E; }
+@font-face { font-family: Amiri; font-weight: 700; src: url(/fonts/amiri-normal-arabic-700.woff2); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200E; }
+@font-face { font-family: Corm; font-weight: 300 700; src: url(/fonts/cormorant-normal-latin-400.woff2); unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: Corm; font-weight: 300 700; src: url(/fonts/cormorant-normal-latin-ext-400.woff2); unicode-range: U+0100-02AF, U+1E00-1EFF; }
+@font-face { font-family: Corm; font-style: italic; src: url(/fonts/cormorant-italic-latin-400.woff2); unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: Corm; font-style: italic; src: url(/fonts/cormorant-italic-latin-ext-400.woff2); unicode-range: U+0100-02AF, U+1E00-1EFF; }
+:root { --gold: oklch(68% .11 80); --gold-soft: oklch(80% .08 84); --grad: linear-gradient(100deg, oklch(74% .1 86), oklch(86% .09 88) 40%, oklch(66% .12 76) 70%, oklch(80% .1 84)); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+body { font-family: Inter, sans-serif; color: #f3efe6; }
+canvas#gl { position: absolute; inset: 0; }
+#ui { position: absolute; inset: 0; pointer-events: none; }
+.goldtxt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cap { font: 500 20px Inter; letter-spacing: .42em; text-transform: uppercase; color: var(--gold-soft); text-shadow: 0 2px 12px rgba(0,0,0,.8); }
+.mask { position: absolute; overflow: hidden; white-space: nowrap; padding: 0 .08em .08em; }
+.mask > span { display: inline-block; }
+.ar { font-family: Amiri, serif; direction: rtl; }
+.vs { position: absolute; top: 0; left: 0; white-space: nowrap; font: 400 100px/1.25 Amiri; direction: rtl; color: #f4efe4; text-shadow: 0 10px 30px rgba(0,0,0,.9); }
+.ul { position: absolute; height: 3px; background: var(--grad); border-radius: 2px; transform-origin: 100% 50%; }
+.tag { position: absolute; left: 0; top: 0; height: 64px; padding: 0 30px 0 22px; border-radius: 32px; background: rgba(20,21,25,.9); border: 1px solid oklch(68% .11 80 / .45); box-shadow: 0 20px 50px rgba(0,0,0,.6); font: 600 26px/62px Inter; color: #f3eee3; white-space: nowrap; display: flex; gap: 14px; align-items: center; }
+.tag .d { width: 12px; height: 12px; transform: rotate(45deg); background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+#cursor { position: absolute; left: 0; top: 0; width: 50px; height: 50px; filter: drop-shadow(0 8px 12px rgba(0,0,0,.7)); }
+#call { position: absolute; left: 0; top: 0; }
+#call path { fill: none; stroke: oklch(80% .08 84); stroke-width: 2; }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1920" height="1080"></canvas>
+<div id="ui">
+  <!-- D : légendes de la calligraphie -->
+  <svg id="call" width="1920" height="1080"><path id="cl0" pathLength="1"/><path id="cl1" pathLength="1"/><circle id="cd0" r="7" fill="oklch(90% .07 88)"/><circle id="cd1" r="7" fill="oklch(90% .07 88)"/></svg>
+  <div class="mask" id="lbl0" style="font:italic 400 54px/1.1 Corm;color:#efe6d2"><span>la lumière</span></div>
+  <div class="mask" id="lbl1" style="font:italic 400 54px/1.1 Corm;color:#efe6d2"><span>la clarté</span></div>
+  <div class="mask" id="nameD" style="left:0;right:0;top:930px;text-align:center;font:500 40px Corm;letter-spacing:.5em;color:var(--gold-soft)"><span>NŪR AL-BAYĀN</span></div>
+  <!-- E -->
+  <div class="mask" id="enum" style="left:170px;top:110px"><span class="cap" id="enumT">01 / 03</span></div>
+  <div class="mask" id="es0" style="left:172px;top:690px;font:400 36px Inter;color:#d8d0bf"><span>Des articles approfondis, à lire lentement.</span></div>
+  <div class="mask" id="es1" style="left:172px;top:690px;font:400 36px Inter;color:#d8d0bf"><span>Une question ? Réponse dans la semaine.</span></div>
+  <div class="mask" id="es2" style="left:172px;top:740px;font:400 36px Inter;color:#d8d0bf"><span>Une séance privée, sans hâte.</span></div>
+  <!-- F -->
+  <div id="flab"></div><div id="segs"></div>
+  <!-- G -->
+  <div class="mask" id="gh" style="left:0;right:0;top:90px;text-align:center"><span class="cap">Écrits · cours · articles récents</span></div>
+  <!-- H -->
+  <div class="tag" id="tag"><span class="d"></span><span id="tagt">Accueil</span></div>
+  <!-- I -->
+  <div class="mask" id="ih" style="left:0;right:0;top:120px;text-align:center"><span class="cap">L’origine du nom · Sourate Ar-Raḥmān 55 : 1-4</span></div>
+  <div id="verse"></div>
+  <div class="mask" id="itr" style="left:0;right:0;top:640px;text-align:center;font:italic 400 44px/1.3 Corm;color:#d6cebe"><span>« … Il lui a enseigné l’expression claire. »</span></div>
+  <div class="mask" id="itr2" style="left:0;right:0;top:770px;text-align:center;font:500 52px Corm;color:#f3ecdc"><span>al-bayān <b class="goldtxt" style="font-weight:600">→</b> Nūr al-Bayān</span></div>
+  <!-- J -->
+  <div class="mask" id="jc" style="left:0;right:0;top:150px;text-align:center"><span class="cap">En tête-à-tête</span></div>
+  <div class="mask" id="jl0" style="left:0;right:0;top:200px;text-align:center;font:500 90px/1.08 Corm;color:#f7f2e7"><span>Apportez la question</span></div>
+  <div class="mask" id="jl1" style="left:0;right:0;top:298px;text-align:center;font:500 90px/1.08 Corm;color:#f7f2e7"><span>que vous portez depuis longtemps.</span></div>
+  <div class="mask" id="jp" style="left:0;right:0;top:420px;text-align:center;font:400 30px Inter;color:#c5beb0"><span>Le premier échange est offert.</span></div>
+  <svg id="cursor" viewBox="0 0 24 24"><path d="M4 2l16 10-7 1.5L9.5 21z" fill="#fff" stroke="#111" stroke-width="1.2" stroke-linejoin="round"/></svg>
+  <!-- K -->
+  <div class="mask" id="kLat" style="left:0;right:0;top:790px;text-align:center;font:500 74px Corm;color:#f7f2e7"><span>Nūr al-Bayān</span></div>
+  <div class="mask" id="kTag" style="left:0;right:0;top:893px;text-align:center;font:400 28px Inter;color:#c4bdaf"><span>Comprendre les questions difficiles, à votre rythme.</span></div>
+  <div class="mask" id="kAya" style="left:0;right:0;top:965px;text-align:center"><span><span class="ar goldtxt" style="font:400 46px/1.4 Amiri">وَقُل رَّبِّ زِدْنِي عِلْمًا</span><span style="font:italic 400 30px Corm;color:#a9a294;margin-left:24px">« Et dis : Seigneur, accrois mes connaissances. » · Ṭā-Hā, 20 : 114</span></span></div>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import { Reflector } from 'three/addons/objects/Reflector.js';
+import { TTFLoader } from 'three/addons/loaders/TTFLoader.js';
+import { Font } from 'three/addons/loaders/FontLoader.js';
+import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+window.READY = false;
+
+// ================= courbes de mouvement =================
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, k) => a + (b - a) * k;
+const K = (t, a, d) => clamp((t - a) / d);
+const seeded = i => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+const spring = (z = 6, f = 1.4) => k => k <= 0 ? 0 : k >= 1 ? 1 : 1 - Math.exp(-z * k) * Math.cos(k * Math.PI * 2 * f);
+const E = {
+  lin: k => k, out: k => 1 - Math.pow(1 - k, 3), out5: k => 1 - Math.pow(1 - k, 5), in: k => k * k * k,
+  inExpo: k => k <= 0 ? 0 : Math.pow(2, 10 * k - 10),
+  io: k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2,
+  io5: k => k < .5 ? 16 * k ** 5 : 1 - Math.pow(-2 * k + 2, 5) / 2,
+  anticip: k => { const c = 1.6; return (c + 1) * k * k * k - c * k * k; },
+  bounce: k => { const n = 7.5625, d = 2.75; if (k < 1 / d) return n * k * k; if (k < 2 / d) return n * (k -= 1.5 / d) * k + .75; if (k < 2.5 / d) return n * (k -= 2.25 / d) * k + .9375; return n * (k -= 2.625 / d) * k + .984375; },
+  spring: spring(6.5, 1.35), soft: spring(8, 1.05), bouncy: spring(5, 2.1),
+};
+const pulse = (t, at, up = .08, down = .5) => t < at - up ? 0 : t < at ? E.out((t - at + up) / up) : Math.max(0, 1 - E.out((t - at) / down));
+const $ = id => document.getElementById(id);
+function slide(el, t, a, o, { d = .55, dout = .38, e = 'out5' } = {}) {
+  const inner = el.firstElementChild;
+  const ki = E[e](K(t, a, d)), ko = o == null ? 0 : E.inExpo(K(t, o, dout));
+  inner.style.transform = `translateY(${lerp(115, 0, ki) - 115 * ko}%) skewY(${(1 - ki) * 8 - ko * 8}deg)`;
+  el.style.visibility = t < a || ko >= 1 ? 'hidden' : 'visible';
+}
+const hideUI = () => { for (const el of $('ui').querySelectorAll('.mask,.vs,.ul,.tag,#cursor')) el.style.visibility = 'hidden'; $('call').style.visibility = 'hidden'; };
+
+// ================= moteur 3D =================
+const canvas = $('gl');
+const R = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+R.setPixelRatio(1); R.setSize(1920, 1080, false);
+R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap;
+R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.0;
+const S = new THREE.Scene();
+const pm = new THREE.PMREMGenerator(R);
+S.environment = pm.fromScene(new RoomEnvironment(), .04).texture;
+const cam = new THREE.PerspectiveCamera(35, 16 / 9, .05, 200);
+const DARK = new THREE.Color(0x060709), CREAM = new THREE.Color(0xefe8da);
+S.background = DARK.clone(); S.fog = new THREE.Fog(DARK.clone(), 14, 46);
+
+// matières
+const M = {
+  gold: new THREE.MeshStandardMaterial({ color: 0xf0c27a, metalness: 1, roughness: .2, envMapIntensity: 1.25 }),
+  goldBtn: new THREE.MeshStandardMaterial({ color: 0xc99a52, metalness: 1, roughness: .34, envMapIntensity: .55 }),
+  goldMat: new THREE.MeshStandardMaterial({ color: 0xd9ad62, metalness: .9, roughness: .38 }),
+  ink: new THREE.MeshStandardMaterial({ color: 0x1d1913, metalness: .1, roughness: .48, side: THREE.DoubleSide }),
+  dark: new THREE.MeshStandardMaterial({ color: 0x15161a, metalness: .3, roughness: .32 }),
+  flame: new THREE.MeshBasicMaterial({ color: new THREE.Color(1.5, 1.05, .5), toneMapped: false }),
+  glow: new THREE.MeshBasicMaterial({ color: new THREE.Color(2.2, 1.6, .8), toneMapped: false, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide }),
+};
+
+// sols : miroir sombre (scènes noires) / sol crème qui ne garde que les ombres
+const refl = new Reflector(new THREE.PlaneGeometry(120, 120), { textureWidth: 768, textureHeight: 432, color: 0x6a6a6a });
+refl.rotation.x = -Math.PI / 2; S.add(refl);
+const darkFloor = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), new THREE.MeshStandardMaterial({ color: 0x020203, roughness: .7, metalness: 0, transparent: true, opacity: .9 }));
+darkFloor.rotation.x = -Math.PI / 2; darkFloor.position.y = .003; darkFloor.receiveShadow = true; S.add(darkFloor);
+const creamFloor = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), new THREE.ShadowMaterial({ color: 0x4a3a26, opacity: .3 }));
+creamFloor.rotation.x = -Math.PI / 2; creamFloor.receiveShadow = true; S.add(creamFloor);
+
+// lumières
+const hemi = new THREE.HemisphereLight(0xb8c4d6, 0x1a120a, .35); S.add(hemi);
+const key = new THREE.SpotLight(0xffe4b8, 420, 60, .55, .7, 1.6);
+key.position.set(5, 11, 7); key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.bias = -.0004; key.shadow.radius = 5;
+S.add(key); S.add(key.target);
+const rim = new THREE.DirectionalLight(0xffc98a, 1.6); rim.position.set(-6, 5, -8); S.add(rim);
+const sweep = new THREE.SpotLight(0xfff0d0, 0, 30, .25, .5, 1.2); S.add(sweep); S.add(sweep.target);
+const orbLight = new THREE.PointLight(0xffc070, 0, 9, 1.8); S.add(orbLight);
+
+// faisceaux de lumière volumétriques (cônes additifs)
+const beamMat = new THREE.ShaderMaterial({
+  transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
+  uniforms: { uO: { value: 0 } },
+  vertexShader: `varying float vY; varying vec3 vN; varying vec3 vV; void main(){ vY = uv.y; vec4 mv = modelViewMatrix*vec4(position,1.); vN = normalize(normalMatrix*normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix*mv; }`,
+  fragmentShader: `uniform float uO; varying float vY; varying vec3 vN; varying vec3 vV; void main(){ float f = pow(abs(dot(vN, vV)), 2.); gl_FragColor = vec4(vec3(1.,.82,.55)*f*pow(vY,1.6)*.35*uO, 1.); }`,
+});
+const beams = [-4.5, 0, 4.5].map((x, i) => { const m = new THREE.Mesh(new THREE.CylinderGeometry(.15, 2.4, 16, 32, 1, true), beamMat); m.position.set(x, 8, -4 - i % 2 * 2); m.rotation.z = (i - 1) * -.18; S.add(m); return m; });
+
+// poussière dorée en profondeur
+const dustN = 900, dustPos = new Float32Array(dustN * 3), dustSeed = [];
+for (let i = 0; i < dustN; i++) dustSeed.push([seeded(i) * 40 - 20, seeded(i + 99) * 12, seeded(i + 333) * 36 - 26, .2 + seeded(i + 7)]);
+const dustGeo = new THREE.BufferGeometry(); dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPos, 3));
+const spr = (() => { const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d'); const r = g.createRadialGradient(32, 32, 0, 32, 32, 32); r.addColorStop(0, 'rgba(255,240,210,1)'); r.addColorStop(.3, 'rgba(255,210,140,.5)'); r.addColorStop(1, 'rgba(0,0,0,0)'); g.fillStyle = r; g.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c); })();
+const dustMat = new THREE.PointsMaterial({ size: .09, map: spr, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, color: 0xffd9a0 });
+const dust = new THREE.Points(dustGeo, dustMat); S.add(dust);
+
+// ================= post-production =================
+// La profondeur de la passe principale est réutilisée pour la profondeur de champ (pas de second rendu).
+const rt = new THREE.WebGLRenderTarget(1920, 1080, { type: THREE.HalfFloatType, depthTexture: new THREE.DepthTexture(1920, 1080) });
+const comp = new EffectComposer(R, rt);
+comp.renderTarget2.depthTexture = new THREE.DepthTexture(1920, 1080);
+comp.addPass(new RenderPass(S, cam));
+const dof = new ShaderPass({
+  uniforms: { tDiffuse: { value: null }, tDepth: { value: null }, uFocus: { value: 10 }, uAperture: { value: .0016 }, uNear: { value: .05 }, uFar: { value: 200 } },
+  vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+  fragmentShader: `
+    uniform sampler2D tDiffuse, tDepth; uniform float uFocus, uAperture, uNear, uFar; varying vec2 vUv;
+    float lin(vec2 uv){ float d = texture2D(tDepth, uv).x; return uNear*uFar/(uFar - d*(uFar-uNear)); }
+    float coc(vec2 uv){ float z = lin(uv); return clamp(abs(z - uFocus)/z * uAperture * 900., 0., 9.); }
+    void main(){
+      float c = coc(vUv); vec4 base = texture2D(tDiffuse, vUv);
+      if (c < .6) { gl_FragColor = base; return; }
+      vec3 acc = base.rgb; float wsum = 1.;
+      for (int i = 0; i < 16; i++) {
+        float a = float(i)*2.39996, r = sqrt(float(i)+.5)/4.;
+        vec2 o = vec2(cos(a), sin(a))*r*c/vec2(1920.,1080.);
+        float w = clamp(coc(vUv+o)/c, .2, 1.);
+        acc += texture2D(tDiffuse, vUv+o).rgb*w; wsum += w;
+      }
+      gl_FragColor = vec4(acc/wsum, base.a);
+    }`,
+});
+{ const r0 = dof.render.bind(dof); dof.render = (r, w, rd, dt, m) => { dof.uniforms.tDepth.value = rd.depthTexture; r0(r, w, rd, dt, m); }; }
+comp.addPass(dof);
+const bloom = new UnrealBloomPass(new THREE.Vector2(960, 540), .4, .4, .92); comp.addPass(bloom);
+const bokeh = { uniforms: { focus: dof.uniforms.uFocus, aperture: dof.uniforms.uAperture } };
+comp.addPass(new OutputPass());
+const fx = new ShaderPass({
+  uniforms: { tDiffuse: { value: null }, uFlash: { value: 0 }, uWhip: { value: new THREE.Vector2() }, uZoom: { value: 0 }, uCA: { value: .0015 }, uTime: { value: 0 }, uLeak: { value: 0 }, uFade: { value: 0 } },
+  vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+  fragmentShader: `
+    uniform sampler2D tDiffuse; uniform float uFlash, uZoom, uCA, uTime, uLeak, uFade; uniform vec2 uWhip; varying vec2 vUv;
+    float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)))*43758.5453); }
+    vec3 tap(vec2 uv){ vec2 d = (uv-.5)*uCA*(1.+length(uv-.5)*2.); return vec3(texture2D(tDiffuse, uv+d).r, texture2D(tDiffuse, uv).g, texture2D(tDiffuse, uv-d).b); }
+    void main(){
+      vec3 c = vec3(0.);
+      float w = length(uWhip), z = uZoom;
+      if (w > .0005 || z > .0005) {
+        for (int i = 0; i < 16; i++) { float k = float(i)/15. - .5; vec2 uv = vUv + uWhip*k + (vUv-.5)*z*k; c += tap(uv); }
+        c /= 16.;
+      } else c = tap(vUv);
+      vec2 q = vUv-.5;
+      c += vec3(1.,.62,.28)*uLeak*smoothstep(.9,0.,length(q-vec2(.55,-.35)))*.55;
+      c *= mix(1., smoothstep(1.05,.25,length(q*vec2(1.,.9))), .55);
+      c += (h(vUv*1000.+uTime)-.5)*.045;
+      c = mix(c, vec3(1.,.97,.9), uFlash);
+      c *= 1.-uFade;
+      gl_FragColor = vec4(c,1.);
+    }`,
+});
+comp.addPass(fx);
+
+// ================= fabrication des objets =================
+const add = (o, p = S) => (p.add(o), o);
+const shadowed = o => { o.traverse(m => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } }); return o; };
+const fontLoad = url => new Promise((ok, ko) => new TTFLoader().load(url, j => ok(new Font(j)), undefined, ko));
+
+// Mot en 3D, une lettre = un pivot (base au centre) pour animer chaque lettre.
+function word3d(font, str, size, depth, mat, align = 'center') {
+  const g = new THREE.Group(), items = [];
+  const sc = size / font.data.resolution;
+  let x = 0;
+  for (const ch of str) {
+    const gl = font.data.glyphs[ch] || font.data.glyphs['?'];
+    const adv = gl.ha * sc;
+    if (ch !== ' ') {
+      const geo = new TextGeometry(ch, { font, size, depth, curveSegments: 5, bevelEnabled: true, bevelThickness: depth * .18, bevelSize: size * .012, bevelSegments: 2 });
+      geo.computeBoundingBox();
+      const bb = geo.boundingBox, cx = (bb.min.x + bb.max.x) / 2;
+      geo.translate(-cx, 0, -depth / 2);
+      const pivot = new THREE.Group(); pivot.position.x = x + cx;
+      const mesh = new THREE.Mesh(geo, mat); mesh.castShadow = true; mesh.receiveShadow = true;
+      pivot.add(mesh); g.add(pivot);
+      items.push({ pivot, mesh, x0: x + cx, i: items.length });
+    }
+    x += adv;
+  }
+  const off = align === 'center' ? -x / 2 : 0;
+  for (const it of items) { it.pivot.position.x += off; it.x0 += off; }
+  return { g, items, width: x };
+}
+// Tube doré qui se trace (trim path en 3D) le long d'une liste de points 2D.
+function tube(pts2, scale, r, mat, closed = false, segs = 200) {
+  const curve = new THREE.CatmullRomCurve3(pts2.map(([x, y]) => new THREE.Vector3(x * scale, -y * scale, 0)), closed, 'centripetal', .2);
+  const geo = new THREE.TubeGeometry(curve, segs, r, 10, closed);
+  const m = new THREE.Mesh(geo, mat); m.castShadow = true;
+  m.userData.count = geo.index.count;
+  return m;
+}
+const trim = (m, k) => { const n = Math.floor(m.userData.count * clamp(k) / 60) * 60; m.geometry.setDrawRange(0, n); m.visible = n > 0; };
+// Points d'une courbe de Bézier cubique (pour l'arche et la lampe).
+const bez = (p0, p1, p2, p3, n = 24) => Array.from({ length: n + 1 }, (_, i) => { const t = i / n, u = 1 - t; return [u * u * u * p0[0] + 3 * u * u * t * p1[0] + 3 * u * t * t * p2[0] + t * t * t * p3[0], u * u * u * p0[1] + 3 * u * u * t * p1[1] + 3 * u * t * t * p2[1] + t * t * t * p3[1]]; });
+const line = (a, b, n = 10) => Array.from({ length: n + 1 }, (_, i) => [lerp(a[0], b[0], i / n), lerp(a[1], b[1], i / n)]);
+const archPts = (w, h, top) => [...line([0, h], [0, top + 20]).slice(0, -1), ...bez([0, top + 20], [0, top - 30], [w * .3, top - 60], [w / 2, top - 120]), ...bez([w / 2, top - 120], [w * .7, top - 60], [w, top - 30], [w, top + 20]).slice(1), ...line([w, top + 20], [w, h]).slice(1)];
+
+// Lampe du site (arche + suspension + coupe + flamme) ; coordonnées du SVG 100×136.
+function lamp(scale, mat) {
+  const g = new THREE.Group();
+  const arch = tube([...line([12, 134], [12, 58]).slice(0, -1), ...bez([12, 58], [12, 36], [34, 24], [50, 4]), ...bez([50, 4], [66, 24], [88, 36], [88, 58]).slice(1), ...line([88, 58], [88, 134]).slice(1)], scale, 2.2 * scale, mat);
+  const chain = tube(line([50, 4], [50, 34]), scale, 1.3 * scale, mat, false, 20);
+  const bowl = tube([[33, 62], ...bez([33, 62], [42, 76], [58, 76], [67, 62]).slice(1), [50, 62.5], [33, 62]], scale, 1.8 * scale, mat, false, 80);
+  const base = tube(line([42, 84], [58, 84]), scale, 1.6 * scale, mat, false, 10);
+  const fl = new THREE.Mesh(new THREE.LatheGeometry(Array.from({ length: 16 }, (_, i) => { const k = i / 15; return new THREE.Vector2(Math.sin(k * Math.PI) * (1 - k * .55) * 7 * scale, (-k * 24 + 24) * scale); }), 24), M.flame);
+  fl.position.set(50 * scale, -60 * scale, 0);
+  const parts = [arch, chain, bowl, base];
+  parts.forEach(p => g.add(p)); g.add(fl);
+  const inner = new THREE.Group(); inner.add(g); g.position.set(-50 * scale, 68 * scale, 0);
+  inner.userData = { parts, fl };
+  return inner;
+}
+function drawLamp(l, k, flame) { l.userData.parts.forEach((p, i) => trim(p, clamp(k * 4 - i * .7))); l.userData.fl.scale.setScalar(Math.max(.001, flame)); l.userData.fl.visible = flame > .01; }
+
+// Cadre carré extrudé (deux cadres tournés = étoile à huit branches du site).
+function frame(s, w, d, mat) {
+  const sh = new THREE.Shape(); sh.moveTo(-s, -s); sh.lineTo(s, -s); sh.lineTo(s, s); sh.lineTo(-s, s); sh.closePath();
+  const hole = new THREE.Path(); const q = s - w; hole.moveTo(-q, -q); hole.lineTo(-q, q); hole.lineTo(q, q); hole.lineTo(q, -q); hole.closePath(); sh.holes.push(hole);
+  const geo = new THREE.ExtrudeGeometry(sh, { depth: d, bevelEnabled: true, bevelThickness: .03, bevelSize: .02, bevelSegments: 3 }); geo.translate(0, 0, -d / 2);
+  return shadowed(new THREE.Mesh(geo, mat));
+}
+// Calligraphie : texture du texte arabe empilée en couches = volume extrudé, ombre portée comprise.
+function calli(text, width, layers = 22, depth = .45) {
+  const cv = document.createElement('canvas'); cv.width = 2048; cv.height = 900;
+  const g = cv.getContext('2d'); g.font = '700 400px Amiri'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.direction = 'rtl';
+  const grd = g.createLinearGradient(0, 200, 2048, 700); grd.addColorStop(0, '#f7dca0'); grd.addColorStop(.45, '#fff2cf'); grd.addColorStop(.7, '#c9963f'); grd.addColorStop(1, '#efc77d');
+  g.fillStyle = grd; g.fillText(text, 1024, 470);
+  const front = new THREE.CanvasTexture(cv); front.colorSpace = THREE.SRGBColorSpace; front.anisotropy = 4;
+  const cv2 = document.createElement('canvas'); cv2.width = 2048; cv2.height = 900;
+  const g2 = cv2.getContext('2d'); g2.font = g.font; g2.textAlign = 'center'; g2.textBaseline = 'middle'; g2.direction = 'rtl'; g2.fillStyle = '#5e4116'; g2.fillText(text, 1024, 470);
+  const side = new THREE.CanvasTexture(cv2); side.colorSpace = THREE.SRGBColorSpace;
+  const h = width * 900 / 2048, geo = new THREE.PlaneGeometry(width, h);
+  const grp = new THREE.Group();
+  const sideMat = new THREE.MeshStandardMaterial({ map: side, alphaTest: .45, metalness: .6, roughness: .45, color: 0xffffff });
+  const frontMat = new THREE.MeshStandardMaterial({ map: front, alphaTest: .45, metalness: .75, roughness: .25, emissive: 0x3a2508, emissiveMap: front, emissiveIntensity: .25 });
+  const depthMat = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking, map: front, alphaTest: .45 });
+  for (let i = 0; i < layers; i++) {
+    const m = new THREE.Mesh(geo, i === layers - 1 ? frontMat : sideMat);
+    m.position.z = -depth + depth * i / (layers - 1);
+    if (i === 0 || i === layers - 1) { m.castShadow = true; m.customDepthMaterial = depthMat; }
+    grp.add(m);
+  }
+  grp.userData = { frontMat, h };
+  return grp;
+}
+// Texture de carte (titre, catégorie) dessinée sur canvas.
+function cardTex(meta, title, foot) {
+  const c = document.createElement('canvas'); c.width = 1024; c.height = 700; const g = c.getContext('2d');
+  const gr = g.createLinearGradient(0, 0, 1024, 700); gr.addColorStop(0, '#1f2126'); gr.addColorStop(1, '#121317'); g.fillStyle = gr; g.fillRect(0, 0, 1024, 700);
+  g.strokeStyle = '#c9a25a'; g.lineWidth = 6; g.strokeRect(8, 8, 1008, 684);
+  g.fillStyle = '#d9bd86'; g.font = '600 30px Inter'; g.fillText(meta.toUpperCase(), 70, 120);
+  g.fillStyle = '#f6f1e6'; g.font = '600 76px Corm';
+  let y = 230, ln = '';
+  for (const w of title.split(' ')) { const tt = ln ? ln + ' ' + w : w; if (g.measureText(tt).width > 880) { g.fillText(ln, 70, y); y += 84; ln = w; } else ln = tt; }
+  g.fillText(ln, 70, y);
+  g.fillStyle = '#d9bd86'; g.font = '600 32px Inter'; g.fillText(foot, 70, 630);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; return t;
+}
+
+// ================= construction des scènes =================
+const G = {};
+const grp = name => (G[name] = add(new THREE.Group()));
+let F = {};
+
+async function build() {
+  await document.fonts.load('700 100px Amiri'); await document.fonts.load('600 60px Corm'); await document.fonts.load('600 30px Inter');
+  const [inter, corm, cormI] = await Promise.all([fontLoad('/fonts/InterDisplay-Black.otf'), fontLoad('/fonts/CormorantGaramond-SemiBold.ttf'), fontLoad('/fonts/CormorantGaramond-Italic500.ttf')]);
+  F = { inter, corm, cormI };
+
+  // ---------- A : trait de lumière, orbe qui rebondit ----------
+  grp('A');
+  G.A.ball = shadowed(add(new THREE.Mesh(new THREE.SphereGeometry(.34, 64, 32), M.gold), G.A));
+  G.A.rod = add(new THREE.Mesh(new THREE.CylinderGeometry(.012, .012, 1, 8), M.flame), G.A); G.A.rod.rotation.z = Math.PI / 2;
+  G.A.rodT = add(G.A.rod.clone(), G.A); G.A.rodB = add(G.A.rod.clone(), G.A);
+  G.A.rings = [0, 1, 2, 3].map(() => { const m = add(new THREE.Mesh(new THREE.RingGeometry(.96, 1, 128), M.glow.clone()), G.A); m.rotation.x = -Math.PI / 2; m.position.y = .01; return m; });
+
+  // ---------- B : étoile à huit branches, lampe, nom (studio crème) ----------
+  grp('B');
+  G.B.f1 = add(frame(1.25, .16, .16, M.gold), G.B); G.B.f2 = add(frame(1.25, .16, .16, M.gold), G.B);
+  G.B.lamp = add(lamp(.0135, M.gold), G.B);
+  G.B.name = word3d(inter, 'NŪR AL-BAYĀN', .5, .16, M.ink); add(G.B.name.g, G.B);
+
+  // ---------- C : mots en volume qui tombent ----------
+  grp('C');
+  G.C.words = [['COMPRENDRE', inter, 1.15, .4, M.ink], ['LES QUESTIONS', inter, 1.0, .36, M.ink], ['DIFFICILES,', inter, 1.15, .4, M.ink], ['à votre rythme.', cormI, 1.45, .22, M.gold]]
+    .map(([s, f, size, d, m]) => { const w = word3d(f, s, size, d, m); add(w.g, G.C); return w; });
+
+  // ---------- D : calligraphie en volume, arche, balayage de lumière ----------
+  grp('D');
+  G.D.cal = add(calli('نور البيان', 10.5), G.D); G.D.cal.position.set(0, 3.2, 0);
+  G.D.arch = [0, 1].map(i => { const m = add(tube(archPts(800 - i * 80, 1100, 40 + i * 60), .0068, .028 - i * .01, M.gold, false, 260), G.D); m.position.set(-2.72 + i * .27, 7.48, -1.2 - i * .3); return m; });
+  G.D.anchors = [new THREE.Vector3(2.1, 1.9, .2), new THREE.Vector3(-2.2, 1.7, .2)];
+
+  // ---------- E : livre → bulle → deux personnes, sur un socle ----------
+  grp('E');
+  const ped = add(new THREE.Group(), G.E); ped.position.set(3.0, 0, 0); G.E.ped = ped;
+  add(shadowed(new THREE.Mesh(new THREE.CylinderGeometry(2.0, 2.15, .36, 64), M.dark)), ped).position.y = .18;
+  add(new THREE.Mesh(new THREE.TorusGeometry(2.02, .025, 8, 128), M.gold), ped).position.y = .36;
+  ped.children[1].rotation.x = Math.PI / 2;
+  const obj = add(new THREE.Group(), ped); obj.position.y = 2.0; G.E.obj = obj;
+  // livre : deux couvertures sur charnière + pages texturées
+  const pageTex = (() => { const c = document.createElement('canvas'); c.width = 512; c.height = 700; const g = c.getContext('2d'); g.fillStyle = '#f2ead9'; g.fillRect(0, 0, 512, 700); g.fillStyle = '#b89a66'; for (let i = 0; i < 12; i++) g.fillRect(50, 90 + i * 46, i % 4 === 3 ? 260 : 410, 12); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
+  const book = add(new THREE.Group(), obj); G.E.book = book;
+  G.E.pages = [-1, 1].map(s => {
+    const hinge = add(new THREE.Group(), book);
+    const cover = shadowed(add(new THREE.Mesh(new RoundedBoxGeometry(1.45, 1.95, .09, 3, .03), M.gold), hinge)); cover.position.x = s * .74;
+    const paper = add(new THREE.Mesh(new THREE.PlaneGeometry(1.32, 1.82), new THREE.MeshStandardMaterial({ map: pageTex, roughness: .9, color: 0x9a9284 })), hinge); paper.position.set(s * .74, 0, .052);
+    return hinge;
+  });
+  // bulle avec queue
+  const bs = new THREE.Shape(); bs.absarc(0, 0, 1.05, -1.1, Math.PI * 2 - 1.5, false); bs.lineTo(.95, -1.25); bs.closePath();
+  const bub = shadowed(add(new THREE.Mesh(new THREE.ExtrudeGeometry(bs, { depth: .3, bevelEnabled: true, bevelThickness: .08, bevelSize: .06, bevelSegments: 4, curveSegments: 48 }), M.gold), obj));
+  bub.geometry.translate(0, 0, -.15); G.E.bub = bub;
+  const qm = word3d(corm, '?', 1.5, .2, M.ink); add(qm.g, bub); qm.g.position.set(0, -.55, .3); G.E.qm = qm.g;
+  // deux personnes à une table
+  const ppl = add(new THREE.Group(), obj); G.E.ppl = ppl; ppl.position.y = -1.25;
+  G.E.people = [-1, 1].map(s => { const p = add(new THREE.Group(), ppl); add(shadowed(new THREE.Mesh(new THREE.CapsuleGeometry(.36, .55, 8, 24), M.gold)), p).position.y = .7; add(shadowed(new THREE.Mesh(new THREE.SphereGeometry(.3, 48, 24), M.gold)), p).position.y = 1.62; p.position.x = s * 1.0; return p; });
+  G.E.table = shadowed(add(new THREE.Mesh(new RoundedBoxGeometry(2.4, .12, 1.0, 3, .04), M.dark), ppl)); G.E.table.position.set(0, .82, .65);
+  // mots
+  G.E.w = [['LIRE', 1.5], ['DEMANDER', 1.0], ["S'ASSEOIR", .8], ['ENSEMBLE', .8]].map(([s, size]) => { const w = word3d(inter, s, size, .3, M.gold, 'left'); add(w.g, G.E); return w; });
+  // éclats de particules aux transformations
+  const bN = 160, bPos = new Float32Array(bN * 3); const bGeo = new THREE.BufferGeometry(); bGeo.setAttribute('position', new THREE.BufferAttribute(bPos, 3));
+  G.E.burst = add(new THREE.Points(bGeo, new THREE.PointsMaterial({ size: .12, map: spr, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, color: 0xffd08a })), ped);
+
+  // ---------- F : compteurs à tambours ----------
+  grp('F');
+  const NUMS = ['120+', '1,2 M', '900+', '100+'];
+  G.F.nums = NUMS.map(s => {
+    const g = add(new THREE.Group(), G.F), cols = [], syms = [];
+    const size = 2.5, adv = F.corm.data.glyphs['0'].ha * size / F.corm.data.resolution;
+    let x = 0;
+    for (const ch of s) {
+      if (/\d/.test(ch)) {
+        const drum = add(new THREE.Group(), g); drum.position.set(x + adv / 2, 0, -2.9);
+        const digits = [];
+        for (let d = 0; d < 10; d++) {
+          const w = word3d(corm, String(d), size, .5, M.gold);
+          const holder = add(new THREE.Group(), drum); add(w.g, holder);
+          w.g.position.y = -size * .35;
+          const a = d * Math.PI / 5; holder.position.set(0, Math.sin(a) * 2.9, Math.cos(a) * 2.9);
+          const mat = M.gold.clone(); mat.transparent = true; w.items.forEach(it => it.mesh.material = mat); holder.userData.mat = mat; holder.rotation.x = -a;
+          digits.push(holder);
+        }
+        cols.push({ drum, digits, target: +ch });
+        x += adv;
+      } else {
+        const ww = ch === ' ' ? null : word3d(corm, ch, size * (ch === ',' ? 1 : .9), .4, M.gold);
+        if (ww) { const p = add(new THREE.Group(), g); add(ww.g, p); p.position.x = x + ww.width / 2; ww.g.position.y = -size * .35; syms.push(p); }
+        x += ch === ' ' ? adv * .45 : (ww.width);
+      }
+    }
+    g.children.forEach(c => c.position.x -= x / 2);
+    return { g, cols, syms };
+  });
+  G.F.dial = add(new THREE.Mesh(new THREE.TorusGeometry(4.2, .018, 8, 200), M.flame), G.F);
+  G.F.dial2 = add(new THREE.Mesh(new THREE.TorusGeometry(4.6, .01, 6, 200), M.glow), G.F);
+
+  // ---------- G : cartes en dominos ----------
+  grp('G');
+  const CARDS = [['Herméneutique · 11 min', 'Muḥkam et mutashābih : lire le clair à côté de l’ambigu', 'Lire l’article →'], ['Uṣūl al-tafsīr · 14 min', 'Le naskh reconsidéré : ce que l’abrogation affirme réellement', 'Lire l’article →'], ['Contexte · 9 min', 'Asbāb al-nuzūl : quand le contexte éclaire et quand il restreint', 'Lire l’article →'], ['Méthode · vidéo 24:10', 'Comment lire un verset difficile — un cadre pratique', 'Voir le cours →'], ['Études de sourates · vidéo 38:52', 'Sourate al-Kahf : quatre récits, un seul argument', 'Voir le cours →']];
+  G.G.cards = CARDS.map((c, i) => {
+    const pivot = add(new THREE.Group(), G.G);
+    const body = shadowed(add(new THREE.Mesh(new RoundedBoxGeometry(3.4, 2.32, .14, 3, .05), M.dark), pivot)); body.position.y = 1.16;
+    const face = add(new THREE.Mesh(new THREE.PlaneGeometry(3.3, 2.25), new THREE.MeshBasicMaterial({ map: cardTex(...c), color: 0xbdbdbd })), pivot); face.position.set(0, 1.16, .072);
+    const edge = add(new THREE.Mesh(new THREE.BoxGeometry(3.42, .03, .16), M.gold), pivot); edge.position.y = 2.33;
+    return pivot;
+  });
+
+  // ---------- H : le site en lamelles ----------
+  grp('H');
+  const site = await new THREE.TextureLoader().loadAsync('/projets/nur-al-bayan/img/full-1280.jpg');
+  site.colorSpace = THREE.SRGBColorSpace; site.anisotropy = 4;
+  const win = add(new THREE.Group(), G.H); win.position.y = 4.4; G.H.win = win;
+  G.H.strips = Array.from({ length: 10 }, (_, i) => {
+    const p = add(new THREE.Group(), win); p.position.x = -5.76 + i * 1.28;
+    shadowed(add(new THREE.Mesh(new THREE.BoxGeometry(1.27, 7.54, .2), M.dark), p));
+    const tx = site.clone(); tx.repeat.set(.1, 754 / 7343); tx.offset.set(i * .1, 1 - 754 / 7343); tx.needsUpdate = true;
+    add(new THREE.Mesh(new THREE.PlaneGeometry(1.27, 7.54), new THREE.MeshBasicMaterial({ map: tx, color: 0xc8c8c8 })), p).position.z = .101;
+    p.userData.tx = tx; return p;
+  });
+  const bar = add(new THREE.Group(), win); G.H.bar = bar; bar.position.y = 4.0;
+  shadowed(add(new THREE.Mesh(new RoundedBoxGeometry(12.82, .46, .22, 3, .06), new THREE.MeshStandardMaterial({ color: 0x1d1e22, roughness: .4 })), bar));
+  [0xff5f57, 0xfebc2e, 0x28c840].forEach((c, i) => add(new THREE.Mesh(new THREE.SphereGeometry(.07, 16, 8), new THREE.MeshStandardMaterial({ color: c, roughness: .3 })), bar).position.set(-6.1 + i * .24, 0, .12));
+
+  // ---------- I : emblème lointain derrière le verset ----------
+  grp('I');
+  G.I.f1 = add(frame(3.2, .2, .25, M.goldMat), G.I); G.I.f2 = add(frame(3.2, .2, .25, M.goldMat), G.I);
+  G.I.f1.position.set(0, 1.4, -20); G.I.f2.position.set(0, 1.4, -20);
+
+  // ---------- J : orbe → bouton pilule ----------
+  grp('J');
+  const btn = add(new THREE.Group(), G.J); btn.position.set(0, 1.7, 0); G.J.btn = btn;
+  G.J.capL = shadowed(add(new THREE.Mesh(new THREE.SphereGeometry(.52, 64, 32), M.goldBtn), btn));
+  G.J.capR = shadowed(add(new THREE.Mesh(new THREE.SphereGeometry(.52, 64, 32), M.goldBtn), btn));
+  G.J.mid = shadowed(add(new THREE.Mesh(new THREE.CylinderGeometry(.52, .52, 1, 64, 1, true), M.goldBtn), btn)); G.J.mid.rotation.z = Math.PI / 2;
+  G.J.txt = word3d(inter, 'Prendre rendez-vous', .24, .06, M.ink); add(G.J.txt.g, btn); G.J.txt.g.position.set(0, -.09, .57);
+  G.J.rings = [0, 1, 2].map(() => { const m = add(new THREE.Mesh(new THREE.TorusGeometry(1, .012, 8, 160), M.glow), G.J); return m; });
+  G.J.floorRing = add(new THREE.Mesh(new THREE.RingGeometry(.96, 1, 160), M.glow.clone()), G.J); G.J.floorRing.rotation.x = -Math.PI / 2; G.J.floorRing.position.y = .01;
+
+  // ---------- K : signature ----------
+  grp('K');
+  const emb = add(new THREE.Group(), G.K); emb.position.y = 3.6; emb.scale.setScalar(.8); G.K.emb = emb;
+  G.K.f1 = add(frame(1.0, .13, .14, M.gold), emb); G.K.f2 = add(frame(1.0, .13, .14, M.gold), emb);
+  G.K.lamp = add(lamp(.0105, M.gold), emb);
+  G.K.gyro = [1.65, 1.95, 2.25].map((r, i) => add(new THREE.Mesh(new THREE.TorusGeometry(r, .02 - i * .004, 10, 200), M.goldMat), emb));
+  G.K.gyro.forEach(m => m.castShadow = true);
+  G.K.cal = add(calli('نور البيان', 4.6, 18, .22), G.K); G.K.cal.position.set(0, 1.25, .6);
+
+  for (const k in G) G[k].visible = false;
+  window.READY = true;
+}
+
+// ================= interface : verset, compteurs =================
+const VERSE = [['الرَّحْمَنُ', 0], ['عَلَّمَ الْقُرْآنَ', 0], ['خَلَقَ الْإِنْسَانَ', 1], ['عَلَّمَهُ', 1], ['الْبَيَانَ', 1]];
+$('verse').innerHTML = VERSE.map((v, i) => `<div class="vs" id="vs${i}"><span class="${i === 4 ? 'goldtxt' : ''}" style="padding:0 12px">${v[0]}</span></div><div class="ul" id="ul${i}"></div>`).join('');
+let vlay = null;
+function verseLayout() {
+  const gap = 70, rows = [[], []]; VERSE.forEach((v, i) => rows[v[1]].push(i)); const pos = [];
+  rows.forEach((r, ri) => { const ws = r.map(i => $('vs' + i).offsetWidth), tot = ws.reduce((a, b) => a + b, 0) + gap * (r.length - 1); let x = 960 + tot / 2; r.forEach((i, j) => { x -= ws[j]; pos[i] = { x, y: 230 + ri * 150, w: ws[j] }; x -= gap; }); });
+  return pos;
+}
+const LABS = ['articles publiés', 'vues des cours', 'questions traitées', 'personnes accompagnées'];
+$('flab').innerHTML = LABS.map((l, i) => `<div class="mask" id="fl${i}" style="left:0;right:0;top:800px;text-align:center;font:500 42px Inter;color:#e0d8c8;letter-spacing:.04em;text-shadow:0 4px 20px #000"><span>${l}</span></div>`).join('');
+$('segs').innerHTML = LABS.map((_, i) => `<div style="position:absolute;left:${720 + i * 125}px;top:950px;width:105px;height:4px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden"><div id="seg${i}" style="width:100%;height:100%;background:var(--gold);transform-origin:0 50%"></div></div>`).join('');
+const STOPS = [[0, 'Accueil'], [3180, 'Articles approfondis'], [4120, 'La vidéothèque'], [6620, 'Le verset de la lumière'], [7360, 'Prendre rendez-vous']];
+const proj = (v) => { const p = v.clone().project(cam); return [(p.x + 1) * 960, (1 - p.y) * 540]; };
+
+// ================= montage =================
+const SC = { A: [0, 4.95], B: [4.9, 9.05], C: [9.0, 13.5], D: [13.45, 17.85], E: [17.8, 24.55], F: [24.5, 31.55], G: [31.5, 37.45], H: [37.4, 43.6], I: [43.55, 51.3], J: [51.25, 56.3], K: [56.25, 64] };
+window.DURATION = 64;
+const env = { cream: 0 };
+function setEnv(c) {
+  env.cream = c;
+  S.background.copy(DARK).lerp(CREAM, c); S.fog.color.copy(S.background);
+  refl.visible = darkFloor.visible = c < .5; creamFloor.visible = c >= .5;
+  hemi.intensity = lerp(.35, 1.6, c); hemi.color.set(c > .5 ? 0xfff4e4 : 0xb8c4d6);
+  key.intensity = lerp(170, 260, c); rim.intensity = lerp(1.6, .4, c);
+  S.fog.near = lerp(14, 18, c); S.fog.far = lerp(46, 60, c);
+}
+const camSet = (p, look, fov = 35, focus) => { cam.position.copy(p); cam.fov = fov; cam.updateProjectionMatrix(); cam.lookAt(look); bokeh.uniforms.focus.value = focus ?? p.distanceTo(look); };
+const V = (x, y, z) => new THREE.Vector3(x, y, z);
+
+window.seek = function (t) {
+  const live = id => t >= SC[id][0] && t < SC[id][1];
+  for (const k in SC) G[k].visible = live(k);
+  hideUI();
+  const u = fx.uniforms;
+  u.uTime.value = (t * 60) % 1000; u.uWhip.value.set(0, 0); u.uZoom.value = 0; u.uLeak.value = 0;
+  u.uFlash.value = Math.min(1, pulse(t, 4.93, .25, .55) + pulse(t, 17.8, .2, .5) * .9 + pulse(t, 37.42, .15, .5) * .9 + pulse(t, 43.57, .12, .5) * .9 + pulse(t, 51.27, .2, .55) + pulse(t, 56.27, .25, .6));
+  u.uFade.value = clamp(K(t, 0, .6) < 1 ? 1 - K(t, 0, .6) : 0) + E.io(K(t, 62.9, 1.0));
+  u.uCA.value = .0012 + .006 * (pulse(t, 17.8, .2, .4) + pulse(t, 43.57, .2, .4) + pulse(t, 24.5, .2, .4));
+  bokeh.uniforms.aperture.value = .0016; bloom.strength = env.cream ? .15 : .4;
+  setEnv(t >= 4.93 && t < 13.45 ? 1 : 0);
+  key.position.set(5, 11, 7); key.target.position.set(0, 1, 0); key.angle = .55; sweep.intensity = 0; orbLight.intensity = 0;
+  beamMat.uniforms.uO.value = 0;
+  // poussière
+  dust.visible = !env.cream;
+  for (let i = 0; i < dustN; i++) { const [x, y, z, s] = dustSeed[i]; dustPos[i * 3] = x + Math.sin(t * .3 + i) * .4; dustPos[i * 3 + 1] = (y + t * .12 * s) % 12; dustPos[i * 3 + 2] = z; }
+  dustGeo.attributes.position.needsUpdate = true;
+  const hand = V(Math.sin(t * .7) * .04, Math.cos(t * .53) * .03, 0);
+
+  // =========== A ===========
+  if (live('A')) {
+    const A = G.A;
+    beamMat.uniforms.uO.value = .6 * K(t, .3, 1.5);
+    const draw = E.io5(K(t, .25, .9));
+    A.rod.scale.set(1, 9 * draw, 1); A.rod.position.set(0, 2.2, 0); A.rod.visible = t < 1.4;
+    const sp = E.spring(K(t, 1.05, 1.0)), fade = 1 - K(t, 2.6, .6);
+    [A.rodT, A.rodB].forEach((r, i) => { r.visible = t > 1.05 && fade > 0; r.position.set(0, 2.2 + (i ? -1 : 1) * 1.1 * sp, -.5 * sp); r.scale.set(1, 9 * lerp(1, .4, E.out(K(t, 1.05, 1))) * fade, 1); });
+    // chute avec rebonds ; étirement en vol, écrasement à l'impact
+    const kb = K(t, 1.2, 1.5), y = lerp(5.5, .34, E.bounce(kb));
+    const IMP = [1 / 2.75, 2 / 2.75, 2.5 / 2.75, 1].map(k => 1.2 + k * 1.5);
+    const sq = IMP.reduce((a, c, i) => a + pulse(t, c, .015, .16) * [.45, .3, .18, .08][i], 0);
+    const fly = E.inExpo(K(t, 4.0, .95));
+    const p = V(0, y, 0).lerp(V(0, 1.55, 6.2), fly);
+    A.ball.position.copy(p); A.ball.position.y -= .34 * sq * (1 - fly);
+    A.ball.scale.set(1 + sq * 1.1, 1 - sq, 1 + sq * 1.1); A.ball.visible = t > 1.2;
+    orbLight.position.copy(A.ball.position).add(V(0, .6, .8)); orbLight.intensity = 6 * K(t, 1.2, .3);
+    A.rings.forEach((r, i) => { const k = K(t, IMP[i], 1.0); r.scale.setScalar(.05 + E.out5(k) * [3.2, 2.4, 1.6, 1.1][i]); r.material.opacity = k > 0 ? (1 - k) * [1, .7, .5, .35][i] : 0; r.visible = k > 0 && k < 1; });
+    camSet(V(lerp(-1.2, .6, E.io(K(t, 0, 4.5))), lerp(1.1, 1.5, E.io(K(t, 0, 4.5))), lerp(8.8, 7.0, E.io(K(t, 0, 4.5)))).add(hand), V(0, lerp(2.0, 1.2, E.io(K(t, .5, 3))), 0), 35, 7.5);
+  }
+
+  // =========== B (crème) ===========
+  if (live('B')) {
+    const B = G.B, ex = E.anticip(K(t, 8.35, .7)), spin = (t - 5) * .25;
+    const s1 = E.bouncy(K(t, 5.0, 1.3)), s2 = E.bouncy(K(t, 5.15, 1.3));
+    B.f1.position.set(0, 2.15 + 4 * ex, 0); B.f1.rotation.set(Math.sin(t * .8) * .2, spin * .8 + 2 * ex, lerp(-Math.PI, 0, E.spring(K(t, 5.0, 1.4))) + spin);
+    B.f1.scale.setScalar(Math.max(.001, s1));
+    B.f2.position.set(0, 2.15 + 4 * ex, -.05); B.f2.rotation.set(Math.sin(t * .8) * .2, spin * .8 - 2 * ex, lerp(Math.PI * 1.25, Math.PI / 4, E.spring(K(t, 5.15, 1.4))) - spin);
+    B.f2.scale.setScalar(Math.max(.001, s2));
+    B.lamp.position.set(0, 2.15 + 4 * ex, .1); B.lamp.rotation.y = Math.sin(t * .8) * .3; B.lamp.scale.setScalar(1 - ex * .8);
+    drawLamp(B.lamp, K(t, 5.45, 1.2), E.bouncy(K(t, 6.3, .8)));
+    B.name.g.position.set(0, 0, 1.6);
+    B.name.items.forEach((it, i) => {
+      const a = 6.2 + i * .06, kb = K(t, a, 1.0);
+      it.pivot.position.y = lerp(4.5, 0, E.bounce(kb)); it.pivot.visible = t > a;
+      it.pivot.rotation.set(-E.in(K(t, 8.3 + i * .025, .45)) * Math.PI / 2, 0, (1 - E.out(kb)) * (seeded(i) - .5) * 1.4);
+    });
+    camSet(V(Math.sin(t * .35) * 1.2, 2.4, 9.2).add(hand), V(0, 1.75, 0), 35, 8.6);
+  }
+
+  // =========== C (crème) : mots qui tombent, basculent ===========
+  if (live('C')) {
+    const W = G.C.words, T = [[9.05, 9.95], [9.95, 10.85], [10.85, 11.75], [11.8, 99]];
+    W.forEach((w, wi) => {
+      const [a, o] = T[wi];
+      w.g.visible = t > a - .01 && t < o + .55;
+      w.g.position.set(0, 0, wi === 3 ? .6 : 0);
+      w.items.forEach((it, i) => {
+        if (wi < 3) {
+          const ki = K(t, a + i * .028, .75);
+          const ko = E.in(K(t, o + i * .02, .5));
+          it.pivot.position.y = lerp(5, 0, E.bounce(ki));
+          it.pivot.position.z = -ko * 2.2; it.pivot.position.y -= ko * .3;
+          const jit = wi === 2 ? clamp(K(t, 11.05, .15)) * (1 - K(t, 11.65, .1)) : 0;
+          it.pivot.rotation.set(-ko * Math.PI / 2 + Math.sin(t * 50 + i) * .06 * jit, Math.sin(t * 43 + i * 2) * .1 * jit, (1 - E.out(ki)) * (seeded(i + wi * 9) - .5) * 1.2 + Math.sin(t * 61 + i * 3) * .12 * jit);
+          it.pivot.visible = t > a + i * .028;
+        } else {
+          // « à votre rythme. » : chaque lettre monte lentement, comme une respiration
+          const k = E.soft(K(t, a + i * .07, 1.4));
+          it.pivot.position.y = lerp(-1.6, .25, k) + Math.sin(t * 1.6 + i * .5) * .06 * k;
+          it.pivot.rotation.set(0, (1 - k) * 1.2, 0);
+          it.pivot.visible = k > .001;
+        }
+      });
+    });
+    // fouetté vers le bas (13.15 → 13.45)
+    const wh = E.inExpo(K(t, 13.1, .38));
+    u.uWhip.value.set(0, .09 * wh);
+    camSet(V(0, lerp(2.3, 2.0, E.io(K(t, 9, 4))), lerp(12.5, 10.5, E.io(K(t, 9, 4)))).add(hand), V(0, lerp(.75, -6, wh), 0), 35, 11);
+  }
+
+  // =========== D : calligraphie ===========
+  if (live('D')) {
+    const D = G.D;
+    beamMat.uniforms.uO.value = .9;
+    const settle = E.spring(K(t, 13.45, 1.0));
+    u.uWhip.value.set(0, .09 * (1 - E.out(K(t, 13.45, .3))));
+    const rv = E.io(K(t, 13.65, 1.3));
+    D.cal.position.set(0, 3.2, 0); D.cal.rotation.y = Math.sin(t * .5) * .08;
+    D.cal.scale.setScalar(lerp(.85, 1, E.soft(K(t, 13.5, 1.4))));
+    D.cal.userData.frontMat.emissiveIntensity = .2 + .5 * pulse(t, 15.0, .4, 1.4);
+    // balayage de lumière de droite à gauche (sens de l'écriture)
+    sweep.intensity = 260 * Math.sin(Math.PI * rv); sweep.position.set(lerp(9, -9, rv), 6, 6); sweep.target.position.set(lerp(6, -6, rv), 3, 0);
+    D.arch.forEach((m, i) => trim(m, E.io5(K(t, 13.7 + i * .2, 1.5))));
+    const dive = E.inExpo(K(t, 17.2, .62));
+    u.uZoom.value = .25 * dive;
+    camSet(V(Math.sin(t * .4) * .6, lerp(3.6, 3.3, settle), lerp(15, 12.5, E.io(K(t, 13.45, 4))) - 11 * dive).add(hand), V(0, lerp(9, 3.5, settle), 0), 35, 12.5);
+    // légendes accrochées aux mots (projection 3D → écran)
+    if (t > 15.0 && dive < .3) {
+      $('call').style.visibility = 'visible';
+      D.anchors.forEach((a, i) => {
+        const [x, y] = proj(a.clone().add(D.cal.position).sub(V(0, 3.2, 0)).add(V(0, 0, 0)));
+        const s = i ? -1 : 1, ex = x + s * 150, ey = y + 140;
+        $('cl' + i).setAttribute('d', `M${x},${y} L${x},${y + 90} L${ex},${ey}`);
+        $('cl' + i).style.strokeDasharray = '1 1'; $('cl' + i).style.strokeDashoffset = 1 - E.io(K(t, 15.1 + i * .2, .6));
+        $('cd' + i).setAttribute('cx', x); $('cd' + i).setAttribute('cy', y); $('cd' + i).setAttribute('r', 7 * E.bouncy(K(t, 15.0 + i * .2, .6)));
+        const lb = $('lbl' + i); lb.style.top = ey - 34 + 'px'; lb.style.left = (s > 0 ? ex + 14 : ex - 14 - lb.offsetWidth) + 'px';
+        slide(lb, t, 15.5 + i * .2, 17.1);
+      });
+    }
+    slide($('nameD'), t, 15.9, 17.1, { d: .7 });
+  }
+
+  // =========== E : livre → bulle → personnes ===========
+  if (live('E')) {
+    const Eo = G.E, B1 = 19.9, B2 = 22.0, OUT = 24.0;
+    beamMat.uniforms.uO.value = .5;
+    Eo.ped.rotation.y = Math.sin(t * .5) * .25;
+    // mots en volume, lettres qui pivotent
+    const WT = [[17.95, B1 - .25, 0], [B1 + .05, B2 - .25, 1], [B2 + .05, OUT, 2], [B2 + .15, OUT + .05, 3]];
+    Eo.w.forEach((w, wi) => {
+      const [a, o] = WT[wi];
+      w.g.visible = t > a && t < o + .7;
+      w.g.position.set(-6.3, wi === 2 ? 3.05 : wi === 3 ? 2.05 : 2.35, .6);
+      w.items.forEach((it, i) => {
+        const ki = E.bouncy(K(t, a + i * .04, .8)), ko = E.in(K(t, o + i * .025, .45));
+        it.pivot.rotation.x = lerp(Math.PI / 2, 0, ki) - ko * Math.PI / 2;
+        it.pivot.position.z = lerp(-.6, 0, ki) + ko * .6;
+        it.pivot.visible = t > a + i * .04 && ko < 1;
+      });
+    });
+    slide($('enum'), t, 18.0, OUT); $('enumT').textContent = t < B1 ? '01 / 03' : t < B2 ? '02 / 03' : '03 / 03';
+    slide($('es0'), t, 18.4, B1 - .2); slide($('es1'), t, B1 + .35, B2 - .2); slide($('es2'), t, B2 + .5, OUT);
+    // livre
+    const bookIn = E.bouncy(K(t, 18.0, 1.0)), bookOut = E.anticip(K(t, B1 - .3, .45));
+    Eo.book.visible = t < B1 + .2; Eo.book.scale.setScalar(Math.max(.001, bookIn * (1 - bookOut)));
+    Eo.book.rotation.set(-.15, Math.sin(t) * .1 + bookOut * 3, 0);
+    const open = E.spring(K(t, 18.3, 1.2));
+    Eo.pages[0].rotation.y = lerp(Math.PI - .05, .42, open); Eo.pages[1].rotation.y = -.42;
+    // bulle
+    const bIn = E.bouncy(K(t, B1, .9)), bOut = E.anticip(K(t, B2 - .3, .45));
+    Eo.bub.visible = t > B1 && t < B2 + .2; Eo.bub.scale.setScalar(Math.max(.001, bIn * (1 - bOut)));
+    Eo.bub.rotation.set(0, lerp(-Math.PI, 0, E.spring(K(t, B1, 1.1))) + Math.sin(t * 1.3) * .15 - bOut * 3, Math.sin((t - B1) * 6) * .08 * (1 - K(t, B1, 1.5)));
+    // personnes
+    const pIn = E.spring(K(t, B2, 1.0));
+    Eo.ppl.visible = t > B2;
+    Eo.people.forEach((p, i) => { const s = i ? 1 : -1; p.position.x = s * lerp(1.9, 1.0, pIn); p.scale.setScalar(Math.max(.001, E.bouncy(K(t, B2 + i * .1, .9)))); p.rotation.y = -s * .35; });
+    Eo.table.scale.set(Math.max(.001, E.io5(K(t, B2 + .4, .7))), 1, 1);
+    // éclats aux transformations
+    const bur = [18.0, B1, B2].map(b => K(t, b, .9)).find(k => k > 0 && k < 1) || 0;
+    Eo.burst.visible = bur > 0;
+    if (bur > 0) { const a = Eo.burst.geometry.attributes.position; for (let i = 0; i < 160; i++) { const th = seeded(i) * 6.283, ph = Math.acos(2 * seeded(i + 50) - 1), r = E.out5(bur) * (1.6 + seeded(i + 9) * 2.4); a.setXYZ(i, Math.sin(ph) * Math.cos(th) * r, 2 + Math.cos(ph) * r - bur * bur * 1.2, Math.sin(ph) * Math.sin(th) * r); } a.needsUpdate = true; Eo.burst.material.opacity = 1 - bur; }
+    // fouetté latéral en sortie
+    const wh = E.inExpo(K(t, 24.1, .45));
+    u.uWhip.value.set(.1 * wh, 0);
+    camSet(V(lerp(-1.2, 0, E.io(K(t, 17.8, 6))) + 9 * wh, 2.6, 11.5).add(hand), V(-1.2 + 14 * wh, 1.9, 0), 35, 11.2);
+  }
+
+  // =========== F : tambours ===========
+  if (live('F')) {
+    const Fo = G.F;
+    u.uWhip.value.set(.1 * (1 - E.out(K(t, 24.5, .35))), 0);
+    beamMat.uniforms.uO.value = .6;
+    Fo.dial.rotation.set(1.25 + Math.sin(t * .4) * .1, .2, t * .3); Fo.dial.position.set(0, 2.6, -2.5);
+    Fo.dial.scale.setScalar(Math.max(.001, E.spring(K(t, 24.55, 1.2))));
+    Fo.dial2.rotation.set(1.3, -.15, -t * .2); Fo.dial2.position.set(0, 2.6, -2.8); Fo.dial2.scale.copy(Fo.dial.scale);
+    Fo.nums.forEach((n, i) => {
+      const a = 24.6 + i * 1.72, o = i < 3 ? a + 1.55 : 31.0;
+      const ins = E.spring(K(t, a, .9)), out = E.inExpo(K(t, o, .45));
+      n.g.visible = t > a && out < 1;
+      n.g.position.set(0, lerp(-3, 1.55, ins) + 3.5 * out, -9 * out); n.g.scale.setScalar(1 - .5 * out);
+      n.g.rotation.set(lerp(.6, 0, ins) - .3 * out, Math.sin(t * .6) * .12, 0);
+      n.cols.forEach((c, j) => {
+        const k = E.spring(K(t, a + j * .12, 1.25));
+        const ang = (c.target + 20) * Math.PI / 5 * k;
+        c.drum.rotation.x = ang;
+        c.digits.forEach((h, d) => { const rel = Math.cos(d * Math.PI / 5 - ang), o = clamp((rel - .72) / .24); h.visible = o > .01; h.userData.mat.opacity = o; h.userData.mat.depthWrite = o > .95; });
+      });
+      n.syms.forEach((s, j) => s.scale.setScalar(Math.max(.001, E.bouncy(K(t, a + .5 + j * .08, .8)))));
+      slide($('fl' + i), t, a + .35, o);
+      $('seg' + i).style.transform = `scaleX(${E.io(K(t, a, 1.6))})`;
+      $('seg' + i).parentElement.style.visibility = 'visible';
+    });
+    const fw = E.inExpo(K(t, 31.1, .45)); u.uZoom.value = .2 * fw; bloom.strength = .25;
+    camSet(V(Math.sin(t * .35) * 1.5, 1.2, 11 - 4 * fw).add(hand), V(0, 2.1, 0), 35, 11);
+  }
+  if (!live('F')) $('segs').querySelectorAll('div > div').forEach(d => d.parentElement.style.visibility = 'hidden');
+
+  // =========== G : cartes, dominos ===========
+  if (live('G')) {
+    const Go = G.G;
+    slide($('gh'), t, 31.7, 36.4);
+    Go.cards.forEach((c, i) => {
+      const a = 31.6 + i * .18;
+      const kb = K(t, a, 1.0);
+      c.position.set(-5 + i * 2.5, lerp(5, 0, E.bounce(kb)), -i * 1.55);
+      c.rotation.order = 'YXZ';
+      c.rotation.y = .62 + (1 - E.out(kb)) * (seeded(i) - .5);
+      // dominos : chaque carte bascule vers l'arrière et s'appuie sur la suivante
+      const fall = E.in(K(t, 35.0 + i * .16, .32));
+      const rest = i < 4 ? -.62 : -Math.PI / 2 + .04;
+      c.rotation.x = lerp(0, rest, fall) + (fall >= 1 ? Math.sin((t - 35.32 - i * .16) * 18) * .03 * Math.max(0, 1 - (t - 35.32 - i * .16) * 3) : 0);
+      c.visible = t > a;
+    });
+    const up = E.io(K(t, 34.8, 2.0)), dive = E.inExpo(K(t, 36.95, .5));
+    u.uZoom.value = .2 * dive;
+    camSet(V(lerp(-7.5, -3, E.io(K(t, 31.5, 5))), lerp(2.2, 7.5, up) - 6 * dive, lerp(8.5, 6.5, up) - 3 * dive).add(hand), V(lerp(-1, .5, up), lerp(1.2, 0, up), lerp(-2, -3.5, up)), 35, 10);
+  }
+
+  // =========== H : site en lamelles ===========
+  if (live('H')) {
+    const H = G.H;
+    let sy = 0, idx = 0;
+    for (let i = 1; i < STOPS.length; i++) { const k = K(t, 38.9 + (i - 1) * .88, .7); if (k > 0) { sy = lerp(STOPS[i - 1][0], STOPS[i][0], E.soft(k)); idx = k > .35 ? i : i - 1; } }
+    const off = 1 - (sy * 1280 / 1440 + 754) / 7343;
+    H.win.rotation.y = Math.sin((t - 37.4) * .5) * .18; H.win.rotation.x = .04;
+    H.strips.forEach((p, i) => {
+      const s = i % 2 ? 1 : -1, a = 37.5 + Math.abs(i - 4.5) * .07;
+      const k = E.spring(K(t, a, 1.1));
+      const kx = K(t, 42.45 + seeded(i) * .25, 1.1), ex = E.out(kx);
+      p.position.set(-5.76 + i * 1.28 + (seeded(i + 3) - .5) * 14 * ex, s * lerp(11, 0, k) - 9 * kx * kx + 3 * ex * seeded(i + 5), lerp(-3, 0, k) + (seeded(i + 8) * 14 - 2) * ex);
+      p.rotation.set(s * lerp(1.3, 0, k) + (seeded(i + 1) - .5) * 6 * ex, (seeded(i + 2) - .5) * 5 * ex, (seeded(i + 4) - .5) * 3 * ex);
+      p.visible = t > a;
+      p.userData.tx.offset.y = off;
+    });
+    const bk = E.spring(K(t, 37.6, .9)), bx = E.anticip(K(t, 42.35, .5));
+    H.bar.position.set(0, lerp(9, 4.0, bk) + 6 * bx, 0); H.bar.rotation.z = -.3 * bx;
+    const tg = $('tag'); $('tagt').textContent = STOPS[idx][1];
+    const tagAt = idx === 0 ? 38.3 : 38.9 + (idx - 1) * .88 + .25, tk = E.bouncy(K(t, tagAt, .7));
+    tg.style.visibility = t > tagAt && t < 42.4 ? 'visible' : 'hidden';
+    tg.style.transform = `translate(${960 - tg.offsetWidth / 2}px,${lerp(1010, 975, tk)}px) scale(${lerp(.6, 1, tk)}) rotate(${lerp(-6, 0, tk)}deg)`;
+    camSet(V(Math.sin(t * .3) * 1.2, lerp(2.5, 3.6, E.io(K(t, 37.4, 4))), lerp(24, 20.5, E.io(K(t, 37.4, 4))) - 4 * E.io(K(t, 42.4, 1.2))).add(hand), V(0, 4.3, 0), 35, 20);
+  }
+
+  // =========== I : verset ===========
+  if (live('I')) {
+    const I = G.I; I.f1.visible = I.f2.visible = false;
+    beamMat.uniforms.uO.value = 1;
+    I.f1.rotation.set(.2, t * .15, t * .1); I.f2.rotation.set(.2, t * .15, Math.PI / 4 - t * .1);
+    if (!vlay) vlay = verseLayout();
+    slide($('ih'), t, 43.7, 47.9);
+    const focus = E.io5(K(t, 48.0, 1.1)), dive = E.inExpo(K(t, 50.45, .85));
+    VERSE.forEach((v, i) => {
+      const p = vlay[i], a = 43.9 + i * .58, el = $('vs' + i);
+      el.style.visibility = t > a ? 'visible' : 'hidden';
+      const ki = E.soft(K(t, a, .9)), k = E.out5(K(t, a, .8));
+      el.style.clipPath = `inset(-30% 0 -30% ${100 - k * 100}%)`;
+      if (i === 4) {
+        const cx = lerp(p.x + p.w / 2, 960, focus), cy = lerp(p.y, 330, focus);
+        el.style.left = cx - p.w / 2 + 'px'; el.style.top = cy + 'px'; el.style.transformOrigin = '50% 62%';
+        el.style.transform = `translateY(${lerp(70, 0, ki)}px) scale(${lerp(1, 2.3, focus) * (1 + 40 * dive)})`;
+        el.style.opacity = (1 - K(t, 51.05, .2)); el.style.filter = `blur(${(1 - ki) * 10 + dive * 10}px) drop-shadow(0 0 ${10 + 40 * focus}px oklch(80% .12 86 / .7))`;
+      } else {
+        el.style.left = p.x + 'px'; el.style.top = p.y + 'px'; el.style.transform = `translateY(${lerp(70, 0, ki) - 80 * focus}px)`;
+        el.style.opacity = 1 - focus; el.style.filter = `blur(${(1 - ki) * 10 + 14 * focus}px)`;
+      }
+      const ul = $('ul' + i); ul.style.visibility = t > a + .3 && focus < 1 ? 'visible' : 'hidden';
+      ul.style.left = p.x + 12 + 'px'; ul.style.top = p.y + 138 + 'px'; ul.style.width = p.w - 24 + 'px';
+      ul.style.transform = `scaleX(${E.io5(K(t, a + .35, .6))})`; ul.style.opacity = (1 - focus) * .85;
+    });
+    slide($('itr'), t, 46.9, 47.95); slide($('itr2'), t, 48.9, 50.3, { d: .7 });
+    u.uZoom.value = .35 * dive;
+    camSet(V(Math.sin(t * .25) * 1.5, lerp(2.2, 2.8, E.io(K(t, 43.5, 7))), 11 - 9 * dive).add(hand), V(0, 3.4, -4), 35, 9);
+    bokeh.uniforms.aperture.value = .003;
+  }
+
+  // =========== J : orbe → bouton, clic ===========
+  if (live('J')) {
+    const J = G.J;
+    beamMat.uniforms.uO.value = .5;
+    const dot = E.bouncy(K(t, 51.3, .8)), morph = E.spring(K(t, 51.95, 1.0));
+    const half = lerp(0, 1.95, morph);
+    J.capL.position.x = -half; J.capR.position.x = half; J.mid.scale.set(1, Math.max(.001, 2 * half), 1); J.mid.visible = half > .01;
+    const click = pulse(t, 54.95, .08, .3), glow = E.inExpo(K(t, 55.45, .8));
+    J.btn.position.set(0, lerp(4.5, 1.7, E.bounce(K(t, 51.3, 1.0))), -.25 * click);
+    J.btn.scale.set(Math.max(.001, dot) * (1 + .06 * click), Math.max(.001, dot) * (1 - .1 * click), Math.max(.001, dot));
+    J.btn.rotation.set(Math.sin(t * .9) * .05, Math.sin(t * .6) * .12, 0);
+    M.goldBtn.emissive.setRGB(glow * .9, glow * .6, glow * .25);
+    J.txt.items.forEach((it, i) => { const k = E.bouncy(K(t, 52.5 + i * .025, .7)); it.pivot.scale.setScalar(Math.max(.001, k)); it.pivot.position.z = lerp(-.3, 0, k); it.pivot.visible = k > .001; });
+    J.rings.forEach((r, i) => { const k = K(t, 55.0 + i * .12, 1.1); r.position.set(0, 1.7, 0); r.scale.setScalar(.5 + E.out5(k) * (2.5 + i * 1.3)); r.visible = k > 0 && k < 1; r.material.opacity = 1 - k; });
+    const fk = K(t, 55.0, 1.2); J.floorRing.scale.setScalar(.1 + E.out5(fk) * 6); J.floorRing.visible = fk > 0 && fk < 1; J.floorRing.material.opacity = 1 - fk;
+    slide($('jc'), t, 52.0, 55.4); slide($('jl0'), t, 52.15, 55.4, { d: .7 }); slide($('jl1'), t, 52.3, 55.45, { d: .7 }); slide($('jp'), t, 52.8, 55.45);
+    camSet(V(Math.sin(t * .4) * .5, 2.2, lerp(9.5, 8.6, E.io(K(t, 51.3, 4))) - 6 * glow).add(hand), V(0, 2.25, 0), 35, 8.7);
+    const [bx, by] = proj(V(.35, 1.55, .5));
+    const ck = E.io(K(t, 53.9, 1.0)), cx = lerp(1520, bx, ck) + Math.sin(ck * Math.PI) * 60, cy = lerp(1040, by, ck) - Math.sin(ck * Math.PI) * 120;
+    const cur = $('cursor'); cur.style.visibility = t > 53.9 && t < 55.4 ? 'visible' : 'hidden';
+    cur.style.transform = `translate(${cx}px,${cy}px) scale(${1 - .2 * click})`;
+  } else M.goldBtn.emissive.setRGB(0, 0, 0);
+
+  // =========== K : signature ===========
+  if (live('K')) {
+    const Ko = G.K;
+    beamMat.uniforms.uO.value = .8; u.uLeak.value = .5 * E.io(K(t, 57, 3));
+    const spin = (t - 56.3) * .3;
+    Ko.f1.rotation.set(0, 0, lerp(-Math.PI, 0, E.spring(K(t, 56.5, 1.4))) + spin); Ko.f1.scale.setScalar(Math.max(.001, E.bouncy(K(t, 56.5, 1.3))));
+    Ko.f2.rotation.set(0, 0, lerp(Math.PI * 1.25, Math.PI / 4, E.spring(K(t, 56.65, 1.4))) - spin); Ko.f2.scale.setScalar(Math.max(.001, E.bouncy(K(t, 56.65, 1.3)))); Ko.f2.position.z = -.05;
+    Ko.lamp.position.z = .1; drawLamp(Ko.lamp, K(t, 56.8, 1.1), E.bouncy(K(t, 57.6, .8)) * (1 + .05 * Math.sin(t * 9)));
+    // gyroscope : trois anneaux qui se posent sur des axes différents
+    Ko.gyro.forEach((g, i) => {
+      const k = E.spring(K(t, 56.35 + i * .12, 1.6));
+      g.scale.setScalar(lerp(4, 1, k)); g.visible = t > 56.35 + i * .12;
+      g.rotation.set(lerp(1.4, .0, k) + Math.sin(t * .5 + i) * .25 * k + i * .5, Math.sin(t * .4 + i * 2) * .5 + i * .9 + t * .2 * (i - 1), 0);
+    });
+    Ko.emb.rotation.y = Math.sin(t * .35) * .25;
+    const cr = E.out5(K(t, 57.5, 1.2)); Ko.cal.scale.setScalar(Math.max(.001, lerp(.6, 1, E.soft(K(t, 57.5, 1.3))))); Ko.cal.visible = cr > .01; Ko.cal.position.y = lerp(.8, 1.4, cr);
+    slide($('kLat'), t, 58.2, null, { d: .8 }); slide($('kTag'), t, 58.8, null, { d: .7 }); slide($('kAya'), t, 59.4, null, { d: .8 });
+    camSet(V(Math.sin(t * .3) * 1.6, lerp(3.4, 2.7, E.io(K(t, 56.3, 5))), lerp(13.5, 11.2, E.io(K(t, 56.3, 7)))).add(hand), V(0, 2.3, 0), 35, 11);
+  }
+
+  comp.render();
+};
+await build();
+seek(0);
+</script>
+</body>
+</html>
