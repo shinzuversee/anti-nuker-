@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Nūr al-Bayān — Motion design</title>
+<style>
+@font-face { font-family: Amiri; font-weight: 400; src: url(../../fonts/amiri-normal-arabic-400.woff2); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200E; }
+@font-face { font-family: Amiri; font-weight: 700; src: url(../../fonts/amiri-normal-arabic-700.woff2); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF, U+200C-200E; }
+@font-face { font-family: Corm; font-weight: 300 700; src: url(../../fonts/cormorant-normal-latin-400.woff2); unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: Corm; font-weight: 300 700; src: url(../../fonts/cormorant-normal-latin-ext-400.woff2); unicode-range: U+0100-02AF, U+1E00-1EFF; }
+@font-face { font-family: Corm; font-style: italic; src: url(../../fonts/cormorant-italic-latin-400.woff2); unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: Corm; font-style: italic; src: url(../../fonts/cormorant-italic-latin-ext-400.woff2); unicode-range: U+0100-02AF, U+1E00-1EFF; }
+:root {
+  --gold: oklch(68% .11 80); --gold-soft: oklch(80% .08 84); --gold-hi: oklch(90% .07 88); --gold-dk: oklch(52% .1 72);
+  --cream: #f3eee3; --ink: #17140f;
+  --grad: linear-gradient(100deg, oklch(74% .1 86), oklch(86% .09 88) 40%, oklch(66% .12 76) 70%, oklch(80% .1 84));
+  --grad-dk: linear-gradient(100deg, oklch(50% .1 72), oklch(62% .11 80) 45%, oklch(44% .09 68));
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+body { font-family: Inter, sans-serif; color: #f3efe6; }
+#bg, #grain { position: absolute; inset: 0; }
+#grain { opacity: .07; mix-blend-mode: overlay; pointer-events: none; }
+#cam { position: absolute; inset: 0; perspective: 1700px; perspective-origin: 50% 48%; }
+#world { position: absolute; inset: 0; transform-style: preserve-3d; }
+.sc { position: absolute; inset: 0; transform-style: preserve-3d; display: none; }
+.abs { position: absolute; }
+.p3 { transform-style: preserve-3d; }
+.ar { font-family: Amiri, serif; direction: rtl; }
+.goldtxt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.golddk { background: var(--grad-dk); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cap { font: 500 18px Inter; letter-spacing: .42em; text-transform: uppercase; color: var(--gold-soft); }
+.k { font-family: 'Inter Display', Inter, sans-serif; font-weight: 900; letter-spacing: -.035em; line-height: .9; }
+/* masque : le texte glisse depuis une fente invisible */
+.mask { position: absolute; overflow: hidden; white-space: nowrap; padding: 0 .08em .06em; }
+.mask > span { display: inline-block; }
+.ch { display: inline-block; white-space: pre; }
+#cream { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #fbf8f1 0%, #f1ebde 60%, #e6dece 100%); display: none; }
+#flash { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 50% 50%, #fffaf0 0%, oklch(88% .08 86) 30%, oklch(70% .11 80 / .6) 60%, transparent 85%); opacity: 0; }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(0,0,0,.6) 100%); pointer-events: none; }
+#fade { position: absolute; inset: 0; background: #000; opacity: 0; }
+.bar { position: absolute; top: 0; height: 1080px; background: #0b0c0f; }
+.ring { position: absolute; border-radius: 50%; border: 3px solid var(--gold-soft); }
+svg .draw { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+/* A */
+#line { position: absolute; left: 260px; top: 539px; width: 1400px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold-hi) 20%, var(--gold-hi) 80%, transparent); box-shadow: 0 0 18px var(--gold); }
+#lineT, #lineB { position: absolute; left: 260px; width: 1400px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold) 70%, transparent); }
+#ball { position: absolute; left: 960px; top: 0; width: 34px; height: 34px; margin: -17px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #fffbe9, var(--gold-soft) 45%, var(--gold) 100%); box-shadow: 0 0 30px 6px oklch(80% .1 84 / .7), 0 0 120px 30px oklch(70% .11 80 / .35); }
+
+/* B */
+.sq { position: absolute; left: 960px; top: 470px; width: 300px; height: 300px; margin: -150px; border: 4px solid var(--gold-dk); }
+#octo2 { border-color: oklch(52% .1 72 / .55); }
+
+/* C */
+#ubar { position: absolute; left: 960px; top: 660px; height: 12px; background: var(--grad-dk); border-radius: 6px; }
+
+/* E */
+.pg { position: absolute; width: 170px; height: 230px; margin: -115px -85px; border: 4px solid var(--gold); border-radius: 10px; background: #15161a; transform-style: preserve-3d; }
+.pg i { position: absolute; left: 24px; right: 24px; height: 6px; border-radius: 3px; background: var(--gold-soft); transform-origin: 0 50%; opacity: .7; }
+#bub { position: absolute; width: 280px; height: 280px; margin: -140px; border-radius: 50%; border: 5px solid var(--gold); background: #15161a; }
+#tail { position: absolute; width: 70px; height: 70px; margin: -35px; background: #15161a; border-right: 5px solid var(--gold); border-bottom: 5px solid var(--gold); }
+#qm { position: absolute; width: 200px; margin-left: -100px; margin-top: -100px; text-align: center; font: 600 170px/200px Corm; color: var(--gold-hi); }
+.head { position: absolute; width: 96px; height: 96px; margin: -48px; border-radius: 50%; border: 5px solid var(--gold); background: #15161a; }
+.body { position: absolute; width: 190px; height: 110px; margin: -55px -95px; border-radius: 95px 95px 0 0; border: 5px solid var(--gold); border-bottom: none; background: #15161a; }
+#table { position: absolute; height: 5px; width: 560px; margin-left: -280px; background: var(--gold); border-radius: 3px; transform-origin: 50% 50%; }
+
+/* F */
+.odo { position: absolute; left: 960px; top: 470px; display: flex; align-items: flex-start; font: 600 300px/1 Corm; font-variant-numeric: lining-nums tabular-nums; transform: translate(-50%, -50%); }
+.col { height: 300px; overflow: hidden; }
+.col > div { display: flex; flex-direction: column; }
+.col > div > span { height: 300px; }
+.sym { display: inline-block; }
+
+/* G */
+.card { position: absolute; width: 540px; height: 380px; margin: -190px -270px; transform-style: preserve-3d; }
+.card svg { position: absolute; inset: -4px; width: 548px; height: 388px; }
+.card .fill { position: absolute; inset: 0; border-radius: 20px; background: linear-gradient(160deg, #1d1f24, #121317 70%); box-shadow: 0 40px 100px rgba(0,0,0,.6); }
+.card .in { position: absolute; inset: 0; padding: 44px 46px; }
+.card .meta { font: 600 17px Inter; color: var(--gold-soft); letter-spacing: .06em; text-transform: uppercase; }
+.card h3 { font: 600 44px/1.06 Corm; color: #f6f1e6; margin-top: 22px; white-space: normal; }
+.card .lnk { position: absolute; left: 46px; bottom: 40px; font: 600 19px Inter; color: var(--gold-soft); }
+
+/* H */
+#win { position: absolute; left: 960px; top: 545px; width: 1280px; height: 800px; margin: -400px -640px; transform-style: preserve-3d; }
+#wbar { position: absolute; left: 0; top: 0; width: 1280px; height: 46px; border-radius: 16px 16px 0 0; background: #1b1c20; border: 1px solid #34363c; display: flex; align-items: center; padding: 0 18px; gap: 9px; }
+#wbar i { width: 13px; height: 13px; border-radius: 50%; display: block; }
+#wbar div { margin-left: 120px; flex: 0 0 560px; height: 28px; border-radius: 8px; background: #111215; font: 500 14px/28px Inter; color: #9a958b; text-align: center; }
+.strip { position: absolute; top: 46px; width: 128px; height: 754px; background-image: url(img/full.jpg); background-size: 1280px auto; background-repeat: no-repeat; backface-visibility: hidden; }
+.tag { position: absolute; left: 0; top: 0; height: 64px; padding: 0 30px 0 22px; border-radius: 32px; background: rgba(20,21,25,.9); border: 1px solid oklch(68% .11 80 / .45); box-shadow: 0 20px 50px rgba(0,0,0,.6); font: 600 26px/62px Inter; color: #f3eee3; white-space: nowrap; display: flex; gap: 14px; align-items: center; }
+.tag .d { width: 12px; height: 12px; transform: rotate(45deg); background: var(--gold); box-shadow: 0 0 12px var(--gold); }
+
+/* I */
+.vs { position: absolute; top: 0; left: 0; white-space: nowrap; font: 400 100px/1.25 Amiri; direction: rtl; color: #f4efe4; }
+.ul { position: absolute; height: 3px; background: var(--grad); border-radius: 2px; transform-origin: 100% 50%; }
+
+/* J */
+#pill { position: absolute; left: 960px; top: 700px; border-radius: 999px; background: var(--grad); box-shadow: 0 0 60px oklch(74% .1 86 / .5); overflow: hidden; }
+#pillT { position: absolute; left: 0; right: 0; top: 0; bottom: 0; text-align: center; font: 600 30px/92px Inter; color: #1b1408; white-space: nowrap; }
+#cursor { position: absolute; left: 0; top: 0; width: 48px; height: 48px; filter: drop-shadow(0 6px 10px rgba(0,0,0,.6)); }
+</style>
+</head>
+<body>
+<canvas id="bg" width="1920" height="1080"></canvas>
+<div id="cream"></div>
+<div id="cam"><div id="world">
+
+  <!-- A : trait, point qui rebondit -->
+  <div class="sc" id="A">
+    <div id="lineT"></div><div id="lineB"></div><div id="line"></div>
+    <div id="ripples"></div>
+    <div id="ball"></div>
+  </div>
+
+  <!-- B : étoile à huit branches + lampe, sur crème -->
+  <div class="sc" id="B">
+    <div class="sq" id="octo1"></div><div class="sq" id="octo2"></div>
+    <div class="abs" id="lampB" style="left:960px;top:470px"><svg id="lampBs" width="170" height="232" viewBox="0 0 100 136" style="position:absolute;left:-85px;top:-116px"></svg></div>
+    <div class="abs k" id="nameB" style="left:0;right:0;top:700px;text-align:center;font-size:64px;letter-spacing:.32em;color:var(--ink)"></div>
+  </div>
+
+  <!-- C : typographie cinétique -->
+  <div class="sc" id="C">
+    <div class="mask k" id="c0" style="font-size:250px;color:var(--ink)"><span>COMPRENDRE</span></div>
+    <div class="mask k" id="c1" style="font-size:250px;color:var(--ink)"><span>LES QUESTIONS</span></div>
+    <div class="mask k" id="c2" style="font-size:250px;color:var(--ink)"><span id="c2s"></span></div>
+    <div class="mask" id="c3" style="font:italic 400 210px/1.15 Corm;padding:0 .2em .12em"><span id="c3s"></span></div>
+    <div id="ubar"></div>
+  </div>
+
+  <!-- D : calligraphie -->
+  <div class="sc" id="D">
+    <svg id="archD" class="abs" style="left:560px;top:40px" width="800" height="1100" viewBox="0 0 800 1100">
+      <path class="draw" pathLength="1" d="M60,1100 V520 C60,330 250,230 400,40 C550,230 740,330 740,520 V1100" stroke="oklch(68% .11 80)" stroke-width="3"/>
+      <path class="draw" pathLength="1" d="M100,1100 V530 C100,360 270,270 400,100 C530,270 700,360 700,530 V1100" stroke="oklch(68% .11 80 / .5)" stroke-width="1.5"/>
+    </svg>
+    <div class="abs" id="calD" style="left:960px;top:380px"><div class="ar goldtxt" id="calDt" style="position:absolute;transform:translate(-50%,-50%);font:700 270px/1.35 Amiri;white-space:nowrap;padding:0 50px">نور البيان</div></div>
+    <div class="abs" id="streak" style="left:0;top:180px;width:60px;height:420px;background:linear-gradient(90deg,transparent,rgba(255,248,225,.95),transparent);filter:blur(6px)"></div>
+    <svg class="abs" id="callD" style="left:0;top:0" width="1920" height="1080">
+      <path class="draw" id="dln0" pathLength="1" d="M1180,520 L1180,640 L1320,700" stroke="oklch(80% .08 84)" stroke-width="2"/>
+      <path class="draw" id="dln1" pathLength="1" d="M800,540 L800,640 L640,700" stroke="oklch(80% .08 84)" stroke-width="2"/>
+      <circle id="ddot0" cx="1180" cy="520" r="7" fill="oklch(90% .07 88)"/><circle id="ddot1" cx="800" cy="540" r="7" fill="oklch(90% .07 88)"/>
+    </svg>
+    <div class="mask" id="lbl0" style="left:1330px;top:672px;font:italic 400 52px/1.1 Corm;color:#efe6d2"><span>la lumière</span></div>
+    <div class="mask" id="lbl1" style="left:370px;top:672px;font:italic 400 52px/1.1 Corm;color:#efe6d2"><span>la clarté</span></div>
+    <div class="mask" id="nameD" style="left:0;right:0;top:860px;text-align:center;font:500 40px Corm;letter-spacing:.5em;color:var(--gold-soft)"><span>NŪR AL-BAYĀN</span></div>
+  </div>
+
+  <!-- E : lire, demander, s'asseoir -->
+  <div class="sc" id="E">
+    <div class="mask k" id="e0" style="left:170px;top:340px;font-size:190px"><span class="goldtxt">LIRE</span></div>
+    <div class="mask k" id="e1" style="left:170px;top:340px;font-size:190px"><span class="goldtxt">DEMANDER</span></div>
+    <div class="mask k" id="e2" style="left:170px;top:270px;font-size:170px"><span class="goldtxt">S’ASSEOIR</span></div>
+    <div class="mask k" id="e3" style="left:170px;top:420px;font-size:170px"><span class="goldtxt">ENSEMBLE</span></div>
+    <div class="mask" id="es0" style="left:176px;top:600px;font:400 38px Inter;color:#cfc7b6"><span>Des articles approfondis, à lire lentement.</span></div>
+    <div class="mask" id="es1" style="left:176px;top:600px;font:400 38px Inter;color:#cfc7b6"><span>Une question ? Réponse dans la semaine.</span></div>
+    <div class="mask" id="es2" style="left:176px;top:640px;font:400 38px Inter;color:#cfc7b6"><span>Une séance privée, sans hâte.</span></div>
+    <div class="mask" id="enum" style="left:176px;top:200px;font:600 26px Inter;letter-spacing:.3em;color:var(--gold-soft)"><span id="enumT">01 / 03</span></div>
+    <div class="abs p3" id="ico" style="left:1380px;top:540px">
+      <div class="pg" id="pgL"><i style="top:50px"></i><i style="top:80px"></i><i style="top:110px;right:60px"></i><i style="top:150px"></i></div>
+      <div class="pg" id="pgR"><i style="top:50px"></i><i style="top:80px"></i><i style="top:110px"></i><i style="top:150px;right:70px"></i></div>
+      <div id="tail"></div><div id="bub"></div><div id="qm">?</div>
+      <div class="body" id="bd0"></div><div class="body" id="bd1"></div>
+      <div class="head" id="hd0"></div><div class="head" id="hd1"></div>
+      <div id="table"></div>
+    </div>
+  </div>
+
+  <!-- F : compteurs -->
+  <div class="sc" id="F">
+    <svg class="abs" id="dial" style="left:560px;top:70px" width="800" height="800" viewBox="0 0 800 800">
+      <circle cx="400" cy="400" r="380" fill="none" stroke="oklch(68% .11 80 / .35)" stroke-width="2" stroke-dasharray="2 14"/>
+      <circle id="dialArc" cx="400" cy="400" r="350" fill="none" stroke="oklch(80% .08 84)" stroke-width="3" pathLength="1" stroke-dasharray="0 1" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:400px 400px"/>
+    </svg>
+    <div id="odos"></div>
+    <div id="flab"></div>
+    <div id="segs"></div>
+  </div>
+
+  <!-- G : articles -->
+  <div class="sc" id="G">
+    <div class="mask" id="gh" style="left:0;right:0;top:110px;text-align:center"><span class="cap" style="font-size:22px">Écrits · articles récents</span></div>
+    <div class="abs p3" id="row" style="left:960px;top:560px"></div>
+  </div>
+
+  <!-- H : le site, en bandes -->
+  <div class="sc" id="H">
+    <div id="win"><div id="wbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><div>🔒 Nūr al-Bayān</div></div></div>
+    <div class="tag" id="tag"><span class="d"></span><span id="tagt">Accueil</span></div>
+  </div>
+
+  <!-- I : le verset -->
+  <div class="sc" id="I">
+    <div class="mask" id="ih" style="left:0;right:0;top:120px;text-align:center"><span class="cap" style="font-size:20px">L’origine du nom · Sourate Ar-Raḥmān 55 : 1-4</span></div>
+    <div id="verse"></div>
+    <div class="mask" id="itr" style="left:0;right:0;top:640px;text-align:center;font:italic 400 44px/1.3 Corm;color:#d6cebe"><span>« … Il lui a enseigné l’expression claire. »</span></div>
+    <div class="mask" id="itr2" style="left:0;right:0;top:760px;text-align:center;font:500 50px Corm;color:#f3ecdc"><span>al-bayān <b class="goldtxt" style="font-weight:600">→</b> Nūr al-Bayān</span></div>
+  </div>
+
+  <!-- J : rendez-vous -->
+  <div class="sc" id="J">
+    <div class="mask" id="jc" style="left:0;right:0;top:240px;text-align:center"><span class="cap" style="font-size:20px">En tête-à-tête</span></div>
+    <div class="abs" id="jh" style="left:0;right:0;top:310px;text-align:center;font:500 92px/1.08 Corm;color:#f7f2e7"></div>
+    <div class="mask" id="jp" style="left:0;right:0;top:560px;text-align:center;font:400 30px Inter;color:#bdb6a8"><span>Le premier échange est offert.</span></div>
+    <div id="pill"><div id="pillT"></div></div>
+    <div id="jrip"></div>
+    <svg id="cursor" viewBox="0 0 24 24"><path d="M4 2l16 10-7 1.5L9.5 21z" fill="#fff" stroke="#111" stroke-width="1.2" stroke-linejoin="round"/></svg>
+  </div>
+
+  <!-- K : signature -->
+  <div class="sc" id="K">
+    <div id="kr"></div>
+    <div class="sq" id="ko1" style="top:390px;width:250px;height:250px;margin:-125px;border-color:var(--gold)"></div>
+    <div class="sq" id="ko2" style="top:390px;width:250px;height:250px;margin:-125px;border-color:oklch(68% .11 80 / .5)"></div>
+    <div class="abs" id="lampK" style="left:960px;top:390px"><svg id="lampKs" width="130" height="177" viewBox="0 0 100 136" style="position:absolute;left:-65px;top:-88px"></svg></div>
+    <div class="abs" id="kAr" style="left:960px;top:640px"><div class="ar goldtxt" id="kArT" style="position:absolute;transform:translate(-50%,-50%);font:700 130px/1.35 Amiri;white-space:nowrap;padding:0 30px">نور البيان</div></div>
+    <div class="abs" id="kLat" style="left:0;right:0;top:730px;text-align:center;font:500 70px Corm;color:#f7f2e7"></div>
+    <div class="mask" id="kTag" style="left:0;right:0;top:840px;text-align:center;font:400 28px Inter;color:#c4bdaf"><span>Comprendre les questions difficiles, à votre rythme.</span></div>
+    <div class="mask" id="kAya" style="left:0;right:0;top:930px;text-align:center"><span><span class="ar goldtxt" style="font:400 46px/1.4 Amiri">وَقُل رَّبِّ زِدْنِي عِلْمًا</span><span style="font:italic 400 30px Corm;color:#a9a294;margin-left:24px">« Et dis : Seigneur, accrois mes connaissances. » · Ṭā-Hā, 20 : 114</span></span></div>
+  </div>
+
+</div></div>
+<div id="bars"></div>
+<div id="flash"></div>
+<div id="vig"></div>
+<canvas id="grain" width="1920" height="1080"></canvas>
+<div id="fade"></div>
+
+<script>
+// ================= outils de mouvement =================
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, k) => a + (b - a) * k;
+const K = (t, a, d) => clamp((t - a) / d);
+const seeded = i => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+// Ressort amorti : z = amortissement, f = oscillations sur la durée.
+const spring = (z = 6, f = 1.4) => k => k <= 0 ? 0 : k >= 1 ? 1 : 1 - Math.exp(-z * k) * Math.cos(k * Math.PI * 2 * f);
+const E = {
+  lin: k => k,
+  out: k => 1 - Math.pow(1 - k, 3),
+  out5: k => 1 - Math.pow(1 - k, 5),
+  expo: k => k >= 1 ? 1 : 1 - Math.pow(2, -10 * k),
+  in: k => k * k * k,
+  inExpo: k => k <= 0 ? 0 : Math.pow(2, 10 * k - 10),
+  io: k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2,
+  io5: k => k < .5 ? 16 * k ** 5 : 1 - Math.pow(-2 * k + 2, 5) / 2,
+  anticip: k => { const c = 1.6; return (c + 1) * k * k * k - c * k * k; },
+  bounce: k => { const n = 7.5625, d = 2.75; if (k < 1 / d) return n * k * k; if (k < 2 / d) return n * (k -= 1.5 / d) * k + .75; if (k < 2.5 / d) return n * (k -= 2.25 / d) * k + .9375; return n * (k -= 2.625 / d) * k + .984375; },
+  spring: spring(6.5, 1.35),
+  soft: spring(8, 1.05),
+  bouncy: spring(5, 2.1),
+};
+const tw = (t, a, d, v0, v1, e = 'out') => lerp(v0, v1, E[e](K(t, a, d)));
+const pulse = (t, at, up = .08, down = .5) => t < at - up ? 0 : t < at ? E.out((t - at + up) / up) : Math.max(0, 1 - E.out((t - at) / down));
+const $ = id => document.getElementById(id);
+
+function put(el, s = {}) {
+  let tr = `translate3d(${s.x || 0}px,${s.y || 0}px,${s.z || 0}px)`;
+  if (s.rx) tr += ` rotateX(${s.rx}deg)`;
+  if (s.ry) tr += ` rotateY(${s.ry}deg)`;
+  if (s.r) tr += ` rotate(${s.r}deg)`;
+  if (s.sk) tr += ` skewX(${s.sk}deg)`;
+  if (s.sky) tr += ` skewY(${s.sky}deg)`;
+  const sc = s.s ?? 1;
+  tr += ` scale(${sc * (s.sx ?? 1)},${sc * (s.sy ?? 1)})`;
+  el.style.transform = (s.pre || '') + tr;
+  const o = s.o ?? 1;
+  el.style.opacity = o;
+  el.style.visibility = o < .002 ? 'hidden' : 'visible';
+  const b = s.b || 0;
+  el.style.filter = b > .15 ? `blur(${b.toFixed(2)}px)` : '';
+}
+// Entrée sur ressort puis sortie accélérée. L'opacité est toujours calculée.
+function life(t, a, da, from, o, dout, to, ein = 'spring', eout = 'inExpo') {
+  const ki = E[ein](K(t, a, da)), ko = o == null ? 0 : E[eout](K(t, o, dout));
+  const s = {};
+  const keys = new Set(['o', ...Object.keys(from), ...Object.keys(to || {})]);
+  for (const k of keys) {
+    const rest = k === 's' || k === 'o' ? 1 : 0;
+    const v0 = from[k] ?? rest, v1 = (to || {})[k] ?? rest;
+    s[k] = k === 's' ? lerp(v0, 1, ki) * lerp(1, v1, ko) : k === 'o' ? clamp(lerp(v0, 1, clamp(K(t, a, da) * 2.2))) * lerp(1, v1, ko) : lerp(v0, rest, ki) + lerp(0, v1 - rest, ko);
+  }
+  if (t < a) s.o = 0;
+  return s;
+}
+// Texte dans un masque : monte depuis le bas, sort par le haut.
+function slide(el, t, a, o, { d = .55, dout = .38, e = 'out5', dir = 1, skew = 8 } = {}) {
+  const inner = el.firstElementChild;
+  const ki = E[e](K(t, a, d)), ko = o == null ? 0 : E.inExpo(K(t, o, dout));
+  const y = lerp(115 * dir, 0, ki) - 115 * dir * ko;
+  inner.style.transform = `translateY(${y}%) skewY(${(1 - ki) * skew * dir - ko * skew * dir}deg)`;
+  el.style.visibility = t < a || ko >= 1 ? 'hidden' : 'visible';
+}
+// Découpe en lettres.
+const chars = (el, txt, cls = '') => { el.innerHTML = [...txt].map(c => `<span class="ch ${cls}">${c}</span>`).join(''); return [...el.children]; };
+// Flou de mouvement selon la vitesse.
+function speed(fn, t) { const dt = 1 / 120; return Math.abs(fn(t + dt) - fn(t - dt)) / (2 * dt); }
+const show = (id, on) => { $(id).style.display = on ? 'block' : 'none'; };
+const center = el => { el.style.left = (960 - el.offsetWidth / 2) + 'px'; };
+
+// ================= lampe =================
+const LAMP = col => `<path class="draw" pathLength="1" d="M12,134 V58 C12,36 34,24 50,4 C66,24 88,36 88,58 V134" stroke="${col}" stroke-width="3.4"/>
+  <path class="draw" pathLength="1" d="M50,4 V34" stroke="${col}" stroke-width="2"/>
+  <path class="draw" pathLength="1" d="M33,62 Q50,84 67,62 Z" stroke="${col}" stroke-width="2.8"/>
+  <path class="flame" d="M50,36 C43,46 43,55 50,60 C57,55 57,46 50,36 Z" style="fill:oklch(80% .12 80);filter:drop-shadow(0 0 6px oklch(86% .12 86))"/>
+  <path class="draw" pathLength="1" d="M42,84 H58" stroke="${col}" stroke-width="2.6"/>`;
+$('lampBs').innerHTML = LAMP('oklch(46% .09 70)');
+$('lampKs').innerHTML = LAMP('oklch(80% .08 84)');
+function drawLamp(svg, k, flame = 1) {
+  const paths = svg.querySelectorAll('.draw');
+  paths.forEach((p, i) => { const kk = clamp(k * paths.length - i * .6); p.style.strokeDasharray = '1 1'; p.style.strokeDashoffset = 1 - E.io(kk); });
+  const f = svg.querySelector('.flame');
+  f.style.opacity = clamp(flame); f.style.transformOrigin = '50px 60px'; f.style.transform = `scale(${.2 + .8 * flame})`;
+}
+const drawPath = (p, k) => { p.style.strokeDasharray = '1 1'; p.style.strokeDashoffset = 1 - k; };
+
+// ================= construction =================
+// A : ondes à chaque rebond
+const IMPACTS = [1 / 2.75, 2 / 2.75, 2.5 / 2.75, 2.625 / 2.75 + .02];
+$('ripples').innerHTML = IMPACTS.map((_, i) => `<div class="ring" id="rp${i}"></div>`).join('');
+// B
+const nameB = chars($('nameB'), 'NŪR AL-BAYĀN');
+// C
+const c2 = chars($('c2s'), 'DIFFICILES,');
+const c3 = chars($('c3s'), 'à votre rythme.', 'golddk');
+// E
+// F : compteurs à rouleaux
+const NUMS = [
+  { s: '120+', l: 'articles publiés' },
+  { s: '1,2 M', l: 'vues des cours' },
+  { s: '900+', l: 'questions traitées' },
+  { s: '100+', l: 'personnes accompagnées' },
+];
+$('odos').innerHTML = NUMS.map((n, i) => `<div class="odo" id="odo${i}">${[...n.s].map((c, j) => /\d/.test(c)
+  ? `<div class="col"><div id="col${i}_${j}">${Array.from({ length: 20 }, (_, d) => `<span class="goldtxt">${d % 10}</span>`).join('')}<span class="goldtxt">${c}</span></div></div>`
+  : `<span class="sym goldtxt" id="sym${i}_${j}">${c === ' ' ? '&nbsp;' : c}</span>`).join('')}</div>`).join('');
+$('flab').innerHTML = NUMS.map((n, i) => `<div class="mask" id="fl${i}" style="left:0;right:0;top:660px;text-align:center;font:500 40px Inter;color:#d3cbbb;letter-spacing:.04em"><span>${n.l}</span></div>`).join('');
+$('segs').innerHTML = NUMS.map((_, i) => `<div class="abs" style="left:${720 + i * 125}px;top:930px;width:105px;height:4px;background:rgba(255,255,255,.12);border-radius:2px;overflow:hidden"><div id="seg${i}" style="width:100%;height:100%;background:var(--gold);transform-origin:0 50%"></div></div>`).join('');
+// G : cartes d'articles
+const ARTS = [
+  ['Herméneutique · 11 min', 'Muḥkam et mutashābih : lire le clair à côté de l’ambigu'],
+  ['Uṣūl al-tafsīr · 14 min', 'Le naskh reconsidéré : ce que l’abrogation affirme réellement'],
+  ['Contexte · 9 min', 'Asbāb al-nuzūl : quand le contexte éclaire et quand il restreint'],
+];
+$('row').innerHTML = ARTS.map((a, i) => `<div class="card" id="cd${i}">
+  <div class="fill" id="cf${i}"></div>
+  <svg viewBox="0 0 548 388"><rect class="draw" id="cb${i}" x="4" y="4" width="540" height="380" rx="20" pathLength="1" stroke="oklch(74% .1 86)" stroke-width="2.5"/></svg>
+  <div class="in"><div class="mask" id="cm${i}" style="position:relative"><span class="meta">${a[0]}</span></div>
+  <h3 id="ct${i}">${a[1].split(' ').map(w => `<span class="ch" style="margin-right:.24em">${w}</span>`).join('')}</h3>
+  <div class="lnk" id="cl${i}">Lire l’article →</div></div></div>`).join('');
+// H : bandes du site
+const STRIPS = 10, SCALE = 1280 / 1440;
+$('win').insertAdjacentHTML('beforeend', Array.from({ length: STRIPS }, (_, i) => `<div class="strip" id="sp${i}" style="left:${i * 128}px;background-position:${-i * 128}px 0"></div>`).join(''));
+const STOPS = [[0, 'Accueil'], [3180, 'Articles approfondis'], [4120, 'La vidéothèque'], [6620, 'Le verset de la lumière'], [7360, 'Prendre rendez-vous']];
+// I : verset, segments placés de droite à gauche sur deux lignes
+const VERSE = [['الرَّحْمَنُ', 0], ['عَلَّمَ الْقُرْآنَ', 0], ['خَلَقَ الْإِنْسَانَ', 1], ['عَلَّمَهُ', 1], ['الْبَيَانَ', 1]];
+$('verse').innerHTML = VERSE.map((v, i) => `<div class="vs" id="vs${i}"><span class="${i === 4 ? 'goldtxt' : ''}" style="padding:0 12px">${v[0]}</span></div><div class="ul" id="ul${i}"></div>`).join('');
+let vlay = null;
+function verseLayout() {
+  const gap = 70, rows = [[], []];
+  VERSE.forEach((v, i) => rows[v[1]].push(i));
+  const pos = [];
+  rows.forEach((r, ri) => {
+    const ws = r.map(i => $('vs' + i).offsetWidth), total = ws.reduce((a, b) => a + b, 0) + gap * (r.length - 1);
+    let x = 960 + total / 2;
+    r.forEach((i, j) => { x -= ws[j]; pos[i] = { x, y: 230 + ri * 150, w: ws[j] }; x -= gap; });
+  });
+  return pos;
+}
+// J
+$('jh').innerHTML = ['Apportez la question', 'que vous portez depuis longtemps.'].map((l, i) => `<div class="mask" id="jl${i}" style="position:relative;display:block;padding:0 .1em .08em"><span>${l}</span></div>`).join('');
+const pillT = chars($('pillT'), 'Prendre rendez-vous');
+$('jrip').innerHTML = [0, 1, 2].map(i => `<div class="ring" id="jr${i}"></div>`).join('');
+// K
+$('kr').innerHTML = [0, 1, 2].map(i => `<div class="ring" id="kr${i}"></div>`).join('');
+const kLat = chars($('kLat'), 'Nūr al-Bayān');
+// volets de transition
+$('bars').innerHTML = Array.from({ length: 8 }, (_, i) => `<div class="bar" id="bar${i}" style="left:${i * 240}px;width:241px"></div>`).join('');
+
+// ================= fond =================
+const bg = $('bg').getContext('2d');
+const LET = ['ش', 'د', 'م', 'س', 'ا', 'ح', 'ن', 'ب', 'ع', 'ق'];
+function star(ctx, x, y, r) {
+  ctx.beginPath();
+  for (let q = 0; q < 2; q++) { for (let i = 0; i < 4; i++) { const a = q * Math.PI / 4 + i * Math.PI / 2; const px = x + Math.cos(a) * r, py = y + Math.sin(a) * r; i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); } ctx.closePath(); }
+  ctx.stroke();
+}
+function drawBg(t, o) {
+  const W = 1920, H = 1080;
+  const g = bg.createRadialGradient(960, 500, 0, 960, 540, 1150);
+  g.addColorStop(0, '#17181d'); g.addColorStop(.6, '#0c0d10'); g.addColorStop(1, '#050506');
+  bg.fillStyle = g; bg.fillRect(0, 0, W, H);
+  if (o.glow > .01) {
+    const h = bg.createRadialGradient(960, o.gy, 0, 960, o.gy, 760);
+    h.addColorStop(0, `rgba(196,154,78,${.28 * o.glow})`); h.addColorStop(.5, `rgba(150,110,50,${.08 * o.glow})`); h.addColorStop(1, 'rgba(0,0,0,0)');
+    bg.fillStyle = h; bg.fillRect(0, 0, W, H);
+  }
+  if (o.pat > .01) {
+    bg.strokeStyle = `rgba(200,160,90,${.07 * o.pat})`; bg.lineWidth = 1.2;
+    const off = (t * 10) % 120;
+    for (let x = -120 + off; x < W + 120; x += 120) for (let y = -120 + off * .5; y < H + 120; y += 120) {
+      bg.globalAlpha = clamp(1.1 - Math.hypot(x - 960, y - 540) / 1100);
+      star(bg, x, y, 30); bg.beginPath(); bg.arc(x, y, 12, 0, 6.283); bg.stroke();
+    }
+    bg.globalAlpha = 1;
+  }
+  bg.textAlign = 'center';
+  for (let i = 0; i < 14; i++) {
+    const z = .35 + seeded(i + 40) * .9;
+    const x = seeded(i + 2) * W + Math.sin(t * .3 + i) * 30;
+    const y = ((seeded(i + 11) * 1400 - t * (10 + 26 * z)) % 1400 + 1400) % 1400 - 160;
+    bg.font = `700 ${Math.round(60 + 90 * z)}px Amiri`;
+    bg.fillStyle = `rgba(205,165,95,${(.04 + .08 * z) * o.letters})`;
+    bg.fillText(LET[i % LET.length], x, y);
+  }
+  for (let i = 0; i < 140; i++) {
+    const z = seeded(i + 900);
+    const x = seeded(i + 200) * W + Math.sin(t * .6 + i) * 30 * z;
+    const y = ((seeded(i + 300) * H - t * (8 + z * 40)) % H + H) % H;
+    const a = (.15 + .6 * Math.max(0, Math.sin(t * 2 + i * 1.7))) * (.3 + z * .7) * o.dust;
+    bg.fillStyle = `rgba(240,210,150,${a})`;
+    bg.beginPath(); bg.arc(x, y, .8 + z * 2.6, 0, 6.283); bg.fill();
+  }
+  if (o.warp > .01) {
+    bg.lineWidth = 2;
+    for (let i = 0; i < 120; i++) {
+      const a = seeded(i + 500) * 6.283, d0 = 80 + seeded(i + 600) * 700, len = 80 + o.warp * 700 * (.4 + seeded(i));
+      bg.strokeStyle = `rgba(250,230,190,${.45 * o.warp * seeded(i + 7)})`;
+      bg.beginPath(); bg.moveTo(960 + Math.cos(a) * d0, 540 + Math.sin(a) * d0); bg.lineTo(960 + Math.cos(a) * (d0 + len), 540 + Math.sin(a) * (d0 + len)); bg.stroke();
+    }
+  }
+}
+const grain = document.createElement('canvas'); grain.width = grain.height = 256;
+{ const g = grain.getContext('2d'), d = g.createImageData(256, 256);
+  for (let i = 0; i < d.data.length; i += 4) { const v = seeded(i * .37) * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; }
+  g.putImageData(d, 0, 0); }
+const gctx = $('grain').getContext('2d');
+function drawGrain(t) {
+  const f = Math.floor(t * 30), ox = (seeded(f) * 256) | 0, oy = (seeded(f + 7) * 256) | 0;
+  for (let x = -ox; x < 1920; x += 256) for (let y = -oy; y < 1080; y += 256) gctx.drawImage(grain, x, y);
+}
+
+// ================= montage =================
+const SCN = { A: [0, 4.6], B: [4.2, 8.3], C: [8.0, 12.95], D: [12.8, 16.7], E: [16.5, 23.1], F: [22.8, 30.6], G: [30.4, 36.4], H: [36.2, 43.0], I: [42.8, 50.6], J: [50.3, 55.4], K: [55.2, 63] };
+const CUTS = [16.55, 22.85, 36.25, 50.35, 55.25];
+const IMPACT_T = IMPACTS.map(k => 1.2 + k * 1.5);
+window.DURATION = 63;
+
+window.seek = function (t) {
+  const live = id => t >= SCN[id][0] && t < SCN[id][1];
+  for (const id in SCN) show(id, live(id));
+
+  // ---------- caméra ----------
+  const shake = CUTS.reduce((a, c) => a + pulse(t, c, .02, .4), 0) + IMPACT_T.reduce((a, c, i) => a + pulse(t, c, .01, .25) * [.6, .35, .2, .1][i], 0);
+  put($('world'), { x: Math.sin(t * .37) * 6 + Math.sin(t * 43) * 8 * shake, y: Math.cos(t * .29) * 5 + Math.cos(t * 37) * 6 * shake, rx: Math.sin(t * .21) * .6, ry: Math.sin(t * .17) * .8, s: 1 + .02 * shake });
+  $('flash').style.opacity = Math.min(1, CUTS.reduce((a, c) => a + pulse(t, c, .1, .5) * .85, 0));
+  $('fade').style.opacity = tw(t, 61.9, 1.0, 0, 1, 'io');
+  drawBg(t, {
+    glow: t < 2 ? tw(t, .3, 1.8, 0, .5) : .7 + .3 * Math.sin(t * .8), gy: t > 55 ? 420 : 500,
+    pat: tw(t, 12.8, 2, 0, 1, 'io'), letters: tw(t, 13, 2, 0, 1, 'io'), dust: tw(t, 0, 3, .2, 1),
+    warp: CUTS.reduce((a, c) => a + pulse(t, c, .25, .5), 0),
+  });
+  drawGrain(t);
+
+  // ---------- crème : s'ouvre depuis le point (3.75 s), repart sous les volets (12.85 s) ----------
+  const creamOn = t >= 3.7 && t < 12.85;
+  $('cream').style.display = creamOn ? 'block' : 'none';
+  if (creamOn) $('cream').style.clipPath = `circle(${lerp(17, 1250, E.io5(K(t, 3.75, .75)))}px at 960px 540px)`;
+  // volets : montent (12.2 s) puis repartent vers le haut (12.9 s)
+  for (let i = 0; i < 8; i++) {
+    const d = Math.abs(i - 3.5) * .05;
+    const up = E.io(K(t, 12.15 + d, .45)), off = E.io(K(t, 12.9 + d, .5));
+    const el = $('bar' + i);
+    const on = up > 0 && off < 1;
+    el.style.display = on ? 'block' : 'none';
+    el.style.transformOrigin = off > 0 ? '50% 0' : '50% 100%';
+    el.style.transform = `scaleY(${off > 0 ? 1 - off : up})`;
+  }
+
+  // =========== A : 0 → 4.6 — trait, point qui rebondit, ouverture en crème ===========
+  if (live('A')) {
+    put($('line'), { sx: E.io5(K(t, .2, .9)), o: 1 - K(t, 1.15, .35) });
+    const split = E.spring(K(t, 1.05, 1.0));
+    put($('lineT'), { y: 539 - 130 * split, sx: lerp(1, .35, E.out(K(t, 1.05, 1))), o: K(t, 1.05, .1) * (1 - K(t, 2.6, .6)) * .7 });
+    put($('lineB'), { y: 539 + 130 * split, sx: lerp(1, .35, E.out(K(t, 1.05, 1))), o: K(t, 1.05, .1) * (1 - K(t, 2.6, .6)) * .7 });
+    // chute avec rebonds, étirement en vol, écrasement aux impacts
+    const fall = tt => lerp(-80, 540, E.bounce(K(tt, 1.2, 1.5)));
+    const v = speed(fall, t);
+    const squash = IMPACT_T.reduce((a, c, i) => a + pulse(t, c, .015, .16) * [.5, .32, .18, .1][i], 0);
+    const grow = E.io5(K(t, 3.75, .75));
+    put($('ball'), { y: fall(t), sy: (1 + Math.min(.5, v * .00045)) * (1 - squash), sx: (1 - Math.min(.25, v * .0002)) * (1 + squash * 1.1), o: K(t, 1.2, .05), s: 1 + grow * 3, pre: `translateY(${17 * squash}px) ` });
+    IMPACT_T.forEach((c, i) => {
+      const k = K(t, c, .9), r = E.out5(k) * [260, 190, 130, 90][i];
+      const el = $('rp' + i);
+      el.style.left = 960 - r + 'px'; el.style.top = 557 - r * .35 + 'px';
+      el.style.width = 2 * r + 'px'; el.style.height = 2 * r * .35 + 'px';
+      el.style.opacity = k > 0 ? (1 - k) * [.9, .7, .5, .35][i] : 0;
+    });
+  }
+
+  // =========== B : 4.2 → 8.3 — étoile à huit branches, lampe, nom ===========
+  if (live('B')) {
+    const ex = E.anticip(K(t, 7.55, .7));
+    const spin = (t - 4.4) * 12;
+    put($('octo1'), { ...life(t, 4.35, 1.3, { s: 0, r: -180 }, null, 0, {}, 'bouncy'), r: lerp(-180, 0, E.spring(K(t, 4.35, 1.3))) + spin + 200 * ex, s: E.bouncy(K(t, 4.35, 1.3)) * (1 - ex), y: -300 * ex });
+    put($('octo2'), { r: lerp(225, 45, E.spring(K(t, 4.5, 1.3))) - spin - 200 * ex, s: E.bouncy(K(t, 4.5, 1.3)) * (1 - ex), o: K(t, 4.5, .1), y: -300 * ex });
+    drawLamp($('lampBs'), K(t, 4.85, 1.2), E.bouncy(K(t, 5.7, .8)));
+    put($('lampB'), { y: -300 * ex, s: 1 - ex, o: K(t, 4.8, .1) });
+    nameB.forEach((c, i) => put(c, life(t, 5.6 + i * .05, .8, { y: -90, r: -25, b: 6 }, 7.4 + i * .02, .35, { y: 90, o: 0 }, 'bouncy')));
+  }
+
+  // =========== C : 8 → 12.95 — typographie cinétique ===========
+  if (live('C')) {
+    const W = ['c0', 'c1', 'c2'], T = [[8.05, 8.95], [8.95, 9.85], [9.85, 10.8]];
+    W.forEach((id, i) => { const el = $(id); el.style.top = '410px'; center(el); slide(el, t, T[i][0], T[i][1]); });
+    // DIFFICILES tremble, lettre par lettre
+    const jit = clamp(K(t, 10.1, .2)) * (1 - K(t, 10.75, .1));
+    c2.forEach((c, i) => { c.style.transform = `translate(${Math.sin(t * 60 + i * 2) * 5 * jit}px,${Math.cos(t * 50 + i * 3) * 6 * jit}px) rotate(${Math.sin(t * 40 + i) * 4 * jit}deg)`; });
+    // « à votre rythme. » : chaque lettre se pose lentement, comme une respiration
+    const el3 = $('c3'); el3.style.top = '390px'; center(el3); el3.style.visibility = t > 10.75 ? 'visible' : 'hidden';
+    c3.forEach((c, i) => put(c, life(t, 10.8 + i * .07, 1.1, { y: 120, b: 10, r: 8 }, 12.25 + i * .012, .35, { y: -60, o: 0, b: 8 }, 'soft')));
+    // barre sous le mot, qui suit sa largeur sur ressort
+    const ws = W.map(id => $(id).offsetWidth * .9).concat([el3.offsetWidth * .7]);
+    const starts = [8.05, 8.95, 9.85, 10.8];
+    let bw = 0; for (let i = 0; i < 4; i++) if (t >= starts[i]) bw = lerp(i ? ws[i - 1] : 0, ws[i], E.spring(K(t, starts[i] + .05, .6)));
+    const ub = $('ubar'); ub.style.width = Math.max(0, bw) + 'px'; ub.style.marginLeft = -Math.max(0, bw) / 2 + 'px';
+    ub.style.top = (t > 10.8 ? 640 : 660) + 'px';
+    put(ub, { o: 1 - K(t, 12.2, .3), sx: 1 - E.inExpo(K(t, 12.15, .4)) });
+  }
+
+  // =========== D : 12.8 → 16.7 — calligraphie, légendes ===========
+  if (live('D')) {
+    const ex = E.inExpo(K(t, 16.1, .55));
+    put($('D'), { s: 1 + 2.2 * ex, b: 14 * ex, o: 1 - ex });
+    $('archD').querySelectorAll('.draw').forEach((p, i) => drawPath(p, E.io5(K(t, 13.0 + i * .2, 1.4))));
+    const rv = E.io(K(t, 13.05, 1.1));
+    $('calDt').style.clipPath = `inset(-20% 0 -20% ${100 - rv * 100}%)`;
+    put($('calD'), life(t, 13.0, 1.4, { s: 1.15, b: 10 }, null, 0, {}, 'soft'));
+    put($('streak'), { x: lerp(1500, 380, rv), o: rv > 0 && rv < 1 ? 1 : 0 });
+    $('calDt').style.filter = `drop-shadow(0 0 ${20 + 40 * pulse(t, 14.2, .3, 1)}px oklch(74% .1 86 / .6))`;
+    [0, 1].forEach(i => {
+      drawPath($('dln' + i), E.io(K(t, 14.35 + i * .2, .6)));
+      put($('ddot' + i), { s: E.bouncy(K(t, 14.3 + i * .2, .6)), o: K(t, 14.3 + i * .2, .05) });
+      $('ddot' + i).style.transformBox = 'fill-box'; $('ddot' + i).style.transformOrigin = '50% 50%';
+      slide($('lbl' + i), t, 14.85 + i * .2, null);
+    });
+    slide($('nameD'), t, 15.2, null, { d: .7 });
+  }
+
+  // =========== E : 16.5 → 23.1 — livre → bulle → deux personnes ===========
+  if (live('E')) {
+    const B1 = 18.4, B2 = 20.4, OUT = 22.45;
+    slide($('e0'), t, 16.7, B1 - .1); slide($('es0'), t, 16.95, B1 - .15);
+    slide($('e1'), t, B1 + .05, B2 - .1); slide($('es1'), t, B1 + .25, B2 - .15);
+    slide($('e2'), t, B2 + .05, OUT); slide($('e3'), t, B2 + .15, OUT + .05); slide($('es2'), t, B2 + .4, OUT);
+    slide($('enum'), t, 16.7, OUT);
+    $('enumT').textContent = t < B1 ? '01 / 03' : t < B2 ? '02 / 03' : '03 / 03';
+    const exIco = E.anticip(K(t, OUT, .6));
+    put($('ico'), { x: 900 * exIco, ry: -40 * exIco + Math.sin(t * .8) * 8, rx: 6, b: exIco * 12 });
+    // livre : deux pages qui s'ouvrent en 3D
+    const open = E.spring(K(t, 16.75, 1.1)), close = E.anticip(K(t, B1 - .15, .45));
+    [['pgL', -1], ['pgR', 1]].forEach(([id, s]) => {
+      put($(id), { x: s * lerp(0, 92, open) * (1 - close), ry: s * lerp(90, 16, open) + s * 74 * close, s: 1 - .7 * close, o: K(t, 16.75, .1) * (1 - K(t, B1 + .2, .1)) });
+      $(id).querySelectorAll('i').forEach((b, j) => { b.style.transform = `scaleX(${E.out5(K(t, 17.3 + j * .1, .5))})`; });
+    });
+    // bulle : jaillit sur ressort vif, point d'interrogation qui balance
+    const bub = E.bouncy(K(t, B1 + .05, .9)), bubOut = E.anticip(K(t, B2 - .1, .45));
+    put($('bub'), { s: bub * lerp(1, .34, bubOut), o: K(t, B1 + .05, .05) * (1 - K(t, B2 + .25, .1)) });
+    put($('tail'), { x: 70, y: 105, r: 20, s: E.bouncy(K(t, B1 + .35, .7)) * (1 - bubOut), o: K(t, B1 + .35, .05) });
+    put($('qm'), { s: E.bouncy(K(t, B1 + .3, .9)) * (1 - bubOut), r: Math.sin((t - B1) * 5) * 10 * (1 - K(t, B1, 1.6)), o: K(t, B1 + .3, .05) });
+    // deux personnes : le cercle se divise, elles s'approchent ; la table se trace
+    const split = E.spring(K(t, B2 + .1, 1.0));
+    [[0, -1], [1, 1]].forEach(([i, s]) => {
+      const x = s * lerp(0, 150, E.out5(K(t, B2 + .1, .4))) - s * 40 * split;
+      put($('hd' + i), { x, y: -70, s: lerp(.9, 1, split), o: K(t, B2 + .1, .05) });
+      put($('bd' + i), { x, y: 40, s: E.bouncy(K(t, B2 + .3, .9)), o: K(t, B2 + .3, .05) });
+    });
+    put($('table'), { y: 120, sx: E.io5(K(t, B2 + .6, .7)), o: K(t, B2 + .6, .05) });
+  }
+
+  // =========== F : 22.8 → 30.6 — compteurs à rouleaux ===========
+  if (live('F')) {
+    const dialIn = E.spring(K(t, 22.9, 1.2)), ex = E.inExpo(K(t, 30.0, .55));
+    put($('dial'), { s: dialIn * (1 + 1.5 * ex), r: t * 14, o: K(t, 22.9, .2) * (1 - ex) });
+    NUMS.forEach((n, i) => {
+      const a = 23.0 + i * 1.75, o = i < 3 ? a + 1.55 : 29.9;
+      const ins = K(t, a, .1), outs = E.inExpo(K(t, o, .35));
+      const odo = $('odo' + i);
+      odo.style.visibility = ins > 0 && outs < 1 ? 'visible' : 'hidden';
+      odo.style.transform = `translate(-50%,-50%) translateY(${-220 * outs}px) scale(${1 - .2 * outs})`;
+      odo.style.opacity = 1 - outs;
+      odo.style.filter = outs > .02 ? `blur(${outs * 16}px)` : '';
+      [...n.s].forEach((c, j) => {
+        if (/\d/.test(c)) {
+          const k = E.spring(K(t, a + j * .1, 1.05));
+          $(`col${i}_${j}`).style.transform = `translateY(${-k * 20 * 300}px)`;
+        } else put($(`sym${i}_${j}`), life(t, a + .45 + j * .05, .7, { s: 0, y: 60, r: -30 }, null, 0, {}, 'bouncy'));
+      });
+      slide($('fl' + i), t, a + .3, o - .05);
+      $('seg' + i).style.transform = `scaleX(${E.io(K(t, a, 1.6))})`;
+    });
+    drawPath($('dialArc'), E.io(K(t, 23, 7)));
+  }
+
+  // =========== G : 30.4 → 36.4 — cartes construites trait par trait ===========
+  if (live('G')) {
+    slide($('gh'), t, 30.6, 35.8);
+    const ex = K(t, 35.6, .9);
+    put($('row'), { ry: tw(t, 30.5, 5.5, -18, 14, 'io'), rx: 10, z: tw(t, 30.5, 5.5, -300, 0, 'io') });
+    ARTS.forEach((_, i) => {
+      const a = 30.6 + i * .3;
+      const fly = E.anticip(K(t, 35.55 + i * .1, .6));
+      put($('cd' + i), { x: (i - 1) * 590, y: Math.sin(t * 1.2 + i) * 8 - 700 * fly, rx: 70 * fly, s: E.spring(K(t, a, .9)) * .3 + .7, o: K(t, a, .05) * (1 - K(t, 35.9 + i * .1, .2)) });
+      drawPath($('cb' + i), E.io5(K(t, a, .9)));
+      $('cf' + i).style.clipPath = `inset(0 ${100 - 100 * E.io5(K(t, a + .55, .7))}% 0 0 round 20px)`;
+      slide($('cm' + i), t, a + 1.0, null);
+      [...$('ct' + i).children].forEach((w, j) => put(w, life(t, a + 1.1 + j * .05, .7, { y: 40, b: 8, rx: -60 }, null, 0, {})));
+      put($('cl' + i), life(t, a + 1.7, .7, { x: -40, b: 6 }, null, 0, {}, 'bouncy'));
+    });
+  }
+
+  // =========== H : 36.2 → 43 — le site, en bandes qui s'assemblent puis s'envolent ===========
+  if (live('H')) {
+    let sy = 0, idx = 0;
+    for (let i = 1; i < STOPS.length; i++) { const k = K(t, 38.0 + (i - 1) * .95, .75); if (k > 0) { sy = lerp(STOPS[i - 1][0], STOPS[i][0], E.soft(k)); idx = k > .35 ? i : i - 1; } }
+    const scroll = sy * SCALE;
+    const barIn = E.spring(K(t, 36.4, .9)), barOut = E.anticip(K(t, 41.9, .5));
+    put($('wbar'), { y: lerp(-200, 0, barIn) - 300 * barOut, o: K(t, 36.4, .1) * (1 - K(t, 42.3, .1)) });
+    put($('win'), { s: .88, ry: Math.sin((t - 36) * .6) * 7, rx: 4 });
+    for (let i = 0; i < STRIPS; i++) {
+      const s = i % 2 ? 1 : -1;
+      const a = 36.5 + Math.abs(i - 4.5) * .06;
+      const k = E.spring(K(t, a, 1.0));
+      const o = 41.95 + i * .04, ko = E.anticip(K(t, o, .7));
+      const el = $('sp' + i);
+      put(el, { y: s * lerp(900, 0, k) + s * 1200 * ko, rx: s * lerp(-80, 0, k) + s * 70 * ko, z: -300 * ko, r: s * 8 * ko, o: K(t, a, .1) });
+      el.style.backgroundPosition = `${-i * 128}px ${-scroll}px`;
+    }
+    const tg = $('tag'); $('tagt').textContent = STOPS[idx][1];
+    const tagAt = idx === 0 ? 37.3 : 38.0 + (idx - 1) * .95 + .25;
+    const tk = E.bouncy(K(t, tagAt, .7));
+    put(tg, { x: 960 - tg.offsetWidth / 2, y: lerp(1010, 950, tk), z: 200, s: lerp(.6, 1, tk), r: lerp(-6, 0, tk), o: K(t, tagAt, .1) * (1 - K(t, 41.9, .2)) });
+  }
+
+  // =========== I : 42.8 → 50.6 — le verset ; « al-bayān » s'isole et emplit l'écran ===========
+  if (live('I')) {
+    if (!vlay) vlay = verseLayout();
+    slide($('ih'), t, 42.9, 47.0);
+    const focus = E.io5(K(t, 47.1, 1.1));
+    const dive = E.inExpo(K(t, 49.6, .85));
+    VERSE.forEach((v, i) => {
+      const p = vlay[i], a = 43.1 + i * .55;
+      const el = $('vs' + i);
+      const st = life(t, a, .9, { y: 70, b: 10 }, null, 0, {}, 'soft');
+      const k = E.out5(K(t, a, .8));
+      el.style.clipPath = `inset(-30% 0 -30% ${100 - k * 100}%)`;
+      if (i === 4) {
+        // vers le centre, grossit, puis la caméra plonge dedans
+        const cx = lerp(p.x + p.w / 2, 960, focus), cy = lerp(p.y, 330, focus);
+        const sc = lerp(1, 2.3, focus) * (1 + 40 * dive);
+        el.style.left = cx - p.w / 2 + 'px'; el.style.top = cy + 'px';
+        put(el, { y: st.y, s: sc, o: st.o * (1 - K(t, 50.2, .25)), b: st.b + dive * 10 });
+        el.style.transformOrigin = '50% 62%';
+        el.firstElementChild.style.filter = `drop-shadow(0 0 ${10 + 40 * focus}px oklch(80% .12 86 / .7))`;
+      } else {
+        el.style.left = p.x + 'px'; el.style.top = p.y + 'px';
+        put(el, { y: st.y - 80 * focus, o: st.o * (1 - focus), b: st.b + 14 * focus });
+      }
+      const ul = $('ul' + i);
+      ul.style.left = p.x + 12 + 'px'; ul.style.top = p.y + 138 + 'px'; ul.style.width = p.w - 24 + 'px';
+      put(ul, { sx: E.io5(K(t, a + .35, .6)), o: (1 - focus) * .8 });
+    });
+    slide($('itr'), t, 46.0, 47.0);
+    slide($('itr2'), t, 48.0, 49.4, { d: .7 });
+  }
+
+  // =========== J : 50.3 → 55.4 — point d'or → bouton ; clic ===========
+  if (live('J')) {
+    // le point naît du flash, se déforme en pilule (ressort), le texte s'y glisse
+    const dot = E.bouncy(K(t, 50.4, .7)), morph = E.spring(K(t, 51.0, .9));
+    const w = lerp(30, 460, morph), h = lerp(30, 92, morph);
+    const pl = $('pill');
+    pl.style.width = w + 'px'; pl.style.height = h + 'px'; pl.style.marginLeft = -w / 2 + 'px'; pl.style.marginTop = -h / 2 + 'px';
+    const click = pulse(t, 53.95, .08, .25);
+    const grow = E.inExpo(K(t, 54.55, .75));
+    put(pl, { s: dot * (1 - .08 * click) * (1 + 30 * grow), y: lerp(-160, 0, E.spring(K(t, 50.4, 1.3))) });
+    pillT.forEach((c, i) => put(c, life(t, 51.45 + i * .025, .6, { y: 60, b: 4 }, 54.5, .2, { o: 0 }, 'bouncy')));
+    slide($('jc'), t, 51.1, 54.5);
+    [0, 1].forEach(i => slide($('jl' + i), t, 51.25 + i * .15, 54.45 + i * .04, { d: .7 }));
+    slide($('jp'), t, 51.9, 54.5);
+    const ck = E.io(K(t, 52.9, 1.0));
+    const cx = lerp(1500, 985, ck) + Math.sin(ck * Math.PI) * 60, cy = lerp(1020, 712, ck) - Math.sin(ck * Math.PI) * 120;
+    put($('cursor'), { x: cx, y: cy, s: 1 - .2 * click, o: K(t, 52.9, .15) * (1 - K(t, 54.5, .15)) });
+    [0, 1, 2].forEach(i => {
+      const k = K(t, 54.0 + i * .12, .9), r = E.out5(k) * (300 + i * 150);
+      const el = $('jr' + i);
+      el.style.left = 960 - r + 'px'; el.style.top = 700 - r + 'px'; el.style.width = el.style.height = 2 * r + 'px';
+      el.style.opacity = k > 0 ? (1 - k) * .9 : 0;
+    });
+  }
+
+  // =========== K : 55.2 → 63 — signature ===========
+  if (live('K')) {
+    // trois anneaux qui se resserrent autour du logo
+    [0, 1, 2].forEach(i => {
+      const k = E.spring(K(t, 55.3 + i * .1, 1.4));
+      const r = lerp(1300 - i * 150, [200, 240, 285][i], k) + Math.sin(t * 2 + i) * 3;
+      const el = $('kr' + i);
+      el.style.left = 960 - r + 'px'; el.style.top = 390 - r + 'px'; el.style.width = el.style.height = 2 * r + 'px';
+      el.style.borderWidth = [3, 1.5, 1][i] + 'px';
+      el.style.opacity = K(t, 55.3, .3) * [.9, .5, .3][i];
+    });
+    const spin = (t - 55.6) * 10;
+    put($('ko1'), { r: lerp(-135, 0, E.spring(K(t, 55.6, 1.3))) + spin, s: E.bouncy(K(t, 55.6, 1.2)), o: K(t, 55.6, .1) });
+    put($('ko2'), { r: lerp(180, 45, E.spring(K(t, 55.75, 1.3))) - spin, s: E.bouncy(K(t, 55.75, 1.2)), o: K(t, 55.75, .1) });
+    drawLamp($('lampKs'), K(t, 55.9, 1.1), E.bouncy(K(t, 56.6, .8)) * (1 + .05 * Math.sin(t * 9)));
+    put($('kAr'), life(t, 56.6, 1.2, { y: 40, b: 10 }, null, 0, {}, 'soft'));
+    $('kArT').style.clipPath = `inset(-20% 0 -20% ${100 - 100 * E.io(K(t, 56.6, 1.0))}%)`;
+    kLat.forEach((c, i) => put(c, life(t, 57.3 + i * .05, .9, { y: 70, rx: -90, b: 6 }, null, 0, {})));
+    slide($('kTag'), t, 58.0, null, { d: .7 });
+    slide($('kAya'), t, 58.6, null, { d: .8 });
+  }
+};
+seek(0);
+</script>
+</body>
+</html>
