@@ -44,9 +44,9 @@ async function openScene(browser) {
   const page = await browser.newPage({ viewport: { width, height } });
   const errors = [];
   page.on('pageerror', e => errors.push(String(e)));
-  await page.goto(sceneUrl);
+  await page.goto(sceneUrl, { timeout: 300000 });
   await page.evaluate(() => document.fonts.ready);
-  await page.waitForFunction(() => window.READY !== false, null, { timeout: 120000 });
+  await page.waitForFunction(() => window.READY !== false, null, { timeout: 300000 });
   await page.evaluate(() => Promise.all([...document.images].map(i => i.decode().catch(() => {}))));
   return { page, errors };
 }
