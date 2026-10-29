@@ -3,8 +3,8 @@
 //         [--fps 30] [--size 1080x1920] [--workers 1] [--stills 1,5,10]
 import { chromium } from 'playwright-core';
 import { spawn } from 'node:child_process';
-import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
-import { resolve, dirname, join } from 'node:path';
+import { mkdirSync, writeFileSync, rmSync, renameSync, existsSync } from 'node:fs';
+import { resolve, dirname, join, basename } from 'node:path';
 import { tmpdir } from 'node:os';
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
@@ -78,23 +78,34 @@ async function renderRange(from, to, file, label) {
   for (let f = from; f < to; f++) {
     await page.evaluate(t => seek(t), f / fps);
     if (errors.length) { console.error(errors); process.exit(1); }
-    const buf = await page.screenshot({ type: 'jpeg', quality: 95 });
+    let buf;
+    for (let k = 0; ; k++) {
+      try { buf = await page.screenshot({ type: 'jpeg', quality: 95, timeout: 120000 }); break; }
+      catch (e) { if (k >= 2) throw e; process.stderr.write(`[${label}] nouvel essai image ${f}\n`); }
+    }
     if (!ff.stdin.write(buf)) await new Promise(r => ff.stdin.once('drain', r));
     if ((f - from) % 120 === 0) process.stderr.write(`[${label}] frame ${f - from}/${to - from}\n`);
   }
   ff.stdin.end();
   await new Promise(r => ff.on('close', r));
   await page.close();
+  renameSync(file, file.replace(/\.tmp\.mp4$/, '.mp4'));
 }
 
 mkdirSync(dirname(resolve(out)), { recursive: true });
 const frames = Math.round(duration * fps);
-const tmp = join(tmpdir(), `render-${process.pid}`);
+// Morceaux conservés sur disque : une relance reprend là où le rendu s'est arrêté.
+const tmp = join(dirname(resolve(out)), `.parts-${basename(out)}-${fps}`);
 mkdirSync(tmp, { recursive: true });
-const parts = Array.from({ length: workers }, (_, i) => ({
-  from: Math.floor((frames * i) / workers), to: Math.floor((frames * (i + 1)) / workers), file: join(tmp, `part${i}.mp4`),
+const chunks = Math.max(workers, Math.ceil(frames / 240));
+const parts = Array.from({ length: chunks }, (_, i) => ({
+  from: Math.floor((frames * i) / chunks), to: Math.floor((frames * (i + 1)) / chunks), file: join(tmp, `part${String(i).padStart(3, '0')}.mp4`),
 }));
-await Promise.all(parts.map((p, i) => renderRange(p.from, p.to, p.file, `w${i}`)));
+const todo = parts.filter(p => !existsSync(p.file));
+let next = 0;
+await Promise.all(Array.from({ length: workers }, async (_, w) => {
+  while (next < todo.length) { const p = todo[next++]; await renderRange(p.from, p.to, p.file.replace(/\.mp4$/, '.tmp.mp4'), `w${w} ${basename(p.file)}`); }
+}));
 await browser.close();
 
 writeFileSync(join(tmp, 'list.txt'), parts.map(p => `file '${p.file}'`).join('\n'));
