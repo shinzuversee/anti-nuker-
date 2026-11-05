@@ -60230,6 +60230,376 @@ Ibn ʿAbbās a dit : ce sont **ceux qui savent qu'Allāh est capable de toute ch
           type: `p`,
           text: `Le récit complet, rapporté dans les deux Sahīh, montre un Héraclius qui interroge Abū Sufyān avec la méthode d'un enquêteur, reconnaît les signes d'un prophète, puis **recule devant la réaction de ses patriarches et le risque pour son trône**. C'est le cas d'école de notre sujet : **l'intelligence a conclu, la volonté a reculé**. Le problème n'était pas un manque d'information.`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : à La Mecque, ils savaient`,
+        },
+        {
+          type: `p`,
+          text: `Revenons quatorze siècles en arrière. À La Mecque, personne ne doutait de l'intelligence des chefs de Quraysh. C'étaient des négociants qui traversaient le désert jusqu'à Damas et jusqu'au Yémen, des orateurs, des connaisseurs de la poésie, des hommes qui savaient lire un rapport de force. Et pourtant, la plupart ont refusé le message. Était-ce parce qu'ils ne le comprenaient pas ?`,
+        },
+        {
+          type: `p`,
+          text: `Le Coran répond lui-même, et la réponse est surprenante : **ils ne le traitaient pas de menteur**. Le Prophète ﷺ était connu chez eux sous le surnom d'al-Amīn, « le digne de confiance ». Le problème n'était pas la crédibilité du messager, c'était **ce que le message leur demandait**.`,
+        },
+        {
+          type: `verse`,
+          arabic: `قَدْ نَعْلَمُ إِنَّهُۥ لَيَحْزُنُكَ ٱلَّذِى يَقُولُونَ ۖ **فَإِنَّهُمْ لَا يُكَذِّبُونَكَ وَلَٰكِنَّ ٱلظَّٰلِمِينَ بِـَٔايَٰتِ ٱللَّهِ يَجْحَدُونَ**`,
+          translation: `Nous savons que ce qu'ils disent t'attriste. **Ce n'est pas toi qu'ils traitent de menteur, ce sont les signes d'Allāh que les injustes renient.**`,
+          reference: `Coran, al-Anʿām, 6:33`,
+        },
+        {
+          type: `quote`,
+          text: `قَالَ أَبُو مَيْسَرَةَ: إِنَّ رَسُولَ اللَّهِ ﷺ مَرَّ بِأَبِي جَهْلٍ وَأَصْحَابِهِ فَقَالُوا: يَا مُحَمَّدُ **وَاللَّهِ مَا نُكَذِّبُكَ وَإِنَّكَ عِنْدَنَا لَصَادِقٌ، وَلَكِنْ نُكَذِّبُ مَا جِئْتَ بِهِ**، فَنَزَلَتْ هَذِهِ الْآيَةُ ... وَيُقَوِّي هَذَا أَنَّ رَجُلًا قَرَأَ عَلَى ابْنِ عَبَّاسٍ "فَإِنَّهُمْ لَا يُكْذِبُونَكَ" مُخَفَّفًا فَقَالَ لَهُ ابْنُ عَبَّاسٍ: "فَإِنَّهُمْ لَا يُكَذِّبُونَكَ" **لِأَنَّهُمْ كَانُوا يُسَمُّونَ النَّبِيَّ ﷺ الْأَمِينَ**.
+
+Abū Maysara a dit : le Messager d'Allāh ﷺ passa près d'Abū Jahl et de ses compagnons, qui lui dirent : « Ô Muhammad, **par Allāh, nous ne te traitons pas de menteur, tu es pour nous véridique ; mais nous traitons de mensonge ce que tu apportes** ». Ce verset descendit alors… Ce qui renforce cela, c'est qu'un homme récita devant Ibn ʿAbbās « fa-innahum lā yukdhibūnaka », et Ibn ʿAbbās le reprit : « fa-innahum lā yukadhdhibūnaka », **car ils appelaient le Prophète ﷺ al-Amīn**.`,
+          source: `Al-Qurtubī (m. 671 H), al-Jāmiʿ li-ahkām al-Qurʾān, 6/416, sur al-Anʿām 6:33`,
+        },
+        {
+          type: `p`,
+          text: `Arrête-toi sur la phrase d'Abū Jahl, parce qu'elle résume tout ce chapitre : « **tu es véridique, mais nous refusons ce que tu apportes** ». Ce n'est pas la phrase de quelqu'un qui manque d'informations. C'est la phrase de quelqu'un qui a les informations, et qui a déjà décidé.`,
+        },
+        {
+          type: `h3`,
+          text: `ʿUmar et ʿAbd Allāh ibn Salām : « je le connais mieux que mon fils »`,
+        },
+        {
+          type: `p`,
+          text: `Le même phénomène existait chez les savants des gens du Livre, c'est-à-dire chez les spécialistes des Écritures, les « experts » de l'époque en matière de prophétie. Le Coran dit d'eux qu'ils reconnaissent le Prophète ﷺ **comme ils reconnaissent leurs propres fils** (2:146). Al-Qurtubī rapporte un échange entre ʿUmar ibn al-Khattāb et ʿAbd Allāh ibn Salām, un rabbin de Médine qui, lui, a embrassé l'islam :`,
+        },
+        {
+          type: `quote`,
+          text: `وَرُوِيَ أَنَّ عُمَرَ قَالَ لِعَبْدِ اللَّهِ بْنِ سَلَامٍ: أَتَعْرِفُ مُحَمَّدًا ﷺ كَمَا تَعْرِفُ ابْنَكَ؟ فَقَالَ: **نَعَمْ وَأَكْثَرَ**، بَعَثَ اللَّهُ أَمِينَهُ فِي سَمَائِهِ إِلَى أَمِينِهِ فِي أَرْضِهِ بِنَعْتِهِ فَعَرَفْتُهُ، وَابْنِي لَا أَدْرِي مَا كَانَ مِنْ أُمِّهِ. ... قَوْلُهُ تَعَالَى: "وَهُمْ يَعْلَمُونَ" **ظَاهِرٌ فِي صِحَّةِ الْكُفْرِ عِنَادًا**.
+
+On rapporte que ʿUmar demanda à ʿAbd Allāh ibn Salām : « Connais-tu Muhammad ﷺ comme tu connais ton fils ? » Il répondit : « **Oui, et davantage.** Allāh a envoyé Son dépositaire du ciel [Jibrīl] à Son dépositaire sur terre [le Prophète] avec sa description, et je l'ai reconnu ; quant à mon fils, je ne sais pas ce qu'il en a été de sa mère. » … Et Sa parole « alors qu'ils savent » **montre clairement que la mécréance par obstination existe bel et bien**.`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 2/163, sur al-Baqara 2:146`,
+        },
+        {
+          type: `p`,
+          text: `La phrase finale d'al-Qurtubī est capitale pour notre question : **kufr ʿinād**, la mécréance par obstination. Les savants classiques ne pensaient pas que tout refus vient de l'ignorance. Ils distinguaient celui qui ne sait pas, celui qui sait mal, et **celui qui sait et refuse**. Notre question moderne, « comment un homme si instruit peut-il ne pas croire ? », ils l'avaient déjà classée.`,
+        },
+        {
+          type: `chronologie`,
+          title: `Des hommes qui savaient, à travers l'histoire du Coran`,
+          events: [
+            {
+              date: `Époque de Moïse`,
+              label: `Pharaon et ses notables`,
+              note: `« Ils les ont niés, alors que leurs âmes en étaient convaincues » (27:14) : la preuve était là, l'orgueil l'a refusée.`,
+            },
+            {
+              date: `Avant l'hégire`,
+              label: `Abū Jahl et les chefs de Quraysh`,
+              note: `« Nous ne te traitons pas de menteur, mais nous refusons ce que tu apportes » (al-Qurtubī, 6/416).`,
+            },
+            {
+              date: `An 6-7 de l'hégire`,
+              label: `Héraclius, empereur de Byzance`,
+              note: `Il interroge Abū Sufyān, reconnaît les signes d'un prophète, puis recule devant la colère de sa cour.`,
+            },
+            {
+              date: `Médine`,
+              label: `ʿAbd Allāh ibn Salām, rabbin devenu Compagnon`,
+              note: `Le même savoir que les autres, mais une décision différente : « je le connais mieux que mon fils ».`,
+            },
+          ],
+          caption: `Dans chaque cas, **le savoir est présent** ; ce qui change d'une ligne à l'autre, c'est la décision.`,
+        },
+        {
+          type: `p`,
+          text: `Cette frise se lit de haut en bas comme une seule leçon. **Pharaon** avait vu les signes de Moïse de ses propres yeux. **Abū Jahl** connaissait l'honnêteté du Prophète ﷺ depuis l'enfance. **Héraclius** maîtrisait les Écritures mieux que quiconque dans son empire. Aucun d'eux ne manquait de données. Et la dernière ligne, **ʿAbd Allāh ibn Salām**, montre que le même savoir peut aboutir à la foi : ce n'est donc pas le savoir qui éloigne, c'est ce que l'on décide d'en faire.`,
+        },
+        {
+          type: `objection`,
+          objection: `N'est-ce pas injuste de comparer un chercheur athée d'aujourd'hui à Abū Jahl ou à Pharaon ?`,
+          reponse: `Ce n'est pas une comparaison de personnes, c'est une comparaison de mécanismes. Le Coran ne dit pas que tout non-croyant est un Pharaon ; il montre qu'**il existe un chemin par lequel on peut savoir et refuser**, et il nous demande de le connaître pour ne pas l'emprunter nous-mêmes. Ibn ʿAtiyya, on va le voir, applique d'ailleurs le même verset aux croyants.`,
+        },
+        {
+          type: `h2`,
+          text: `Al-Shinqītī : un avertissement adressé à notre époque`,
+        },
+        {
+          type: `p`,
+          text: `De tous les commentateurs, celui qui a le plus directement répondu à notre question est le savant malikite de Mauritanie, **Muhammad al-Amīn al-Shinqītī** (m. 1393 H / 1974). Il a vécu l'époque où les musulmans découvraient, souvent avec un sentiment d'infériorité, la puissance technique de l'Europe. Arrivé au verset 30:7, il interrompt son commentaire pour écrire un « avertissement » (tanbīh) :`,
+        },
+        {
+          type: `quote`,
+          text: `اعْلَمْ أَنَّهُ **يَجِبُ عَلَى كُلِّ مُسْلِمٍ فِي هَذَا الزَّمَانِ أَنْ يَتَدَبَّرَ آيَةَ «الرُّومِ» هَذِهِ تَدَبُّرًا كَثِيرًا** ... وَإِيضَاحُ ذَلِكَ أَنَّ مِنْ أَعْظَمِ فِتَنِ آخِرِ الزَّمَانِ الَّتِي ابْتَلَى اللَّهُ بِهَا ضِعَافَ الْعُقُولِ مِنَ الْمُسْلِمِينَ شِدَّةَ إِتْقَانِ الْإِفْرِنْجِ لِأَعْمَالِ الْحَيَاةِ الدُّنْيَا ... **فَظَنُّوا أَنَّ مَنْ قَدَرَ عَلَى تِلْكَ الْأَعْمَالِ أَنَّهُ عَلَى الْحَقِّ**، وَأَنَّ مَنْ عَجَزَ عَنْهَا مُتَخَلِّفٌ وَلَيْسَ عَلَى الْحَقِّ، **وَهَذَا جَهْلٌ فَاحِشٌ، وَغَلَطٌ فَادِحٌ**. وَفِي هَذِهِ الْآيَةِ الْكَرِيمَةِ إِيضَاحٌ لِهَذِهِ الْفِتْنَةِ ... أَنْزَلَهُ اللَّهُ فِي كِتَابِهِ **قَبْلَ وُقُوعِهَا بِأَزْمَانٍ كَثِيرَةٍ**.
+
+Sache qu'**il est du devoir de tout musulman, à notre époque, de méditer longuement ce verset de la sourate al-Rūm** … En effet, l'une des plus grandes épreuves de la fin des temps, par laquelle Allāh a éprouvé les esprits faibles parmi les musulmans, est la grande maîtrise des Européens dans les œuvres de la vie d'ici-bas … **Ils ont alors cru que celui qui est capable de ces œuvres est dans le vrai**, et que celui qui en est incapable est arriéré et dans l'erreur. **C'est une ignorance grossière et une erreur grave.** Ce noble verset éclaire cette épreuve … Allāh l'a fait descendre dans Son Livre **bien des siècles avant qu'elle ne survienne**.`,
+          source: `Muhammad al-Amīn al-Shinqītī (m. 1393 H), Adwāʾ al-Bayān, 6/166, sur al-Rūm 30:7`,
+        },
+        {
+          type: `p`,
+          text: `L'objection de notre sujet, al-Shinqītī l'a donc vue naître et il l'a nommée : **confondre la puissance technique avec la vérité**. Celui qui conclut « ils maîtrisent la physique, donc ils ont raison sur Dieu » commet exactement l'erreur que le verset décrit. Puis il précise pourquoi ce savoir, aussi impressionnant soit-il, ne tranche pas la question : il lui reconnaît **deux défauts**.`,
+        },
+        {
+          type: `quote`,
+          text: `وَعَابَ ذَلِكَ النَّوْعَ الْمَذْكُورَ مِنَ الْعِلْمِ، بِعَيْبَيْنِ عَظِيمَيْنِ: أَحَدُهُمَا: **قِلَّتُهُ وَضِيقُ مَجَالِهِ**، لِأَنَّهُ لَا يُجَاوِزُ ظَاهِرًا مِنَ الْحَيَاةِ الدُّنْيَا ... وَالثَّانِي مِنْهُمَا: هُوَ **دِنَاءَهُ هَدَفِ ذَلِكَ الْعِلْمِ، وَعَدَمُ نُبْلِ غَايَتِهِ**، لِأَنَّهُ لَا يَتَجَاوَزُ الْحَيَاةَ الدُّنْيَا، وَهِيَ سَرِيعَةُ الِانْقِطَاعِ وَالزَّوَالَ.
+
+Allāh a blâmé ce type de savoir par deux grands défauts. Le premier : **sa petitesse et l'étroitesse de son champ**, car il ne dépasse pas un aspect apparent de la vie d'ici-bas … Le second : **la bassesse de son but et le manque de noblesse de sa finalité**, car il ne dépasse pas cette vie, qui s'interrompt et disparaît vite.`,
+          source: `Al-Shinqītī, Adwāʾ al-Bayān, 6/166`,
+        },
+        {
+          type: `schema`,
+          title: `Les deux limites du « savoir de la surface » selon al-Shinqītī`,
+          arabic: `عيبان عظيمان`,
+          variant: `branch`,
+          nodes: [
+            {
+              label: `Un champ étroit`,
+              arabic: `قلته وضيق مجاله`,
+              note: `Il ne porte que sur « un aspect apparent » du monde. Ce qu'il y a avant, après, et au-delà de ce qui se mesure lui échappe.`,
+            },
+            {
+              label: `Un horizon court`,
+              arabic: `دناءة هدفه`,
+              note: `Son but s'arrête à cette vie, qui finit vite. Il dit comment vivre plus confortablement, jamais pourquoi vivre.`,
+            },
+            {
+              label: `Conséquence`,
+              arabic: `كلا علم`,
+              note: `Sur la question de Dieu et du destin final, ce savoir se retrouve dans la même position que l'ignorance : il n'a rien à en dire.`,
+            },
+          ],
+          caption: `Le schéma ne nie pas la valeur de ces sciences ; il délimite **ce sur quoi elles ont autorité**.`,
+        },
+        {
+          type: `p`,
+          text: `Lisons ce schéma branche par branche. **La première branche, le champ étroit** : la physique peut décrire la naissance d'une étoile avec une précision vertigineuse, mais la question « pourquoi y a-t-il quelque chose plutôt que rien ? » n'est pas une question de physique. **La deuxième branche, l'horizon court** : ces sciences améliorent la vie, soignent, construisent ; mais aucune équation ne dit à un homme ce qu'il doit faire de sa vie, ni ce qui l'attend après.`,
+        },
+        {
+          type: `p`,
+          text: `**La troisième branche, la conséquence**, est la plus fine. Al-Shinqītī s'appuie sur une remarque de grammaire : dans le verset, « ils connaissent un aspect apparent » est placé en apposition (badal) à « la plupart des gens **ne savent pas** ». Le Coran met donc ce savoir **à la place même** de l'ignorance, comme s'il disait : sur ce point précis, leur savoir équivaut à ne pas savoir.`,
+        },
+        {
+          type: `quote`,
+          text: `قَالَ الزَّمَخْشَرِيُّ فِي «الْكَشَّافِ»: وَقَوْلُهُ: يَعْلَمُونَ بَدَلٌ مِنْ قَوْلِهِ: لَا يَعْلَمُونَ، وَفِي هَذَا الْإِبْدَالِ مِنَ النُّكْتَةِ أَنَّهُ أَبْدَلَهُ مِنْهُ وَجَعَلَهُ بِحَيْثُ يَقُومُ مَقَامَهُ، وَيَسُدُّ مَسَدَّهُ لِيُعَلِّمَكَ أَنَّهُ **لَا فَرْقَ بَيْنَ عَدَمِ الْعِلْمِ الَّذِي هُوَ الْجَهْلُ، وَبَيْنَ وُجُودِ الْعِلْمِ الَّذِي لَا يَتَجَاوَزُ الدُّنْيَا**.
+
+Al-Zamakhsharī a dit dans al-Kashshāf : « ils connaissent » est une apposition à « ils ne savent pas ». La finesse de cette apposition est qu'Il l'a mise à sa place et lui a fait jouer son rôle, pour t'apprendre qu'**il n'y a pas de différence entre l'absence de savoir, qui est l'ignorance, et la présence d'un savoir qui ne dépasse pas ce bas monde**.`,
+          source: `Rapporté et approuvé par al-Shinqītī, Adwāʾ al-Bayān, 6/167`,
+        },
+        {
+          type: `p`,
+          text: `Al-Shinqītī ajoute ailleurs une image qui choque au premier abord, mais qui est profonde : **l'habileté technique, à elle seule, ne prouve pas la clairvoyance**, puisque Allāh l'a donnée aussi à des animaux.`,
+        },
+        {
+          type: `quote`,
+          text: `فَحِذْقُ الْكُفَّارِ فِي الصِّنَاعَاتِ الْيَدَوِيَّةِ **كَحِذْقِ بَعْضِ الْحَيَوَانَاتِ فِي صِنَاعَتِهَا، بِإِلْهَامِ اللَّهِ لَهَا ذَلِكَ**، فَالنَّحْلُ تَبْنِي بَيْتَ عَسَلِهَا عَلَى صُورَةِ شَكْلٍ مُسَدَّسٍ، **يَحَارُ فِيهِ حُذَّاقُ الْمُهَنْدِسِينَ**.
+
+L'habileté des mécréants dans les techniques **est comme l'habileté de certains animaux dans leur ouvrage, qu'Allāh leur a inspiré** : l'abeille construit la demeure de son miel en forme d'hexagone, **devant lequel les ingénieurs les plus habiles restent perplexes**.`,
+          source: `Al-Shinqītī, Adwāʾ al-Bayān, 2/262`,
+        },
+        {
+          type: `p`,
+          text: `L'abeille construit une structure que les mathématiciens admirent, et pourtant personne ne dirait que l'abeille connaît Dieu ou le sens de l'existence. La compétence technique est un don, réel et admirable, mais **elle ne dit rien, à elle seule, de la justesse d'une vision du monde**.`,
+        },
+        {
+          type: `balance`,
+          title: `Ce qu'al-Shinqītī affirme, et ce qu'il refuse`,
+          arabic: `بين الإفراط والتفريط`,
+          affirmLabel: `Ce qu'il affirme`,
+          denyLabel: `Ce qu'il refuse`,
+          affirm: [
+            `Les musulmans ont le **devoir** d'apprendre ces sciences du monde (Adwāʾ, 6/167).`,
+            `Apprises et utilisées selon ce qu'Allāh ordonne, elles deviennent **parmi les plus nobles et les plus utiles des sciences**.`,
+            `Le Coran ordonne de préparer « tout ce que vous pouvez comme force » (8:60) : la compétence fait partie de l'obéissance.`,
+          ],
+          deny: [
+            `Conclure que la maîtrise technique d'un peuple prouve que sa croyance est vraie.`,
+            `Croire que l'incapacité technique prouve qu'on est dans l'erreur religieuse.`,
+            `Confondre le savoir du « comment » avec le savoir du « pourquoi ».`,
+          ],
+          caption: `Le même savant qui relativise ces sciences face à la question de Dieu **oblige** les musulmans à les acquérir.`,
+        },
+        {
+          type: `quote`,
+          text: `وَاعْلَمْ أَنَّ **الْمُسْلِمِينَ يَجِبُ عَلَيْهِمْ تَعَلُّمُ هَذِهِ الْعُلُومِ الدُّنْيَوِيَّةِ** ... إِذَا تَعَلَّمَهَا الْمُسْلِمُونَ، وَكَانَ كُلٌّ مِنْ تَعْلِيمِهَا وَاسْتِعْمَالِهَا مُطَابِقًا لِمَا أَمَرَ اللَّهُ بِهِ عَلَى لِسَانِ نَبِيِّهِ ﷺ، **كَانَتْ مِنْ أَشْرَفِ الْعُلُومِ وَأَنْفَعِهَا**.
+
+Sache que **les musulmans ont l'obligation d'apprendre ces sciences du monde** … Si les musulmans les apprennent, et que leur enseignement comme leur usage sont conformes à ce qu'Allāh a ordonné par la bouche de Son Prophète ﷺ, **elles sont alors parmi les plus nobles et les plus utiles des sciences**.`,
+          source: `Al-Shinqītī, Adwāʾ al-Bayān, 6/167`,
+        },
+        {
+          type: `focus`,
+          kind: `vigilance`,
+          title: `Ne pas tirer la mauvaise leçon`,
+          text: `Ce passage n'est pas un mépris de la science. Al-Shinqītī en fait un **devoir religieux**. Ce qu'il refuse, c'est de faire du laboratoire un tribunal de la foi : **un savoir peut être immense sur le monde et muet sur son Auteur**.`,
+        },
+        {
+          type: `h2`,
+          text: `Ibn ʿAtiyya : ce que voient les sens, et ce qui leur échappe`,
+        },
+        {
+          type: `p`,
+          text: `Le grand commentateur malikite d'al-Andalus, **Ibn ʿAtiyya** (m. 542 H), recense les sens que les savants ont donnés au mot « apparent » (zāhir) dans le verset. L'un d'eux éclaire notre sujet de façon saisissante, et il termine par une remarque qui nous concerne tous.`,
+        },
+        {
+          type: `quote`,
+          text: `فقالت فرقة معناه بينا أي **ما أدته إليهم حواسهم فكأن علومهم إنما هي علوم البهائم**، وقال ابن عباس والحسن والجمهور: معناه ما فيه الظهور والعلو في الدنيا من **إتقان الصناعات والمباني ومظان كسب الأموال والفلاحات** ونحو هذا ... وغفلة الكافر هي على الكمال **والمؤمن المنهمك في أمور الدنيا التي هي أكبر همه يأخذ من هذه الآية بحظ**، نوّر الله قلوبنا بهداه.
+
+Un groupe a dit : « apparent » signifie évident, c'est-à-dire **ce que leurs sens leur ont transmis, comme si leurs sciences n'étaient que les sciences des bêtes**. Ibn ʿAbbās, al-Hasan et la majorité ont dit : c'est ce qui donne prestige et élévation en ce monde, **la maîtrise des métiers et des constructions, les moyens de gagner de l'argent, l'agriculture**, et ce qui y ressemble … L'inattention du mécréant est totale, **mais le croyant absorbé par les affaires de ce monde, au point qu'elles soient son plus grand souci, prend lui aussi sa part de ce verset**. Qu'Allāh illumine nos cœurs de Sa guidance.`,
+          source: `Ibn ʿAtiyya (m. 542 H), al-Muharrar al-wajīz, 4/329, sur al-Rūm 30:7`,
+        },
+        {
+          type: `p`,
+          text: `La dernière phrase d'Ibn ʿAtiyya retourne la question vers nous. Il serait trop facile de lire ce verset en pointant du doigt « les autres ». **Le croyant dont la vie entière est absorbée par le travail, l'argent et les écrans, sans jamais lever la tête vers l'au-delà, vit lui aussi à la surface.** La différence est de degré, pas de nature. Le verset n'est pas seulement une réponse à une objection : c'est un miroir.`,
+        },
+        {
+          type: `quote`,
+          text: `وَمِنَ الْبَلِيَّةِ أَنْ تَرَى لَكَ صَاحِبًا ... فِي صُورَةِ الرَّجُلِ السَّمِيعِ الْمُبْصِرِ
+فَطِنٍ بِكُلِّ مُصِيبَةٍ فِي مَالِهِ ... **وَإِذَا يُصَابُ بِدِينِهِ لَمْ يَشْعُرِ**
+
+C'est un malheur de voir l'un de tes amis, qui a l'apparence d'un homme qui entend et qui voit, **attentif à la moindre perte dans ses biens, et qui, lorsqu'il est frappé dans sa religion, ne s'en aperçoit même pas**.`,
+          source: `Vers cité par al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 14/8, sur al-Rūm 30:7`,
+        },
+        {
+          type: `p`,
+          text: `Al-Qurtubī, juste avant ce vers, cite une remarque d'Ibn Khālawayh sur les rois de Perse, qui avaient réparti leurs journées selon le temps qu'il faisait, un jour pour la chasse, un jour pour les affaires : « **Comme ils connaissaient bien la gestion de leur monde !** Ils connaissent un aspect apparent de la vie d'ici-bas. » Une civilisation peut être raffinée, organisée, savante, et passer à côté de l'essentiel.`,
+        },
+        {
+          type: `h2`,
+          text: `Quand le cœur se ferme : l'orgueil et la passion`,
+        },
+        {
+          type: `p`,
+          text: `Reste une question : **pourquoi** quelqu'un qui a les éléments refuserait-il de conclure ? Le Coran nomme deux causes principales, et les commentateurs les ont détaillées. La première est **l'orgueil** (kibr). La seconde est **la passion** (hawā), c'est-à-dire le fait de suivre ce que l'on désire plutôt que ce que l'on sait.`,
+        },
+        {
+          type: `verse`,
+          arabic: `**سَأَصْرِفُ عَنْ ءَايَٰتِىَ ٱلَّذِينَ يَتَكَبَّرُونَ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ** وَإِن يَرَوْا كُلَّ ءَايَةٍ لَّا يُؤْمِنُوا بِهَا`,
+          translation: `**Je détournerai de Mes signes ceux qui s'enflent d'orgueil sur terre sans droit** ; et quand bien même ils verraient tous les signes, ils n'y croiraient pas.`,
+          reference: `Coran, al-Aʿrāf, 7:146`,
+        },
+        {
+          type: `quote`,
+          text: `قَالَ قَتَادَةُ: **سَأَمْنَعُهُمْ فَهْمَ كِتَابِي**. وَقَالَهُ سُفْيَانُ بْنُ عُيَيْنَةَ. وَقِيلَ: سَأَصْرِفُهُمْ عَنِ الْإِيمَانِ بِهَا. وَقِيلَ: سَأَصْرِفُهُمْ عَنْ نَفْعِهَا، **وَذَلِكَ مُجَازَاةً عَلَى تَكَبُّرِهِمْ** ... (يَتَكَبَّرُونَ) **يَرَوْنَ أَنَّهُمْ أَفْضَلُ الْخَلْقِ**. وَهَذَا ظَنٌّ بَاطِلٌ، فَلِهَذَا قَالَ: (بِغَيْرِ الْحَقِّ).
+
+Qatāda a dit : « **Je les priverai de la compréhension de Mon Livre.** » Sufyān ibn ʿUyayna a dit de même. On a dit aussi : Je les détournerai d'y croire ; ou : Je les détournerai d'en tirer profit, **en rétribution de leur orgueil** … « Ils s'enflent d'orgueil » : **ils se voient supérieurs aux autres créatures**. C'est une opinion fausse, c'est pourquoi Il a dit : « sans droit ».`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 7/283, sur al-Aʿrāf 7:146`,
+        },
+        {
+          type: `p`,
+          text: `Le verset dit quelque chose de vertigineux : **l'orgueil n'empêche pas seulement d'accepter la vérité, il finit par empêcher de la comprendre**. Celui qui se croit au-dessus du message finit par ne plus le voir, même avec tous les signes devant lui. Ce n'est pas l'intelligence qui manque ; c'est l'humilité nécessaire pour l'utiliser.`,
+        },
+        {
+          type: `verse`,
+          arabic: `أَفَرَءَيْتَ مَنِ ٱتَّخَذَ إِلَٰهَهُۥ هَوَىٰهُ **وَأَضَلَّهُ ٱللَّهُ عَلَىٰ عِلْمٍ**`,
+          translation: `Vois-tu celui qui a pris sa passion pour divinité, **et qu'Allāh a égaré malgré [sa] science** ?`,
+          reference: `Coran, al-Jāthiya, 45:23`,
+        },
+        {
+          type: `quote`,
+          text: `وَقَالَ ابْنُ عَبَّاسٍ: **مَا ذَكَرَ اللَّهُ هَوًى فِي الْقُرْآنِ إِلَّا ذَمَّهُ** ... وَقَالَ أَبُو الدَّرْدَاءِ ﵁: إِذَا أَصْبَحَ الرَّجُلُ اجْتَمَعَ هَوَاهُ وَعَمَلُهُ وَعِلْمُهُ، **فَإِنْ كَانَ عَمَلُهُ تَبَعًا لِهَوَاهُ فَيَوْمُهُ يَوْمُ سُوءٍ، وَإِنْ كَانَ عَمَلُهُ تَبَعًا لِعِلْمِهِ فَيَوْمُهُ يَوْمٌ صَالِحٌ**.
+
+Ibn ʿAbbās a dit : « **Allāh n'a jamais mentionné la passion dans le Coran sans la blâmer.** » … Et Abū l-Dardāʾ, qu'Allāh l'agrée, a dit : « Quand l'homme se lève le matin, sa passion, ses actes et sa science se réunissent. **Si ses actes suivent sa passion, sa journée est une mauvaise journée ; s'ils suivent sa science, sa journée est une bonne journée.** »`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 16/167-168, sur al-Jāthiya 45:23`,
+        },
+        {
+          type: `p`,
+          text: `La parole d'Abū l-Dardāʾ est d'une précision remarquable. Elle met en scène, chaque matin, **trois forces** : ce que je sais, ce que je désire, et ce que je fais. La question n'est jamais seulement « que sais-tu ? », mais « **qui commande à tes actes : ton savoir ou ton désir ?** ». Un homme peut tout savoir et laisser son désir décider.`,
+        },
+        {
+          type: `quote`,
+          text: `قَوْلُهُ تَعَالَى: "وَأَضَلَّهُ اللَّهُ عَلى عِلْمٍ" أَيْ عَلَى عِلْمٍ قَدْ عَلِمَهُ مِنْهُ ... وَقَالَ ابْنُ عَبَّاسٍ: أَيْ عَلَى عِلْمٍ قَدْ سَبَقَ عِنْدَهُ أَنَّهُ سَيَضِلُّ ... وَقِيلَ: **عَلَى عِلْمٍ مِنْ عَابِدِ الصَّنَمِ أَنَّهُ لَا يَنْفَعُ وَلَا يَضُرُّ**.
+
+Sa parole « et qu'Allāh a égaré malgré une science » : c'est-à-dire selon une science qu'Il avait de lui … Ibn ʿAbbās a dit : selon une science antérieure qu'Il avait qu'il s'égarerait … Et l'on a dit : **malgré la science qu'avait l'adorateur de l'idole qu'elle ne peut ni profiter ni nuire**.`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 16/169`,
+        },
+        {
+          type: `p`,
+          text: `Le dernier sens rapporté par al-Qurtubī rejoint exactement notre sujet : l'homme peut **savoir** que ce qu'il suit ne vaut rien, et le suivre quand même. Le savoir n'est pas une garantie de guidance ; il en est une condition, pas la cause suffisante.`,
+        },
+        {
+          type: `cycle`,
+          title: `Comment un savoir réel peut se refermer sur lui-même`,
+          arabic: `الكبر والهوى`,
+          center: `le cœur`,
+          steps: [
+            {
+              label: `Le signe arrive`,
+              note: `Une preuve, un verset, une question qui dérange : la vérité frappe à la porte.`,
+            },
+            {
+              label: `L'orgueil résiste`,
+              note: `« Je suis au-dessus de cela » : accepter coûterait un statut, une image, des habitudes.`,
+            },
+            {
+              label: `La passion décide`,
+              note: `Ce que je désire prend la place de ce que je sais, comme dans la parole d'Abū l-Dardāʾ.`,
+            },
+            {
+              label: `La compréhension se voile`,
+              note: `« Je les priverai de la compréhension de Mon Livre » (Qatāda) : le prochain signe sera moins bien perçu.`,
+            },
+          ],
+          caption: `Le cycle peut se briser à chaque étape : **par l'humilité devant le signe**, comme ʿAbd Allāh ibn Salām.`,
+        },
+        {
+          type: `p`,
+          text: `Ce cycle explique pourquoi le refus peut se durcir avec le temps. **Le signe arrive** : personne n'en est privé, le Coran insiste sur ce point. **L'orgueil résiste**, parce qu'accepter coûte quelque chose. **La passion décide**, et le savoir passe au second plan. Alors **la compréhension se voile** : c'est le sens du verset 7:146 selon Qatāda et Sufyān ibn ʿUyayna. Le signe suivant arrive dans un cœur un peu plus fermé, et le cycle recommence.`,
+        },
+        {
+          type: `p`,
+          text: `Mais la légende du schéma est essentielle : **le cycle n'est pas une fatalité**. À chaque tour, la porte de l'humilité reste ouverte. ʿAbd Allāh ibn Salām était un savant, comme les autres rabbins de Médine ; il a franchi la porte. C'est pour cela que le Coran raconte ces histoires : non pour juger les autres, mais pour que chacun surveille la porte de son propre cœur.`,
+        },
+        {
+          type: `objection`,
+          objection: `Si c'est Allāh qui « détourne » ou « égare », en quoi l'homme est-il responsable ?`,
+          reponse: `Le verset donne lui-même la cause : « ceux qui s'enflent d'orgueil ». Al-Qurtubī le dit en toutes lettres : c'est « **une rétribution de leur orgueil** ». Le détournement vient après le choix, il ne le précède pas. Le sujet « Ce que "Dieu égare qui Il veut" signifie » développe ce point en détail.`,
+        },
+        {
+          type: `comparaison`,
+          title: `Ce que disent les savants cités dans cette section`,
+          columns: [
+            `Ce qu'ils affirment`,
+            `Où le lire`,
+          ],
+          rows: [
+            {
+              criterion: `Abū Jahl, rapporté par Abū Maysara`,
+              cells: [
+                `« Nous ne te traitons pas de menteur, mais nous refusons ce que tu apportes. »`,
+                `Al-Qurtubī, al-Jāmiʿ, 6/416`,
+              ],
+            },
+            {
+              criterion: `ʿAbd Allāh ibn Salām`,
+              cells: [
+                `Il connaissait le Prophète ﷺ « plus que son propre fils », par sa description dans les Écritures.`,
+                `Al-Qurtubī, al-Jāmiʿ, 2/163`,
+              ],
+            },
+            {
+              criterion: `Al-Shinqītī`,
+              cells: [
+                `Confondre la puissance technique avec la vérité est « une ignorance grossière » ; mais apprendre ces sciences est un devoir.`,
+                `Adwāʾ al-Bayān, 6/166-167`,
+              ],
+            },
+            {
+              criterion: `Ibn ʿAtiyya`,
+              cells: [
+                `Le croyant absorbé par ce monde « prend lui aussi sa part » du verset.`,
+                `Al-Muharrar al-wajīz, 4/329`,
+              ],
+            },
+            {
+              criterion: `Qatāda et Sufyān ibn ʿUyayna`,
+              cells: [
+                `L'orgueil est puni par la privation de la compréhension du Livre.`,
+                `Al-Qurtubī, al-Jāmiʿ, 7/283`,
+              ],
+            },
+            {
+              criterion: `Abū l-Dardāʾ`,
+              cells: [
+                `Chaque matin, la journée est bonne ou mauvaise selon que les actes suivent la science ou la passion.`,
+                `Al-Qurtubī, al-Jāmiʿ, 16/168`,
+              ],
+            },
+          ],
+          caption: `Tous convergent : **le refus de la foi est rarement un problème d'information ; c'est un problème d'orientation du cœur.**`,
+        },
         { type: `h2`, text: `Conséquences pratiques` },
         {
           type: `list`,
