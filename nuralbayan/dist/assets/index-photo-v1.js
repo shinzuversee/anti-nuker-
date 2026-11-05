@@ -66220,6 +66220,256 @@ Sahnūn a dit : **fait partie de la connaissance de Dieu le fait d'ignorer ce qu
           type: `p`,
           text: `Sahnūn, l'auteur de la Mudawwana, le grand livre de la jurisprudence malikite, a résumé en une phrase toute l'humilité de la théologie des anciens. Ibn ʿAbd al-Barr précise qu'il tenait cette idée d'Ibn al-Mājishūn, qui la tenait d'al-Hasan al-Basrī, rapportant de Mutarrif ibn al-Shikhkhīr cette louange : « Louange à Allāh, **dont fait partie de la foi en Lui l'ignorance de ce qu'Il n'a pas décrit de Lui-même**. » Ce n'est pas de la paresse intellectuelle : c'est **savoir où s'arrête le terrain**. Au-delà de ce que Dieu a révélé de Lui, chaque mot que j'ajoute est une supposition, et une supposition sur Dieu n'est pas un savoir.`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : pourquoi ce verset est devenu la clé`,
+        },
+        {
+          type: `p`,
+          text: `Du vivant du Prophète ﷺ, personne ne débattait des attributs divins. Les Compagnons entendaient « le Tout Miséricordieux S'est établi sur le Trône » ou « la main d'Allāh est au-dessus de leurs mains », et ils croyaient, sans imaginer de corps et sans vider les mots de leur sens. Les difficultés sont venues plus tard, quand des courants ont commencé à raisonner sur Dieu avec les catégories de la philosophie grecque.`,
+        },
+        {
+          type: `p`,
+          text: `Deux pentes opposées sont alors apparues. Les uns, les **mushabbiha**, ont imaginé Dieu à la manière des créatures : une main comme nos mains, un établissement comme celui d'un roi sur son trône. Les autres, les **muʿattila**, effrayés par cette image, ont vidé les attributs de leur contenu : « la main » ne serait qu'une façon de parler, « l'établissement » une simple métaphore de la domination. Al-Shinqītī décrit ce moment avec une grande clarté :`,
+        },
+        {
+          type: `quote`,
+          text: `هَذِهِ الْآيَةُ الْكَرِيمَةُ وَأَمْثَالُهَا مِنْ آيَاتِ الصِّفَاتِ ... **أَشْكَلَتْ عَلَى كَثِيرٍ مِنَ النَّاسِ إِشْكَالًا ضَلَّ بِسَبَبِهِ خَلْقٌ لَا يُحْصَى كَثْرَةً، فَصَارَ قَوْمٌ إِلَى التَّعْطِيلِ وَقَوْمٌ إِلَى التَّشْبِيهِ** ... وَاللَّهُ جَلَّ وَعَلَا أَوْضَحَ هَذَا غَايَةَ الْإِيضَاحِ، وَلَمْ يَتْرُكْ فِيهِ أَيَّ لَبْسٍ وَلَا إِشْكَالٍ، وَحَاصِلُ تَحْرِيرِ ذَلِكَ أَنَّهُ جَلَّ وَعَلَا بَيَّنَ أَنَّ **الْحَقَّ فِي آيَاتِ الصِّفَاتِ مُتَرَكِّبٌ مِنْ أَمْرَيْنِ**: أَحَدُهُمَا: **تَنْزِيهُ اللَّهِ جَلَّ وَعَلَا عَنْ مُشَابَهَةِ الْحَوَادِثِ فِي صِفَاتِهِمْ** ... وَالثَّانِي: **الْإِيمَانُ بِكُلِّ مَا وَصَفَ اللَّهُ بِهِ نَفْسَهُ فِي كِتَابِهِ، أَوْ وَصَفَهُ بِهِ رَسُولُهُ ﷺ**؛ لِأَنَّهُ لَا يَصِفُ اللَّهَ أَعْلَمُ بِاللَّهِ مِنَ اللَّهِ.
+
+Ce noble verset et ceux qui lui ressemblent parmi les versets des attributs … **ont posé à beaucoup de gens une difficulté à cause de laquelle d'innombrables personnes se sont égarées : certains sont allés vers la négation (taʿtīl), d'autres vers la comparaison (tashbīh)** … Or Allāh a éclairci cela au plus haut point, sans laisser la moindre confusion. Le résumé en est qu'Il a montré que **la vérité, dans les versets des attributs, se compose de deux éléments** : le premier, **déclarer Allāh au-dessus de toute ressemblance avec les êtres créés dans leurs attributs** ; le second, **croire à tout ce par quoi Allāh S'est décrit Lui-même dans Son Livre, ou par quoi Son Messager ﷺ L'a décrit**, car nul ne décrit Allāh avec plus de science qu'Allāh Lui-même.`,
+          source: `Muhammad al-Amīn al-Shinqītī (m. 1393 H), Adwāʾ al-Bayān, 2/18, sur al-Aʿrāf 7:54`,
+        },
+        {
+          type: `p`,
+          text: `Puis al-Shinqītī désigne le verset qui contient, à lui seul, ces deux éléments, et il fait une remarque que l'on n'oublie pas une fois qu'on l'a lue :`,
+        },
+        {
+          type: `quote`,
+          text: `وَالْآيَةُ الَّتِي أَوْضَحَ اللَّهُ بِهَا هَذَا هِيَ قَوْلُهُ تَعَالَى: لَيْسَ كَمِثْلِهِ شَيْءٌ وَهُوَ السَّمِيعُ الْبَصِيرُ، **فَنَفَى عَنْ نَفْسِهِ جَلَّ وَعَلَا مُمَاثَلَةَ الْحَوَادِثِ بِقَوْلِهِ: لَيْسَ كَمِثْلِهِ شَيْءٌ، وَأَثْبَتَ لِنَفْسِهِ صِفَاتِ الْكَمَالِ وَالْجَلَالِ بِقَوْلِهِ: وَهُوَ السَّمِيعُ الْبَصِيرُ** ... وَالظَّاهِرُ أَنَّ السِّرَّ فِي تَعْبِيرِهِ بِقَوْلِهِ: "وَهُوَ السَّمِيعُ الْبَصِيرُ" دُونَ أَنْ يَقُولَ مَثَلًا: "وَهُوَ الْعَلِيُّ الْعَظِيمُ" ... **أَنَّ السَّمْعَ وَالْبَصَرَ يَتَّصِفُ بِهِمَا جَمِيعُ الْحَيَوَانَاتِ**، فَبَيَّنَ أَنَّ اللَّهَ مُتَّصِفٌ بِهِمَا، وَلَكِنَّ وَصْفَهُ بِهِمَا عَلَى أَسَاسِ نَفْيِ الْمُمَاثَلَةِ.
+
+Le verset par lequel Allāh a éclairci cela est Sa parole : « Rien ne Lui ressemble, et Il est l'Audient, le Voyant. » **Il a nié de Lui-même la ressemblance avec les êtres créés par « rien ne Lui ressemble », et Il S'est attribué les attributs de perfection et de majesté par « Il est l'Audient, le Voyant »** … Le secret apparent de Son choix de « Il est l'Audient, le Voyant », plutôt que par exemple « Il est le Très-Haut, l'Immense », est que **l'ouïe et la vue sont des qualités que possèdent tous les animaux**. Il a donc montré qu'Allāh les possède, mais sur la base de la négation de toute ressemblance.`,
+          source: `Al-Shinqītī, Adwāʾ al-Bayān, 2/18-19`,
+        },
+        {
+          type: `p`,
+          text: `C'est une observation d'une finesse remarquable. Si Allāh avait dit « Rien ne Lui ressemble, et Il est le Très-Haut », personne n'aurait été tenté de comparer : on ne voit pas d'animal « très-haut ». Mais Il a choisi **les deux attributs que nous partageons avec les fourmis et les oiseaux** : entendre et voir. Le verset place donc la négation de la ressemblance **juste à côté** de l'attribut le plus « commun » qui soit, comme pour dire : même là où les mots sont les mêmes, **la réalité n'a rien de commun**.`,
+        },
+        {
+          type: `schema`,
+          title: `Le choix des mots dans 42:11, selon al-Shinqītī`,
+          arabic: `وهو السميع البصير`,
+          variant: `flow`,
+          nodes: [
+            {
+              label: `D'abord la négation`,
+              arabic: `ليس كمثله شيء`,
+              note: `Rien, absolument rien, ne Lui ressemble : ni en Son essence, ni en Ses attributs.`,
+            },
+            {
+              label: `Puis l'affirmation`,
+              arabic: `وهو السميع البصير`,
+              note: `Il entend et Il voit, réellement : les attributs ne sont pas des mots vides.`,
+            },
+            {
+              label: `Le choix délibéré`,
+              arabic: `يتصف بهما جميع الحيوانات`,
+              note: `Ouïe et vue sont partagées par tous les animaux : le risque de comparer y est le plus grand.`,
+            },
+            {
+              label: `La leçon`,
+              arabic: `على أساس نفي المماثلة`,
+              note: `Même quand le mot est commun, l'attribut divin est affirmé « sur la base de la négation de la ressemblance ».`,
+            },
+          ],
+          caption: `Le verset enseigne la méthode **sur l'exemple le plus difficile** : si elle vaut pour l'ouïe et la vue, elle vaut pour tous les attributs.`,
+        },
+        {
+          type: `h2`,
+          text: `Le kāf de « kamithlihi » : quatre lectures`,
+        },
+        {
+          type: `p`,
+          text: `Les grammairiens ont remarqué une particularité dans la formule « laysa ka-mithlihi shayʾ ». Littéralement, elle contient deux mots de comparaison : **ka** (« comme ») et **mithl** (« semblable »). Mot à mot : « rien n'est **comme son semblable** ». Que signifie ce doublement ? Al-Qurtubī et Ibn ʿUthaymīn rapportent les explications des savants.`,
+        },
+        {
+          type: `quote`,
+          text: `قِيلَ: إِنَّ **الْكَافَ زَائِدَةٌ لِلتَّوْكِيدِ**، أَيْ لَيْسَ مِثْلَهُ شَيْءٌ ... وَقِيلَ: **الْمِثْلُ زَائِدَةٌ لِلتَّوْكِيدِ**، وَهُوَ قَوْلُ ثَعْلَبٍ: لَيْسَ كَهُوَ شَيْءٌ.
+
+On a dit : **le kāf est ajouté pour renforcer**, c'est-à-dire : rien n'est semblable à Lui … Et on a dit : **c'est « mithl » qui est ajouté pour renforcer** ; c'est l'avis de Thaʿlab : « rien n'est comme Lui ».`,
+          source: `Al-Qurtubī (m. 671 H), al-Jāmiʿ li-ahkām al-Qurʾān, 16/8, sur al-Shūrā 42:11`,
+        },
+        {
+          type: `quote`,
+          text: `وَالْقَوْلُ الثَّالِثُ: أَنَّ (مِثْلَ) بِمَعْنَى: صِفَةٍ، وَالْمَعْنَى: "**لَيْسَ كَصِفَتِهِ شَيْءٌ**" ... وَهَذَا لَيْسَ بِبَعِيدٍ مِنَ الصَّوَابِ. الْقَوْلُ الرَّابِعُ: أَنَّهُ لَيْسَ فِي الْآيَةِ زِيَادَةٌ، لَكِنْ إِذَا قُلْتَ: "لَيْسَ كَمِثْلِهِ شَيْءٌ"، **لَزِمَ مِنْ ذَلِكَ نَفْيُ الْمِثْلِ، وَإِذَا كَانَ لَيْسَ لِلْمِثْلِ مِثْلٌ، صَارَ الْمَوْجُودُ وَاحِدًا** ... وَالْحَقِيقَةُ أَنَّ هَذِهِ الْبُحُوثَ لَوْ لَمْ تُعْرَضْ لَكُمْ، **لَكَانَ مَعْنَى الْآيَةِ وَاضِحًا، وَمَعْنَاهَا أَنَّ اللَّهَ لَيْسَ لَهُ مَثِيلٌ** ... وَالرَّاجِحُ: أَنْ نَقُولَ، إِنَّ الْكَافَ زَائِدَةٌ لَكِنَّ الْمَعْنَى الْأَخِيرَ لِمَنْ تَمَكَّنَ مِنْ تَصَوُّرِهِ أَجْوَدُ.
+
+Le troisième avis : « mithl » signifie « attribut », et le sens est « **rien n'est comme Son attribut** » … ce qui n'est pas loin de la vérité. Le quatrième avis : il n'y a rien d'ajouté dans le verset ; quand tu dis « rien n'est comme Son semblable », **cela implique la négation du semblable lui-même : s'il n'y a rien de semblable à un semblable supposé, alors l'existant est unique** … En vérité, si ces discussions ne vous avaient pas été présentées, **le sens du verset serait clair : Allāh n'a pas de semblable** … L'avis le plus fort est que le kāf est ajouté ; mais le dernier sens est meilleur pour qui parvient à le concevoir.`,
+          source: `Muhammad ibn Sālih al-ʿUthaymīn (m. 1421 H), Sharh al-ʿAqīda al-Wāsitiyya, 1/209`,
+        },
+        {
+          type: `comparaison`,
+          title: `Les quatre lectures de « laysa ka-mithlihi shayʾ »`,
+          columns: [
+            `Explication`,
+            `Sens obtenu`,
+          ],
+          rows: [
+            {
+              criterion: `1. Le kāf renforce`,
+              cells: [
+                `« Ka » est ajouté pour l'insistance, comme dans d'autres vers arabes.`,
+                `« Rien, absolument rien, ne Lui est semblable. » (avis jugé le plus fort par Ibn ʿUthaymīn)`,
+              ],
+            },
+            {
+              criterion: `2. « Mithl » renforce`,
+              cells: [
+                `C'est « mithl » qui est ajouté (Thaʿlab).`,
+                `« Rien n'est comme Lui. » (avis jugé faible : on ajoute rarement des noms)`,
+              ],
+            },
+            {
+              criterion: `3. « Mithl » = attribut`,
+              cells: [
+                `« Mathal » et « mithl » peuvent signifier « description » (cf. 47:15).`,
+                `« Rien n'est comme Son attribut. »`,
+              ],
+            },
+            {
+              criterion: `4. Rien n'est ajouté`,
+              cells: [
+                `Nier le semblable d'un semblable revient à nier tout semblable.`,
+                `« Même un semblable supposé n'aurait pas d'égal : Il est donc unique. »`,
+              ],
+            },
+          ],
+          caption: `D'après al-Qurtubī (16/8) et Ibn ʿUthaymīn (1/209). **Les quatre lectures aboutissent au même sens.**`,
+        },
+        {
+          type: `p`,
+          text: `Ce tableau montre une chose rassurante : **les savants divergent sur la grammaire, jamais sur le sens**. La première lecture fait du kāf une insistance. La deuxième fait porter l'insistance sur « mithl ». La troisième comprend « rien n'est comme Son attribut », ce qui s'applique parfaitement à notre sujet. La quatrième, la plus subtile, raisonne ainsi : si même un semblable imaginaire n'aurait pas d'égal, c'est qu'il n'y a pas de semblable du tout. Et Ibn ʿUthaymīn conclut avec bon sens : sans ces discussions, **le verset serait déjà parfaitement clair**.`,
+        },
+        {
+          type: `h2`,
+          text: `Al-Qurtubī et al-Wāsitī : le même mot, pas la même réalité`,
+        },
+        {
+          type: `p`,
+          text: `Après ces questions de grammaire, al-Qurtubī expose ce que le croyant doit tenir pour vrai, puis il cite deux formules qui sont devenues des références. Retiens surtout la seconde, celle d'al-Wāsitī :`,
+        },
+        {
+          type: `quote`,
+          text: `وَالَّذِي يَعْتَقِدُ فِي هَذَا الْبَابِ أَنَّ اللَّهَ جَلَّ اسْمُهُ فِي عَظَمَتِهِ وَكِبْرِيَائِهِ وَمَلَكُوتِهِ وَحُسْنَى أَسْمَائِهِ وَعَلِيِّ صِفَاتِهِ، **لَا يُشْبِهُ شَيْئًا مِنْ مَخْلُوقَاتِهِ وَلَا يُشَبَّهُ بِهِ**، وَإِنَّمَا جَاءَ مِمَّا أَطْلَقَهُ الشَّرْعُ عَلَى الْخَالِقِ وَالْمَخْلُوقِ، **فَلَا تَشَابُهَ بَيْنَهُمَا فِي الْمَعْنَى الْحَقِيقِيِّ** ... وَكَفَى فِي هَذَا قَوْلُهُ الْحَقُّ: "لَيْسَ كَمِثْلِهِ شَيْءٌ". وَقَدْ قَالَ بَعْضُ الْعُلَمَاءِ الْمُحَقِّقِينَ: **التَّوْحِيدُ إِثْبَاتُ ذَاتٍ غَيْرِ مُشْبِهَةٍ لِلذَّوَاتِ وَلَا مُعَطَّلَةٍ مِنَ الصِّفَاتِ**. وَزَادَ الْوَاسِطِيُّ ﵀ بَيَانًا فَقَالَ: **لَيْسَ كَذَاتِهِ ذَاتٌ، وَلَا كَاسْمِهِ اسْمٌ، وَلَا كَفِعْلِهِ فِعْلٌ، وَلَا كَصِفَتِهِ صِفَةٌ إِلَّا مِنْ جِهَةِ مُوَافَقَةِ اللَّفْظِ** ... وَهَذَا كُلُّهُ مَذْهَبُ أَهْلِ الْحَقِّ وَالسُّنَّةِ وَالْجَمَاعَةِ.
+
+Ce qu'il faut croire dans ce chapitre, c'est qu'Allāh, que Son nom soit glorifié, dans Sa grandeur, Sa majesté, Sa royauté, Ses plus beaux noms et Ses attributs sublimes, **ne ressemble à rien de Ses créatures, et que rien ne Lui est comparé**. Quant aux mots que la Loi applique à la fois au Créateur et à la créature, **il n'y a entre eux aucune ressemblance dans la réalité qu'ils désignent** … Et il suffit en cela de Sa parole vraie : « Rien ne Lui ressemble ». Un savant rigoureux a dit : **« L'unicité, c'est affirmer une essence qui ne ressemble pas aux essences et qui n'est pas vidée de ses attributs. »** Et al-Wāsitī, qu'Allāh lui fasse miséricorde, a précisé : **« Aucune essence n'est comme Son essence, aucun nom comme Son nom, aucun acte comme Son acte, aucun attribut comme Son attribut, si ce n'est par la correspondance du mot. »** … Tout cela est la doctrine des gens de la vérité, de la Sunna et de la communauté.`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 16/8-9, sur al-Shūrā 42:11`,
+        },
+        {
+          type: `p`,
+          text: `La définition citée par al-Qurtubī tient en une ligne et contient tout le sujet : « **une essence qui ne ressemble pas aux essences** » (refus de la comparaison) « **et qui n'est pas vidée de ses attributs** » (refus de la négation). Puis al-Wāsitī applique ce principe à quatre domaines : l'essence, les noms, les actes, les attributs. Dans chacun, **il n'y a de commun que le mot**.`,
+        },
+        {
+          type: `degres`,
+          title: `Les quatre négations d'al-Wāsitī`,
+          arabic: `ليس كذاته ذات`,
+          degres: [
+            {
+              label: `L'essence`,
+              arabic: `ليس كذاته ذات`,
+              note: `Aucune essence n'est comme la Sienne : Il n'appartient à aucune catégorie d'êtres.`,
+            },
+            {
+              label: `Les noms`,
+              arabic: `ولا كاسمه اسم`,
+              note: `On peut appeler un homme « savant » ou « généreux », mais le nom divin désigne une perfection sans limite.`,
+            },
+            {
+              label: `Les actes`,
+              arabic: `ولا كفعله فعل`,
+              note: `Nous « faisons » à partir de ce qui existe déjà ; Lui crée à partir de rien.`,
+            },
+            {
+              label: `Les attributs`,
+              arabic: `ولا كصفته صفة`,
+              note: `« Si ce n'est par la correspondance du mot » : le mot est partagé, la réalité ne l'est pas.`,
+            },
+          ],
+          direction: `asc`,
+          caption: `D'après al-Wāsitī, cité par al-Qurtubī (16/9). **Chaque niveau applique la même règle : le mot commun ne crée pas de ressemblance.**`,
+        },
+        {
+          type: `p`,
+          text: `Cette échelle se lit comme une application progressive du verset. **L'essence** d'abord : Allāh n'est pas un être parmi les êtres. **Les noms** : un homme peut s'appeler Karīm, mais sa générosité a des limites et un commencement. **Les actes** : quand nous « créons » une œuvre, nous transformons ce qui existait ; Allāh fait exister. **Les attributs** enfin : nous disons « Il entend » comme nous disons « l'homme entend », mais la ressemblance s'arrête au mot. C'est exactement l'idée qu'al-Shinqītī lisait dans le choix de « l'Audient, le Voyant ».`,
+        },
+        {
+          type: `h2`,
+          text: `Ibn Taymiyya et al-Shinqītī : « connais-tu le comment de Son essence ? »`,
+        },
+        {
+          type: `p`,
+          text: `Reste une objection qui revient sans cesse : « Si vous affirmez qu'Allāh S'est établi sur le Trône, dites-nous **comment** ! Sinon, vos mots n'ont pas de sens. » Ibn Taymiyya y a répondu par un principe qu'il appelle le deuxième fondement de sa Risāla Tadmuriyya, et al-Shinqītī a formulé la même réponse sous forme de dialogue.`,
+        },
+        {
+          type: `quote`,
+          text: `**الْقَوْلُ فِي الصِّفَاتِ كَالْقَوْلِ فِي الذَّاتِ**: فَإِنَّ اللَّهَ لَيْسَ كَمِثْلِهِ شَيْءٌ لَا فِي ذَاتِهِ وَلَا فِي صِفَاتِهِ وَلَا فِي أَفْعَالِهِ. فَإِذَا كَانَ لَهُ ذَاتٌ حَقِيقَةً لَا تُمَاثِلُ الذَّوَاتَ، فَالذَّاتُ مُتَّصِفَةٌ بِصِفَاتٍ حَقِيقَةً لَا تُمَاثِلُ سَائِرَ الصِّفَاتِ. فَإِذَا قَالَ السَّائِلُ: كَيْفَ اسْتَوَى عَلَى الْعَرْشِ؟ قِيلَ لَهُ كَمَا قَالَ **رَبِيعَةُ وَمَالِكٌ** وَغَيْرُهُمَا: الِاسْتِوَاءُ مَعْلُومٌ، وَالْكَيْفُ مَجْهُولٌ، وَالْإِيمَانُ بِهِ وَاجِبٌ، وَالسُّؤَالُ عَنِ الْكَيْفِيَّةِ بِدْعَةٌ ... وَكَذَلِكَ إِذَا قَالَ: كَيْفَ يَنْزِلُ رَبُّنَا إِلَى السَّمَاءِ الدُّنْيَا؟ قِيلَ لَهُ: **كَيْفَ هُوَ؟** فَإِذَا قَالَ: لَا أَعْلَمُ كَيْفِيَّتَهُ، قِيلَ لَهُ: وَنَحْنُ لَا نَعْلَمُ كَيْفِيَّةَ نُزُولِهِ، **إِذِ الْعِلْمُ بِكَيْفِيَّةِ الصِّفَةِ يَسْتَلْزِمُ الْعِلْمَ بِكَيْفِيَّةِ الْمَوْصُوفِ**، وَهُوَ فَرْعٌ لَهُ وَتَابِعٌ لَهُ.
+
+**Ce qu'on dit des attributs est comme ce qu'on dit de l'essence** : Allāh n'a pas de semblable, ni en Son essence, ni en Ses attributs, ni en Ses actes. S'Il a une essence réelle qui ne ressemble pas aux essences, cette essence possède des attributs réels qui ne ressemblent pas aux autres attributs. Si quelqu'un demande : « Comment S'est-Il établi sur le Trône ? », on lui répond comme **Rabīʿa, Mālik** et d'autres : « L'établissement est connu, le comment est inconnu, y croire est obligatoire, et interroger sur le comment est une innovation. » … De même, s'il demande : « Comment notre Seigneur descend-Il vers le ciel le plus proche ? », on lui répond : « **Comment est-Il, Lui ?** » S'il dit : « Je ne connais pas Sa modalité », on lui dit : « Nous non plus, nous ne connaissons pas la modalité de Sa descente, **car connaître la modalité d'un attribut suppose de connaître la modalité de celui qui le possède** ; l'attribut en dérive et en dépend. »`,
+          source: `Ibn Taymiyya (m. 728 H), al-Risāla al-Tadmuriyya, dans Majmūʿ al-fatāwā, 3/25`,
+        },
+        {
+          type: `quote`,
+          text: `فَلَوْ قَالَ مُتَنَطِّعٌ: بَيِّنُوا لَنَا كَيْفِيَّةَ الِاتِّصَافِ بِصِفَةِ الِاسْتِوَاءِ وَالْيَدِ، وَنَحْوَ ذَلِكَ لِنَعْقِلَهَا، قُلْنَا: **أَعَرَفْتَ كَيْفِيَّةَ الذَّاتِ الْمُقَدَّسَةِ الْمُتَّصِفَةِ بِتِلْكَ الصِّفَاتِ؟** فَلَا بُدَّ أَنْ يَقُولَ: لَا، فَنَقُولُ: **مَعْرِفَةُ كَيْفِيَّةِ الِاتِّصَافِ بِالصِّفَاتِ مُتَوَقِّفَةٌ عَلَى مَعْرِفَةِ كَيْفِيَّةِ الذَّاتِ** ... فَتَحَصَّلَ مِنْ جَمِيعِ هَذَا الْبَحْثِ **أَنَّ الصِّفَاتِ مِنْ بَابٍ وَاحِدٍ**.
+
+Si un ergoteur disait : « Expliquez-nous la modalité de l'établissement, de la main et des attributs semblables, pour que nous les comprenions », nous répondrions : « **Connais-tu la modalité de l'Essence sainte qui possède ces attributs ?** » Il devra répondre : « Non. » Nous dirons alors : « **Connaître la modalité des attributs dépend de la connaissance de la modalité de l'essence.** » … Il ressort de toute cette étude **que les attributs relèvent d'une seule et même règle**.`,
+          source: `Al-Shinqītī, Adwāʾ al-Bayān, 2/31`,
+        },
+        {
+          type: `experiment`,
+          title: `Le dialogue, étape par étape`,
+          steps: [
+            `L'objecteur : « Tu dis qu'Allāh entend. Mais **comment** entend-Il, sans oreilles ? Explique-moi, ou admets que ton mot est vide. »`,
+            `Le croyant : « Avant de répondre, une question : est-ce qu'Allāh existe réellement, selon toi ? » — « Oui. » — « **Et comment est Son essence ?** » — « Je ne sais pas. Elle ne ressemble à rien. »`,
+            `Le croyant : « Tu affirmes donc une essence réelle dont tu ignores le comment, sans dire que ton affirmation est vide. **Pourquoi exiger pour Son ouïe ce que tu n'exiges pas pour Son essence ?** »`,
+            `« Comme le dit Ibn Taymiyya, l'attribut dépend de celui qui le possède. Si le comment de l'essence nous échappe, **le comment de ses attributs nous échappe nécessairement aussi**, sans que leur réalité disparaisse. »`,
+          ],
+          conclusion: `L'argument ne force personne à croire ; il montre seulement que **ne pas connaître le comment n'empêche pas d'affirmer le fait**, puisque tout le monde le fait déjà pour l'existence même de Dieu.`,
+        },
+        {
+          type: `p`,
+          text: `Cet échange, tiré des raisonnements d'Ibn Taymiyya et d'al-Shinqītī, montre la cohérence de la position. **Celui qui nie les attributs** sous prétexte qu'on n'en connaît pas le comment devrait, pour être logique, nier aussi l'essence divine, dont il ne connaît pas davantage le comment. Personne ne le fait. **Celui qui compare** commet l'erreur inverse : il croit connaître le comment parce qu'il connaît le mot. La voie juste affirme ce qu'Allāh a dit de Lui, et s'arrête là où Il S'est tu.`,
+        },
+        {
+          type: `p`,
+          text: `Al-Shinqītī va plus loin dans une page saisissante : selon lui, celui qui prétend que le sens apparent des attributs est indigne d'Allāh **a d'abord comparé dans son cœur**, en imaginant une main de créature ; puis, effrayé par sa propre image, il a nié l'attribut. « Il fut donc **comparateur d'abord, négateur ensuite** » (Adwāʾ al-Bayān, 2/31). Si son cœur avait été purifié de la comparaison, il aurait compris d'emblée que l'attribut divin est d'une perfection qui exclut toute ressemblance.`,
+        },
+        {
+          type: `spectre`,
+          title: `Trois positions devant un attribut comme « la main »`,
+          left: `Comparer (tashbīh)`,
+          right: `Nier (taʿtīl)`,
+          markers: [
+            {
+              label: `« Une main comme la nôtre »`,
+              position: 8,
+              note: `On projette sur Dieu une image de créature : c'est ce que « rien ne Lui ressemble » interdit.`,
+            },
+            {
+              label: `Affirmer sans comparer`,
+              position: 50,
+              note: `« Une main » réelle, comme Il l'a dit, « qui ne ressemble pas aux autres attributs » (Ibn Taymiyya).`,
+            },
+            {
+              label: `« Ce n'est qu'une image »`,
+              position: 92,
+              note: `On vide le mot de son contenu, souvent parce qu'on a d'abord imaginé une main de créature (al-Shinqītī).`,
+            },
+          ],
+          caption: `Les deux extrêmes partagent la même erreur cachée : **ils supposent qu'affirmer, c'est forcément comparer**.`,
+        },
+        {
+          type: `objection`,
+          objection: `Mais les savants ashʿarites, comme al-Qurtubī lui-même ailleurs, n'ont-ils pas interprété certains attributs ?`,
+          reponse: `Les savants ont effectivement divergé sur la manière de traiter certains textes, et cette page n'efface pas cette histoire. Mais ils s'accordent tous sur le verset 42:11 : al-Qurtubī écrit ici qu'Allāh « ne ressemble à rien de Ses créatures » et cite la définition de l'unicité comme « une essence non vidée de ses attributs ». La question de l'interprétation (taʾwīl) et de la remise du sens à Dieu (tafwīd) est traitée dans deux sujets dédiés, plus loin dans cette partie.`,
+        },
         { type: `h2`, text: `Ce que disent les savants, en un coup d'œil` },
         {
           type: `comparaison`,
