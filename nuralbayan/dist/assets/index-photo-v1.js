@@ -61787,6 +61787,334 @@ Qatāda a dit : al-ʿālamūn est le pluriel de ʿālam, et c'est **tout ce qui 
           type: `p`,
           text: `On sait par les Sahīh qu'il écrivit aussi au roi de Perse et à d'autres souverains. **Un prophète qui écrit aux empires voisins dans la première décennie de sa mission** n'annonce pas un culte national : il annonce un message universel.`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : le jour où Bilāl monta sur la Kaʿba`,
+        },
+        {
+          type: `p`,
+          text: `Si l'islam avait été « la religion des Arabes », l'un des moments les plus symboliques de son histoire se serait déroulé autrement. Nous sommes en l'an 8 de l'hégire. La Mecque vient d'être reprise sans bataille. La Kaʿba, que les tribus arabes vénéraient depuis des siècles, est purifiée de ses idoles. Et pour faire entendre le premier appel à la prière depuis son toit, le Prophète ﷺ ne choisit ni un noble de Quraysh, ni un chef de tribu : il choisit **Bilāl, un ancien esclave noir venu d'Abyssinie**.`,
+        },
+        {
+          type: `quote`,
+          text: `قَالَ ابْنُ عَبَّاسٍ: لَمَّا كَانَ يَوْمُ فَتْحِ مَكَّةَ **أَمَرَ النَّبِيُّ ﷺ بِلَالًا حَتَّى عَلَا عَلَى ظَهْرِ الْكَعْبَةِ فَأَذَّنَ**، فَقَالَ عَتَّابُ بْنُ أَسِيدِ بْنِ أَبِي الْعِيصِ: الْحَمْدُ لِلَّهِ الَّذِي قَبَضَ أَبِي حَتَّى لَا يَرَى هَذَا الْيَوْمَ. وَقَالَ الْحَارِثُ بْنُ هِشَامٍ: **مَا وَجَدَ مُحَمَّدٌ غَيْرَ هَذَا الْغُرَابِ الْأَسْوَدِ مُؤَذِّنًا**. وَقَالَ سُهَيْلُ بْنُ عَمْرٍو: إِنْ يُرِدِ اللَّهُ شَيْئًا يُغَيِّرْهُ ... فَأَتَى جِبْرِيلُ النَّبِيَّ ﷺ وَأَخْبَرَهُ بِمَا قَالُوا ... فَأَنْزَلَ اللَّهُ تَعَالَى هَذِهِ الْآيَةَ. **زَجَرَهُمْ عَنِ التَّفَاخُرِ بِالْأَنْسَابِ**، وَالتَّكَاثُرِ بِالْأَمْوَالِ، وَالِازْدِرَاءِ بِالْفُقَرَاءِ، **فَإِنَّ الْمَدَارَ عَلَى التَّقْوَى**.
+
+Ibn ʿAbbās a dit : le jour de la conquête de La Mecque, **le Prophète ﷺ ordonna à Bilāl de monter sur le toit de la Kaʿba, et il fit l'appel à la prière**. ʿAttāb ibn Asīd dit : « Louange à Allāh qui a repris mon père avant qu'il ne voie ce jour. » Al-Hārith ibn Hishām dit : « **Muhammad n'a donc trouvé que ce corbeau noir comme muezzin !** » Suhayl ibn ʿAmr dit : « Si Allāh veut une chose, Il la change. » … Jibrīl vint informer le Prophète ﷺ de ce qu'ils avaient dit … et Allāh fit descendre ce verset [49:13]. **Il les réprimanda pour leur fierté des lignées**, leur rivalité dans les richesses et leur mépris des pauvres, **car tout repose sur la piété**.`,
+          source: `Al-Qurtubī (m. 671 H), al-Jāmiʿ li-ahkām al-Qurʾān, 16/341, sur al-Hujurāt 49:13`,
+        },
+        {
+          type: `verse`,
+          arabic: `يَٰٓأَيُّهَا ٱلنَّاسُ إِنَّا خَلَقْنَٰكُم مِّن ذَكَرٍ وَأُنثَىٰ وَجَعَلْنَٰكُمْ شُعُوبًا وَقَبَآئِلَ لِتَعَارَفُوٓا۟ ۚ **إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ**`,
+          translation: `Ô hommes ! Nous vous avons créés d'un mâle et d'une femelle, et Nous avons fait de vous des peuples et des tribus, pour que vous vous connaissiez. **Le plus noble d'entre vous auprès d'Allāh est le plus pieux.**`,
+          reference: `Coran, al-Hujurāt, 49:13`,
+        },
+        {
+          type: `p`,
+          text: `Mesure le choc de la scène. Pour les notables mecquois, la Kaʿba était le sanctuaire des Arabes, et la noblesse arabe une évidence. Le premier appel à « Allāhu akbar » depuis son toit est confié à un Africain que certains appellent encore, ce jour-là, « le corbeau noir ». Et la réponse du ciel ne commence pas par « Ô Arabes », mais par « **Ô hommes** ».`,
+        },
+        {
+          type: `p`,
+          text: `Si Allāh était « le dieu des Arabes », c'est la fierté arabe que ce verset aurait confirmée. Il l'a au contraire **démontée**, au moment même où les Arabes de La Mecque entraient dans l'islam. Al-Qurtubī le résume en une phrase : « **tout repose sur la piété** ».`,
+        },
+        {
+          type: `focus`,
+          kind: `repere`,
+          title: `Un détail qui dit tout`,
+          text: `La phrase d'Abū Sufyān ce jour-là est remarquable : « Je ne dis rien, de peur que le Seigneur du ciel n'en soit informé. » Même les adversaires d'hier savaient que **le Dieu dont on parlait n'était pas une idole tribale**, mais le Seigneur du ciel, qui entend tout.`,
+        },
+        {
+          type: `h2`,
+          text: `Al-Shinqītī : « chaque messager dans la langue de son peuple »`,
+        },
+        {
+          type: `p`,
+          text: `L'objection a un argument sérieux, tiré du Coran lui-même : « Nous n'avons envoyé de messager que dans la langue de son peuple » (14:4). Le Coran est en arabe, le Prophète ﷺ est arabe : son message ne serait-il pas, par définition, destiné aux Arabes ? Al-Shinqītī a traité exactement cette difficulté.`,
+        },
+        {
+          type: `verse`,
+          arabic: `**وَمَآ أَرْسَلْنَا مِن رَّسُولٍ إِلَّا بِلِسَانِ قَوْمِهِۦ لِيُبَيِّنَ لَهُمْ**`,
+          translation: `**Nous n'avons envoyé de messager que dans la langue de son peuple, afin qu'il leur explique clairement.**`,
+          reference: `Coran, Ibrāhīm, 14:4`,
+        },
+        {
+          type: `quote`,
+          text: `بَيَّنَ اللَّهُ تَعَالَى فِي هَذِهِ الْآيَةِ الْكَرِيمَةِ أَنَّهُ لَمْ يُرْسِلْ رَسُولًا إِلَّا بِلُغَةِ قَوْمِهِ ; لِأَنَّهُ لَمْ يُرْسِلْ رَسُولًا إِلَّا إِلَى قَوْمِهِ دُونَ غَيْرِهِمْ، **وَلَكِنَّهُ بَيَّنَ فِي مَوَاضِعَ أُخَرَ أَنَّ نَبِيَّنَا ﷺ أُرْسِلَ إِلَى جَمِيعِ الْخَلَائِقِ دُونَ اخْتِصَاصٍ بِقَوْمِهِ وَلَا بِغَيْرِهِمْ**، كَقَوْلِهِ تَعَالَى: قُلْ يَا أَيُّهَا النَّاسُ إِنِّي رَسُولُ اللَّهِ إِلَيْكُمْ جَمِيعًا [٧ \\ ١٥٨]، وَقَوْلِهِ: تَبَارَكَ الَّذِي نَزَّلَ الْفُرْقَانَ عَلَى عَبْدِهِ لِيَكُونَ لِلْعَالَمِينَ نَذِيرًا [٢٥ \\ ١]، وَقَوْلِهِ: وَمَا أَرْسَلْنَاكَ إِلَّا كَافَّةً لِلنَّاسِ [٣٤ \\ ٢٨] إِلَى غَيْرِ ذَلِكَ مِنَ الْآيَاتِ الدَّالَّةِ عَلَى عُمُومِ رِسَالَتِهِ لِأَهْلِ كُلِّ لِسَانٍ، **فَهُوَ ﷺ يَجِبُ عَلَيْهِ إِبْلَاغُ أَهْلِ كُلِّ لِسَانٍ**.
+
+Allāh a montré dans ce noble verset qu'Il n'a envoyé de messager que dans la langue de son peuple, parce qu'Il n'envoyait chaque messager qu'à son peuple, à l'exclusion des autres. **Mais Il a montré en d'autres passages que notre Prophète ﷺ a été envoyé à toutes les créatures, sans être réservé à son peuple ni à un autre**, comme Sa parole : « Dis : Ô hommes, je suis le Messager d'Allāh envers vous tous » (7:158), « Béni soit Celui qui a fait descendre le Discernement sur Son serviteur, pour qu'il soit un avertisseur pour les mondes » (25:1), et « Nous ne t'avons envoyé qu'à l'ensemble des hommes » (34:28), et d'autres versets qui montrent l'universalité de sa mission envers les gens de toute langue. **Il lui incombait donc de transmettre le message aux gens de toutes les langues.**`,
+          source: `Muhammad al-Amīn al-Shinqītī (m. 1393 H), Adwāʾ al-Bayān, 2/241, sur Ibrāhīm 14:4`,
+        },
+        {
+          type: `p`,
+          text: `La méthode d'al-Shinqītī est celle de tout son commentaire : **expliquer le Coran par le Coran**. Il ne nie pas le verset 14:4, il le replace parmi les autres. Les messagers précédents parlaient la langue de leur peuple **parce qu'ils étaient envoyés à leur peuple seulement**. Le Prophète ﷺ parle la langue de son peuple pour être compris d'abord par ceux qui l'entourent, mais sa mission est déclarée universelle par trois versets explicites.`,
+        },
+        {
+          type: `quote`,
+          text: `قَوْلَ ابْنِ عَبَّاسٍ ﵄: «إِنَّ اللَّهَ فَضَّلَ مُحَمَّدًا ﷺ عَلَى الْأَنْبِيَاءِ ... قَالُوا: فَمَا فَضْلُهُ عَلَى الْأَنْبِيَاءِ؟ قَالَ: قَالَ اللَّهُ تَعَالَى: وَمَا أَرْسَلْنَا مِنْ رَسُولٍ إِلَّا بِلِسَانِ قَوْمِهِ لِيُبَيِّنَ لَهُمْ، وَقَالَ اللَّهُ ﷿ لِمُحَمَّدٍ ﷺ: وَمَا أَرْسَلْنَاكَ إِلَّا كَافَّةً لِلنَّاسِ، **فَأَرْسَلَهُ إِلَى الْجِنِّ وَالْإِنْسِ**» ذَكَرَهُ أَبُو مُحَمَّدٍ الدَّارِمِيُّ فِي «مُسْنَدِهِ» ... **وَهُوَ تَفْسِيرٌ مِنِ ابْنِ عَبَّاسٍ لِلْآيَةِ بِمَا ذَكَرْنَا**.
+
+La parole d'Ibn ʿAbbās : « Allāh a préféré Muhammad ﷺ aux prophètes… » On lui demanda : « En quoi l'a-t-Il préféré aux prophètes ? » Il répondit : « Allāh a dit : "Nous n'avons envoyé de messager que dans la langue de son peuple", et Il a dit à Muhammad ﷺ : "Nous ne t'avons envoyé qu'à l'ensemble des hommes" ; **Il l'a donc envoyé aux djinns et aux hommes**. » Al-Dārimī l'a rapportée dans son Musnad … **C'est une explication du verset par Ibn ʿAbbās, dans le sens que nous avons exposé.**`,
+          source: `Al-Shinqītī, Adwāʾ al-Bayān, 2/241-242`,
+        },
+        {
+          type: `p`,
+          text: `L'argument d'Ibn ʿAbbās est d'une grande finesse. Il prend le verset de l'objection, « chaque messager dans la langue de son peuple », et il en fait **la preuve de la supériorité du Prophète ﷺ**. Les autres prophètes étaient limités à leur peuple ; lui ne l'est pas. Ce qui semblait une limite devient, quand on lit les deux versets ensemble, **un privilège**.`,
+        },
+        {
+          type: `schema`,
+          title: `Comment lire ensemble 14:4 et 34:28`,
+          arabic: `بلسان قومه / كافة للناس`,
+          variant: `flow`,
+          nodes: [
+            {
+              label: `Les prophètes précédents`,
+              arabic: `إلى قومه خاصة`,
+              note: `Envoyés à leur peuple seul, ils parlent la langue de ce peuple : la langue et le destinataire coïncident.`,
+            },
+            {
+              label: `Le Prophète ﷺ`,
+              arabic: `كافة للناس`,
+              note: `Il parle la langue de son peuple pour être compris d'abord par ceux qui l'entourent.`,
+            },
+            {
+              label: `Mais sa mission dépasse sa langue`,
+              arabic: `إلى أهل كل لسان`,
+              note: `Il a le devoir de transmettre « aux gens de toutes les langues » (al-Shinqītī) : la langue est le point de départ, non la frontière.`,
+            },
+          ],
+          caption: `Pour les autres messagers, **langue = peuple = destinataires**. Pour le dernier, **langue arabe, destinataires : l'humanité entière**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce schéma se lit en trois temps. **Pour les prophètes précédents**, tout coïncide : Moïse parle aux Banū Isrāʾīl dans leur langue, parce qu'ils sont ses seuls destinataires. **Pour le Prophète ﷺ**, la langue arabe est le point de départ naturel : il fallait bien qu'il parle à quelqu'un, et d'abord à son entourage. **Mais la troisième étape** fait toute la différence : al-Shinqītī écrit qu'il lui incombe de transmettre « aux gens de toutes les langues ». C'est pour cela que, de son vivant même, il a écrit aux empereurs de Byzance et de Perse, au Négus d'Abyssinie et au gouverneur d'Égypte.`,
+        },
+        {
+          type: `h2`,
+          text: `« J'ai été envoyé à tout homme, rouge ou noir »`,
+        },
+        {
+          type: `p`,
+          text: `Le Prophète ﷺ a lui-même énuméré les privilèges qui le distinguent des prophètes précédents. Al-Qurtubī cite ce hadith de Muslim en commentant l'épisode des djinns qui écoutent le Coran (46:29-31), car il montre que la mission dépasse même l'humanité :`,
+        },
+        {
+          type: `quote`,
+          text: `وَفِي صَحِيحِ مُسْلِمٍ عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ الْأَنْصَارِيِّ قَالَ قَالَ رَسُولُ اللَّهِ ﷺ: أُعْطِيتُ خَمْسًا لَمْ يُعْطَهُنَّ أَحَدٌ قَبْلِي: **كَانَ كُلُّ نَبِيٍّ يُبْعَثُ إِلَى قَوْمِهِ خَاصَّةً وَبُعِثْتُ إِلَى كُلِّ أَحْمَرَ وَأَسْوَدَ**، وَأُحِلَّتْ لِيَ الْغَنَائِمُ وَلَمْ تُحَلَّ لِأَحَدٍ قَبْلِي، **وَجُعِلَتْ لِيَ الْأَرْضُ طَيِّبَةً طَهُورًا وَمَسْجِدًا** فَأَيُّمَا رَجُلٍ أَدْرَكَتْهُ الصَّلَاةُ صَلَّى حَيْثُ كَانَ، وَنُصِرْتُ بِالرُّعْبِ بَيْنَ يَدَيْ مَسِيرَةَ شَهْرٍ، وَأُعْطِيتُ الشَّفَاعَةَ ... وَفِي رِوَايَةٍ مِنْ حَدِيثِ أَبِي هُرَيْرَةَ: "**وَبُعِثْتُ إِلَى الْخَلْقِ كَافَّةً وَخُتِمَ بِي النَّبِيُّونَ**".
+
+Dans le Sahīh de Muslim, d'après Jābir ibn ʿAbd Allāh al-Ansārī : le Messager d'Allāh ﷺ a dit : « J'ai reçu cinq choses qui n'ont été données à personne avant moi : **chaque prophète était envoyé à son peuple en particulier, et moi j'ai été envoyé à tout homme, rouge ou noir** ; le butin m'a été rendu licite, alors qu'il ne l'était pour personne avant moi ; **la terre entière a été faite pour moi pure, purifiante et lieu de prière**, si bien que tout homme que l'heure de la prière surprend prie là où il se trouve ; j'ai été secouru par la crainte [inspirée à l'ennemi] à un mois de marche ; et j'ai reçu l'intercession. » … Et dans une version d'Abū Hurayra : « **J'ai été envoyé à l'ensemble des créatures, et les prophètes ont été scellés par moi.** »`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 16/217, sur al-Ahqāf 46:31`,
+        },
+        {
+          type: `p`,
+          text: `Deux détails de ce hadith répondent directement à l'objection. Le premier : « **rouge ou noir** », une expression arabe qui désigne toutes les couleurs de peau, donc tous les peuples. Mujāhid, cité au même endroit par al-Qurtubī, l'étend même aux djinns et aux hommes. Le second : « **la terre entière a été faite pour moi lieu de prière** ». Une religion ethnique a un territoire sacré hors duquel le culte n'a pas de sens. Ici, le lieu de prière, c'est toute la surface de la terre.`,
+        },
+        {
+          type: `comparaison`,
+          title: `Ce qui distingue une religion tribale d'un message universel`,
+          columns: [
+            `Un « dieu des Arabes » aurait…`,
+            `Ce que disent les textes`,
+          ],
+          rows: [
+            {
+              criterion: `Destinataires`,
+              cells: [
+                `un peuple précis.`,
+                `« Tout homme, rouge ou noir » ; « l'ensemble des créatures ».`,
+              ],
+            },
+            {
+              criterion: `Lieu du culte`,
+              cells: [
+                `un territoire sacré réservé.`,
+                `« La terre entière a été faite pour moi lieu de prière. »`,
+              ],
+            },
+            {
+              criterion: `Critère de noblesse`,
+              cells: [
+                `l'appartenance au peuple élu.`,
+                `« Le plus noble d'entre vous est le plus pieux » (49:13).`,
+              ],
+            },
+            {
+              criterion: `Langue`,
+              cells: [
+                `une frontière.`,
+                `Un point de départ, avec le devoir de transmettre « aux gens de toutes les langues ».`,
+              ],
+            },
+          ],
+          caption: `Sur chacun des quatre critères, **les textes vont à l'opposé de ce qu'impliquerait une divinité ethnique**.`,
+        },
+        {
+          type: `p`,
+          text: `Parcourons ce tableau. **Les destinataires** : une divinité tribale protège sa tribu contre les autres ; le hadith dit « tout homme, rouge ou noir ». **Le lieu du culte** : les dieux ethniques ont leurs temples, hors desquels on ne peut les prier ; ici, la terre entière est mosquée. **Le critère de noblesse** : une religion tribale honore le sang ; le Coran honore la piété. **La langue** enfin : elle est le véhicule du message, non sa limite. Sur les quatre lignes, l'objection se heurte aux textes.`,
+        },
+        {
+          type: `h2`,
+          text: `Le sermon de Minā : « votre Seigneur est un »`,
+        },
+        {
+          type: `p`,
+          text: `Lors de son pèlerinage d'adieu, devant la plus grande foule qu'il ait jamais réunie, le Prophète ﷺ a prononcé une phrase qui pourrait servir de réponse définitive à notre question. Al-Qurtubī la rapporte d'après al-Tabarī, d'après Abū Nadra, qui la tenait d'un témoin direct :`,
+        },
+        {
+          type: `quote`,
+          text: `خَطَبَ رَسُولُ اللَّهِ ﷺ بِمِنًى فِي وَسَطِ أَيَّامِ التَّشْرِيقِ وَهُوَ عَلَى بَعِيرٍ فَقَالَ: يَا أَيُّهَا النَّاسُ **أَلَا إِنَّ رَبَّكُمْ وَاحِدٌ وَإِنَّ أَبَاكُمْ وَاحِدٌ**، أَلَا **لَا فَضْلَ لِعَرَبِيٍّ عَلَى عَجَمِيٍّ وَلَا عَجَمِيٍّ عَلَى عَرَبِيٍّ** وَلَا لِأَسْوَدَ عَلَى أَحْمَرَ وَلَا لِأَحْمَرَ عَلَى أَسْوَدَ **إِلَّا بِالتَّقْوَى**، أَلَا هَلْ بَلَّغْتُ؟ - قَالُوا نَعَمْ قَالَ - لِيُبَلِّغِ الشَّاهِدُ الْغَائِبَ.
+
+Le Messager d'Allāh ﷺ fit un sermon à Minā, au milieu des jours de Tashrīq, monté sur un chameau, et dit : « Ô hommes ! **Votre Seigneur est un, et votre père est un.** **Un Arabe n'a aucune supériorité sur un non-Arabe, ni un non-Arabe sur un Arabe**, ni un Noir sur un rouge, ni un rouge sur un Noir, **si ce n'est par la piété.** Ai-je transmis ? » Ils dirent : « Oui. » Il dit : « Que celui qui est présent transmette à celui qui est absent. »`,
+          source: `Rapporté par al-Tabarī (Ādāb al-nufūs), d'après Abū Nadra, d'après un témoin du sermon ; cité par al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 16/342`,
+        },
+        {
+          type: `p`,
+          text: `Lis la structure du sermon : « **votre Seigneur est un** » vient en premier. Ce n'est pas : « notre Seigneur, à nous les Arabes ». C'est le Seigneur de tous ceux qui écoutent, et, par la dernière phrase, de tous ceux qui ne sont pas là : « que le présent transmette à l'absent ». **Un seul Seigneur, un seul père, Adam : donc aucune supériorité de naissance.** L'unicité de Dieu et l'égalité des peuples sont présentées comme une seule et même vérité.`,
+        },
+        {
+          type: `cycle`,
+          title: `La logique du sermon de Minā`,
+          arabic: `ربكم واحد وأباكم واحد`,
+          center: `un seul Seigneur`,
+          steps: [
+            {
+              label: `Un seul Seigneur`,
+              note: `Personne n'a « son » dieu : tous ont le même.`,
+            },
+            {
+              label: `Un seul père`,
+              note: `Tous descendent d'Adam : la lignée ne fait pas de différence.`,
+            },
+            {
+              label: `Aucune supériorité de naissance`,
+              note: `Ni l'Arabe sur le non-Arabe, ni l'inverse, ni une couleur sur une autre.`,
+            },
+            {
+              label: `Un seul critère : la piété`,
+              note: `Ce qui distingue les hommes est ce qu'ils font de leur cœur, pas d'où ils viennent.`,
+            },
+          ],
+          caption: `Le cycle se referme sur son centre : **parce qu'Il est le Seigneur de tous, nul peuple ne peut se L'approprier**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce cycle montre pourquoi l'objection « Allāh est le dieu des Arabes » contredit l'islam dans sa structure même. **Le premier maillon**, un seul Seigneur, interdit qu'un peuple possède son dieu. **Le deuxième**, un seul père, efface les généalogies dont les Arabes étaient si fiers. **Le troisième** en tire la conséquence : aucune supériorité de naissance. **Le quatrième** donne le seul critère qui reste : la piété, accessible à tout homme. Retirer un maillon, ce serait briser tout le raisonnement.`,
+        },
+        {
+          type: `h2`,
+          text: `Le Dieu d'Abraham, d'Isaac et de Jacob`,
+        },
+        {
+          type: `p`,
+          text: `Un dernier indice, souvent négligé : dans le Coran, celui que l'on appelle « Allāh » est explicitement **le Dieu des prophètes d'Israël**. Au moment de mourir, Jacob (Yaʿqūb) réunit ses fils pour s'assurer de leur foi, et leur réponse est rapportée ainsi :`,
+        },
+        {
+          type: `verse`,
+          arabic: `إِذْ قَالَ لِبَنِيهِ مَا تَعْبُدُونَ مِنۢ بَعْدِى ۖ قَالُوا۟ **نَعْبُدُ إِلَٰهَكَ وَإِلَٰهَ ءَابَآئِكَ إِبْرَٰهِـۧمَ وَإِسْمَٰعِيلَ وَإِسْحَٰقَ إِلَٰهًا وَٰحِدًا** وَنَحْنُ لَهُۥ مُسْلِمُونَ`,
+          translation: `Quand il dit à ses fils : « Qu'adorerez-vous après moi ? », ils répondirent : « **Nous adorerons ta divinité et la divinité de tes pères, Abraham, Ismaël et Isaac, Divinité unique**, et à Lui nous sommes soumis. »`,
+          reference: `Coran, al-Baqara, 2:133`,
+        },
+        {
+          type: `quote`,
+          text: `وَالْخِطَابُ لِلْيَهُودِ وَالنَّصَارَى الَّذِينَ يَنْسُبُونَ إِلَى إِبْرَاهِيمَ مَا لَمْ يُوصِ بِهِ بَنِيهِ ... وَعَبَّرَ عَنِ الْمَعْبُودِ بِـ"مَا" وَلَمْ يَقُلْ مَنْ، لِأَنَّهُ أَرَادَ أَنْ يَخْتَبِرَهُمْ ... فَاهْتَدَوْا وَقَالُوا: "نَعْبُدُ إِلهَكَ" الْآيَةَ. **فَأَرَوْهُ ثُبُوتَهُمْ عَلَى الدِّينِ وَمَعْرِفَتَهُمْ بِاللَّهِ تَعَالَى**.
+
+Le discours s'adresse aux juifs et aux chrétiens qui attribuaient à Abraham ce qu'il n'avait pas recommandé à ses fils … Il a désigné l'objet d'adoration par « quoi » et non par « qui », parce qu'il voulait les mettre à l'épreuve … Ils furent bien guidés et dirent : « Nous adorerons ta divinité… » **Ils lui montrèrent ainsi leur fermeté dans la religion et leur connaissance d'Allāh, exalté soit-Il.**`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 2/137, sur al-Baqara 2:133`,
+        },
+        {
+          type: `p`,
+          text: `Isaac et Jacob ne sont pas arabes : ce sont les pères des Banū Isrāʾīl. Et pourtant le Coran les présente comme adorateurs du même Dieu unique, et al-Qurtubī parle de leur « **connaissance d'Allāh** ». Le nom arabe « Allāh » désigne donc, dans le Coran, **le Dieu d'Abraham, d'Isaac, de Jacob, de Moïse et de Jésus**, c'est-à-dire le Dieu de toute la lignée prophétique, quelle que soit la langue dans laquelle chacun L'a invoqué.`,
+        },
+        {
+          type: `chronologie`,
+          title: `Un même Dieu, invoqué dans des langues différentes`,
+          events: [
+            {
+              date: `Mésopotamie`,
+              label: `Abraham (Ibrāhīm)`,
+              note: `Il rompt avec les idoles de son peuple et se tourne vers « Celui qui a créé les cieux et la terre » (6:79).`,
+            },
+            {
+              date: `Canaan`,
+              label: `Isaac et Jacob`,
+              note: `Les fils de Jacob s'engagent à adorer « la divinité de tes pères, Divinité unique » (2:133).`,
+            },
+            {
+              date: `Égypte, Sinaï`,
+              label: `Moïse (Mūsā)`,
+              note: `Envoyé aux Banū Isrāʾīl, dans leur langue (14:4-5).`,
+            },
+            {
+              date: `Palestine`,
+              label: `Jésus (ʿĪsā)`,
+              note: `« Adorez Allāh, mon Seigneur et votre Seigneur » (5:72).`,
+            },
+            {
+              date: `La Mecque, Médine`,
+              label: `Muhammad ﷺ`,
+              note: `En arabe, mais « envoyé à l'ensemble des créatures », sceau de cette lignée.`,
+            },
+          ],
+          caption: `Les langues changent d'une étape à l'autre ; **le Dieu invoqué, Lui, ne change pas**.`,
+        },
+        {
+          type: `p`,
+          text: `Cette frise montre que le Coran se situe lui-même au bout d'une lignée qui traverse plusieurs peuples et plusieurs langues. **Abraham** en Mésopotamie, **Isaac et Jacob** en terre de Canaan, **Moïse** en Égypte et au Sinaï, **Jésus** en Palestine, et enfin **Muhammad ﷺ** en Arabie. Si Allāh était un dieu arabe, il faudrait expliquer pourquoi le Coran Lui attribue tous ces prophètes non arabes. La réponse est simple : le nom est arabe, parce que le dernier message est arabe ; mais Celui qu'il nomme est le Dieu de tous.`,
+        },
+        {
+          type: `objection`,
+          objection: `Pourquoi alors les musulmans du monde entier prient-ils en arabe ?`,
+          reponse: `Parce que le Coran est la parole d'Allāh dans la langue où Il l'a révélée, et qu'une traduction n'est qu'une explication humaine. Prier en arabe, c'est réciter le texte révélé lui-même, pas adopter une identité ethnique. Bilāl l'Abyssinien, Salmān le Persan et Suhayb le Byzantin ont prié en arabe sans cesser d'être ce qu'ils étaient. **La langue de la récitation unit les croyants ; elle ne les transforme pas en Arabes.**`,
+        },
+        {
+          type: `comparaison`,
+          title: `Ce que disent les sources de cette section`,
+          columns: [
+            `Ce qu'elles affirment`,
+            `Où le lire`,
+          ],
+          rows: [
+            {
+              criterion: `Ibn ʿAbbās (Bilāl sur la Kaʿba)`,
+              cells: [
+                `Le verset 49:13 descend pour réprimander la fierté des lignées : « tout repose sur la piété ».`,
+                `Al-Qurtubī, al-Jāmiʿ, 16/341`,
+              ],
+            },
+            {
+              criterion: `Al-Shinqītī`,
+              cells: [
+                `Les autres messagers étaient envoyés à leur peuple ; le Prophète ﷺ « aux gens de toutes les langues ».`,
+                `Adwāʾ al-Bayān, 2/241`,
+              ],
+            },
+            {
+              criterion: `Ibn ʿAbbās (rapporté par al-Dārimī)`,
+              cells: [
+                `L'universalité de la mission est ce qui distingue le Prophète ﷺ des autres prophètes.`,
+                `Adwāʾ al-Bayān, 2/242`,
+              ],
+            },
+            {
+              criterion: `Hadith de Jābir (Muslim)`,
+              cells: [
+                `« Envoyé à tout homme, rouge ou noir » ; « la terre entière, lieu de prière ».`,
+                `Al-Qurtubī, al-Jāmiʿ, 16/217`,
+              ],
+            },
+            {
+              criterion: `Sermon de Minā`,
+              cells: [
+                `« Votre Seigneur est un, votre père est un ; aucune supériorité sinon par la piété. »`,
+                `Al-Qurtubī, al-Jāmiʿ, 16/342`,
+              ],
+            },
+            {
+              criterion: `Al-Qurtubī sur 2:133`,
+              cells: [
+                `Les fils de Jacob adorent le Dieu unique d'Abraham, d'Ismaël et d'Isaac.`,
+                `Al-Jāmiʿ, 2/137`,
+              ],
+            },
+          ],
+          caption: `Toutes les sources convergent : **le nom est arabe, la mission est universelle, et le Dieu nommé est celui de tous les prophètes**.`,
+        },
         { type: `h2`, text: `Conclusion` },
         {
           type: `p`,
