@@ -63325,6 +63325,333 @@ Si l'on demande : la raison a-t-elle une preuve que les corps ont commencé d'ex
           title: `Une intuition que l'on retrouve aujourd'hui`,
           text: `Al-Bayhaqī remarque aussi que chaque chose existe **sous une forme précise plutôt qu'une autre** : sans quelqu'un qui l'a spécifiée, aucune forme ne serait plus probable qu'une autre. Je ne prétends pas que la cosmologie moderne « prouve » le hadith. Mais l'idée que **l'univers observable a un commencement**, et que ses lois sont **réglées de manière précise**, n'est plus une idée étrangère au débat scientifique. Le croyant n'en a pas besoin pour croire ; il constate seulement que **la question d'al-Bayhaqī reste d'actualité**.`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : « ce qui nous fait périr, c'est le temps »`,
+        },
+        {
+          type: `p`,
+          text: `Pour comprendre pourquoi le Prophète ﷺ a tant insisté sur la question du temps, il faut entendre ce que disaient les Arabes de son époque. Le temps, ad-dahr, était pour eux une puissance presque divine : c'est lui qui apportait la vieillesse, la maladie, la ruine et la mort. Leur poésie est pleine de plaintes contre « les coups du temps ». Le Coran rapporte leur philosophie en une phrase :`,
+        },
+        {
+          type: `verse`,
+          arabic: `وَقَالُوا۟ مَا هِىَ إِلَّا حَيَاتُنَا ٱلدُّنْيَا نَمُوتُ وَنَحْيَا **وَمَا يُهْلِكُنَآ إِلَّا ٱلدَّهْرُ** ۚ وَمَا لَهُم بِذَٰلِكَ مِنْ عِلْمٍ ۖ إِنْ هُمْ إِلَّا يَظُنُّونَ`,
+          translation: `Ils ont dit : « Il n'y a que notre vie d'ici-bas : nous mourons et nous vivons, **et rien ne nous fait périr que le temps**. » Ils n'en ont aucune connaissance : ils ne font que conjecturer.`,
+          reference: `Coran, al-Jāthiya, 45:24`,
+        },
+        {
+          type: `p`,
+          text: `Le Prophète ﷺ a répondu à cette croyance par un hadith qudsī, c'est-à-dire une parole qu'il rapporte de son Seigneur. Al-Qurtubī le cite en commentant ce verset, puis il rappelle que l'imam **Mālik** l'a transmis dans le Muwattaʾ :`,
+        },
+        {
+          type: `quote`,
+          text: `وَرَوَى أَبُو هُرَيْرَةَ عَنِ النَّبِيِّ ﷺ قَالَ: "كَانَ أَهْلُ الْجَاهِلِيَّةِ يَقُولُونَ مَا يُهْلِكُنَا إِلَّا اللَّيْلُ وَالنَّهَارُ وَهُوَ الَّذِي يُهْلِكُنَا وَيُمِيتُنَا وَيُحْيِينَا فَيَسُبُّونَ الدَّهْرَ، قَالَ اللَّهُ تَعَالَى: **يُؤْذِينِي ابْنُ آدَمَ يَسُبُّ الدَّهْرَ وَأَنَا الدَّهْرُ، بِيَدِي الْأَمْرُ، أُقَلِّبُ اللَّيْلَ وَالنَّهَارَ**". ... وَفِي الْمُوَطَّأِ عَنْ أَبِي هُرَيْرَةَ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ: (**لَا يَقُولَنَّ أَحَدُكُمْ يَا خَيْبَةَ الدَّهْرِ فَإِنَّ اللَّهَ هُوَ الدَّهْرُ**) ... فَإِنَّهُمْ كَانُوا يَعْتَقِدُونَ أَنَّ الدَّهْرَ هُوَ الْفَاعِلُ ... فَقِيلَ لَهُمْ عَلَى ذَلِكَ: لَا تَسُبُّوا الدَّهْرَ فَإِنَّ اللَّهَ هُوَ الدَّهْرُ، **أَيْ إِنَّ اللَّهَ هُوَ الْفَاعِلُ لِهَذِهِ الْأُمُورِ الَّتِي تُضِيفُونَهَا إِلَى الدَّهْرِ**، فَيَرْجِعُ السَّبُّ إِلَيْهِ سُبْحَانَهُ، فَنُهُوا عَنْ ذَلِكَ.
+
+Abū Hurayra rapporte du Prophète ﷺ : « Les gens de la Jāhiliyya disaient : rien ne nous fait périr que la nuit et le jour, c'est lui qui nous fait périr, mourir et vivre ; et ils insultaient le temps. Allāh a dit : **Le fils d'Adam M'offense : il insulte le temps, alors que c'est Moi le temps ; l'ordre est dans Ma main, Je fais alterner la nuit et le jour.** » … Et dans le Muwattaʾ, d'après Abū Hurayra, le Messager d'Allāh ﷺ a dit : « **Que nul d'entre vous ne dise : "Ô malheur du temps !", car Allāh est le temps.** » … Ils croyaient en effet que le temps était l'agent … On leur dit donc : n'insultez pas le temps, car Allāh est le temps, **c'est-à-dire qu'Allāh est l'auteur de ces événements que vous attribuez au temps** ; l'insulte remonte donc à Lui, Gloire à Lui, et cela leur fut interdit.`,
+          source: `Al-Qurtubī (m. 671 H), al-Jāmiʿ li-ahkām al-Qurʾān, 16/171, sur al-Jāthiya 45:24 ; hadith d'al-Bukhārī, de Muslim et du Muwattaʾ de Mālik`,
+        },
+        {
+          type: `p`,
+          text: `Ce hadith change complètement la place du temps dans la pensée humaine. Pour les Arabes de la Jāhiliyya, **le temps était le maître** : il frappait, il décidait, il emportait. Le Prophète ﷺ le remet à sa place : le temps n'est pas un agent, il ne fait rien par lui-même. « **L'ordre est dans Ma main, Je fais alterner la nuit et le jour.** » Le temps est quelque chose que Dieu fait tourner, comme on tourne les pages d'un livre.`,
+        },
+        {
+          type: `quote`,
+          text: `يَا عَاتِبَ الدَّهْرِ إِذَا نَابَهُ ... لَا تَلُمِ الدَّهْرَ عَلَى غَدْرِهِ
+**الدَّهْرُ مَأْمُورٌ، لَهُ آمِرٌ ... وَيَنْتَهِي الدَّهْرُ إِلَى أَمْرِهِ**
+
+Toi qui fais des reproches au temps quand il te frappe, ne blâme pas le temps pour sa trahison : **le temps reçoit des ordres, il a Quelqu'un qui le commande, et le temps s'arrête là où Son ordre le mène.**`,
+          source: `Vers d'Abū ʿAlī al-Thaqafī, cités par al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 16/171`,
+        },
+        {
+          type: `p`,
+          text: `Al-Qurtubī rapporte aussi une scène de famille chez un grand Compagnon. **Sālim, fils de ʿAbd Allāh ibn ʿUmar**, avait pris l'habitude de parler souvent du temps, comme on se plaint des « coups du sort ». Son père le reprit : « **Garde-toi, mon fils, de mentionner le temps [comme s'il agissait] !** » Et il lui récita des vers : « Le temps n'est coupable de rien, il n'apporte pas l'épreuve ; mais quand Allāh envoie un événement sur un peuple, Il change leur aisance en difficulté. »`,
+        },
+        {
+          type: `p`,
+          text: `La leçon d'Ibn ʿUmar est très actuelle. Nous disons encore « le temps fera son œuvre », « c'est la faute à pas de chance », « l'époque est dure ». Ces formules ne sont pas toujours de la mécréance, mais elles **habituent le cœur à voir le temps comme une force autonome**. Ibn ʿUmar voulait que son fils prenne l'habitude inverse : derrière chaque jour qui passe, voir Celui qui le fait passer.`,
+        },
+        {
+          type: `h2`,
+          text: `« Je suis, tout le temps, Celui qui tient l'ordre »`,
+        },
+        {
+          type: `p`,
+          text: `Le hadith « c'est Moi le temps » pourrait être mal compris : Dieu serait-Il le temps lui-même ? Ce serait une contradiction totale avec notre sujet, qui dit que le temps est une créature. **Ibn ʿAbd al-Barr**, dans son grand commentaire du Muwattaʾ, apporte une précision grammaticale qui éclaire tout :`,
+        },
+        {
+          type: `quote`,
+          text: `فَمِنْ أَهْلِ الْعِلْمِ مَنْ يَرْوِي هَذَا الْخَبَرَ **بِنَصْبِ الدَّهْرِ عَلَى الظَّرْفِ**، يَقُولُ: **أَنَا الدَّهْرَ كُلَّهُ بِيَدِيَ الْأَمْرُ، أُقَلِّبُ اللَّيْلَ وَالنَّهَارَ**، وَمِنْهُمْ مَنْ يَرْوِيهِ بِالرَّفْعِ عَلَى مَعْنَى حَدِيثِ مَالِكٍ وَمَنْ تَابَعَهُ. وَالْمَعْنَى فِيهِ **أَنَّ أَهْلَ الْجَاهِلِيَّةِ كَانُوا يَذُمُّونَ الدَّهْرَ فِي أَشْعَارِهِمْ وَأَخْبَارِهِمْ، وَيُضِيفُونَ إِلَيْهِ كُلَّ مَا يَصْنَعُهُ اللَّهُ بِهِمْ**.
+
+Parmi les savants, certains rapportent ce hadith **en mettant « le temps » à l'accusatif, comme complément de temps** : « **Je suis, tout le temps durant, Celui dans la main de qui est l'ordre ; Je fais alterner la nuit et le jour.** » D'autres le rapportent au nominatif, dans le sens du hadith de Mālik et de ceux qui l'ont suivi. Le sens en est que **les gens de la Jāhiliyya blâmaient le temps dans leurs poèmes et leurs récits, et lui attribuaient tout ce qu'Allāh faisait d'eux**.`,
+          source: `Ibn ʿAbd al-Barr (m. 463 H), al-Tamhīd, 18/154`,
+        },
+        {
+          type: `comparaison`,
+          title: `Deux lectures du hadith, un seul sens`,
+          columns: [
+            `Lecture au nominatif (ad-dahru)`,
+            `Lecture à l'accusatif (ad-dahra)`,
+          ],
+          rows: [
+            {
+              criterion: `Traduction`,
+              cells: [
+                `« C'est Moi le temps. »`,
+                `« Je suis, tout le temps durant, [Celui qui tient l'ordre]. »`,
+              ],
+            },
+            {
+              criterion: `Ce que cela veut dire`,
+              cells: [
+                `Ce que vous attribuez au temps, c'est Moi qui le fais.`,
+                `À chaque instant du temps, c'est Moi qui dirige.`,
+              ],
+            },
+            {
+              criterion: `Ce que cela ne veut pas dire`,
+              cells: [
+                `Que Dieu serait la durée elle-même.`,
+                `Que le temps aurait un pouvoir propre.`,
+              ],
+            },
+            {
+              criterion: `Conclusion commune`,
+              cells: [
+                `Le temps n'est pas un agent.`,
+                `Le temps n'est pas un agent.`,
+              ],
+            },
+          ],
+          caption: `D'après Ibn ʿAbd al-Barr (al-Tamhīd, 18/154) et al-Qurtubī (al-Jāmiʿ, 16/171).`,
+        },
+        {
+          type: `p`,
+          text: `Ce tableau montre que, quelle que soit la lecture, **la conclusion est identique**. Au nominatif, le hadith répond à ceux qui accusaient le temps : « ce que vous croyez être l'œuvre du temps, c'est Mon œuvre ». À l'accusatif, il dit que Dieu gouverne **à chaque moment du temps**. Dans les deux cas, le temps est **ce dans quoi** les choses arrivent, et Dieu est **Celui par qui** elles arrivent. Et c'est exactement le cœur de notre sujet : le temps est une créature, Dieu n'est pas dans le temps.`,
+        },
+        {
+          type: `focus`,
+          kind: `subtilite`,
+          title: `« Al-Dahr » est-il un nom de Dieu ?`,
+          text: `Al-Qurtubī signale que certains ont déduit de ce hadith que « al-Dahr » serait un nom divin. Mais il rapporte aussi l'avis de ceux qui refusent cette conclusion : le hadith est **une réponse aux Arabes de la Jāhiliyya**, non l'introduction d'un nouveau nom. La lecture d'Ibn ʿAbd al-Barr à l'accusatif va dans ce sens. Le sujet « Un nom, quatre-vingt-dix-neuf, ou davantage ? » traite des conditions pour qu'un mot soit compté parmi les noms d'Allāh.`,
+        },
+        {
+          type: `h2`,
+          text: `« En six jours », alors qu'il n'y avait pas encore de soleil ?`,
+        },
+        {
+          type: `p`,
+          text: `Le Coran répète à plusieurs reprises qu'Allāh a créé les cieux et la terre « **en six jours** ». Une question surgit immédiatement, et elle touche notre sujet de plein fouet : un « jour », c'est la durée qui sépare deux levers de soleil. **Comment parler de jours avant que le soleil n'existe ?** Al-Qurtubī rapporte la réponse d'al-Qushayrī :`,
+        },
+        {
+          type: `verse`,
+          arabic: `إِنَّ رَبَّكُمُ ٱللَّهُ ٱلَّذِى خَلَقَ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ **فِى سِتَّةِ أَيَّامٍ** ثُمَّ ٱسْتَوَىٰ عَلَى ٱلْعَرْشِ يُغْشِى ٱلَّيْلَ ٱلنَّهَارَ يَطْلُبُهُۥ حَثِيثًا وَٱلشَّمْسَ وَٱلْقَمَرَ وَٱلنُّجُومَ مُسَخَّرَٰتٍۭ بِأَمْرِهِۦٓ`,
+          translation: `Votre Seigneur est Allāh, qui a créé les cieux et la terre **en six jours**, puis S'est établi sur le Trône. Il couvre le jour de la nuit, qui le poursuit sans relâche ; et le soleil, la lune et les étoiles sont soumis à Son ordre.`,
+          reference: `Coran, al-Aʿrāf, 7:54`,
+        },
+        {
+          type: `quote`,
+          text: `وَالْيَوْمُ: مِنْ طُلُوعِ الشَّمْسِ إِلَى غُرُوبِهَا. **فَإِنْ لَمْ يَكُنْ شَمْسٌ فَلَا يَوْمَ**، قَالَ الْقُشَيْرِيُّ. وَقَالَ: وَمَعْنَى (فِي سِتَّةِ أَيَّامٍ) أَيْ **مِنْ أَيَّامِ الْآخِرَةِ، كُلَّ يَوْمٍ أَلْفَ سَنَةٍ**، لِتَفْخِيمِ خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ. وَقِيلَ: مِنْ أَيَّامِ الدُّنْيَا ... وَذَكَرَ هَذِهِ الْمُدَّةَ **وَلَوْ أَرَادَ خَلْقَهَا فِي لَحْظَةٍ لَفَعَلَ**، إِذْ هُوَ الْقَادِرُ عَلَى أَنْ يَقُولَ لَهَا كُونِي فَتَكُونُ. **وَلَكِنَّهُ أَرَادَ أَنْ يُعَلِّمَ الْعِبَادَ الرِّفْقَ وَالتَّثَبُّتَ فِي الْأُمُورِ** ... وَحِكْمَةٌ أُخْرَى: خَلَقَهَا فِي سِتَّةِ أَيَّامٍ **لِأَنَّ لِكُلِّ شَيْءٍ عِنْدَهُ أَجَلًا**.
+
+Le jour, c'est du lever du soleil à son coucher. **S'il n'y a pas de soleil, il n'y a pas de jour**, a dit al-Qushayrī. Et il a dit : « en six jours » signifie **des jours de l'au-delà, chaque jour valant mille ans**, pour souligner la grandeur de la création des cieux et de la terre. On a dit aussi : des jours de ce monde … Il a mentionné cette durée **alors que, s'Il avait voulu les créer en un instant, Il l'aurait fait**, puisqu'Il peut leur dire « Sois ! » et elles sont. **Mais Il a voulu enseigner à Ses serviteurs la douceur et la patience dans les affaires** … Autre sagesse : Il les a créés en six jours **parce que toute chose a, auprès de Lui, un terme fixé**.`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 7/219, sur al-Aʿrāf 7:54`,
+        },
+        {
+          type: `p`,
+          text: `La phrase d'al-Qushayrī est d'une clarté remarquable : « **s'il n'y a pas de soleil, il n'y a pas de jour** ». Les savants musulmans savaient donc parfaitement que **notre temps, celui que nous mesurons en jours et en années, dépend de réalités créées** : le soleil, la terre, leur mouvement. Avant elles, le mot « jour » ne peut pas avoir le même sens. C'est pourquoi beaucoup ont compris ces « six jours » comme des périodes, ou comme des jours d'une autre mesure.`,
+        },
+        {
+          type: `schema`,
+          title: `Pourquoi « six jours » ne contredit pas l'idée d'un temps créé`,
+          arabic: `في ستة أيام`,
+          variant: `branch`,
+          nodes: [
+            {
+              label: `Un jour suppose un soleil`,
+              arabic: `فإن لم يكن شمس فلا يوم`,
+              note: `Notre « jour » est une mesure née avec le soleil (al-Qushayrī). Avant lui, le mot désigne autre chose qu'une journée solaire.`,
+            },
+            {
+              label: `Une autre mesure`,
+              arabic: `من أيام الآخرة`,
+              note: `Certains ont compris des jours « de l'au-delà », chacun valant mille ans (cf. 22:47) : une mesure qui n'est pas la nôtre.`,
+            },
+            {
+              label: `Un choix, non une nécessité`,
+              arabic: `لو أراد خلقها في لحظة لفعل`,
+              note: `Allāh aurait pu tout créer en un instant ; la durée elle-même est voulue, pour enseigner la patience.`,
+            },
+            {
+              label: `Chaque chose a son terme`,
+              arabic: `لكل شيء عنده أجل`,
+              note: `La durée fait partie de l'ordre créé : Dieu n'est pas soumis aux étapes, Il les institue.`,
+            },
+          ],
+          caption: `Les « six jours » ne disent pas que Dieu a besoin du temps ; **ils disent que le temps fait partie de ce qu'Il a mis en ordre**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce schéma montre comment les commentateurs ont lu ces versets, branche par branche. **La première** pose le principe : pas de soleil, pas de jour au sens habituel. **La deuxième** propose une autre mesure, celle de l'au-delà. **La troisième** est capitale pour notre sujet : Allāh n'avait pas besoin de six jours, **la durée n'est pas une contrainte qui pèse sur Lui**, c'est un choix pédagogique. **La quatrième** l'élargit : chaque chose créée a son terme, son rythme, sa durée. Le temps est une structure de la création, non une condition du Créateur.`,
+        },
+        {
+          type: `objection`,
+          objection: `Si Dieu a choisi d'étaler la création sur une durée, n'est-Il pas, d'une certaine manière, « dans » le temps ?`,
+          reponse: `Non. Un architecte peut décider qu'un bâtiment sera construit en six étapes sans être lui-même une brique du bâtiment. La durée est une propriété de **ce qui est créé**, qui passe d'un état à un autre ; elle n'est pas une propriété du Créateur. C'est pour cela qu'al-Qurtubī insiste : « **s'Il avait voulu les créer en un instant, Il l'aurait fait** ».`,
+        },
+        {
+          type: `h2`,
+          text: `« Cinquante mille ans avant les cieux » : un « avant » qui n'est pas le nôtre`,
+        },
+        {
+          type: `p`,
+          text: `Un autre hadith pose la même question sous un autre angle. Al-Qurtubī le cite d'après ʿAbd Allāh ibn ʿAmr ibn al-ʿĀs, et il est rapporté par Muslim :`,
+        },
+        {
+          type: `quote`,
+          text: `وَخَلَقَ اللَّهُ الْمَقَادِيرَ قَبْلَ أَنْ يَخْلُقَ السَّمَوَاتِ وَالْأَرْضَ بِخَمْسِينَ أَلْفَ سَنَةٍ، رَوَاهُ عَبْدُ اللَّهِ بْنُ عَمْرِو بْنِ الْعَاصِ قَالَ: سَمِعْتُ رَسُولَ اللَّهِ ﷺ يَقُولُ: "**قَدَّرَ اللَّهُ الْمَقَادِيرَ قَبْلَ أَنْ يَخْلُقَ السَّمَوَاتِ وَالْأَرْضَ بِخَمْسِينَ أَلْفَ سَنَةٍ**".
+
+Allāh a fixé les décrets avant de créer les cieux et la terre, de cinquante mille ans, comme l'a rapporté ʿAbd Allāh ibn ʿAmr ibn al-ʿĀs : « J'ai entendu le Messager d'Allāh ﷺ dire : **Allāh a fixé les mesures de toute chose cinquante mille ans avant de créer les cieux et la terre.** »`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 9/52, sur Hūd 11:56 ; hadith rapporté par Muslim`,
+        },
+        {
+          type: `p`,
+          text: `« Cinquante mille ans avant les cieux et la terre » : avec quelle horloge, puisque les années se comptent avec le soleil, qui n'existait pas encore ? La réponse découle de ce qui précède. Il y avait **déjà des créatures**, le Trône, l'eau, et l'écriture des décrets, et donc déjà **une succession**, un avant et un après. Mais cette durée **n'est pas la nôtre** ; le hadith l'exprime en années pour que nous puissions la concevoir.`,
+        },
+        {
+          type: `p`,
+          text: `Ce qui est certain, en revanche, c'est la distinction fondamentale que pose le hadith de ʿImrān ibn Husayn cité plus haut : « **Allāh était, et rien n'était en dehors de Lui** ». Avant toute créature, y compris le Trône, l'eau et le Calame, il n'y avait aucune durée créée. Il y avait Allāh, **le Premier**, sans commencement.`,
+        },
+        {
+          type: `chronologie`,
+          title: `L'ordre que dessinent les textes`,
+          events: [
+            {
+              date: `Sans commencement`,
+              label: `Allāh, et rien en dehors de Lui`,
+              note: `« Allāh était, et rien n'était en dehors de Lui » (al-Bukhārī). Il est « le Premier » : rien ne Le précède.`,
+            },
+            {
+              date: `Premières créatures`,
+              label: `Le Trône sur l'eau`,
+              note: `« Son Trône était sur l'eau » (11:7). Le hadith de ʿImrān le place avant les cieux et la terre.`,
+            },
+            {
+              date: `50 000 ans avant les cieux`,
+              label: `L'écriture des décrets`,
+              note: `« Il a fixé les mesures de toute chose cinquante mille ans avant de créer les cieux et la terre » (Muslim).`,
+            },
+            {
+              date: `« Six jours »`,
+              label: `Les cieux et la terre`,
+              note: `Une durée que les commentateurs ne confondent pas avec nos journées solaires (al-Qurtubī, 7/219).`,
+            },
+            {
+              date: `Avec le soleil`,
+              label: `Nos jours et nos nuits`,
+              note: `« Je fais alterner la nuit et le jour » (hadith qudsī) : notre temps naît avec ce qu'Il fait tourner.`,
+            },
+          ],
+          caption: `Les dates de cette frise ne sont pas des dates de calendrier ; **elles marquent un ordre, dont le premier terme est hors du temps**.`,
+        },
+        {
+          type: `p`,
+          text: `Lis cette frise de haut en bas en remarquant une chose : **la première ligne n'a pas de date**, parce qu'elle est hors du temps. Les lignes suivantes décrivent des créatures, et donc une succession : le Trône sur l'eau, l'écriture des décrets, les cieux et la terre. **La dernière ligne** est celle où commence le temps que nous connaissons, celui des jours et des nuits. Le temps, sous ses différentes formes, est toujours **du côté de la création**.`,
+        },
+        {
+          type: `h2`,
+          text: `Ibn ʿAtiyya : « le Premier » et « le Dernier »`,
+        },
+        {
+          type: `p`,
+          text: `Le commentateur malikite d'al-Andalus, **Ibn ʿAtiyya**, donne de « le Premier » et « le Dernier » (57:3) des définitions courtes et exactes, qui résument notre sujet :`,
+        },
+        {
+          type: `quote`,
+          text: `هُوَ الْأَوَّلُ **الذي ليس لوجوده بداية مفتتحة**. وَالْآخِرُ **الدائم الذي ليس له نهاية منقضية**. قال أبو بكر الوراق: هُوَ الْأَوَّلُ بالأزلية، وَالْآخِرُ بالأبدية، وهُوَ الْأَوَّلُ بالوجود، **إذ كل موجود فبعده وبه**. وَالْآخِرُ إذا ترقى العقل في الموجودات **حتى يكون إليه منتهاها**، قال ﷿: وَأَنَّ إِلى رَبِّكَ الْمُنْتَهى.
+
+« Le Premier » : **Celui dont l'existence n'a pas de début qui l'aurait ouverte**. « Le Dernier » : **le Permanent, qui n'a pas de fin qui le clôturerait**. Abū Bakr al-Warrāq a dit : Il est le Premier par l'éternité sans commencement, le Dernier par l'éternité sans fin ; Il est le Premier par l'existence, **puisque tout existant vient après Lui et existe par Lui** ; et le Dernier, quand l'intelligence remonte la chaîne des existants **jusqu'à ce qu'elle aboutisse à Lui**, comme Il a dit : « Et c'est vers ton Seigneur que tout aboutit » (53:42).`,
+          source: `Ibn ʿAtiyya (m. 542 H), al-Muharrar al-wajīz, 5/257, sur al-Hadīd 57:3`,
+        },
+        {
+          type: `p`,
+          text: `La formule d'Abū Bakr al-Warrāq, rapportée par Ibn ʿAtiyya, mérite qu'on s'y arrête : « **tout existant vient après Lui et existe par Lui** ». Deux mots : **après** et **par**. Le premier dit l'ordre ; le second dit la dépendance. Le temps fait partie des « existants » : il vient donc après Dieu, et il existe par Lui. Il ne peut pas Le contenir, puisqu'il dépend de Lui.`,
+        },
+        {
+          type: `degres`,
+          title: `Les deux éternités, selon Abū Bakr al-Warrāq`,
+          arabic: `الأزلية والأبدية`,
+          degres: [
+            {
+              label: `Le Premier : sans commencement`,
+              arabic: `الأول بالأزلية`,
+              note: `Aucun début n'a « ouvert » Son existence : il n'y a pas d'« avant » Lui.`,
+            },
+            {
+              label: `Tout existant vient après Lui et par Lui`,
+              arabic: `كل موجود فبعده وبه`,
+              note: `Le temps, l'espace, la matière : tout ce qui est créé est postérieur à Lui et dépend de Lui.`,
+            },
+            {
+              label: `Le Dernier : sans fin`,
+              arabic: `الآخر بالأبدية`,
+              note: `Aucune fin ne viendra « clore » Son existence : tout aboutit à Lui (53:42).`,
+            },
+          ],
+          direction: `asc`,
+          caption: `D'après Ibn ʿAtiyya, al-Muharrar al-wajīz, 5/257. **Le temps est encadré par Dieu des deux côtés : Il est avant lui et après lui.**`,
+        },
+        {
+          type: `comparaison`,
+          title: `Ce que disent les sources citées dans cette section`,
+          columns: [
+            `Ce qu'elles affirment`,
+            `Où le lire`,
+          ],
+          rows: [
+            {
+              criterion: `Hadith qudsī (Mālik, al-Bukhārī, Muslim)`,
+              cells: [
+                `« L'ordre est dans Ma main, Je fais alterner la nuit et le jour » : le temps n'est pas un agent.`,
+                `Al-Qurtubī, al-Jāmiʿ, 16/171`,
+              ],
+            },
+            {
+              criterion: `Ibn ʿUmar`,
+              cells: [
+                `Il reprend son fils Sālim qui parlait du temps comme d'une force agissante.`,
+                `Al-Qurtubī, al-Jāmiʿ, 16/171`,
+              ],
+            },
+            {
+              criterion: `Ibn ʿAbd al-Barr`,
+              cells: [
+                `« Je suis, tout le temps durant, Celui qui tient l'ordre » ; la Jāhiliyya attribuait au temps l'œuvre d'Allāh.`,
+                `Al-Tamhīd, 18/154`,
+              ],
+            },
+            {
+              criterion: `Al-Qushayrī, cité par al-Qurtubī`,
+              cells: [
+                `« S'il n'y a pas de soleil, il n'y a pas de jour » ; la durée de la création est un choix, non une nécessité.`,
+                `Al-Qurtubī, al-Jāmiʿ, 7/219`,
+              ],
+            },
+            {
+              criterion: `ʿAbd Allāh ibn ʿAmr (Muslim)`,
+              cells: [
+                `Les décrets fixés cinquante mille ans avant les cieux et la terre.`,
+                `Al-Qurtubī, al-Jāmiʿ, 9/52`,
+              ],
+            },
+            {
+              criterion: `Ibn ʿAtiyya et Abū Bakr al-Warrāq`,
+              cells: [
+                `« Le Premier, dont l'existence n'a pas de début » ; « tout existant vient après Lui et par Lui ».`,
+                `Al-Muharrar al-wajīz, 5/257`,
+              ],
+            },
+          ],
+          caption: `Toutes ces sources convergent : **le temps est une créature que Dieu fait tourner ; Lui n'a ni commencement ni fin**.`,
+        },
         { type: `h2`, text: `Conclusion` },
         {
           type: `p`,
