@@ -67848,6 +67848,190 @@ Cela n'est rien aux yeux des gens de compréhension parmi les gens de la Sunna, 
           title: `Pourquoi la hauteur n'est pas un lieu`,
           text: `Un lieu, c'est ce qui **contient** quelque chose. Or le Trône, le ciel, l'espace lui-même sont des créatures, qui n'existaient pas quand Dieu existait seul (voir le sujet « Dieu était, et rien n'était avec Lui »). Dire que Dieu est au-dessus de Sa création, ce n'est donc pas Le mettre **dans** quelque chose : c'est dire que **rien de créé n'est au-dessus de Lui**, comme le Prophète ﷺ L'a invoqué : « Tu es l'Apparent, rien n'est au-dessus de Toi ».`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : la bergère du mont Uhud`,
+        },
+        {
+          type: `p`,
+          text: `À Médine, un Compagnon possède quelques moutons, gardés par une jeune servante au pied du mont Uhud. Un jour, un loup emporte une bête. Le maître, en colère, gifle la jeune fille. Puis le remords le saisit, et il vient trouver le Prophète ﷺ : il doit justement affranchir un esclave en expiation, peut-il affranchir celle-ci ? L'imam **Mālik** rapporte la scène dans le Muwattaʾ :`,
+        },
+        {
+          type: `quote`,
+          text: `مَالِكٌ عَنْ هِلَالِ بْنِ أُسَامَةَ عَنْ عَطَاءِ بْنِ يَسَارٍ عَنْ عُمَرَ بْنِ الْحَكَمِ أَنَّهُ قَالَ: أَتَيْتُ رَسُولَ اللَّهِ ﷺ فَقُلْتُ: يَا رَسُولَ اللَّهِ إِنَّ لِي جَارِيَةً كَانَتْ تَرْعَى غَنَمًا لِي، فَجِئْتُهَا وَقَدْ فَقَدَتْ شَاةً، فَسَأَلْتُهَا عَنْهَا فَقَالَتْ: أَكَلَهَا الذِّئْبُ، فَأَسِفْتُ عَلَيْهَا، وَكُنْتُ مِنْ بَنِي آدَمَ، فَلَطَمْتُ حُرَّ وَجْهِهَا، وَعَلَيَّ رَقَبَةٌ، أَفَأُعْتِقُهَا؟ فَقَالَ لَهَا رَسُولُ اللَّهِ ﷺ: **أَيْنَ اللَّهُ؟ فَقَالَتْ: فِي السَّمَاءِ**. فَقَالَ: **مَنْ أَنَا؟** فَقَالَتْ: رَسُولُ اللَّهِ ﷺ. فَقَالَ رَسُولُ اللَّهِ ﷺ: **أَعْتِقْهَا**.
+
+Mālik, d'après Hilāl ibn Usāma, d'après ʿAtāʾ ibn Yasār, d'après ʿUmar ibn al-Hakam, qui dit : je suis venu trouver le Messager d'Allāh ﷺ et j'ai dit : « Ô Messager d'Allāh, j'ai une servante qui gardait mes moutons. Je suis allé la voir alors qu'il lui manquait une brebis ; je lui ai demandé ce qu'elle était devenue, elle a répondu : le loup l'a mangée. J'en ai été contrarié, je suis un fils d'Adam comme les autres, et je l'ai giflée au visage. Or je dois affranchir un esclave : puis-je l'affranchir ? » Le Messager d'Allāh ﷺ lui demanda : « **Où est Allāh ?** » Elle répondit : « **Au ciel.** » Il demanda : « **Qui suis-je ?** » Elle répondit : « Le Messager d'Allāh. » Le Messager d'Allāh ﷺ dit : « **Affranchis-la.** »`,
+          source: `Ibn ʿAbd al-Barr (m. 463 H), al-Tamhīd, 22/75, hadith du Muwattaʾ de Mālik`,
+        },
+        {
+          type: `p`,
+          text: `La version longue, rapportée par Muslim d'après Muʿāwiya ibn al-Hakam et citée aussi par Ibn ʿAbd al-Barr, contient une phrase émouvante du Compagnon sur la manière dont le Prophète ﷺ l'avait corrigé peu avant, pour une faute commise pendant la prière : « **Je n'ai jamais vu, ni avant ni après lui, un enseignant meilleur que lui. Par Allāh, il ne m'a ni frappé, ni rudoyé, ni insulté.** » Le même homme qui avait giflé sa servante venait d'être traité avec une douceur extrême.`,
+        },
+        {
+          type: `p`,
+          text: `Observe maintenant la question que pose le Prophète ﷺ pour vérifier la foi d'une jeune servante qui ne savait sans doute ni lire ni écrire : « **Où est Allāh ?** » Il ne lui demande pas une définition savante. Elle répond spontanément, avec les mots de tout croyant : « **Au ciel.** » Et c'est cette réponse, jointe au témoignage qu'il est le Messager, qui fait dire au Prophète ﷺ : « elle est croyante, affranchis-la ».`,
+        },
+        {
+          type: `quote`,
+          text: `قَالَ أَبُو عُمَرَ: مَعَانِي هَذَا الْحَدِيثِ وَاضِحَةٌ يُسْتَغْنَى عَنِ الْكَلَامِ فِيهَا، وَأَمَّا قَوْلُهُ: أَيْنَ اللَّهُ؟ فَقَالَتْ: فِي السَّمَاءِ، **فَعَلَى هَذَا أَهْلُ الْحَقِّ** لِقَوْلِ اللَّهِ ﷿: "أَأَمِنْتُمْ مَنْ فِي السَّمَاءِ"، وَلِقَوْلِهِ: "إِلَيْهِ يَصْعَدُ الْكَلِمُ الطَّيِّبُ"، وَلِقَوْلِهِ: "تَعْرُجُ الْمَلَائِكَةُ وَالرُّوحُ إِلَيْهِ"، وَمِثْلُ هَذَا فِي الْقُرْآنِ كَثِيرٌ ... وَفِيهِ رَدٌّ عَلَى الْمُعْتَزِلَةِ وَبَيَانٌ لِتَأْوِيلِ قَوْلِ اللَّهِ ﷿: "الرَّحْمَنُ عَلَى الْعَرْشِ اسْتَوَى"، **وَلَمْ يَزَلِ الْمُسْلِمُونَ فِي كُلِّ زَمَانٍ إِذَا دَهَمَهُمْ أَمْرٌ وَكَرَبَهُمْ غَمٌّ يَرْفَعُونَ وُجُوهَهُمْ وَأَيْدِيَهُمْ إِلَى السَّمَاءِ** رَغْبَةً إِلَى اللَّهِ ﷿ فِي الْكَفِّ عَنْهُمْ.
+
+Abū ʿUmar [Ibn ʿAbd al-Barr] a dit : les sens de ce hadith sont clairs et se passent de commentaire. Quant à sa question « Où est Allāh ? » et à sa réponse « Au ciel », **c'est sur cela que sont les gens de la vérité**, d'après la parole d'Allāh : « Êtes-vous à l'abri de Celui qui est au ciel ? » (67:16), « Vers Lui monte la bonne parole » (35:10), « Les anges et l'Esprit montent vers Lui » (70:4), et il y a beaucoup de passages semblables dans le Coran … Il y a là une réponse aux Muʿtazila et une explication de la parole d'Allāh « Le Tout Miséricordieux S'est établi sur le Trône ». **Et les musulmans, à toute époque, quand une affaire les accable et qu'une angoisse les étreint, n'ont jamais cessé de lever leurs visages et leurs mains vers le ciel**, pour supplier Allāh de les en délivrer.`,
+          source: `Ibn ʿAbd al-Barr, al-Tamhīd, 22/80-81`,
+        },
+        {
+          type: `p`,
+          text: `Ibn ʿAbd al-Barr ajoute aussitôt un petit récit, transmis sans nom de témoin (« on m'a rapporté »), mais qui illustre parfaitement ce geste universel. **Abū l-Dardāʾ**, une année où il n'était pas parti en expédition, confia une bourse de pièces à un homme : « Donne-la au premier combattant à l'air pauvre que tu verras. » L'homme la donna ; le pauvre **leva la tête vers le ciel** et dit : « Ô Allāh, Tu n'as pas oublié Hadīd ; fais que Hadīd ne T'oublie pas » (il parlait de lui-même). Quand on le rapporta à Abū l-Dardāʾ, il dit simplement : « **Le vrai maître du bienfait, c'est son Seigneur.** »`,
+        },
+        {
+          type: `focus`,
+          kind: `repere`,
+          title: `Ce que la scène nous apprend`,
+          text: `La réponse « au ciel » n'est pas une théorie de savant : c'est **la croyance spontanée** d'une servante, approuvée par le Prophète ﷺ comme signe de foi. Ibn ʿAbd al-Barr y voit la position des « gens de la vérité », confirmée par le geste de tous les croyants qui, dans la détresse, lèvent les mains vers le ciel.`,
+        },
+        {
+          type: `h2`,
+          text: `Al-Shinqītī : sept passages, une seule règle`,
+        },
+        {
+          type: `p`,
+          text: `Le Coran ne parle pas de l'établissement d'Allāh sur le Trône (istiwāʾ) une fois en passant. Al-Shinqītī relève **sept passages** où il est mentionné, puis il montre que le même verbe est employé pour des créatures, et il en tire la règle qu'il applique à tous les attributs.`,
+        },
+        {
+          type: `list`,
+          items: [
+            `**al-Aʿrāf, 7:54** : « Puis Il S'est établi sur le Trône ; Il couvre le jour de la nuit… »`,
+            `**Yūnus, 10:3** : « Puis Il S'est établi sur le Trône, administrant l'ordre. »`,
+            `**al-Raʿd, 13:2** : « Allāh est Celui qui a élevé les cieux sans piliers visibles, puis S'est établi sur le Trône. »`,
+            `**Tā-Hā, 20:5** : « Le Tout Miséricordieux S'est établi sur le Trône. »`,
+            `**al-Furqān, 25:59** : « Puis Il S'est établi sur le Trône, le Tout Miséricordieux : interroge à Son sujet un connaisseur. »`,
+            `**al-Sajda, 32:4** : « Puis Il S'est établi sur le Trône ; vous n'avez, en dehors de Lui, ni allié ni intercesseur. »`,
+            `**al-Hadīd, 57:4** : « Puis Il S'est établi sur le Trône ; Il sait ce qui pénètre dans la terre… et Il est avec vous où que vous soyez. »`,
+          ],
+        },
+        {
+          type: `quote`,
+          text: `وَقَالَ جَلَّ وَعَلَا فِي وَصْفِ الْحَادِثِ بِالِاسْتِوَاءِ عَلَى بَعْضِ الْمَخْلُوقَاتِ: "**لِتَسْتَوُوا عَلَى ظُهُورِهِ** ثُمَّ تَذْكُرُوا نِعْمَةَ رَبِّكُمْ إِذَا اسْتَوَيْتُمْ عَلَيْهِ"، "**فَإِذَا اسْتَوَيْتَ أَنْتَ وَمَنْ مَعَكَ عَلَى الْفُلْكِ**"، "**وَاسْتَوَتْ عَلَى الْجُودِيِّ**"، وَنَحْوَ ذَلِكَ مِنَ الْآيَاتِ. وَقَدْ عَلِمْتَ مِمَّا تَقَدَّمَ أَنَّهُ لَا إِشْكَالَ فِي ذَلِكَ، **وَأَنَّ لِلْخَالِقِ جَلَّ وَعَلَا اسْتِوَاءً لَائِقًا بِكَمَالِهِ وَجَلَالِهِ، وَلِلْمَخْلُوقِ أَيْضًا اسْتِوَاءً مُنَاسِبًا لِحَالِهِ، وَبَيْنَ اسْتِوَاءِ الْخَالِقِ وَالْمَخْلُوقِ مِنَ الْمُنَافَاةِ مَا بَيْنَ ذَاتِ الْخَالِقِ وَالْمَخْلُوقِ** ... وَيَنْبَغِي لِلنَّاظِرِ فِي هَذِهِ الْمَسْأَلَةِ التَّأَمُّلُ فِي أُمُورٍ: الْأَمْرُ الْأَوَّلُ: **أَنَّ جَمِيعَ الصِّفَاتِ مِنْ بَابٍ وَاحِدٍ، لِأَنَّ الْمَوْصُوفَ بِهَا وَاحِدٌ**.
+
+Et Il a dit, en décrivant des créatures par l'établissement sur d'autres créatures : « **afin que vous vous installiez sur leur dos**, puis que vous rappeliez le bienfait de votre Seigneur quand vous y êtes installés » (43:13), « **quand tu seras installé, toi et ceux qui sont avec toi, sur l'arche** » (23:28), « **et elle s'immobilisa sur le Jūdī** » (11:44), et d'autres versets semblables. Tu as compris de ce qui précède qu'il n'y a là aucune difficulté : **le Créateur a un établissement digne de Sa perfection et de Sa majesté, la créature a aussi un établissement conforme à son état, et entre l'établissement du Créateur et celui de la créature il y a la même incompatibilité qu'entre l'essence du Créateur et celle de la créature** … Celui qui examine cette question doit méditer plusieurs points ; le premier : **tous les attributs relèvent d'une seule règle, puisque Celui qui les possède est unique**.`,
+          source: `Muhammad al-Amīn al-Shinqītī (m. 1393 H), Adwāʾ al-Bayān, 2/29, sur al-Aʿrāf 7:54`,
+        },
+        {
+          type: `comparaison`,
+          title: `« Istawā » dans le Coran : pour Allāh, pour les créatures`,
+          columns: [
+            `L'établissement d'Allāh`,
+            `L'établissement des créatures`,
+          ],
+          rows: [
+            {
+              criterion: `Exemples`,
+              cells: [
+                `« Le Tout Miséricordieux S'est établi sur le Trône » (20:5), dans sept passages.`,
+                `Sur le dos des montures (43:13), sur l'arche (23:28), l'arche sur le Jūdī (11:44).`,
+              ],
+            },
+            {
+              criterion: `Ce qu'il implique pour la créature`,
+              cells: [
+                `Rien de ce qui caractérise la créature : ni besoin d'un support, ni effort, ni limite.`,
+                `Un appui, un besoin d'être porté, une position dans l'espace.`,
+              ],
+            },
+            {
+              criterion: `La règle`,
+              cells: [
+                `« Digne de Sa perfection et de Sa majesté. »`,
+                `« Conforme à son état. »`,
+              ],
+            },
+            {
+              criterion: `Entre les deux`,
+              cells: [
+                `« La même incompatibilité qu'entre les deux essences » (al-Shinqītī).`,
+                `« La même incompatibilité qu'entre les deux essences » (al-Shinqītī).`,
+              ],
+            },
+          ],
+          caption: `D'après Adwāʾ al-Bayān, 2/29. **Le Coran emploie le même verbe ; il ne décrit pas la même réalité.**`,
+        },
+        {
+          type: `p`,
+          text: `Ce tableau montre pourquoi al-Shinqītī écrit qu'« il n'y a là aucune difficulté ». **Les exemples** prouvent que le Coran utilise librement le même verbe pour Allāh et pour un homme sur un chameau. **La deuxième ligne** est la plus importante : l'homme a besoin de sa monture pour être porté ; si elle s'effondre, il tombe. Rien de cela ne peut être dit d'Allāh, puisque c'est Lui qui porte le Trône et toute chose par Sa puissance. **La règle** en découle : chacun selon ce qui lui convient. Et **la dernière ligne** répète la formule qui revient dans toute l'œuvre d'al-Shinqītī : la différence entre les attributs est celle qui sépare les essences.`,
+        },
+        {
+          type: `h2`,
+          text: `Al-Qurtubī : deux voies, et ce que disaient les premiers`,
+        },
+        {
+          type: `p`,
+          text: `Al-Qurtubī, en commentant 7:54, présente honnêtement les deux grandes manières d'aborder la question à son époque. Il expose d'abord la position des théologiens spéculatifs (mutakallimūn), qui, pour éviter toute idée de lieu, refusaient de parler de « direction ». Puis il décrit ce que disaient les premières générations :`,
+        },
+        {
+          type: `quote`,
+          text: `وَقَدْ كَانَ السَّلَفُ الْأَوَّلُ ﵃ **لَا يَقُولُونَ بِنَفْيِ الْجِهَةِ وَلَا يَنْطِقُونَ بِذَلِكَ، بَلْ نَطَقُوا هُمْ وَالْكَافَّةُ بِإِثْبَاتِهَا لِلَّهِ تَعَالَى كَمَا نَطَقَ كِتَابُهُ وَأَخْبَرَتْ رُسُلُهُ**. **وَلَمْ يُنْكِرْ أَحَدٌ مِنَ السَّلَفِ الصَّالِحِ أَنَّهُ اسْتَوَى عَلَى عَرْشِهِ حَقِيقَةً**. وَخُصَّ الْعَرْشُ بِذَلِكَ لِأَنَّهُ أَعْظَمُ مَخْلُوقَاتِهِ، **وَإِنَّمَا جَهِلُوا كَيْفِيَّةَ الِاسْتِوَاءِ فَإِنَّهُ لَا تُعْلَمُ حَقِيقَتُهُ**. قَالَ مَالِكٌ ﵀: الِاسْتِوَاءُ مَعْلُومٌ - يَعْنِي فِي اللُّغَةِ - وَالْكَيْفُ مَجْهُولٌ، وَالسُّؤَالُ عَنْ هَذَا بِدْعَةٌ. **وَكَذَا قَالَتْ أُمُّ سَلَمَةَ** ﵂ ... وَالِاسْتِوَاءُ فِي كَلَامِ الْعَرَبِ هُوَ **الْعُلُوُّ وَالِاسْتِقْرَارُ** ... وَحَكَى أَبُو عُمَرَ بْنُ عَبْدِ الْبَرِّ عَنْ أَبِي عُبَيْدَةَ فِي قَوْلِهِ تَعَالَى: "الرَّحْمَنُ عَلَى الْعَرْشِ اسْتَوَى" قَالَ: **عَلَا**.
+
+Les premiers salaf, qu'Allāh les agrée, **ne niaient pas la direction et n'en parlaient pas en ce sens ; au contraire, eux et l'ensemble [des musulmans] l'affirmaient pour Allāh, comme Son Livre l'a dit et comme Ses messagers l'ont annoncé**. **Aucun des pieux devanciers n'a nié qu'Il Se soit établi réellement sur Son Trône.** Le Trône est mentionné en particulier parce qu'il est la plus immense de Ses créatures. **Ils ignoraient seulement la modalité de l'établissement, car sa réalité ne peut être connue.** Mālik, qu'Allāh lui fasse miséricorde, a dit : « L'établissement est connu » - c'est-à-dire dans la langue - « le comment est inconnu, et interroger à ce sujet est une innovation. » **Umm Salama, qu'Allāh l'agrée, a dit la même chose** … L'istiwāʾ, dans la langue des Arabes, signifie **l'élévation et le fait de se fixer** … Abū ʿUmar ibn ʿAbd al-Barr rapporte d'Abū ʿUbayda, à propos de « Le Tout Miséricordieux S'est établi sur le Trône » : « **Il S'est élevé.** »`,
+          source: `Al-Qurtubī (m. 671 H), al-Jāmiʿ li-ahkām al-Qurʾān, 7/219-220, sur al-Aʿrāf 7:54`,
+        },
+        {
+          type: `p`,
+          text: `Ce passage d'al-Qurtubī est précieux parce qu'il distingue clairement **deux époques**. Les théologiens de son temps refusaient le mot « direction » par crainte de limiter Dieu dans un lieu. Mais al-Qurtubī reconnaît que **les premiers musulmans ne parlaient pas ainsi** : ils affirmaient ce que le Coran affirme, et ils s'arrêtaient au « comment ». Il cite à l'appui la formule de Mālik et ajoute qu'**Umm Salama**, épouse du Prophète ﷺ, avait dit la même chose avant lui.`,
+        },
+        {
+          type: `p`,
+          text: `Al-Qurtubī, fidèle à sa propre école théologique, explique ensuite la hauteur divine comme l'élévation de Sa gloire et de Ses attributs, au-dessus de laquelle il n'y a rien. Les deux lectures ne se contredisent pas sur l'essentiel : **Allāh est au-dessus de tout, absolument, et rien n'est au-dessus de Lui**. Mais le témoignage d'al-Qurtubī sur les premiers salaf reste un repère important pour comprendre la position de Mālik et d'Ibn ʿAbd al-Barr.`,
+        },
+        {
+          type: `balance`,
+          title: `Ce que les premiers musulmans affirmaient, ce qu'ils refusaient`,
+          arabic: `الاستواء معلوم والكيف مجهول`,
+          affirmLabel: `Ils affirmaient`,
+          denyLabel: `Ils refusaient`,
+          affirm: [
+            `Qu'Allāh S'est établi sur Son Trône « réellement » (al-Qurtubī).`,
+            `Le sens connu du mot dans la langue : élévation (Abū ʿUbayda, rapporté par Ibn ʿAbd al-Barr).`,
+            `La réponse de la servante : « Au ciel » (le Prophète ﷺ l'approuve).`,
+          ],
+          deny: [
+            `De se prononcer sur le comment, « qui ne peut être connu ».`,
+            `D'interroger sur la modalité : « c'est une innovation » (Mālik).`,
+            `D'imaginer un établissement semblable à celui d'une créature sur sa monture (al-Shinqītī).`,
+          ],
+          caption: `D'après al-Qurtubī (7/219-220), Ibn ʿAbd al-Barr (22/80) et al-Shinqītī (2/29). **Affirmer le fait, s'arrêter devant le comment.**`,
+        },
+        {
+          type: `p`,
+          text: `Cette balance résume l'attitude que décrivent nos trois savants. **Du côté de l'affirmation**, on trouve ce que les textes disent clairement : l'établissement, l'élévation, la réponse approuvée de la servante. **Du côté du refus**, on trouve tout ce que les textes ne disent pas : le comment, la modalité, l'image d'une créature. C'est exactement la méthode du verset 42:11 : affirmer sans comparer.`,
+        },
+        {
+          type: `cycle`,
+          title: `Ce que la hauteur divine produit dans le cœur`,
+          arabic: `العلي الأعلى`,
+          center: `al-ʿAlī`,
+          steps: [
+            {
+              label: `Lever les mains`,
+              note: `« Les musulmans n'ont jamais cessé de lever leurs visages et leurs mains vers le ciel » (Ibn ʿAbd al-Barr).`,
+            },
+            {
+              label: `Se prosterner`,
+              note: `Dans la prosternation, on dit « Subhāna rabbiya l-aʿlā » : gloire à mon Seigneur, le Très-Haut, au moment où l'on est le plus bas.`,
+            },
+            {
+              label: `Faire monter le bien`,
+              note: `« Vers Lui monte la bonne parole, et Il élève l'œuvre bonne » (35:10).`,
+            },
+            {
+              label: `Se savoir vu de haut`,
+              note: `Celui qui est au-dessus de tout voit tout : rien de ce qui est en bas ne Lui échappe.`,
+            },
+          ],
+          caption: `La hauteur d'Allāh n'éloigne pas le croyant ; **elle oriente toute sa prière vers le haut**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce cycle montre comment la croyance en la hauteur divine se traduit dans les gestes du croyant. **Lever les mains** dans l'invocation, comme tous les musulmans à toute époque. **Se prosterner**, le front au sol, en disant « gloire à mon Seigneur, le Très-Haut » : le corps au plus bas, la pensée vers le plus haut. **Faire monter le bien**, puisque la bonne parole monte vers Lui. Et **se savoir vu** : la hauteur n'est pas une distance qui empêcherait de voir, c'est une position d'où l'on voit tout.`,
+        },
         { type: `h2`, text: `Ce que disent les savants, en un coup d'œil` },
         {
           type: `comparaison`,
