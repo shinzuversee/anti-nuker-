@@ -66816,6 +66816,249 @@ Le sens de la parole de ʿĀʾisha « dont l'ouïe embrasse les voix » est : **
           type: `p`,
           text: `L'histoire de Khawla rend tout cela concret : une femme âgée, humiliée par son mari, murmure sa plainte, et la réponse descend du ciel sous forme de versets qui changeront la loi pour toujours. **C'est cela, « Il entend ».**`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : « vous n'invoquez ni un sourd ni un absent »`,
+        },
+        {
+          type: `p`,
+          text: `Imagine une caravane de Compagnons en voyage avec le Prophète ﷺ. À chaque fois qu'ils gravissent une colline, ils crient « Allāhu akbar » ; à chaque fois qu'ils descendent dans une vallée, ils disent « Subhāna Llāh ». C'est une belle habitude, et c'est le Prophète ﷺ qui la leur a enseignée. Mais ce jour-là, dans leur ferveur, ils crient de plus en plus fort, comme si leur Seigneur était loin.`,
+        },
+        {
+          type: `quote`,
+          text: `كَانَ الصَّحَابَةُ ﵃ مَعَ النَّبِيِّ ﷺ؛ إِذَا عَلَوْا نَشَزًا كَبَّرُوا، وَإِذَا نَزَلُوا وَادِيًا سَبَّحُوا؛ **لِأَنَّ الْإِنْسَانَ إِذَا ارْتَفَعَ قَدْ يَتَعَاظَمُ فِي نَفْسِهِ** ... فَنَاسَبَ أَنْ يَقُولَ: اللَّهُ أَكْبَرُ! تَذْكِيرًا لِنَفْسِهِ بِكِبْرِيَاءِ اللَّهِ ﷿، وَأَمَّا إِذَا نَزَلَ؛ فَهَذَا سُفُولٌ وَنُزُولٌ، فَيَقُولُ: سُبْحَانَ اللَّهِ! تَذْكِيرًا لِنَفْسِهِ بِتَنَزُّهِ اللَّهِ عَنِ السُّفْلِ. فَكَانَ الصَّحَابَةُ ﵃ يَرْفَعُونَ أَصْوَاتَهُمْ بِالذِّكْرِ جِدًّا، فَقَالَ النَّبِيُّ ﵊: "**أَيُّهَا النَّاسُ! ارْبَعُوا عَلَى أَنْفُسِكُمْ**"؛ يَعْنِي: هَوِّنُوا عَلَيْهَا. "**فَإِنَّكُمْ لَا تَدْعُونَ أَصَمَّ وَلَا غَائِبًا**"؛ لَا تَدْعُونَ أَصَمَّ لَا يَسْمَعُ، وَلَا غَائِبًا لَا يَرَى. "**إِنَّمَا تَدْعُونَ سَمِيعًا**"؛ يَسْمَعُ ذِكْرَكُمْ، "**بَصِيرًا**"؛ يَرَى أَفْعَالَكُمْ.
+
+Les Compagnons, qu'Allāh les agrée, étaient avec le Prophète ﷺ : quand ils montaient une hauteur, ils disaient « Allāhu akbar » ; quand ils descendaient dans une vallée, ils disaient « Subhāna Llāh ». **Car l'homme, quand il s'élève, risque de se sentir grand en lui-même** … il convient donc qu'il dise « Allāh est plus grand », pour se rappeler la grandeur d'Allāh ; et quand il descend, ce qui est un abaissement, il dit « Gloire à Allāh », pour se rappeler qu'Allāh est au-dessus de toute bassesse. Les Compagnons élevaient beaucoup la voix dans ce rappel ; le Prophète ﷺ dit alors : « **Ô gens, ménagez-vous !** », c'est-à-dire : allez doucement. « **Car vous n'invoquez ni un sourd ni un absent** » : ni un sourd qui n'entendrait pas, ni un absent qui ne verrait pas. « **Vous invoquez Quelqu'un qui entend** » votre rappel, « **et qui voit** » vos actes.`,
+          source: `Muhammad ibn Sālih al-ʿUthaymīn (m. 1421 H), Sharh al-ʿAqīda al-Wāsitiyya, 2/54 ; hadith d'Abū Mūsā al-Ashʿarī rapporté par al-Bukhārī et Muslim`,
+        },
+        {
+          type: `p`,
+          text: `Cette scène montre que l'attribut divin n'est pas une notion abstraite : il **change la manière de prier**. Ceux qui crient très fort croient, sans le formuler, que leur Seigneur est loin et a besoin qu'on élève la voix pour entendre. Le Prophète ﷺ corrige cette image intérieure : Il n'est ni sourd, ni absent. **Il entend le murmure comme le cri, et voit le geste comme l'intention.**`,
+        },
+        {
+          type: `p`,
+          text: `Al-Shinqītī rattache ce hadith au verset de la sourate Tā-Hā : « Si tu parles à voix haute, Il connaît le secret, et ce qui est plus caché encore » (20:7). Il en tire la conséquence pratique : « **tu n'as donc pas besoin d'élever la voix dans l'invocation** », comme le dit aussi le Coran : « Invoquez votre Seigneur humblement et en secret » (7:55).`,
+        },
+        {
+          type: `quote`,
+          text: `وَقَوْلُهُ تَعَالَى فِي هَذِهِ الْآيَةِ الْكَرِيمَةِ: "وَإِنْ تَجْهَرْ بِالْقَوْلِ فَإِنَّهُ يَعْلَمُ السِّرَّ" **أَيْ فَلَا حَاجَةَ لَكَ إِلَى الْجَهْرِ بِالدُّعَاءِ وَنَحْوِهِ**، كَمَا قَالَ تَعَالَى: "ادْعُوا رَبَّكُمْ تَضَرُّعًا وَخُفْيَةً"، وَقَالَ تَعَالَى: "وَاذْكُرْ رَبَّكَ فِي نَفْسِكَ تَضَرُّعًا وَخِيفَةً وَدُونَ الْجَهْرِ مِنَ الْقَوْلِ" ... **وَيَعْلَمُ مَا هُوَ أَخْفَى مِنَ السِّرِّ**.
+
+Sa parole dans ce noble verset, « si tu parles à voix haute, Il connaît le secret », signifie : **tu n'as donc pas besoin de parler fort dans l'invocation et ce qui lui ressemble**, comme Il a dit : « Invoquez votre Seigneur humblement et en secret », et « Rappelle-toi ton Seigneur en toi-même, humblement et avec crainte, sans élever la voix » … **Et Il connaît ce qui est plus caché que le secret.**`,
+          source: `Muhammad al-Amīn al-Shinqītī (m. 1393 H), Adwāʾ al-Bayān, 4/7, sur Tā-Hā 20:7`,
+        },
+        {
+          type: `degres`,
+          title: `« Le secret, et ce qui est plus caché encore » (20:7)`,
+          arabic: `يعلم السر وأخفى`,
+          degres: [
+            {
+              label: `La parole à voix haute`,
+              arabic: `الجهر بالقول`,
+              note: `Ce que tout le monde entend autour de toi.`,
+            },
+            {
+              label: `Le secret`,
+              arabic: `السر`,
+              note: `Ce que tu murmures, ou ce que tu confies à une seule personne.`,
+            },
+            {
+              label: `Ce qui est plus caché encore`,
+              arabic: `وأخفى`,
+              note: `Ce que tu penses sans le dire, et même ce que tu n'as pas encore pensé.`,
+            },
+          ],
+          direction: `desc`,
+          caption: `Pour nous, chaque marche est plus difficile à atteindre ; **pour Allāh, elles sont toutes également connues**.`,
+        },
+        {
+          type: `p`,
+          text: `Cette échelle descend du plus visible au plus enfoui. **La parole à voix haute**, tous l'entendent. **Le secret**, seul celui à qui tu le confies le connaît. **« Ce qui est plus caché encore »**, al-Shinqītī le rejette comme un verbe et le lit comme un comparatif : ce qui est plus caché que le secret, c'est ce que tu gardes en toi sans même le formuler. Pour une créature, chaque marche est plus difficile à atteindre que la précédente. Pour Allāh, la dernière n'est pas plus difficile que la première.`,
+        },
+        {
+          type: `h2`,
+          text: `Al-Shinqītī : le même mot pour le Créateur et la créature`,
+        },
+        {
+          type: `p`,
+          text: `Une objection revient souvent : « Si vous dites que Dieu sait, entend et voit, et que l'homme aussi sait, entend et voit, vous les mettez au même niveau. » Al-Shinqītī répond par une démonstration très simple : **le Coran lui-même utilise les mêmes mots pour Allāh et pour les créatures**, et il les sépare pourtant totalement. Il passe en revue sept attributs, un par un.`,
+        },
+        {
+          type: `quote`,
+          text: `فَقَدْ قَالَ تَعَالَى فِي وَصْفِ نَفْسِهِ بِالْقُدْرَةِ: وَاللَّهُ عَلَى كُلِّ شَيْءٍ قَدِيرٌ ... وَقَالَ فِي وَصْفِ الْحَادِثِ بِهَا: إِلَّا الَّذِينَ تَابُوا مِنْ قَبْلِ أَنْ تَقْدِرُوا عَلَيْهِمْ، **فَأَثْبَتَ لِنَفْسِهِ قُدْرَةً حَقِيقِيَّةً لَائِقَةً بِجَلَالِهِ وَكَمَالِهِ، وَأَثْبَتَ لِبَعْضِ الْحَوَادِثِ قُدْرَةً مُنَاسِبَةً لِحَالِهِمْ مِنَ الضَّعْفِ وَالِافْتِقَارِ وَالْحُدُوثِ وَالْفَنَاءِ**، وَبَيْنَ قُدْرَتِهِ وَقُدْرَةِ مَخْلُوقِهِ مِنَ الْمُنَافَاةِ مَا بَيْنَ ذَاتِهِ وَذَاتِ مَخْلُوقِهِ ... فَلَهُ جَلَّ وَعَلَا عِلْمٌ حَقِيقِيٌّ لَائِقٌ بِكَمَالِهِ وَجَلَالِهِ، وَلِلْمَخْلُوقِ عِلْمٌ مُنَاسِبٌ لِحَالِهِ ... **فَلَهُ جَلَّ وَعَلَا سَمْعٌ وَبَصَرٌ حَقِيقِيَّانِ يَلِيقَانِ بِكَمَالِهِ وَجَلَالِهِ، وَلِلْمَخْلُوقِ سَمْعٌ وَبَصَرٌ مُنَاسِبَانِ لِحَالِهِ، وَبَيْنَ سَمْعِ الْخَالِقِ وَبَصَرِهِ، وَسَمْعِ الْمَخْلُوقِ وَبَصَرِهِ مِنَ الْمُنَافَاةِ مَا بَيْنَ ذَاتِ الْخَالِقِ وَالْمَخْلُوقِ**.
+
+Il a dit, en Se décrivant par la puissance : « Allāh a pouvoir sur toute chose » … et, en décrivant des créatures par elle : « sauf ceux qui se repentent avant que vous n'ayez pouvoir sur eux ». **Il S'est donc attribué une puissance réelle, digne de Sa majesté et de Sa perfection, et Il a attribué à certaines créatures une puissance conforme à leur état de faiblesse, de dépendance, de commencement et de disparition** ; et entre Sa puissance et celle de Sa créature, il y a la même incompatibilité qu'entre Son essence et celle de Sa créature … Il a une science réelle, digne de Sa perfection et de Sa majesté, et la créature a une science conforme à son état … **Il a une ouïe et une vue réelles, dignes de Sa perfection et de Sa majesté, et la créature a une ouïe et une vue conformes à son état ; et entre l'ouïe et la vue du Créateur, et l'ouïe et la vue de la créature, il y a la même incompatibilité qu'entre l'essence du Créateur et celle de la créature.**`,
+          source: `Al-Shinqītī, Adwāʾ al-Bayān, 2/20-21, sur al-Aʿrāf 7:54`,
+        },
+        {
+          type: `comparaison`,
+          title: `Les mêmes mots dans le Coran, deux réalités incompatibles`,
+          columns: [
+            `Dit d'Allāh`,
+            `Dit de la créature`,
+          ],
+          rows: [
+            {
+              criterion: `La puissance`,
+              cells: [
+                `« Allāh a pouvoir sur toute chose » (2:284)`,
+                `« Avant que vous n'ayez pouvoir sur eux » (5:34)`,
+              ],
+            },
+            {
+              criterion: `La volonté`,
+              cells: [
+                `« Quand Il veut une chose, Il lui dit : Sois ! et elle est » (36:82)`,
+                `« Vous voulez les biens de ce monde » (8:67)`,
+              ],
+            },
+            {
+              criterion: `La science`,
+              cells: [
+                `« Allāh sait toute chose » (24:35)`,
+                `« Ils lui annoncèrent un garçon savant » (51:28)`,
+              ],
+            },
+            {
+              criterion: `La vie`,
+              cells: [
+                `« Le Vivant qui ne meurt pas » (25:58)`,
+                `« Le jour où il naquit, mourra et sera ressuscité vivant » (19:15)`,
+              ],
+            },
+            {
+              criterion: `L'ouïe et la vue`,
+              cells: [
+                `« Allāh est Audient et Voyant » (22:75)`,
+                `« Nous l'avons fait entendant et voyant » (76:2)`,
+              ],
+            },
+            {
+              criterion: `La parole`,
+              cells: [
+                `« Allāh a parlé à Moïse de vive voix » (4:164)`,
+                `« Quand il lui eut parlé, il dit… » (12:54)`,
+              ],
+            },
+          ],
+          caption: `D'après al-Shinqītī, Adwāʾ al-Bayān, 2/20-22. **Le mot est le même ; entre les deux colonnes, il y a la distance qui sépare le Créateur de la créature.**`,
+        },
+        {
+          type: `p`,
+          text: `Ce tableau, construit à partir des versets cités par al-Shinqītī, est une démonstration à lui seul. **Sur chaque ligne**, le Coran emploie exactement le même mot dans les deux colonnes : qudra, irāda, ʿilm, hayāt, samʿ, basar, kalām. Personne ne conclut que l'homme « savant » de 51:28 est l'égal d'Allāh « qui sait toute chose ». La différence n'est pas dans le mot, elle est dans **celui qui le porte**. Al-Shinqītī résume : entre les deux attributs, il y a « la même incompatibilité qu'entre les deux essences ».`,
+        },
+        {
+          type: `p`,
+          text: `Regarde en particulier **la ligne de la puissance**. Al-Shinqītī décrit la puissance humaine par quatre mots : **faiblesse, dépendance, commencement, disparition**. Notre pouvoir est faible, il dépend de mille conditions, il a commencé un jour et il finira. La puissance divine est l'inverse exact de ces quatre limites. C'est pour cela qu'un même mot peut désigner deux réalités aussi éloignées.`,
+        },
+        {
+          type: `balance`,
+          title: `La puissance humaine et la puissance divine, selon al-Shinqītī`,
+          arabic: `قدرة حقيقية لائقة بجلاله`,
+          affirmLabel: `La puissance d'Allāh`,
+          denyLabel: `La puissance de la créature`,
+          affirm: [
+            `Réelle et parfaite, « digne de Sa majesté ».`,
+            `Sans commencement et sans fin.`,
+            `Elle ne dépend de rien : « Sois ! et c'est ».`,
+          ],
+          deny: [
+            `Marquée par la faiblesse (al-daʿf).`,
+            `Dépendante de moyens et de conditions (al-iftiqār).`,
+            `Elle a commencé et disparaîtra (al-hudūth wa-l-fanāʾ).`,
+          ],
+          caption: `D'après Adwāʾ al-Bayān, 2/20. **Ce qui est une limite dans la colonne de droite est absent de la colonne de gauche.**`,
+        },
+        {
+          type: `h2`,
+          text: `Pourquoi « Il sait » suppose une science`,
+        },
+        {
+          type: `p`,
+          text: `Un courant ancien, les Muʿtazila, voulait affirmer qu'Allāh est « savant », « puissant », « audient », tout en niant qu'Il ait **une** science, **une** puissance, **une** ouïe. Ils craignaient de multiplier les éternels. Al-Shinqītī répond par un argument de pur bon sens, emprunté à la logique du langage :`,
+        },
+        {
+          type: `quote`,
+          text: `وَالْمُعْتَزِلَةُ يَنْفُونَهَا وَيُثْبِتُونَ أَحْكَامَهَا فَيَقُولُونَ: هُوَ تَعَالَى حَيٌّ قَادِرٌ، مُرِيدٌ عَلِيمٌ، سَمِيعٌ بَصِيرٌ، مُتَكَلِّمٌ بِذَاتِهِ، لَا بِقُدْرَةٍ قَائِمَةٍ بِذَاتِهِ ... وَمَذْهَبُهُمُ الْبَاطِلُ لَا يَخْفَى بُطْلَانُهُ وَتَنَاقُضُهُ عَلَى أَدْنَى عَاقِلٍ؛ **لِأَنَّ مِنَ الْمَعْلُومِ أَنَّ الْوَصْفَ الَّذِي مِنْهُ الِاشْتِقَاقُ إِذَا عُدِمَ فَالِاشْتِقَاقُ مِنْهُ مُسْتَحِيلٌ**، فَإِذَا عُدِمَ السَّوَادُ عَنْ جِرْمٍ مَثَلًا اسْتَحَالَ أَنْ تَقُولَ هُوَ أَسْوَدُ ... وَكَذَلِكَ **إِذَا لَمْ يَقُمِ الْعِلْمُ وَالْقُدْرَةُ بِذَاتٍ، اسْتَحَالَ أَنْ تَقُولَ: هِيَ عَالِمَةٌ قَادِرَةٌ**.
+
+Les Muʿtazila nient ces attributs tout en affirmant leurs conséquences : ils disent qu'Il est vivant, puissant, voulant, savant, audient, voyant, parlant par Son essence, et non par une puissance qui subsisterait en Lui … Leur doctrine, fausse, est d'une contradiction évidente pour le moins intelligent des hommes : **il est connu que si la qualité dont un mot est dérivé est absente, la dérivation est impossible**. Si la noirceur est absente d'un corps, il est impossible de dire qu'il est noir … De même, **si la science et la puissance ne sont pas présentes en un être, il est impossible de dire qu'il est savant et puissant**.`,
+          source: `Al-Shinqītī, Adwāʾ al-Bayān, 2/22`,
+        },
+        {
+          type: `schema`,
+          title: `L'argument du « noir sans noirceur »`,
+          arabic: `وعند فقد الوصف لا يشتق`,
+          variant: `flow`,
+          nodes: [
+            {
+              label: `Un mot dérivé`,
+              arabic: `أسود / عالم`,
+              note: `« Noir », « savant », « puissant » sont dérivés d'une qualité : la noirceur, la science, la puissance.`,
+            },
+            {
+              label: `La qualité absente`,
+              arabic: `إذا عدم الوصف`,
+              note: `Un objet sans noirceur ne peut pas être appelé noir. C'est une évidence de la langue et de la raison.`,
+            },
+            {
+              label: `La conséquence`,
+              arabic: `استحال الاشتقاق`,
+              note: `Dire « Allāh est savant » en niant qu'Il ait une science, c'est dire « noir » d'un objet sans noirceur.`,
+            },
+            {
+              label: `La position juste`,
+              arabic: `علم حقيقي لائق بجلاله`,
+              note: `Il est Savant parce qu'Il a une science réelle, qui ne ressemble à aucune science créée.`,
+            },
+          ],
+          caption: `Al-Shinqītī cite le vers de Marāqī al-suʿūd : « **Quand la qualité manque, on ne dérive pas ; et le Muʿtazilite a manqué la vérité.** »`,
+        },
+        {
+          type: `p`,
+          text: `Ce schéma suit l'argument pas à pas. **Un mot comme « savant »** n'est pas une étiquette arbitraire : il signifie « qui possède la science ». **Si la science est absente**, le mot devient faux, comme « noir » appliqué à un objet blanc. **La conséquence** est donc qu'on ne peut pas dire « Allāh est savant » en niant toute science en Lui. **La position juste** affirme une science réelle, et la négation de la ressemblance protège d'imaginer une science comme la nôtre. On retrouve les deux fondements du verset 42:11.`,
+        },
+        {
+          type: `h2`,
+          text: `Ce que ces attributs changent : « comme si tu Le voyais »`,
+        },
+        {
+          type: `p`,
+          text: `Tout ce qui précède pourrait sembler théorique. Mais le Prophète ﷺ a résumé l'effet de ces attributs sur la vie du croyant en une phrase, lorsque Jibrīl lui a demandé ce qu'est l'excellence (al-ihsān). Ibn ʿUthaymīn l'explique ainsi :`,
+        },
+        {
+          type: `quote`,
+          text: `فَالْإِحْسَانُ فِي عِبَادَةِ اللَّهِ فَسَّرَهُ النَّبِيُّ ﷺ حِينَ سَأَلَهُ جِبْرِيلُ، فَقَالَ: مَا الْإِحْسَانُ؟ قَالَ: "**أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ**". وَهَذَا أَكْمَلُ مِنَ الَّذِي بَعْدَهُ، **لِأَنَّ الَّذِي يَعْبُدُ اللَّهَ كَأَنَّهُ يَرَاهُ عِبَادَةُ طَلَبٍ وَرَغْبَةٍ**، "**فَإِنْ لَمْ تَكُنْ تَرَاهُ، فَإِنَّهُ يَرَاكَ**"، أَيْ: فَإِنْ لَمْ تَصِلْ إِلَى هَذِهِ الْحَالِ، فَاعْلَمْ أَنَّهُ يَرَاكَ، **وَالَّذِي يَعْبُدُ اللَّهَ عَلَى هَذِهِ الْمَرْتَبَةِ يَعْبُدُهُ عِبَادَةَ خَوْفٍ وَهَرَبٍ**، لِأَنَّهُ يَخَافُ مِمَّنْ يَرَاهُ.
+
+L'excellence dans l'adoration d'Allāh, le Prophète ﷺ l'a expliquée quand Jibrīl lui demanda : « Qu'est-ce que l'excellence ? » Il répondit : « **C'est que tu adores Allāh comme si tu Le voyais.** » C'est le degré le plus parfait, **car celui qui adore Allāh comme s'il Le voyait L'adore par désir et par aspiration**. « **Et si tu ne Le vois pas, Lui te voit** » : c'est-à-dire, si tu n'atteins pas cet état, sache qu'Il te voit ; **et celui qui adore Allāh à ce degré L'adore par crainte et par fuite [du péché]**, car il craint Celui qui le voit.`,
+          source: `Ibn ʿUthaymīn, Sharh al-ʿAqīda al-Wāsitiyya, 1/225 ; hadith de Jibrīl rapporté par Muslim d'après ʿUmar`,
+        },
+        {
+          type: `degres`,
+          title: `Les deux degrés de l'excellence, selon Ibn ʿUthaymīn`,
+          arabic: `الإحسان`,
+          degres: [
+            {
+              label: `« Lui te voit »`,
+              arabic: `فإنه يراك`,
+              note: `Savoir qu'on est vu : on adore par crainte, et l'on fuit le péché. C'est la vue divine qui agit sur le cœur.`,
+            },
+            {
+              label: `« Comme si tu Le voyais »`,
+              arabic: `كأنك تراه`,
+              note: `Être tellement présent qu'on se tient devant Lui : on adore par désir et par aspiration. C'est le degré le plus parfait.`,
+            },
+          ],
+          direction: `asc`,
+          caption: `D'après Ibn ʿUthaymīn (1/225). **Le premier degré repose sur l'attribut de la vue ; le second sur la présence du cœur.**`,
+        },
+        {
+          type: `p`,
+          text: `Ces deux degrés montrent comment un attribut devient une force intérieure. **Le premier degré**, « Lui te voit », est accessible à tous : il suffit de croire vraiment à l'attribut de la vue. Celui qui sait qu'il est vu se retient, comme on se retient devant un témoin. **Le second degré**, « comme si tu Le voyais », est plus haut : on ne se contente plus de se savoir observé, on se tient en présence, avec amour et désir. Ibn ʿUthaymīn le dit : le premier est une adoration de crainte, le second une adoration d'aspiration.`,
+        },
+        {
+          type: `objection`,
+          objection: `Si Dieu voit et entend tout, pourquoi ne répond-Il pas toujours à mes invocations comme je le souhaite ?`,
+          reponse: `Entendre n'est pas obéir. Selon un hadith rapporté par l'imam Ahmad, le Prophète ﷺ a dit que l'invocation n'est jamais perdue : elle est exaucée, ou un mal équivalent est écarté, ou elle est gardée pour l'au-delà. Celui qui entend tout sait aussi ce qui est bon pour toi, mieux que toi. Le sujet « L'invocation change-t-elle ce qui est écrit ? » développe ce point.`,
+        },
         { type: `h2`, text: `Ce que disent les savants, en un coup d'œil` },
         {
           type: `comparaison`,
