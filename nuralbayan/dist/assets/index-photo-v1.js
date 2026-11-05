@@ -64067,6 +64067,301 @@ C'est **la règle de Dieu envers Ses serviteurs, dans le bien comme dans le mal*
           title: `L'équilibre des Compagnons`,
           text: `Les dix promis au Paradis, dit al-Qurtubī, sont devenus **plus craintifs**, pas moins. Ils savaient leur destination, et cela n'a fait qu'augmenter leur révérence. C'est le signe qu'ils avaient compris : **la bonne nouvelle n'est pas une assurance qui dispense d'agir, c'est une confiance qui pousse à agir mieux.**`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : magiciens le matin, martyrs le soir`,
+        },
+        {
+          type: `p`,
+          text: `Le Coran raconte une journée qui résume, à elle seule, toute la notion de muwāfāt. Pharaon a convoqué les meilleurs magiciens d'Égypte pour humilier Moïse devant la foule. Au lever du jour, ce sont des professionnels de l'illusion, venus réclamer leur salaire : « **Aurons-nous une récompense si nous sommes vainqueurs ?** » (7:113). Ils jettent leurs cordes et leurs bâtons, Moïse jette le sien, et en un instant ils comprennent que ce qu'ils voient n'est pas de la magie.`,
+        },
+        {
+          type: `p`,
+          text: `Ils tombent prosternés. Pharaon les menace de leur couper les mains et les pieds et de les crucifier sur des troncs de palmiers. Leur réponse est restée célèbre : « **Seigneur, déverse sur nous l'endurance, et fais-nous mourir soumis à Toi** » (7:126).`,
+        },
+        {
+          type: `quote`,
+          text: `وقول السحرة: (إِنَّا إِلَى رَبِّنَا مُنْقَلِبُونَ) أي: قد تحققنا أنا إليه راجعون، وعذابه أشد من عذابك ... فلنصبرن اليوم على عذابك لنخلص من عذاب الله، لما قالوا: (رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا) أي: عمنا بالصبر على دينك، والثبات عليه، (**وَتَوَفَّنَا مُسْلِمِينَ**) أي: متابعين لنبيك موسى ... **فكانوا في أول النهار سحرة، فصاروا في آخره شهداء بررة**. قال ابن عباس، وعبيد بن عمير، وقتادة، وابن جريج: **كانوا في أول النهار سحرة، وفي آخره شهداء**.
+
+La parole des magiciens « c'est vers notre Seigneur que nous retournerons » signifie : nous sommes certains de revenir à Lui, et Son châtiment est plus dur que le tien … nous endurerons donc aujourd'hui ton châtiment pour échapper à celui d'Allāh. Puis ils dirent : « Seigneur, déverse sur nous l'endurance », c'est-à-dire : enveloppe-nous de patience et de fermeté dans Ta religion, « **et fais-nous mourir soumis** », c'est-à-dire : à la suite de Ton prophète Moïse … **Ils étaient, au début du jour, des magiciens ; à la fin du jour, ils étaient devenus des martyrs pieux.** Ibn ʿAbbās, ʿUbayd ibn ʿUmayr, Qatāda et Ibn Jurayj ont dit : **au début du jour, des magiciens ; à la fin du jour, des martyrs.**`,
+          source: `Ibn Kathīr (m. 774 H), Tafsīr, 3/459, sur al-Aʿrāf 7:126`,
+        },
+        {
+          type: `p`,
+          text: `Retiens la formule d'Ibn ʿAbbās : « **au début du jour, des magiciens ; à la fin du jour, des martyrs** ». Toute une vie passée au service de l'illusion et de Pharaon, et pourtant ce qui compte, c'est **la manière dont elle s'est terminée**. C'est exactement le sens de muwāfāt : on rencontre Allāh avec l'état dans lequel on meurt.`,
+        },
+        {
+          type: `p`,
+          text: `Et remarque leur dernière demande : « **fais-nous mourir soumis** ». Ils viennent de croire, ils savent qu'ils vont être torturés, et la seule chose qu'ils demandent n'est pas d'échapper à la mort, mais **de ne pas perdre leur foi avant de mourir**. Ils ont compris en une matinée ce que certains ne comprennent jamais : la fin est ce qui compte.`,
+        },
+        {
+          type: `h2`,
+          text: `Le savant qui s'est dépouillé des signes`,
+        },
+        {
+          type: `p`,
+          text: `Le Coran raconte aussi l'histoire inverse, celle d'un homme qui avait tout ce que les magiciens n'avaient pas : la science, la connaissance des signes de Dieu, le prestige religieux. Et qui l'a perdu.`,
+        },
+        {
+          type: `verse`,
+          arabic: `وَٱتْلُ عَلَيْهِمْ نَبَأَ ٱلَّذِىٓ ءَاتَيْنَٰهُ ءَايَٰتِنَا **فَٱنسَلَخَ مِنْهَا** فَأَتْبَعَهُ ٱلشَّيْطَٰنُ فَكَانَ مِنَ ٱلْغَاوِينَ`,
+          translation: `Et raconte-leur l'histoire de celui à qui Nous avions donné Nos signes, **et qui s'en est dépouillé** : le diable l'a alors suivi, et il fut du nombre des égarés.`,
+          reference: `Coran, al-Aʿrāf, 7:175`,
+        },
+        {
+          type: `quote`,
+          text: `وَاخْتُلِفَ فِي تَعْيِينِ الَّذِي أُوتِيَ الْآيَاتِ فَقَالَ **ابْنُ مَسْعُودٍ وَابْنُ عَبَّاسٍ: هُوَ بَلْعَامُ بْنُ بَاعُورَاءَ** ... مِنْ بَنِي إِسْرَائِيلَ فِي زَمَنِ مُوسَى ﵇ ... وَهُوَ الْمَعْنِيُّ بِقَوْلِهِ "وَاتْلُ عَلَيْهِمْ نَبَأَ الَّذِي آتَيْناهُ آياتِنا" **وَلَمْ يَقُلْ آيَةً**، وَكَانَ فِي مَجْلِسِهِ **اثْنَتَا عَشْرَةَ أَلْفَ مِحْبَرَةٍ لِلْمُتَعَلِّمِينَ الَّذِينَ يَكْتُبُونَ عَنْهُ**.
+
+On a divergé sur l'identité de celui qui avait reçu les signes. **Ibn Masʿūd et Ibn ʿAbbās ont dit : c'est Balʿām ibn Bāʿūrāʾ**, des Banū Isrāʾīl, à l'époque de Moïse … C'est lui que vise « celui à qui Nous avions donné Nos signes », **au pluriel et non « un signe »** ; et il y avait dans son cercle **douze mille encriers pour les étudiants qui écrivaient ce qu'il enseignait**.`,
+          source: `Al-Qurtubī (m. 671 H), al-Jāmiʿ li-ahkām al-Qurʾān, 7/319, sur al-Aʿrāf 7:175`,
+        },
+        {
+          type: `p`,
+          text: `Le chiffre de douze mille encriers vient des récits transmis sur les Banū Isrāʾīl, qu'al-Qurtubī rapporte sans en garantir le détail. Mais le verset, lui, est sans ambiguïté : cet homme avait reçu **des signes**, au pluriel, et il s'en est « **dépouillé** », comme un serpent se dépouille de sa peau. Le mot arabe insālakha dit bien que la science était sur lui, comme un vêtement, et qu'elle n'était pas entrée dans son cœur.`,
+        },
+        {
+          type: `comparaison`,
+          title: `Deux histoires, deux fins`,
+          columns: [
+            `Les magiciens de Pharaon`,
+            `Celui qui s'est dépouillé des signes`,
+          ],
+          rows: [
+            {
+              criterion: `Au départ`,
+              cells: [
+                `Au service de Pharaon, pour de l'argent.`,
+                `Savant, entouré d'élèves, dépositaire des signes.`,
+              ],
+            },
+            {
+              criterion: `Le tournant`,
+              cells: [
+                `Ils voient la vérité et se prosternent.`,
+                `Il préfère la terre et suit sa passion (7:176).`,
+              ],
+            },
+            {
+              criterion: `Leur demande`,
+              cells: [
+                `« Fais-nous mourir soumis. »`,
+                `Aucune : il « s'est attaché à la terre ».`,
+              ],
+            },
+            {
+              criterion: `La fin`,
+              cells: [
+                `« Le soir, des martyrs » (Ibn ʿAbbās).`,
+                `« Il fut du nombre des égarés » (7:175).`,
+              ],
+            },
+          ],
+          caption: `Le Coran place ces deux récits dans la même sourate : **le départ ne garantit rien, ni dans un sens ni dans l'autre**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce tableau se lit comme deux trajectoires qui se croisent. **Au départ**, tout semblait opposer les magiciens, au service du tyran, et le savant entouré d'élèves. **Au tournant**, chacun a fait un choix : les magiciens ont suivi la vérité qu'ils voyaient, le savant a suivi sa passion. **Leur demande** révèle leur cœur : les uns implorent de mourir dans la foi, l'autre ne demande rien. **La fin** inverse complètement les positions du départ. C'est pourquoi le croyant ne se fie ni à son passé, ni à son savoir.`,
+        },
+        {
+          type: `focus`,
+          kind: `vigilance`,
+          title: `Pour celui qui étudie la religion`,
+          text: `Cette histoire est d'abord un avertissement pour les gens de science. Le Coran ne dit pas que le savoir protège automatiquement : il dit qu'**on peut porter les signes de Dieu comme un vêtement, et s'en dépouiller**. C'est pour cela que les savants les plus grands étaient aussi les plus inquiets de leur fin.`,
+        },
+        {
+          type: `p`,
+          text: `À l'autre extrémité, le Coran montre aussi **Pharaon** au moment de sa noyade. Quand l'eau l'engloutit, il dit enfin : « Je crois qu'il n'y a de divinité que Celui en qui ont cru les Banū Isrāʾīl. » La réponse tombe : « **Maintenant ?** Alors qu'auparavant tu as désobéi et que tu étais parmi les corrupteurs ! » (10:90-91). La foi qui arrive quand la mort est déjà là, quand le voile est levé, ne compte plus. **La muwāfāt ne se joue pas à la dernière seconde ; elle se prépare toute la vie.**`,
+        },
+        {
+          type: `h2`,
+          text: `Le hadith du Muwattaʾ, et la rigueur d'Ibn ʿAbd al-Barr`,
+        },
+        {
+          type: `p`,
+          text: `L'imam **Mālik** rapporte dans le Muwattaʾ un hadith attribué à ʿUmar ibn al-Khattāb, qui exprime très exactement la notion de muwāfāt. **Ibn ʿAbd al-Barr** le commente dans al-Tamhīd, et sa façon de le traiter est une leçon de méthode.`,
+        },
+        {
+          type: `quote`,
+          text: `فَقَالَ رَجُلٌ: يَا رَسُولَ اللَّهِ فَفِيمَ الْعَمَلُ؟ فَقَالَ رَسُولُ اللَّهِ ﷺ: **إِنَّ اللَّهَ ﵎ إِذَا خَلَقَ الْعَبْدَ لِلْجَنَّةِ اسْتَعْمَلَهُ بِعَمَلِ أَهْلِ الْجَنَّةِ حَتَّى يَمُوتَ عَلَى عَمَلٍ مِنْ أَعْمَالِ أَهْلِ الْجَنَّةِ** فَيُدْخِلَهُ بِهِ الْجَنَّةَ، وَإِذَا خَلَقَ الْعَبْدَ لِلنَّارِ اسْتَعْمَلَهُ بِعَمَلِ أَهْلِ النَّارِ حَتَّى يَمُوتَ عَلَى عَمَلٍ مِنْ أَعْمَالِ أَهْلِ النَّارِ فَيُدْخِلَهُ بِهِ النَّارَ. قَالَ أَبُو عُمَرَ: **هَذَا الْحَدِيثُ مُنْقَطِعٌ بِهَذَا الْإِسْنَادِ** لِأَنَّ مُسْلِمَ بْنَ يَسَارٍ هَذَا لَمْ يَلْقَ عُمَرَ بْنَ الْخَطَّابِ، وَبَيْنَهُمَا فِي هَذَا الْحَدِيثِ نُعَيْمُ بْنُ رَبِيعَةَ، وَهُوَ أَيْضًا مَعَ هَذَا الْإِسْنَادِ **لَا تَقُومُ بِهِ حُجَّةٌ**.
+
+Un homme dit : « Ô Messager d'Allāh, à quoi bon agir alors ? » Le Messager d'Allāh ﷺ répondit : « **Quand Allāh, béni et exalté, crée un serviteur pour le Paradis, Il l'emploie aux œuvres des gens du Paradis, jusqu'à ce qu'il meure sur l'une des œuvres des gens du Paradis**, et Il l'y fait entrer par elle. Et quand Il crée un serviteur pour l'Enfer, Il l'emploie aux œuvres des gens de l'Enfer, jusqu'à ce qu'il meure sur l'une de leurs œuvres, et Il l'y fait entrer par elle. » Abū ʿUmar [Ibn ʿAbd al-Barr] a dit : **ce hadith est interrompu avec cette chaîne**, car ce Muslim ibn Yasār n'a pas rencontré ʿUmar ibn al-Khattāb ; il y a entre eux, dans ce hadith, Nuʿaym ibn Rabīʿa, et même avec ce maillon, **cette chaîne ne suffit pas à fonder une preuve**.`,
+          source: `Ibn ʿAbd al-Barr (m. 463 H), al-Tamhīd, 6/3, sur un hadith du Muwattaʾ de Mālik`,
+        },
+        {
+          type: `p`,
+          text: `Admire l'honnêteté d'Ibn ʿAbd al-Barr. Ce hadith se trouve dans le Muwattaʾ de son propre imam, Mālik, et il en commente le texte ; mais il n'hésite pas à dire que **cette chaîne-là ne suffit pas comme preuve**. Le sens, en revanche, est établi par d'autres hadiths authentiques, en particulier celui d'Ibn Masʿūd cité plus haut : « l'un de vous accomplit les œuvres des gens du Paradis jusqu'à ce qu'il n'y ait plus entre lui et lui qu'une coudée… ».`,
+        },
+        {
+          type: `p`,
+          text: `Et le cœur du hadith répond exactement à notre sujet : « **jusqu'à ce qu'il meure sur une œuvre** ». Ce n'est pas la somme des années qui est décisive, c'est **l'état au moment de la rencontre**. La question de l'homme, « à quoi bon agir ? », est la même que se pose quiconque découvre la notion de muwāfāt ; la réponse est que l'œuvre est précisément **le chemin** par lequel le décret se réalise.`,
+        },
+        {
+          type: `focus`,
+          kind: `repere`,
+          title: `Une leçon de méthode`,
+          text: `Les savants malikites ne citaient pas les hadiths sans les examiner, même ceux de leur imam. Ibn ʿAbd al-Barr distingue **le texte**, dont le sens est confirmé par d'autres voies, et **la chaîne**, qu'il juge insuffisante. C'est le même esprit qui guide les références de cette page.`,
+        },
+        {
+          type: `h2`,
+          text: `ʿUmar : « je craindrais d'être celui-là »`,
+        },
+        {
+          type: `p`,
+          text: `Si quelqu'un avait des raisons d'être rassuré sur sa fin, c'était bien ʿUmar ibn al-Khattāb. Le Prophète ﷺ lui avait annoncé le Paradis de son vivant. Et pourtant, on rapporte de lui cette parole, qui montre comment les Compagnons vivaient la muwāfāt :`,
+        },
+        {
+          type: `quote`,
+          text: `عَنْ عُمَرَ بْنِ الْخَطَّابِ قَالَ: لَوْ نَادَى مُنَادٍ مِنَ السَّمَاءِ: أَيُّهَا النَّاسُ إِنَّكُمْ دَاخِلُونَ الْجَنَّةَ كُلُّكُمْ أَجْمَعُونَ إِلَّا رَجُلًا وَاحِدًا، **لَخِفْتُ أَنْ أَكُونَ هُوَ**، وَلَوْ نَادَى مُنَادٍ: أَيُّهَا النَّاسُ إِنَّكُمْ دَاخِلُونَ النَّارَ إِلَّا رَجُلًا وَاحِدًا، **لَرَجَوْتُ أَنْ أَكُونَ هُوَ**.
+
+D'après ʿUmar ibn al-Khattāb : « Si un héraut criait du ciel : Ô gens, vous entrerez tous au Paradis, sauf un seul homme, **je craindrais d'être celui-là**. Et s'il criait : Ô gens, vous entrerez tous en Enfer, sauf un seul homme, **j'espérerais être celui-là**. »`,
+          source: `Abū Nuʿaym al-Asbahānī (m. 430 H), Hilyat al-awliyāʾ, 1/53, par Yahyā ibn Abī Kathīr, qui n'a pas connu ʿUmar (chaîne interrompue)`,
+        },
+        {
+          type: `p`,
+          text: `Cette parole, même transmise par une chaîne interrompue, est devenue une référence parce qu'elle exprime parfaitement **l'équilibre** que demande la muwāfāt. Ce n'est ni le désespoir, ni l'assurance. C'est une crainte qui empêche de se croire arrivé, et une espérance qui empêche de baisser les bras. ʿUmar se voit à la fois comme le seul exclu possible du Paradis et comme le seul sauvé possible de l'Enfer.`,
+        },
+        {
+          type: `spectre`,
+          title: `Où se tenir face à sa propre fin ?`,
+          left: `Désespoir`,
+          right: `Fausse sécurité`,
+          markers: [
+            {
+              label: `« Je suis perdu, quoi que je fasse »`,
+              position: 6,
+              note: `Oublier que la porte du repentir est ouverte jusqu'au dernier souffle, comme pour les magiciens.`,
+            },
+            {
+              label: `« Je craindrais d'être celui-là »`,
+              position: 40,
+              note: `La crainte de ʿUmar : elle pousse à agir et à surveiller son cœur.`,
+            },
+            {
+              label: `« J'espérerais être celui-là »`,
+              position: 60,
+              note: `L'espérance de ʿUmar : elle empêche de désespérer de la miséricorde.`,
+            },
+            {
+              label: `« Mon salut est acquis »`,
+              position: 94,
+              note: `L'illusion de Balʿām : se croire protégé par son savoir ou son passé.`,
+            },
+          ],
+          caption: `ʿUmar se tient **entre les deux repères centraux**, là où la crainte et l'espérance se tiennent mutuellement en équilibre.`,
+        },
+        {
+          type: `p`,
+          text: `Ce spectre place les attitudes possibles sur une même ligne. **À l'extrême gauche**, le désespoir : celui qui pense que ses fautes passées l'ont déjà condamné oublie l'histoire des magiciens. **À l'extrême droite**, la fausse sécurité : celui qui croit son salut acquis oublie l'histoire du savant dépouillé. **Au centre**, les deux phrases de ʿUmar, l'une un peu du côté de la crainte, l'autre un peu du côté de l'espérance. C'est là que se tient le croyant que la muwāfāt a éduqué.`,
+        },
+        {
+          type: `h2`,
+          text: `« Ô Toi qui retournes les cœurs »`,
+        },
+        {
+          type: `p`,
+          text: `La réponse la plus pratique à l'inquiétude de la fin, le Prophète ﷺ l'a donnée par son propre exemple. Al-Qurtubī rapporte, en commentant l'invocation de 3:8, ce qu'Umm Salama, son épouse, a observé de ses prières :`,
+        },
+        {
+          type: `verse`,
+          arabic: `**رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا** وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ ٱلْوَهَّابُ`,
+          translation: `**Seigneur, ne fais pas dévier nos cœurs après que Tu nous as guidés**, et accorde-nous de Ta part une miséricorde. C'est Toi le Donateur.`,
+          reference: `Coran, Āl ʿImrān, 3:8`,
+        },
+        {
+          type: `quote`,
+          text: `وَرَوَى التِّرْمِذِيُّ مِنْ حَدِيثِ شَهْرِ بْنِ حَوْشَبٍ قَالَ: قُلْتُ لِأُمِّ سَلَمَةَ: يَا أُمَّ الْمُؤْمِنِينَ، مَا كَانَ أَكْثَرُ دُعَاءِ رَسُولِ اللَّهِ ﷺ إِذَا كَانَ عِنْدَكِ؟ قَالَتْ: كَانَ أَكْثَرُ دُعَائِهِ: "**يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ**". فَقُلْتُ: يَا رَسُولَ اللَّهِ، مَا أَكْثَرَ دُعَاءَكَ يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ! قَالَ: "يَا أُمَّ سَلَمَةَ **إِنَّهُ لَيْسَ آدَمِيٌّ إِلَّا وَقَلْبُهُ بَيْنَ أُصْبُعَيْنِ مِنْ أَصَابِعِ اللَّهِ، فَمَنْ شَاءَ أَقَامَ وَمَنْ شَاءَ أَزَاغَ**". فَتَلَا مُعَاذٌ: "رَبَّنا لَا تُزِغْ قُلُوبَنا بَعْدَ إِذْ هَدَيْتَنا". قَالَ: حَدِيثٌ حَسَنٌ.
+
+Al-Tirmidhī rapporte, d'après Shahr ibn Hawshab : j'ai demandé à Umm Salama : « Ô Mère des croyants, quelle était l'invocation la plus fréquente du Messager d'Allāh ﷺ quand il était chez toi ? » Elle répondit : « Son invocation la plus fréquente était : **Ô Toi qui retournes les cœurs, affermis mon cœur sur Ta religion.** » Je lui ai dit : « Ô Messager d'Allāh, comme tu répètes souvent : Ô Toi qui retournes les cœurs, affermis mon cœur sur Ta religion ! » Il répondit : « Ô Umm Salama, **il n'y a pas un être humain dont le cœur ne soit entre deux doigts parmi les doigts d'Allāh : celui qu'Il veut, Il le maintient droit ; celui qu'Il veut, Il le fait dévier.** » Puis Muʿādh [l'un des transmetteurs] récita : « Seigneur, ne fais pas dévier nos cœurs après que Tu nous as guidés. » [Al-Tirmidhī] a dit : hadith hasan.`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 4/20, sur Āl ʿImrān 3:8`,
+        },
+        {
+          type: `p`,
+          text: `Lis bien la scène. C'est le Prophète ﷺ lui-même, l'homme le plus sûr de sa guidance, qui répète **le plus souvent** : « affermis mon cœur sur Ta religion ». Si lui le demandait sans cesse, aucun de nous ne peut considérer sa fermeté comme acquise. Et la raison qu'il donne à Umm Salama est la clé de la muwāfāt : **le cœur ne nous appartient pas entièrement**, il est « entre deux doigts » d'Allāh, qui le maintient ou le laisse dévier.`,
+        },
+        {
+          type: `p`,
+          text: `Le mot « cœur » en arabe, qalb, vient d'une racine qui signifie **retourner, renverser** (q-l-b). Le cœur est, par définition, ce qui peut se retourner. C'est pour cela que le Prophète ﷺ invoque Allāh par le nom qui correspond exactement à ce danger : « **Muqallib al-qulūb** », Celui qui retourne les cœurs.`,
+        },
+        {
+          type: `cycle`,
+          title: `Ce que le croyant fait de son inquiétude`,
+          arabic: `ثبت قلبي على دينك`,
+          center: `un cœur affermi`,
+          steps: [
+            {
+              label: `Reconnaître la fragilité`,
+              note: `Le cœur est « entre deux doigts » d'Allāh : personne n'est propriétaire de sa fermeté.`,
+            },
+            {
+              label: `Demander, encore et encore`,
+              note: `« Ô Toi qui retournes les cœurs, affermis mon cœur » : l'invocation la plus fréquente du Prophète ﷺ.`,
+            },
+            {
+              label: `Agir avec constance`,
+              note: `« Jusqu'à ce qu'il meure sur une œuvre » : la fin se prépare par les œuvres de chaque jour.`,
+            },
+            {
+              label: `Espérer sans se croire arrivé`,
+              note: `Comme ʿUmar : craindre d'être l'exclu, espérer être le sauvé.`,
+            },
+          ],
+          caption: `L'inquiétude de la fin n'est pas faite pour paralyser ; **elle est faite pour se transformer en invocation et en action**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce cycle montre ce que la muwāfāt produit dans une vie croyante équilibrée. **Reconnaître la fragilité** du cœur, c'est le point de départ, celui du hadith d'Umm Salama. Cette reconnaissance mène à **demander** sans relâche la fermeté, comme le Prophète ﷺ. La demande s'accompagne de **l'action** constante, puisque c'est sur une œuvre qu'on meurt. Et l'ensemble est porté par **l'espérance** de ʿUmar, qui craint sans désespérer. Puis le cycle recommence, chaque jour, jusqu'au dernier.`,
+        },
+        {
+          type: `objection`,
+          objection: `Si mon cœur est « entre les doigts » d'Allāh et qu'Il fait dévier qui Il veut, à quoi servent mes efforts ?`,
+          reponse: `Al-Qurtubī tire de ce verset une conclusion contre ceux qui niaient qu'Allāh guide et égare ; mais le Coran dit aussi qu'Il égare « les pervers » (2:26) et ceux qui ont dévié les premiers : « quand ils dévièrent, Allāh fit dévier leurs cœurs » (61:5). L'effort est la réponse que le serviteur donne ; l'invocation est l'aveu qu'il ne peut réussir sans Lui. Le sujet « Ce que "Dieu égare qui Il veut" signifie » développe ce point.`,
+        },
+        {
+          type: `comparaison`,
+          title: `Ce que disent les sources citées dans cette section`,
+          columns: [
+            `Ce qu'elles affirment`,
+            `Où le lire`,
+          ],
+          rows: [
+            {
+              criterion: `Ibn ʿAbbās et d'autres`,
+              cells: [
+                `Les magiciens de Pharaon : « au début du jour, des magiciens ; à la fin, des martyrs ».`,
+                `Ibn Kathīr, Tafsīr, 3/459`,
+              ],
+            },
+            {
+              criterion: `Ibn Masʿūd et Ibn ʿAbbās`,
+              cells: [
+                `L'homme qui avait reçu « Nos signes » et s'en est dépouillé.`,
+                `Al-Qurtubī, al-Jāmiʿ, 7/319`,
+              ],
+            },
+            {
+              criterion: `Hadith du Muwattaʾ, jugé par Ibn ʿAbd al-Barr`,
+              cells: [
+                `« Jusqu'à ce qu'il meure sur une œuvre des gens du Paradis » ; chaîne interrompue, sens confirmé ailleurs.`,
+                `Al-Tamhīd, 6/3`,
+              ],
+            },
+            {
+              criterion: `ʿUmar ibn al-Khattāb`,
+              cells: [
+                `« Je craindrais d'être celui-là… j'espérerais être celui-là. »`,
+                `Abū Nuʿaym, Hilyat al-awliyāʾ, 1/53`,
+              ],
+            },
+            {
+              criterion: `Umm Salama (al-Tirmidhī)`,
+              cells: [
+                `L'invocation la plus fréquente du Prophète ﷺ : « affermis mon cœur sur Ta religion ».`,
+                `Al-Qurtubī, al-Jāmiʿ, 4/20`,
+              ],
+            },
+          ],
+          caption: `Toutes ces sources disent la même chose : **le passé ne garantit rien, la fin se prépare chaque jour, et elle se demande à Celui qui tient les cœurs**.`,
+        },
         { type: `h2`, text: `Conséquences pratiques` },
         {
           type: `list`,
