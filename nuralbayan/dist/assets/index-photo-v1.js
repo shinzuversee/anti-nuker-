@@ -60990,6 +60990,395 @@ Sa parole : **« Pas une feuille ne tombe sans qu’Il ne le sache »**, Il info
           title: `Ce que je réponds à l'objection`,
           text: `Dire « l'univers est trop grand pour que Dieu s'occupe de moi », c'est comme dire « la maison est trop grande pour qu'on l'ait construite pour l'enfant qui y vit ». La taille d'une demeure ne dit rien contre l'amour de celui qui l'a bâtie ; elle dit plutôt **sa générosité**. Le Coran me demande de regarder les étoiles non comme une humiliation, mais comme **un service** et **un signe**.`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : la nuit où le Prophète ﷺ a pleuré`,
+        },
+        {
+          type: `p`,
+          text: `On imagine souvent que le vertige devant le cosmos est une expérience moderne, née avec les télescopes. Pourtant, les premiers musulmans levaient eux aussi les yeux vers un ciel immense, sans lumière électrique pour le voiler. La question « que suis-je, moi, devant tout cela ? », ils l'ont vécue. Et la scène la plus forte, c'est le Prophète ﷺ lui-même qui la vit, une nuit, en priant.`,
+        },
+        {
+          type: `verse`,
+          arabic: `**إِنَّ فِى خَلْقِ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَٰفِ ٱلَّيْلِ وَٱلنَّهَارِ لَءَايَٰتٍ لِّأُولِى ٱلْأَلْبَٰبِ**`,
+          translation: `**Dans la création des cieux et de la terre, et dans l'alternance de la nuit et du jour, il y a des signes pour ceux qui sont doués d'intelligence.**`,
+          reference: `Coran, Āl ʿImrān, 3:190`,
+        },
+        {
+          type: `quote`,
+          text: `وَرُوِيَ عَنْ عَائِشَةَ ﵂ أَنَّهَا قَالَتْ: لَمَّا نَزَلَتْ هَذِهِ الْآيَةُ عَلَى النَّبِيِّ ﷺ قَامَ يُصَلِّي، فَأَتَاهُ بِلَالٌ يُؤْذِنُهُ بِالصَّلَاةِ، **فَرَآهُ يَبْكِي** فَقَالَ: يَا رَسُولَ اللَّهِ، أَتَبْكِي وَقَدْ غَفَرَ اللَّهُ لَكَ مَا تَقَدَّمَ مِنْ ذَنْبِكَ وَمَا تَأَخَّرَ! فَقَالَ: (يَا بِلَالُ، **أَفَلَا أَكُونُ عَبْدًا شَكُورًا**، وَلَقَدْ أَنْزَلَ اللَّهُ عَلَيَّ اللَّيْلَةَ آيَةً "إِنَّ فِي خَلْقِ السَّماواتِ وَالْأَرْضِ ..." - ثُمَّ قَالَ: **وَيْلٌ لِمَنْ قَرَأَهَا وَلَمْ يَتَفَكَّرْ فِيهَا**.
+
+On rapporte que ʿĀʾisha, qu'Allāh l'agrée, a dit : quand ce verset descendit sur le Prophète ﷺ, il se leva pour prier. Bilāl vint l'avertir de l'heure de la prière **et le trouva en train de pleurer**. Il lui dit : « Ô Messager d'Allāh, tu pleures, alors qu'Allāh t'a pardonné tes péchés passés et à venir ! » Il répondit : « Ô Bilāl, **ne serais-je pas un serviteur reconnaissant ?** Allāh a fait descendre sur moi cette nuit un verset : "Dans la création des cieux et de la terre…" » Puis il dit : « **Malheur à celui qui le lit sans y réfléchir.** »`,
+          source: `Al-Qurtubī (m. 671 H), al-Jāmiʿ li-ahkām al-Qurʾān, 4/310, sur Āl ʿImrān 3:190`,
+        },
+        {
+          type: `p`,
+          text: `Regarde bien la réaction du Prophète ﷺ. Devant l'immensité des cieux, il ne dit pas : « je ne suis rien, Dieu ne peut pas s'intéresser à moi ». Il dit : « **ne serais-je pas un serviteur reconnaissant ?** » Le vertige ne débouche pas sur l'abandon, il débouche sur la gratitude. Pourquoi ? Parce que celui qui a créé tout cela s'est adressé à lui, cette nuit-là, par un verset. **L'immensité du cosmos et l'attention divine sont arrivées ensemble.**`,
+        },
+        {
+          type: `p`,
+          text: `Al-Qurtubī note juste avant que ce verset clôt la sourate par un ordre de réfléchir et de raisonner sur les signes, « **afin que leur foi repose sur la certitude, et non sur l'imitation** ». Le Coran ne demande pas de fermer les yeux sur le ciel pour garder la foi. Il demande de le regarder plus longtemps.`,
+        },
+        {
+          type: `focus`,
+          kind: `repere`,
+          title: `Ce que cette scène change à la question`,
+          text: `L'objection suppose que plus le cosmos est grand, plus l'homme devient indifférent à Dieu. La nuit du verset 3:190 montre l'inverse : **c'est au moment même où le Prophète ﷺ contemple les cieux qu'il reçoit une parole qui lui est adressée**. Le ciel n'est pas une distance entre Dieu et l'homme ; c'est un message.`,
+        },
+        {
+          type: `h2`,
+          text: `Une échelle qui donne le vertige : le Kursī et le Trône`,
+        },
+        {
+          type: `p`,
+          text: `Si tu trouves que l'univers des astronomes est grand, la Révélation va beaucoup plus loin. Le Coran et la Sunna décrivent une création dont **les sept cieux ne sont qu'une petite partie**. Au-delà, il y a le Kursī (le Piédestal), et au-delà encore, le ʿArsh (le Trône). Le verset le plus célèbre du Coran le dit :`,
+        },
+        {
+          type: `verse`,
+          arabic: `**وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ** ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ`,
+          translation: `**Son Kursī englobe les cieux et la terre**, et leur préservation ne Lui coûte aucune peine. Il est le Très-Haut, l'Immense.`,
+          reference: `Coran, al-Baqara, 2:255`,
+        },
+        {
+          type: `quote`,
+          text: `عَنْ أَبِي ذَرٍّ الْغِفَارِيِّ، أَنَّهُ سَأَلَ النَّبِيَّ ﷺ عَنِ الْكُرْسِيِّ فَقَالَ رَسُولُ اللَّهِ ﷺ: "وَالَّذِي نَفْسِي بِيَدِهِ **مَا السَّمَوَاتُ السَّبْعُ وَالْأَرَضُونَ السَّبْعُ عِنْدَ الْكُرْسِيِّ إِلَّا كَحَلْقَةٍ مُلْقَاةٍ بِأَرْضٍ فَلَاةٍ**، وَإِنَّ فَضْلَ الْعَرْشِ عَلَى الْكُرْسِيِّ كَفَضْلِ الْفَلَاةِ عَلَى تِلْكَ الْحَلْقَةِ".
+
+D'après Abū Dharr al-Ghifārī : il interrogea le Prophète ﷺ sur le Kursī, et le Messager d'Allāh ﷺ dit : « Par Celui qui tient mon âme dans Sa main, **les sept cieux et les sept terres ne sont, à côté du Kursī, qu'un anneau jeté dans un désert**. Et la supériorité du Trône sur le Kursī est comme celle du désert sur cet anneau. »`,
+          source: `Ibn Kathīr (m. 774 H), Tafsīr, 1/681, sur al-Baqara 2:255. Rapporté par plusieurs voies ; l'éditeur signale qu'un transmetteur de celle-ci est discuté. Al-Qurtubī en rapporte le sens (al-Jāmiʿ, 4/205)`,
+        },
+        {
+          type: `degres`,
+          title: `Du plus petit au plus grand, selon le Coran et la Sunna`,
+          arabic: `مراتب الخلق`,
+          degres: [
+            {
+              label: `L'homme`,
+              arabic: `الإنسان`,
+              note: `Un être minuscule sur une planète parmi d'autres.`,
+            },
+            {
+              label: `Les sept cieux et les sept terres`,
+              arabic: `السماوات السبع والأرضون السبع`,
+              note: `Tout ce que nous appelons « l'univers », et bien davantage.`,
+            },
+            {
+              label: `Le Kursī`,
+              arabic: `الكرسي`,
+              note: `À côté de lui, les cieux et les terres sont « un anneau jeté dans un désert ».`,
+            },
+            {
+              label: `Le Trône`,
+              arabic: `العرش`,
+              note: `La plus immense des créatures. À côté de lui, le Kursī est à son tour comme cet anneau.`,
+            },
+          ],
+          direction: `asc`,
+          caption: `Et au-dessus de tout cela, **Allāh, qui « sait ce qui est sur la terre ferme et dans la mer, et pas une feuille ne tombe sans qu'Il le sache »** (6:59).`,
+        },
+        {
+          type: `p`,
+          text: `Lis cette échelle de bas en haut, lentement. **L'homme** est la plus petite marche. **Les sept cieux** contiennent déjà tout ce que les télescopes ont découvert, et plus encore. **Le Kursī** les englobe comme un désert englobe un anneau égaré. **Le Trône**, enfin, dépasse le Kursī dans la même proportion. Si l'argument de l'objection était juste, la Révélation l'aurait elle-même rendu mille fois plus fort.`,
+        },
+        {
+          type: `p`,
+          text: `Or c'est précisément la Révélation qui nous donne cette échelle, et c'est **la même Révélation** qui dit que pas une feuille ne tombe sans qu'Il le sache. Le Coran n'a pas ignoré l'immensité pour sauver l'attention divine : **il a affirmé les deux en même temps**, dans le même verset du Trône, puisque 2:255 dit aussi : « Il sait ce qui est devant eux et ce qui est derrière eux ».`,
+        },
+        {
+          type: `p`,
+          text: `Note enfin la fin du verset : « **leur préservation ne Lui coûte aucune peine** » (wa lā yaʾūduhu hifzuhumā). Ibn Kathīr explique : cela ne Lui pèse pas et ne L'accable pas. L'objection imagine un Dieu dont l'attention s'épuiserait à mesure que le monde grandit, comme la nôtre. Le Coran exclut précisément cela.`,
+        },
+        {
+          type: `objection`,
+          objection: `Ces descriptions du Kursī et du Trône ne sont-elles pas des images ?`,
+          reponse: `Les savants de la Sunna les comprennent comme des réalités créées, dont nous connaissons l'existence et l'immensité par la Révélation, sans en connaître la nature exacte. Ibn Kathīr précise d'ailleurs que le Kursī n'est pas le Trône, et que le Trône est plus grand. Mais même si l'on s'en tenait à l'univers des astronomes, la leçon resterait la même : **la grandeur de la création ne mesure pas la limite de Dieu, elle mesure la nôtre**.`,
+        },
+        {
+          type: `h2`,
+          text: `Al-Shinqītī : l'argument se retourne`,
+        },
+        {
+          type: `p`,
+          text: `Le Coran utilise lui-même l'immensité du cosmos, mais dans le sens exactement inverse de l'objection. Là où l'objection dit « l'univers est trop grand, donc l'homme est trop petit pour compter », le Coran dit : « **l'univers est immense, donc ce que Dieu fait pour l'homme ne Lui coûte rien** ».`,
+        },
+        {
+          type: `verse`,
+          arabic: `**لَخَلْقُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ أَكْبَرُ مِنْ خَلْقِ ٱلنَّاسِ** وَلَٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَعْلَمُونَ`,
+          translation: `**La création des cieux et de la terre est plus grande que la création des hommes**, mais la plupart des hommes ne savent pas.`,
+          reference: `Coran, Ghāfir, 40:57`,
+        },
+        {
+          type: `quote`,
+          text: `بَيَّنَ جَلَّ وَعَلَا فِي هَذِهِ الْآيَةِ الْكَرِيمَةِ: أَنَّ مَنْ خَلَقَ السَّمَوَاتِ وَالْأَرْضَ مَعَ عِظَمِهِمَا قَادِرٌ عَلَى بَعْثِ الْإِنْسَانِ بِلَا شَكٍّ ; **لِأَنَّ مَنْ خَلَقَ الْأَعْظَمَ الْأَكْبَرَ فَهُوَ عَلَى خَلْقِ الْأَصْغَرِ قَادِرٌ بِلَا شَكٍّ**. وَأَوْضَحَ هَذَا الْمَعْنَى فِي مَوَاضِعَ أُخَرَ ; كَقَوْلِهِ: لَخَلْقُ السَّمَاوَاتِ وَالْأَرْضِ أَكْبَرُ مِنْ خَلْقِ النَّاسِ ... أَيْ وَمَنْ قَدَرَ عَلَى خَلْقِ الْأَكْبَرِ فَهُوَ قَادِرٌ عَلَى خَلْقِ الْأَصْغَرِ.
+
+Allāh, exalté et glorifié, a montré dans ce noble verset que Celui qui a créé les cieux et la terre, malgré leur immensité, est sans aucun doute capable de ressusciter l'homme ; **car Celui qui a créé le plus immense et le plus grand est, sans aucun doute, capable de créer le plus petit**. Il a éclairci ce sens en d'autres passages, comme Sa parole : « La création des cieux et de la terre est plus grande que la création des hommes » … c'est-à-dire : Celui qui a pu créer le plus grand peut créer le plus petit.`,
+          source: `Muhammad al-Amīn al-Shinqītī (m. 1393 H), Adwāʾ al-Bayān, 3/186, sur al-Isrāʾ 17:99`,
+        },
+        {
+          type: `comparaison`,
+          title: `Deux manières de raisonner sur l'immensité`,
+          columns: [
+            `Le raisonnement de l'objection`,
+            `Le raisonnement du Coran`,
+          ],
+          rows: [
+            {
+              criterion: `Point de départ`,
+              cells: [
+                `L'univers est gigantesque.`,
+                `L'univers est gigantesque.`,
+              ],
+            },
+            {
+              criterion: `Ce qu'on en déduit`,
+              cells: [
+                `Donc l'homme est perdu dans la masse.`,
+                `Donc Celui qui l'a fait n'est limité par rien.`,
+              ],
+            },
+            {
+              criterion: `L'image de Dieu cachée derrière`,
+              cells: [
+                `Un être dont l'attention est limitée, comme la nôtre.`,
+                `Celui que « leur préservation ne fatigue pas » (2:255).`,
+              ],
+            },
+            {
+              criterion: `Conclusion`,
+              cells: [
+                `Dieu ne peut pas s'occuper de moi.`,
+                `S'occuper de moi ne Lui coûte rien : « plus grand que la création des hommes » (40:57).`,
+              ],
+            },
+          ],
+          caption: `Le même constat de départ mène à deux conclusions opposées ; **tout dépend de l'idée de Dieu qu'on y projette**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce tableau montre où se cache l'erreur. **La première ligne** est identique dans les deux colonnes : personne ne nie l'immensité de l'univers, ni le croyant, ni le sceptique. **La deuxième ligne** diverge, et **la troisième** explique pourquoi : l'objection imagine sans le dire un Dieu fait à notre mesure, dont l'attention serait une ressource limitée qu'il faudrait répartir entre des milliards de galaxies. Le Coran récuse cette image. **La dernière ligne** en tire la conséquence : pour Celui qui a créé le plus grand, le plus petit n'est pas un fardeau.`,
+        },
+        {
+          type: `focus`,
+          kind: `subtilite`,
+          title: `Le piège de l'imagination`,
+          text: `Quand nous pensons « Dieu est trop occupé pour me voir », nous ne parlons pas de Dieu : nous parlons de nous. C'est nous qui ne pouvons suivre qu'une chose à la fois. **Attribuer à Dieu les limites de notre attention, c'est déjà Le comparer à Sa création**, ce que le verset « Rien ne Lui ressemble » (42:11) interdit.`,
+        },
+        {
+          type: `h2`,
+          text: `Chaque nuit, Il appelle chacun : le hadith de la descente`,
+        },
+        {
+          type: `p`,
+          text: `Voici peut-être la réponse la plus touchante à notre question. L'imam **Mālik** rapporte dans le Muwattaʾ un hadith que tous les spécialistes ont accepté. Le Seigneur des sept cieux, du Kursī et du Trône **s'adresse chaque nuit à chaque être humain, un par un**.`,
+        },
+        {
+          type: `quote`,
+          text: `مَالِكٌ عَنِ ابْنِ شِهَابٍ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ وَأَبِي عَبْدِ اللَّهِ الْأَغَرِّ جَمِيعًا عَنْ أَبِي هُرَيْرَةَ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ: **يَنْزِلُ رَبُّنَا ﵎ كُلَّ لَيْلَةٍ إِلَى السَّمَاءِ الدُّنْيَا** حِينَ يَبْقَى ثُلُثُ اللَّيْلِ فَيَقُولُ: **مَنْ يَدْعُونِي فَأَسْتَجِيبَ لَهُ، مَنْ يَسْأَلُنِي فَأُعْطِيَهُ، مَنْ يَسْتَغْفِرُنِي فَأَغْفِرَ لَهُ**. هَذَا حَدِيثٌ ثَابِتٌ مِنْ جِهَةِ النَّقْلِ صَحِيحُ الْإِسْنَادِ **لَا يَخْتَلِفُ أَهْلُ الْحَدِيثِ فِي صِحَّتِهِ** ... وَهُوَ حَدِيثٌ مَنْقُولٌ مِنْ طُرُقٍ مُتَوَاتِرَةٍ.
+
+Mālik, d'après Ibn Shihāb, d'après Abū Salama ibn ʿAbd al-Rahmān et Abū ʿAbd Allāh al-Agharr, d'après Abū Hurayra : le Messager d'Allāh ﷺ a dit : « **Notre Seigneur, béni et exalté, descend chaque nuit vers le ciel le plus proche** lorsqu'il reste le dernier tiers de la nuit, et Il dit : **Qui M'invoque, que Je lui réponde ? Qui Me demande, que Je lui donne ? Qui implore Mon pardon, que Je lui pardonne ?** » Ce hadith est établi du point de vue de la transmission, sa chaîne est authentique, **les spécialistes du hadith ne divergent pas sur son authenticité** … et il est transmis par des voies multiples (mutawātir).`,
+          source: `Ibn ʿAbd al-Barr (m. 463 H), al-Tamhīd, 7/128, hadith du Muwattaʾ de Mālik`,
+        },
+        {
+          type: `p`,
+          text: `Arrête-toi sur la forme des trois questions : « **Qui** M'invoque ? **Qui** Me demande ? **Qui** implore Mon pardon ? » Ce n'est pas un discours adressé à « l'humanité » en bloc. C'est un appel qui attend une réponse individuelle, celle de la personne qui se lève, seule, dans le dernier tiers de la nuit. **Le Seigneur du Trône immense pose une question à laquelle tu peux répondre, toi, personnellement.**`,
+        },
+        {
+          type: `p`,
+          text: `Et cela se produit **chaque nuit**, c'est-à-dire, à l'échelle de la terre, en permanence : le dernier tiers de la nuit passe continuellement d'un pays à l'autre. Il n'y a pas une heure où quelqu'un, quelque part, ne se trouve dans ce moment de l'appel.`,
+        },
+        {
+          type: `schema`,
+          title: `Les trois portes ouvertes chaque nuit`,
+          arabic: `من يدعوني، من يسألني، من يستغفرني`,
+          variant: `flow`,
+          nodes: [
+            {
+              label: `L'invocation`,
+              arabic: `مَنْ يَدْعُونِي فَأَسْتَجِيبَ لَهُ`,
+              note: `Tu appelles : Il répond. La relation la plus simple, celle de l'appel et de la réponse.`,
+            },
+            {
+              label: `La demande`,
+              arabic: `مَنْ يَسْأَلُنِي فَأُعْطِيَهُ`,
+              note: `Tu as un besoin précis : Il donne. Ton besoin, aussi petit soit-il, a une adresse.`,
+            },
+            {
+              label: `Le pardon`,
+              arabic: `مَنْ يَسْتَغْفِرُنِي فَأَغْفِرَ لَهُ`,
+              note: `Tu as fauté : Il pardonne. Même ta faute personnelle ne se perd pas dans la masse ; elle est vue, et elle peut être effacée.`,
+            },
+          ],
+          caption: `Trois formules, trois relations personnelles, offertes chaque nuit **à chacun, par son nom**.`,
+        },
+        {
+          type: `p`,
+          text: `Ces trois portes correspondent à ce que l'homme vit de plus intime. **L'invocation**, c'est le simple fait d'appeler : « Yā Rabb ». **La demande**, c'est le besoin concret, la santé, un enfant, un travail, une issue. **Le pardon**, c'est ce qu'on porte en secret et dont personne d'autre n'a connaissance. Un Dieu indifférent à l'homme ne poserait pas ces trois questions.`,
+        },
+        {
+          type: `focus`,
+          kind: `vigilance`,
+          title: `Comment lire « Il descend »`,
+          text: `L'imam Mālik et Ibn ʿAbd al-Barr font partie de ceux qui rapportent ce hadith et l'acceptent tel qu'il est venu, **sans le comparer à la descente d'une créature et sans en demander le comment**. La question des attributs divins est développée dans la partie b de ce chapitre ; ici, retiens le message du hadith : **chaque nuit, un appel t'est adressé**.`,
+        },
+        {
+          type: `h2`,
+          text: `Ce qu'Il regarde vraiment`,
+        },
+        {
+          type: `p`,
+          text: `La question de notre sujet est formulée avec un verbe précis : Dieu **regarde**-t-Il l'homme ? Un hadith rapporté par Muslim répond avec ce même verbe, et il précise **ce que** Dieu regarde. Al-Qurtubī le cite à propos du verset qui interdit de se moquer des autres (49:11) :`,
+        },
+        {
+          type: `quote`,
+          text: `وَفِي صَحِيحِ مُسْلِمٍ عَنْ أَبِي هُرَيْرَةَ قَالَ قَالَ رَسُولُ اللَّهِ ﷺ: **إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ**. وَهَذَا حَدِيثٌ عَظِيمٌ يَتَرَتَّبُ عَلَيْهِ أَلَّا يُقْطَعَ بِعَيْبِ أَحَدٍ لِمَا يُرَى عَلَيْهِ مِنْ صُوَرِ أَعْمَالِ الطَّاعَةِ أَوِ الْمُخَالَفَةِ ... **فَالْأَعْمَالُ أَمَارَاتٌ ظَنِّيَّةٌ لَا أَدِلَّةً قَطْعِيَّةً**.
+
+Dans le Sahīh de Muslim, d'après Abū Hurayra : le Messager d'Allāh ﷺ a dit : « **Allāh ne regarde ni vos apparences ni vos biens, mais Il regarde vos cœurs et vos actes.** » C'est un hadith immense, dont il découle qu'on ne doit pas juger définitivement quelqu'un sur l'apparence de ses actes d'obéissance ou de désobéissance … **Les actes sont des indices probables, non des preuves certaines.**`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 16/326-327, sur al-Hujurāt 49:11`,
+        },
+        {
+          type: `p`,
+          text: `Ce hadith fait plus que répondre « oui, Dieu regarde l'homme ». Il dit que Son regard va **plus loin que le nôtre**. Nous regardons les visages, la taille, la fortune, le statut. Lui regarde **le cœur**, c'est-à-dire ce qui est invisible même à l'œil le plus proche. Celui qui doute d'être vu par Dieu à cause de sa petitesse oublie qu'Il voit ce qu'aucun télescope, aucun microscope, aucun voisin ne voit : l'intention.`,
+        },
+        {
+          type: `p`,
+          text: `Al-Qurtubī en tire une conséquence morale très fine : puisque Dieu voit les cœurs, **nous ne pouvons pas juger les gens sur leur apparence**. Peut-être que celui qui semble pieux cache un défaut, et que celui qui semble négligent porte dans son cœur une qualité pour laquelle il sera pardonné. Le regard divin sur l'individu est si précis qu'il rend nos jugements humains provisoires.`,
+        },
+        {
+          type: `balance`,
+          title: `Le regard divin, d'après le hadith`,
+          arabic: `إن الله لا ينظر إلى صوركم`,
+          affirmLabel: `Ce qu'Il regarde`,
+          denyLabel: `Ce qui ne pèse pas devant Lui`,
+          affirm: [
+            `Le cœur : l'intention, la sincérité, ce que personne ne voit.`,
+            `Les actes : ce que tu fais réellement de ta vie.`,
+          ],
+          deny: [
+            `Les apparences : la taille, la beauté, la couleur.`,
+            `Les biens : la fortune, le statut, le rang social.`,
+            `Et donc aussi : ta « taille » à l'échelle du cosmos.`,
+          ],
+          caption: `La petitesse physique de l'homme fait partie de ce que **Dieu ne regarde pas** ; ce qu'Il regarde, c'est son cœur.`,
+        },
+        {
+          type: `h2`,
+          text: `Abū Bakr dans la grotte : « deux dont Allāh est le troisième »`,
+        },
+        {
+          type: `p`,
+          text: `Il existe une scène où deux hommes se sont sentis plus petits et plus seuls que jamais. C'est la nuit de l'hégire. Le Prophète ﷺ et Abū Bakr sont cachés dans la grotte de Thawr ; les cavaliers de Quraysh, qui ont promis cent chamelles à qui les ramènerait, sont juste au-dessus d'eux.`,
+        },
+        {
+          type: `quote`,
+          text: `وَمَعْنَى "إِنَّ اللَّهَ مَعَنا" أَيْ **بِالنَّصْرِ وَالرِّعَايَةِ وَالْحِفْظِ وَالْكِلَاءَةِ**. رَوَى التِّرْمِذِيُّ ... عَنْ أَنَسٍ أَنَّ أَبَا بَكْرٍ حَدَّثَهُ قَالَ: قُلْتُ لِلنَّبِيِّ ﷺ وَنَحْنُ فِي الْغَارِ: لَوْ أَنَّ أَحَدَهُمْ نَظَرَ إِلَى قَدَمَيْهِ لَأَبْصَرَنَا تَحْتَ قَدَمَيْهِ، فَقَالَ: (**يَا أَبَا بَكْرٍ مَا ظَنُّكَ بِاثْنَيْنِ اللَّهُ ثَالِثُهُمَا**). قَالَ الْمُحَاسِبِيُّ: يَعْنِي مَعَهُمَا بِالنَّصْرِ وَالدِّفَاعِ، لَا عَلَى مَعْنَى مَا عَمَّ بِهِ الْخَلَائِقَ، فَقَالَ: "مَا يَكُونُ مِنْ نَجْوى ثَلاثَةٍ إِلَّا هُوَ رابِعُهُمْ" فَمَعْنَاهُ الْعُمُومُ **أَنَّهُ يَسْمَعُ وَيَرَى مِنَ الْكُفَّارِ وَالْمُؤْمِنِينَ**.
+
+Le sens de « Allāh est avec nous » est : **par le secours, la protection, la garde et la vigilance**. Al-Tirmidhī rapporte … d'après Anas, qu'Abū Bakr lui raconta : « J'ai dit au Prophète ﷺ, alors que nous étions dans la grotte : si l'un d'eux regardait ses pieds, il nous verrait sous ses pieds. Il répondit : **Ô Abū Bakr, que penses-tu de deux dont Allāh est le troisième ?** » Al-Muhāsibī a dit : c'est-à-dire avec eux par le secours et la défense, et non au sens général qui concerne toutes les créatures, comme dans « Il n'y a pas de conciliabule à trois sans qu'Il soit le quatrième » (58:7), dont le sens général est **qu'Il entend et voit les mécréants comme les croyants**.`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 8/146, sur al-Tawba 9:40`,
+        },
+        {
+          type: `p`,
+          text: `Deux hommes, dans un trou de rocher, au milieu du désert, au milieu de la terre, au milieu des sept cieux. Si quelqu'un avait des raisons de se sentir oublié, c'étaient eux. Et la réponse du Prophète ﷺ est : « **que penses-tu de deux dont Allāh est le troisième ?** » Il ne compte pas deux personnes perdues dans le monde ; il compte **trois**.`,
+        },
+        {
+          type: `comparaison`,
+          title: `Deux manières dont Allāh est « avec » l'homme, selon al-Muhāsibī`,
+          columns: [
+            `La présence générale`,
+            `La présence particulière`,
+          ],
+          rows: [
+            {
+              criterion: `Verset`,
+              cells: [
+                `« Pas de conciliabule à trois sans qu'Il soit le quatrième » (58:7)`,
+                `« Ne t'attriste pas, Allāh est avec nous » (9:40)`,
+              ],
+            },
+            {
+              criterion: `Qui est concerné`,
+              cells: [
+                `Toutes les créatures, croyantes ou non.`,
+                `Les croyants, les prophètes, ceux qui Lui font confiance.`,
+              ],
+            },
+            {
+              criterion: `Ce qu'elle signifie`,
+              cells: [
+                `Il entend et Il voit tout : rien ne Lui échappe.`,
+                `Le secours, la protection, la garde, la défense.`,
+              ],
+            },
+            {
+              criterion: `Ce qu'elle répond à notre question`,
+              cells: [
+                `Personne n'est trop petit pour être vu.`,
+                `Celui qui se tourne vers Lui n'est pas seulement vu : il est soutenu.`,
+              ],
+            },
+          ],
+          caption: `D'après al-Muhāsibī, cité par al-Qurtubī (8/146). Le sujet « "Dieu est avec vous" et "Je suis proche" » développe cette distinction.`,
+        },
+        {
+          type: `p`,
+          text: `Ce tableau répond à notre question en deux temps. **La présence générale** dit que tout homme, croyant ou non, est vu et entendu : la petitesse ne cache personne. **La présence particulière** va plus loin : celui qui se tourne vers Dieu n'est pas seulement observé, il est **accompagné**, protégé, secouru. Abū Bakr dans la grotte n'était pas simplement « vu » par Allāh ; il était gardé par Lui.`,
+        },
+        {
+          type: `objection`,
+          objection: `Mais alors pourquoi tant de croyants souffrent-ils sans être secourus ?`,
+          reponse: `Être secouru ne veut pas dire ne jamais souffrir : le Prophète ﷺ et Abū Bakr ont dû fuir leur ville, se cacher trois nuits, traverser le désert. Le secours divin n'a pas supprimé l'épreuve, il l'a traversée avec eux. La question de la souffrance est traitée dans le sujet « De la justice divine et de la souffrance humaine ».`,
+        },
+        {
+          type: `comparaison`,
+          title: `Ce que disent les sources citées dans cette section`,
+          columns: [
+            `Ce qu'elles affirment`,
+            `Où le lire`,
+          ],
+          rows: [
+            {
+              criterion: `Le Prophète ﷺ, d'après ʿĀʾisha`,
+              cells: [
+                `Devant les cieux : « Ne serais-je pas un serviteur reconnaissant ? »`,
+                `Al-Qurtubī, al-Jāmiʿ, 4/310`,
+              ],
+            },
+            {
+              criterion: `Hadith d'Abū Dharr`,
+              cells: [
+                `Les sept cieux, à côté du Kursī, sont comme un anneau dans un désert.`,
+                `Ibn Kathīr, Tafsīr, 1/681`,
+              ],
+            },
+            {
+              criterion: `Al-Shinqītī`,
+              cells: [
+                `Celui qui a créé le plus grand est capable du plus petit.`,
+                `Adwāʾ al-Bayān, 3/186`,
+              ],
+            },
+            {
+              criterion: `Mālik, avec le commentaire d'Ibn ʿAbd al-Barr`,
+              cells: [
+                `Chaque nuit : « Qui M'invoque ? Qui Me demande ? Qui implore Mon pardon ? » Hadith authentique, mutawātir.`,
+                `Al-Tamhīd, 7/128`,
+              ],
+            },
+            {
+              criterion: `Hadith rapporté par Muslim`,
+              cells: [
+                `Allāh regarde les cœurs et les actes, non les apparences et les biens.`,
+                `Al-Qurtubī, al-Jāmiʿ, 16/326`,
+              ],
+            },
+            {
+              criterion: `Abū Bakr et al-Muhāsibī`,
+              cells: [
+                `« Deux dont Allāh est le troisième » : la présence du secours, au-delà de la présence générale.`,
+                `Al-Qurtubī, al-Jāmiʿ, 8/146`,
+              ],
+            },
+          ],
+          caption: `Toutes ces sources disent la même chose sous des angles différents : **la grandeur de la création n'éloigne pas Dieu de l'homme ; elle montre seulement à quel point Son attention est sans limite**.`,
+        },
         { type: `h2`, text: `Conséquences pratiques` },
         {
           type: `list`,
