@@ -67328,6 +67328,250 @@ Je m'appuie sur al-Qurtubī, al-Nahhās, al-Shinqītī et la règle de Mālik.`,
           type: `p`,
           text: `Le point le plus concret est le deuxième : **quand je récite le Coran, je récite la parole de Dieu**, et non un texte composé par un homme. C'est ce qui donne à la récitation sa gravité et sa douceur.`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : l'épreuve de Bagdad`,
+        },
+        {
+          type: `p`,
+          text: `Au début du IIIe siècle de l'hégire, la question de la parole divine a cessé d'être une discussion entre savants pour devenir une affaire d'État. Un courant influent à la cour abbasside, celui des Jahmiyya et des Muʿtazila, soutenait que le Coran était **créé**, comme n'importe quelle chose du monde. Leur raisonnement : si Allāh parlait réellement, Il aurait un attribut éternel à côté de Lui, ce qui leur semblait contraire à l'unicité.`,
+        },
+        {
+          type: `p`,
+          text: `Le calife al-Maʾmūn, puis ses successeurs, ont voulu imposer cette doctrine à tous les juges et à tous les savants. On les interrogeait un par un : « Le Coran est-il créé ? » Celui qui refusait de dire oui risquait sa charge, la prison ou le fouet. L'historien shaféite **al-Khatīb al-Baghdādī** décrit ainsi le grand juge qui a inspiré cette politique, Ahmad ibn Abī Duʾād :`,
+        },
+        {
+          type: `quote`,
+          text: `... وَالسَّخَاءِ، وَحُسْنِ الْخُلُقِ، وَوُفُورِ الْأَدَبِ، **غَيْرَ أَنَّهُ أَعْلَنَ بِمَذْهَبِ الْجَهْمِيَّةِ، وَحَمَلَ السُّلْطَانَ عَلَى امْتِحَانِ النَّاسِ بِخَلْقِ الْقُرْآنِ**.
+
+… [il était connu pour] sa générosité, son bon caractère et sa grande culture, **si ce n'est qu'il proclama la doctrine des Jahmiyya, et poussa le souverain à mettre les gens à l'épreuve sur la création du Coran**.`,
+          source: `Al-Khatīb al-Baghdādī (m. 463 H), Tārīkh Baghdād, 5/234, notice d'Ahmad ibn Abī Duʾād`,
+        },
+        {
+          type: `p`,
+          text: `C'est dans cette épreuve, la **mihna**, que l'imam **Ahmad ibn Hanbal** est devenu un symbole. Emprisonné, puis interrogé sous le calife al-Muʿtasim, il a refusé de dire que le Coran était créé, malgré les coups. Il ne défendait pas une opinion personnelle : il refusait d'ajouter à la religion une doctrine que ni le Coran, ni le Prophète ﷺ, ni les Compagnons n'avaient enseignée.`,
+        },
+        {
+          type: `chronologie`,
+          title: `La question de la parole divine, de Médine à Bagdad`,
+          events: [
+            {
+              date: `Époque prophétique`,
+              label: `« Afin qu'il entende la parole d'Allāh » (9:6)`,
+              note: `Les Compagnons récitent le Coran comme la parole de leur Seigneur, sans débat.`,
+            },
+            {
+              date: `IIe siècle`,
+              label: `L'imam Mālik à Médine`,
+              note: `« Le Coran est la parole d'Allāh » ; il fait réprimander celui qui dit qu'il est créé (Ibn ʿAbd al-Barr, al-Intiqāʾ, p. 35).`,
+            },
+            {
+              date: `Début du IIIe siècle`,
+              label: `La mihna à Bagdad`,
+              note: `Sous l'influence d'Ibn Abī Duʾād, le pouvoir impose la thèse du Coran créé (Tārīkh Baghdād, 5/234).`,
+            },
+            {
+              date: `Sous al-Muʿtasim`,
+              label: `La fermeté d'Ahmad ibn Hanbal`,
+              note: `Emprisonné et frappé, il refuse de dire ce que les premiers musulmans n'avaient pas dit.`,
+            },
+            {
+              date: `Sous al-Mutawakkil`,
+              label: `La fin de l'épreuve`,
+              note: `La contrainte est abandonnée ; la position des gens de la Sunna est reconnue.`,
+            },
+          ],
+          caption: `Ce que les Compagnons vivaient sans débat a dû, deux siècles plus tard, **être défendu au prix de la prison**.`,
+        },
+        {
+          type: `p`,
+          text: `Cette frise montre que la question n'est pas un raffinement tardif. **À l'époque prophétique**, le Coran est appelé « la parole d'Allāh » sans que personne n'imagine autre chose. **L'imam Mālik**, à Médine, réagit déjà fermement quand la thèse du Coran créé commence à circuler. **La mihna** transforme ensuite la question en épreuve politique, et **la fermeté d'Ahmad ibn Hanbal** préserve la position des premiers musulmans jusqu'à **la fin de l'épreuve**.`,
+        },
+        {
+          type: `h2`,
+          text: `L'imam Mālik, un demi-siècle plus tôt`,
+        },
+        {
+          type: `p`,
+          text: `Bien avant la mihna, l'imam de Médine avait déjà répondu. Ibn ʿAbd al-Barr rapporte, d'après ʿAbd Allāh ibn Nāfiʿ, l'un de ses disciples, quelques phrases qui résument sa croyance :`,
+        },
+        {
+          type: `quote`,
+          text: `عَنْ عَبْدِ اللَّهِ بْنِ نَافِعٍ قَالَ: كَانَ مَالِكُ بْنُ أَنَسٍ يَقُولُ: **الْإِيمَانُ قَوْلٌ وَعَمَلٌ**، وَيَقُولُ: **الْقُرْآنُ كَلَامُ اللَّهِ**، وَيَقُولُ: **مَنْ قَالَ الْقُرْآنُ مَخْلُوقٌ يُوجَعُ ضَرْبًا وَيُحْبَسُ حَتَّى يَتُوبَ**، وَكَانَ مَالِكٌ يَقُولُ: **اللَّهُ فِي السَّمَاءِ، وَعِلْمُهُ فِي كُلِّ مَكَانٍ، لَا يَخْلُو مِنْهُ شَيْءٌ** ... قَالَ: جَاءَ رَجُلٌ إِلَى مَالِكٍ فَقَالَ: يَا أَبَا عَبْدِ اللَّهِ، أَسْأَلُكَ عَنْ مَسْأَلَةٍ أَجْعَلُكَ حُجَّةً فِيمَا بَيْنِي وَبَيْنَ اللَّهِ ﷿ ... قَالَ: مَنْ أَهْلُ السُّنَّةِ؟ قَالَ: **أَهْلُ السُّنَّةِ الَّذِينَ لَيْسَ لَهُمْ لَقَبٌ يُعْرَفُونَ بِهِ، لَا جَهْمِيٌّ وَلَا قَدَرِيٌّ وَلَا رَافِضِيٌّ**.
+
+D'après ʿAbd Allāh ibn Nāfiʿ : Mālik ibn Anas disait : « **La foi est parole et acte.** » Il disait : « **Le Coran est la parole d'Allāh.** » Il disait : « **Celui qui dit que le Coran est créé doit être frappé et emprisonné jusqu'à ce qu'il se repente.** » Et Mālik disait : « **Allāh est au ciel, et Sa science est en tout lieu ; rien n'en est vide.** » … Un homme vint trouver Mālik et lui dit : « Ô Abū ʿAbd Allāh, je vais te poser une question, et je ferai de toi mon argument entre moi et Allāh. » … Il demanda : « Qui sont les gens de la Sunna ? » Mālik répondit : « **Les gens de la Sunna sont ceux qui n'ont pas de surnom par lequel on les désigne : ni jahmite, ni qadarite, ni rāfidite.** »`,
+          source: `Ibn ʿAbd al-Barr (m. 463 H), al-Intiqāʾ fī fadāʾil al-aʾimma al-thalātha al-fuqahāʾ, p. 35`,
+        },
+        {
+          type: `p`,
+          text: `Trois choses frappent dans ce texte. D'abord, Mālik ne fait aucune démonstration philosophique : il affirme **ce que dit le Coran**, « la parole d'Allāh » (9:6). Ensuite, sa sévérité montre qu'il voyait dans la thèse du Coran créé une **innovation dangereuse**, et non une simple opinion. Enfin, sa définition des gens de la Sunna est remarquable : ce sont ceux **qui n'ont pas besoin d'étiquette**, parce qu'ils se contentent de suivre ce que les premiers suivaient.`,
+        },
+        {
+          type: `focus`,
+          kind: `repere`,
+          title: `« Ceux qui n'ont pas de surnom »`,
+          text: `La définition de Mālik est une leçon d'humilité. Les sectes se définissent par une idée nouvelle qui leur donne leur nom. Les gens de la Sunna se définissent **par l'absence d'idée nouvelle** : ils n'ajoutent rien à ce que le Prophète ﷺ et ses Compagnons ont transmis.`,
+        },
+        {
+          type: `h2`,
+          text: `Al-Qurtubī : « un de Ses attributs, ni créé ni produit »`,
+        },
+        {
+          type: `p`,
+          text: `Le grand commentateur malikite al-Qurtubī affirme la même chose dès le début de son tafsīr, en commentant « Ce Livre, nul doute en lui » (2:2). Il ne se contente pas de dire que le Coran est vrai ; il précise **ce qu'il est** :`,
+        },
+        {
+          type: `quote`,
+          text: `فَكِتَابُ اللَّهِ تَعَالَى لَا شَكٌّ فِيهِ وَلَا ارْتِيَابٌ، وَالْمَعْنَى: أَنَّهُ فِي ذَاتِهِ حَقٌّ، وَأَنَّهُ مُنَزَّلٌ مِنْ عِنْدِ اللَّهِ، **وَصِفَةٌ مِنْ صِفَاتِهِ، غَيْرُ مَخْلُوقٍ وَلَا مُحْدَثٍ**، وَإِنْ وَقَعَ رَيْبٌ لِلْكُفَّارِ.
+
+Le Livre d'Allāh ne contient ni doute ni incertitude ; le sens est qu'il est vrai en lui-même, qu'il est descendu de chez Allāh, **et qu'il est l'un de Ses attributs, ni créé ni produit**, même si les mécréants ont des doutes.`,
+          source: `Al-Qurtubī (m. 671 H), al-Jāmiʿ li-ahkām al-Qurʾān, 1/159, sur al-Baqara 2:2`,
+        },
+        {
+          type: `p`,
+          text: `La formule d'al-Qurtubī tient en trois mots : **sifa**, attribut ; **ghayr makhlūq**, non créé ; **wa lā muhdath**, non produit. Le Coran n'est pas une chose qu'Allāh aurait fabriquée comme Il fabrique un arbre ou une étoile. C'est **Sa parole**, et la parole d'un être fait partie de ses attributs.`,
+        },
+        {
+          type: `h2`,
+          text: `Ibn ʿUthaymīn : la création et l'ordre`,
+        },
+        {
+          type: `p`,
+          text: `Pourquoi la parole d'Allāh ne serait-elle pas créée, puisque tout ce qui n'est pas Allāh est créé ? Ibn ʿUthaymīn apporte deux arguments, l'un tiré du Coran, l'autre de la raison.`,
+        },
+        {
+          type: `quote`,
+          text: `قَوْلُهُ: "غَيْرُ مَخْلُوقٍ"؛ أَيْ: لَيْسَ مِنْ مَخْلُوقَاتِ اللَّهِ الَّتِي خَلَقَهَا. وَالدَّلِيلُ عَلَى ذَلِكَ قَوْلُهُ تَعَالَى: "**أَلَا لَهُ الْخَلْقُ وَالْأَمْرُ**". **وَالْقُرْآنُ مِنَ الْأَمْرِ**؛ لِقَوْلِهِ تَعَالَى: "وَكَذَلِكَ أَوْحَيْنَا إِلَيْكَ رُوحًا مِنْ أَمْرِنَا"، **وَلِأَنَّ الْكَلَامَ صِفَةُ الْمُتَكَلِّمِ، وَالْمَخْلُوقَ مَفْعُولٌ لِلْخَالِقِ، بَائِنٌ مِنْهُ؛ كَالْمَصْنُوعِ؛ بَائِنٌ مِنَ الصَّانِعِ**. قَوْلُهُ: "مِنْهُ بَدَأَ"؛ يَعْنِي: أَنَّ ابْتِدَاءَ تَنْزِيلِهِ مِنَ اللَّهِ، لَا مِنْ جِبْرِيلَ وَلَا غَيْرِهِ ... **وَإِذَا كَانَ كَلَامُ اللَّهِ حَقِيقَةً؛ فَلَا يُمْكِنُ أَنْ يَكُونَ مَخْلُوقًا؛ لِأَنَّهُ صِفَتُهُ، وَصِفَةُ الْخَالِقِ غَيْرُ مَخْلُوقَةٍ؛ كَمَا أَنَّ صِفَةَ الْمَخْلُوقِ مَخْلُوقَةٌ**.
+
+Sa parole « non créé » signifie : il ne fait pas partie des créatures qu'Allāh a créées. La preuve en est Sa parole : « **À Lui la création et l'ordre** » (7:54). **Or le Coran fait partie de l'ordre**, d'après Sa parole : « Ainsi t'avons-Nous révélé un esprit venant de Notre ordre » (42:52). **Et parce que la parole est un attribut de celui qui parle, alors que la chose créée est un effet du Créateur, distincte de Lui, comme l'objet fabriqué est distinct de l'artisan.** Sa parole « de Lui il a commencé » signifie que le point de départ de sa révélation est Allāh, non Jibrīl ni un autre … **Si la parole d'Allāh est réelle, elle ne peut pas être créée, puisqu'elle est Son attribut ; et l'attribut du Créateur n'est pas créé, de même que l'attribut de la créature est créé.**`,
+          source: `Muhammad ibn Sālih al-ʿUthaymīn (m. 1421 H), Sharh al-ʿAqīda al-Wāsitiyya, 2/93-94`,
+        },
+        {
+          type: `schema`,
+          title: `Les deux arguments d'Ibn ʿUthaymīn`,
+          arabic: `ألا له الخلق والأمر`,
+          variant: `branch`,
+          nodes: [
+            {
+              label: `L'argument du Coran`,
+              arabic: `له الخلق والأمر`,
+              note: `Le Coran distingue « la création » et « l'ordre ». Or la révélation est appelée « un esprit venant de Notre ordre » (42:52) : elle est du côté de l'ordre, non de la création.`,
+            },
+            {
+              label: `L'argument de la raison`,
+              arabic: `الكلام صفة المتكلم`,
+              note: `Une parole appartient à celui qui parle ; un objet fabriqué est distinct de celui qui le fabrique. La parole n'est pas un produit, c'est un attribut.`,
+            },
+            {
+              label: `La conséquence`,
+              arabic: `صفة الخالق غير مخلوقة`,
+              note: `L'attribut du Créateur n'est pas créé, comme l'attribut de la créature est créé. Si la parole est réelle, elle n'est pas une créature.`,
+            },
+          ],
+          caption: `Les deux branches convergent : **le Coran n'est pas une chose qu'Allāh a faite, c'est une parole qu'Il a dite**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce schéma détaille la démonstration. **La première branche** s'appuie sur une distinction que fait le Coran lui-même : « à Lui la création **et** l'ordre ». Si l'ordre faisait partie de la création, il n'y aurait pas besoin de le mentionner à part. **La deuxième branche** est un argument que chacun peut vérifier : ta parole est à toi, elle exprime ce que tu es ; une chaise que tu as fabriquée est une chose séparée de toi. **La troisième** en tire la conséquence : si la parole est un attribut d'Allāh, elle partage le statut de Ses attributs, qui ne sont pas créés.`,
+        },
+        {
+          type: `focus`,
+          kind: `subtilite`,
+          title: `Ce qui est créé, et ce qui ne l'est pas`,
+          text: `Les savants distinguent **la parole d'Allāh**, qui n'est pas créée, et **ce par quoi nous la recevons** : notre voix qui récite, l'encre et le papier du mushaf, nos mémoires qui retiennent. Ceux-là sont créés. Quand tu récites le Coran, ta voix est à toi, mais **ce que tu récites est la parole de ton Seigneur**.`,
+        },
+        {
+          type: `h2`,
+          text: `Al-Shinqītī : « une parole réelle, digne de Sa perfection »`,
+        },
+        {
+          type: `p`,
+          text: `Al-Shinqītī applique à la parole la même méthode qu'aux autres attributs : il montre que le Coran emploie le mot « parler » pour Allāh et pour les créatures, et il en tire la règle.`,
+        },
+        {
+          type: `quote`,
+          text: `وَقَالَ فِي وَصْفِ نَفْسِهِ بِالْكَلَامِ: "وَكَلَّمَ اللَّهُ مُوسَى تَكْلِيمًا"، "إِنِّي اصْطَفَيْتُكَ عَلَى النَّاسِ بِرِسَالَاتِي وَبِكَلَامِي"، "فَأَجِرْهُ حَتَّى يَسْمَعَ كَلَامَ اللَّهِ" ... وَقَالَ فِي وَصْفِ الْمَخْلُوقِ بِهِ: "فَلَمَّا كَلَّمَهُ قَالَ إِنَّكَ الْيَوْمَ لَدَيْنَا مَكِينٌ أَمِينٌ"، "الْيَوْمَ نَخْتِمُ عَلَى أَفْوَاهِهِمْ وَتُكَلِّمُنَا أَيْدِيهِمْ"، "قَالُوا كَيْفَ نُكَلِّمُ مَنْ كَانَ فِي الْمَهْدِ صَبِيًّا" ... **فَلَهُ جَلَّ وَعَلَا كَلَامٌ حَقِيقِيٌّ يَلِيقُ بِكَمَالِهِ وَجَلَالِهِ؛ وَلِلْمَخْلُوقِ كَلَامٌ أَيْضًا مُنَاسِبٌ لِحَالِهِ. وَبَيْنَ كَلَامِ الْخَالِقِ وَالْمَخْلُوقِ مِنَ الْمُنَافَاةِ مَا بَيْنَ ذَاتِ الْخَالِقِ وَالْمَخْلُوقِ**.
+
+Il a dit en Se décrivant par la parole : « Et Allāh a parlé à Moïse de vive voix », « Je t'ai élu parmi les hommes par Mes messages et par Ma parole », « accorde-lui ta protection afin qu'il entende la parole d'Allāh » … Et Il a dit en décrivant la créature par elle : « Quand il lui eut parlé, il dit : Tu es désormais auprès de nous en position d'autorité et de confiance », « Ce jour-là, Nous scellerons leurs bouches, et leurs mains Nous parleront », « Ils dirent : Comment parlerions-nous à un enfant au berceau ? » … **Il a donc une parole réelle, digne de Sa perfection et de Sa majesté ; et la créature a aussi une parole conforme à son état. Et entre la parole du Créateur et celle de la créature, il y a la même incompatibilité qu'entre l'essence du Créateur et celle de la créature.**`,
+          source: `Muhammad al-Amīn al-Shinqītī (m. 1393 H), Adwāʾ al-Bayān, 2/21-22, sur al-Aʿrāf 7:54`,
+        },
+        {
+          type: `comparaison`,
+          title: `« Parler » dans le Coran : deux réalités`,
+          columns: [
+            `La parole d'Allāh`,
+            `La parole des créatures`,
+          ],
+          rows: [
+            {
+              criterion: `Exemple coranique`,
+              cells: [
+                `« Allāh a parlé à Moïse de vive voix » (4:164)`,
+                `« Leurs mains Nous parleront » (36:65)`,
+              ],
+            },
+            {
+              criterion: `Ce qu'elle est`,
+              cells: [
+                `Un attribut réel, « digne de Sa perfection ».`,
+                `Une capacité créée, « conforme à son état ».`,
+              ],
+            },
+            {
+              criterion: `Son origine`,
+              cells: [
+                `« De Lui il a commencé » : elle n'a pas de source extérieure.`,
+                `Elle dépend d'organes, d'un apprentissage, d'un souffle.`,
+              ],
+            },
+            {
+              criterion: `Le lien entre les deux`,
+              cells: [
+                `« La même incompatibilité qu'entre les deux essences » (al-Shinqītī).`,
+                `« La même incompatibilité qu'entre les deux essences » (al-Shinqītī).`,
+              ],
+            },
+          ],
+          caption: `D'après al-Shinqītī (2/21-22) et Ibn ʿUthaymīn (2/94). **Le mot « parler » est commun ; la réalité ne l'est pas.**`,
+        },
+        {
+          type: `p`,
+          text: `Le dernier exemple d'al-Shinqītī est saisissant : « **leurs mains Nous parleront** » (36:65). Au Jour du Jugement, des mains parleront, sans bouche et sans langue. Si Allāh peut faire parler une main d'une manière qui ne ressemble à aucune parole connue, comment imaginer que **Sa propre parole** devrait ressembler à la nôtre ? La comparaison s'effondre d'elle-même.`,
+        },
+        {
+          type: `cycle`,
+          title: `Ce que change le fait de croire que le Coran est la parole d'Allāh`,
+          arabic: `حتى يسمع كلام الله`,
+          center: `la récitation`,
+          steps: [
+            {
+              label: `J'ouvre le mushaf`,
+              note: `Le papier et l'encre sont créés, mais ce qu'ils portent est la parole de mon Seigneur.`,
+            },
+            {
+              label: `J'écoute Celui qui parle`,
+              note: `« Afin qu'il entende la parole d'Allāh » (9:6) : on n'écoute pas un texte quelconque.`,
+            },
+            {
+              label: `Je me tiens avec respect`,
+              note: `Mālik n'a jamais toléré qu'on rabaisse le Coran au rang d'une chose créée.`,
+            },
+            {
+              label: `Je mets en pratique`,
+              note: `Une parole d'Allāh n'est pas une opinion : on ne la lit pas pour la juger, mais pour lui obéir.`,
+            },
+          ],
+          caption: `La doctrine du Coran incréé n'est pas une abstraction : **elle détermine la manière dont on ouvre le mushaf**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce cycle montre pourquoi les savants ont tant tenu à cette question. **Ouvrir le mushaf** en sachant que l'on tient la parole d'Allāh change le geste lui-même. **Écouter** devient écouter Celui qui parle, comme le dit le verset 9:6. **Le respect** suit naturellement, celui que Mālik défendait avec sévérité. Et **la mise en pratique** en découle : on ne traite pas la parole de son Seigneur comme un texte parmi d'autres. Si le Coran n'était qu'une créature, ce cycle perdrait son centre.`,
+        },
+        {
+          type: `objection`,
+          objection: `N'est-ce pas multiplier les éternels que d'affirmer une parole éternelle à côté d'Allāh ?`,
+          reponse: `La parole n'est pas « à côté » d'Allāh comme un second être : elle est **Son attribut**, comme Sa science ou Sa vie. Personne ne dit qu'affirmer la science divine revient à poser un second dieu. Ibn ʿUthaymīn le résume : « l'attribut du Créateur n'est pas créé, de même que l'attribut de la créature est créé ». L'unicité porte sur l'essence divine et ses attributs ensemble, non sur une essence vidée de ses attributs.`,
+        },
         { type: `h2`, text: `Ce que disent les savants, en un coup d'œil` },
         {
           type: `comparaison`,
