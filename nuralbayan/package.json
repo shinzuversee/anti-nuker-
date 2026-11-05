@@ -1,0 +1,14 @@
+{
+  "name": "nuralbayan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/site.mjs preview",
+    "build": "node scripts/site.mjs build",
+    "preview": "node scripts/site.mjs preview"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

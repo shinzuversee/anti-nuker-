@@ -1,0 +1,92 @@
+{
+  "https://nuralbayan.pages.dev/": {
+    "path": "index.html",
+    "bytes": 5544,
+    "sha256": "1ad69adc79a2cd77f35e904d305e12c7fa9fe2ff83a8adfbd0bd118bd927020e"
+  },
+  "https://nuralbayan.pages.dev/assets/styles-CtNC6LEu.css": {
+    "path": "assets/styles-CtNC6LEu.css",
+    "bytes": 136631,
+    "sha256": "323773eae002437a316068b7b55773f75022f7cd04cf1bda8197ca5c0075fc5d"
+  },
+  "https://nuralbayan.pages.dev/assets/index-photo-v1.js": {
+    "path": "assets/index-photo-v1.js",
+    "bytes": 2884517,
+    "sha256": "66f5e6b9480fca3a2de07e8eb484e47e6fc7185e5670f24fb515a136c42efc1d"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/fonts.css": {
+    "path": "assets/fonts/fonts.css",
+    "bytes": 1822,
+    "sha256": "fac8b42ff956d4afadf9009531966a52e25087573ae343d714fa261a6e20bf18"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/87e867b52640b3b3.ttf": {
+    "path": "assets/fonts/87e867b52640b3b3.ttf",
+    "bytes": 326048,
+    "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+  },
+  "https://nuralbayan.pages.dev/assets/video-thumb-BZsZh_tL.jpg": {
+    "path": "assets/video-thumb-BZsZh_tL.jpg",
+    "bytes": 5544,
+    "sha256": "1ad69adc79a2cd77f35e904d305e12c7fa9fe2ff83a8adfbd0bd118bd927020e"
+  },
+  "https://nuralbayan.pages.dev/assets/portrait-sidi-BEQLQs3M.webp": {
+    "path": "assets/portrait-sidi-BEQLQs3M.webp",
+    "bytes": 5544,
+    "sha256": "1ad69adc79a2cd77f35e904d305e12c7fa9fe2ff83a8adfbd0bd118bd927020e"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/911bf559d287436e.ttf": {
+    "path": "assets/fonts/911bf559d287436e.ttf",
+    "bytes": 289788,
+    "sha256": "63e313fb9c65b6b2e177222010bbea911bfc5c79bee0fb69f8246fcc4e08c93a"
+  },
+  "https://nuralbayan.pages.dev/assets/LetterField-photo-v1.js": {
+    "path": "assets/LetterField-photo-v1.js",
+    "bytes": 921422,
+    "sha256": "f57c82772f97a810c83640dc599483fcd6b420af2abb99cdbe3826d56aa5622b"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/705776b6237d1fd4.ttf": {
+    "path": "assets/fonts/705776b6237d1fd4.ttf",
+    "bytes": 290392,
+    "sha256": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/ee9558be9f8a4d75.ttf": {
+    "path": "assets/fonts/ee9558be9f8a4d75.ttf",
+    "bytes": 325748,
+    "sha256": "d0f4bc7faca468376e3db9b5e57afcdc2192134c9ac82a9511f32767b56853a4"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/e45972c7e9f24dc3.ttf": {
+    "path": "assets/fonts/e45972c7e9f24dc3.ttf",
+    "bytes": 325304,
+    "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/a699af1dea30b799.ttf": {
+    "path": "assets/fonts/a699af1dea30b799.ttf",
+    "bytes": 324820,
+    "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/75407d22188550d6.ttf": {
+    "path": "assets/fonts/75407d22188550d6.ttf",
+    "bytes": 290496,
+    "sha256": "1724047c8988ca5155bff667bc48fa52e97d57aabc6b42eebbf986f21a4be20b"
+  },
+  "https://nuralbayan.pages.dev/assets/sidi-kashabiya.jpg": {
+    "path": "assets/sidi-kashabiya.jpg",
+    "bytes": 82758,
+    "sha256": "e08054f4c55c9268fb11332a3bb1e4b0f7a6c3246609c76a03283343836605f5"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/c1ed75c0eada28ab.ttf": {
+    "path": "assets/fonts/c1ed75c0eada28ab.ttf",
+    "bytes": 385840,
+    "sha256": "7f19c4a5dc77b0ef435b430d750759170def15d6e3801006e0704dadc7f220e3"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/bb8f3c3b0ca40380.ttf": {
+    "path": "assets/fonts/bb8f3c3b0ca40380.ttf",
+    "bytes": 290236,
+    "sha256": "6d37a86241a25d63f8fe6018b4c083449886b7165c1acb15edd0f574f690ecf7"
+  },
+  "https://nuralbayan.pages.dev/assets/fonts/68199692a9545c97.ttf": {
+    "path": "assets/fonts/68199692a9545c97.ttf",
+    "bytes": 368616,
+    "sha256": "65e3e6fe6af66bb6d24959bd537a89ea35de14083f5a2e2290c246136c2b047b"
+  }
+}
