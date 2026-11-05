@@ -64801,6 +64801,220 @@ Ce noble verset **juge quiconque prétend aimer Allāh** sans suivre la voie de 
           title: `Une chaîne qui remonte au ciel`,
           text: `Rapproche ce hadith de celui de Gabriel vu plus haut : quand Dieu aime un serviteur, l'amour descend du ciel vers la terre. Ici, c'est l'inverse : **quand les serviteurs s'aiment sur terre pour Lui, Son amour leur est acquis**. L'amour divin descend sur ceux qui aiment, et monte par ceux qui aiment. **Aimer un frère pour Dieu, c'est déjà frapper à Sa porte.**`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : l'homme qui aimait la sourate al-Ikhlās`,
+        },
+        {
+          type: `p`,
+          text: `Parmi les Compagnons, il y avait un homme dont nous ne connaissons même pas le nom avec certitude, et qui a reçu une nouvelle que beaucoup de savants auraient enviée. Le Prophète ﷺ l'avait placé à la tête d'une expédition. Pendant le voyage, ses compagnons remarquent une habitude étrange : à chaque prière qu'il dirige, il termine sa récitation par la sourate « **Qul huwa Llāhu ahad** ». Toujours la même.`,
+        },
+        {
+          type: `quote`,
+          text: `رَوَى مُسْلِمٌ عَنْ عَائِشَةَ: أَنَّ رَسُولَ اللَّهِ ﷺ بَعَثَ رَجُلًا عَلَى سَرِيَّةٍ ... فَقَالَ: "سَلُوهُ لِأَيِّ شَيْءٍ يَصْنَعُ ذَلِكَ؟" فَسَأَلُوهُ فَقَالَ: **لِأَنَّهَا صِفَةُ الرَّحْمَنِ، فَأَنَا أُحِبُّ أَنْ أَقْرَأَ بِهَا**. فَقَالَ رَسُولُ اللَّهِ ﷺ: "**أَخْبِرُوهُ أَنَّ اللَّهَ ﷿ يُحِبُّهُ**".
+
+Muslim rapporte d'après ʿĀʾisha que le Messager d'Allāh ﷺ envoya un homme à la tête d'une expédition … [À leur retour, on lui rapporta son habitude], et il dit : « Demandez-lui pourquoi il fait cela. » Ils le lui demandèrent, et il répondit : « **Parce qu'elle est la description du Tout Miséricordieux, et j'aime la réciter.** » Le Messager d'Allāh ﷺ dit alors : « **Dites-lui qu'Allāh, à Lui la puissance et la majesté, l'aime.** »`,
+          source: `Al-Qurtubī (m. 671 H), al-Jāmiʿ li-ahkām al-Qurʾān, 20/247-248, au début de sourate al-Ikhlās`,
+        },
+        {
+          type: `p`,
+          text: `Arrête-toi sur ce qui s'est passé. Cet homme n'a pas accompli un exploit, il n'a pas fait de grande dépense ni de long jeûne. **Il a aimé une sourate parce qu'elle décrit Allāh.** Il aimait parler de Lui, entendre Ses attributs, les répéter. Et la réponse du ciel est immédiate : « dites-lui qu'Allāh l'aime ». Celui qui aime connaître Allāh est aimé d'Allāh.`,
+        },
+        {
+          type: `p`,
+          text: `Al-Qurtubī rapporte juste après un récit semblable transmis par al-Tirmidhī d'après Anas : un homme des Ansār qui dirigeait la prière à la mosquée de Qubāʾ commençait chaque rakʿa par cette même sourate. Les deux récits disent la même chose : **l'amour de Dieu commence souvent par l'amour de ce qui Le fait connaître**.`,
+        },
+        {
+          type: `focus`,
+          kind: `repere`,
+          title: `Ce que ce récit nous apprend`,
+          text: `On pense parfois que l'amour divin se mérite seulement par des efforts immenses. Ce Compagnon montre une autre porte : **aimer Allāh pour ce qu'Il est**, aimer entendre Ses noms et Ses attributs. Ce n'est pas un détail théologique, c'est **un chemin vers Son amour**.`,
+        },
+        {
+          type: `h2`,
+          text: `Ibn ʿUthaymīn : « tout l'enjeu, c'est qu'Allāh t'aime »`,
+        },
+        {
+          type: `p`,
+          text: `Le savant contemporain **Muhammad ibn Sālih al-ʿUthaymīn** (m. 1421 H) commente le verset « Faites le bien, Allāh aime ceux qui font le bien » (2:195). Il s'arrête sur une formulation du Coran que l'on lit souvent trop vite, et il en tire une leçon qui renverse notre manière de penser l'amour de Dieu :`,
+        },
+        {
+          type: `quote`,
+          text: `وَقَوْلُهُ: "إِنَّ اللَّهَ يُحِبُّ الْمُحْسِنِينَ": هَذَا تَعْلِيلٌ لِلْأَمْرِ، فَهَذَا ثَوَابُ الْمُحْسِنِ أَنَّ اللَّهَ يُحِبُّهُ، وَمَحَبَّةُ اللَّهِ مَرْتَبَةٌ عَالِيَةٌ عَظِيمَةٌ، **وَوَاللَّهِ إِنَّ مَحَبَّةَ اللَّهِ لَتُشْتَرَى بِالدُّنْيَا كُلِّهَا**، وَهِيَ أَعْلَى مِنْ أَنْ تُحِبَّ اللَّهَ، **فَكَوْنُ اللَّهِ يُحِبُّكَ أَعْلَى مِنْ أَنْ تُحِبَّهُ أَنْتَ**، وَلِهَذَا قَالَ تَعَالَى: "قُلْ إِنْ كُنْتُمْ تُحِبُّونَ اللَّهَ فَاتَّبِعُونِي يُحْبِبْكُمُ اللَّهُ"، وَلَمْ يَقُلْ: فَاتَّبِعُونِي تَصْدُقُوا فِي مَحَبَّتِكُمْ لِلَّهِ ... وَلِهَذَا قَالَ بَعْضُ الْعُلَمَاءِ: **الشَّأْنُ كُلُّ الشَّأْنِ فِي أَنَّ اللَّهَ يُحِبُّكَ، لَا أَنَّكَ تُحِبُّ اللَّهَ**. كُلٌّ يَدَّعِي أَنَّهُ يُحِبُّ اللَّهَ، لَكِنَّ الشَّأْنَ فِي الَّذِي فِي السَّمَاءِ ﷿، هَلْ يُحِبُّكَ أَمْ لَا؟
+
+Sa parole « Allāh aime ceux qui font le bien » est la justification de l'ordre : c'est la récompense de celui qui fait le bien, qu'Allāh l'aime. L'amour d'Allāh est un rang élevé et immense ; **par Allāh, l'amour d'Allāh vaut d'être acheté au prix du monde entier**. Il est plus haut que le fait que tu aimes Allāh : **qu'Allāh t'aime est plus élevé que le fait que toi tu L'aimes**. C'est pourquoi Il a dit : « Dis : si vous aimez Allāh, suivez-moi, Allāh vous aimera » ; Il n'a pas dit : « suivez-moi, vous serez sincères dans votre amour pour Allāh » … C'est pourquoi un savant a dit : **« Tout l'enjeu n'est pas que tu aimes Allāh, mais qu'Allāh t'aime. »** Chacun prétend aimer Allāh ; mais la question est : Celui qui est au ciel, Lui, t'aime-t-Il ou non ?`,
+          source: `Muhammad ibn Sālih al-ʿUthaymīn (m. 1421 H), Sharh al-ʿAqīda al-Wāsitiyya, 1/226`,
+        },
+        {
+          type: `p`,
+          text: `La remarque d'Ibn ʿUthaymīn sur le verset 3:31 est très fine. Logiquement, on attendrait : « si vous aimez Allāh, suivez-moi, **et vous prouverez votre amour** ». Le Coran dit autre chose : « suivez-moi, **Allāh vous aimera** ». Le but n'est pas de prouver un sentiment, c'est d'**obtenir** quelque chose de bien plus précieux : être aimé de Lui. Notre amour est une prétention ; Son amour est le résultat.`,
+        },
+        {
+          type: `balance`,
+          title: `Deux amours qui ne se valent pas`,
+          arabic: `يحبهم ويحبونه`,
+          affirmLabel: `Qu'Allāh t'aime`,
+          denyLabel: `Que tu dises aimer Allāh`,
+          affirm: [
+            `C'est « tout l'enjeu » (Ibn ʿUthaymīn).`,
+            `C'est la récompense promise : « Allāh vous aimera » (3:31).`,
+            `Il se manifeste : les anges t'aiment, puis l'acceptation t'est donnée sur terre.`,
+          ],
+          deny: [
+            `Tout le monde peut le prétendre.`,
+            `Il ne se prouve pas par le sentiment seul, mais par l'obéissance.`,
+            `Il n'a de valeur que s'il mène au premier.`,
+          ],
+          caption: `Le Coran ne demande pas d'abord : « aimes-tu Allāh ? », mais : « **fais-tu ce qui fait qu'Allāh t'aime ?** »`,
+        },
+        {
+          type: `p`,
+          text: `Ibn ʿUthaymīn rappelle aussi qu'Allāh porte le nom **al-Wadūd** (85:14), qu'il explique ainsi : le wudd est « **l'amour pur** », et al-Wadūd signifie à la fois **Celui qui aime** et **Celui qui est aimé**. Puis il ajoute un degré au-dessus de l'amour : la **khulla**, l'amitié intime, dont le Coran honore Abraham : « Allāh a pris Abraham pour ami intime » (4:125).`,
+        },
+        {
+          type: `quote`,
+          text: `"الْوَدُودُ" مَأْخُوذٌ مِنَ الْوُدِّ، وَهُوَ **خَالِصُ الْمَحَبَّةِ**، وَهِيَ بِمَعْنَى: وَادٍّ، وَبِمَعْنَى: مَوْدُودٍ، **لِأَنَّهُ ﷿ مُحِبٌّ وَمَحْبُوبٌ** ... وَأَتَمَنَّى لَوْ أَنَّ الْمُؤَلِّفَ أَضَافَ آيَةً تَاسِعَةً فِي الْمَحَبَّةِ، وَهِيَ الْخُلَّةُ، لِقَوْلِهِ تَعَالَى: "وَاتَّخَذَ اللَّهُ إِبْرَاهِيمَ خَلِيلًا"، وَالْخَلِيلُ هُوَ مَنْ كَانَ فِي أَعْلَى الْمَحَبَّةِ، **فَالْخُلَّةُ أَعْلَى أَنْوَاعِ الْمَحَبَّةِ**، لِأَنَّ الْخَلِيلَ هُوَ الَّذِي وَصَلَ حُبُّهُ إِلَى سُوَيْدَاءِ الْقَلْبِ وَتَخَلَّلَ مَجَارِيَ عُرُوقِهِ.
+
+« Al-Wadūd » vient de wudd, qui est **l'amour pur** ; il signifie à la fois « celui qui aime » et « celui qui est aimé », **car Il est, à Lui la puissance et la majesté, aimant et aimé** … J'aurais aimé que l'auteur ajoute un neuvième verset sur l'amour, celui de l'amitié intime (khulla), avec Sa parole « Allāh a pris Abraham pour ami intime » : l'ami intime est celui qui se trouve au plus haut de l'amour ; **la khulla est la forme la plus haute de l'amour**, car l'ami intime est celui dont l'amour a atteint le fond du cœur et s'est infiltré dans le cours de ses veines.`,
+          source: `Ibn ʿUthaymīn, Sharh al-ʿAqīda al-Wāsitiyya, 1/238`,
+        },
+        {
+          type: `degres`,
+          title: `Les degrés de l'amour dans le Coran`,
+          arabic: `مراتب المحبة`,
+          degres: [
+            {
+              label: `L'amour (mahabba)`,
+              arabic: `المحبة`,
+              note: `« Allāh aime ceux qui font le bien, ceux qui se repentent, ceux qui se purifient… »`,
+            },
+            {
+              label: `L'amour pur (wudd)`,
+              arabic: `الود`,
+              note: `Al-Wadūd, « Celui qui aime et qui est aimé » d'un amour sans mélange (85:14).`,
+            },
+            {
+              label: `L'amitié intime (khulla)`,
+              arabic: `الخلة`,
+              note: `« Allāh a pris Abraham pour ami intime » (4:125) : le plus haut degré, réservé à Abraham et au Prophète ﷺ.`,
+            },
+          ],
+          direction: `asc`,
+          caption: `D'après Ibn ʿUthaymīn, Sharh al-Wāsitiyya, 1/238. **Chaque degré inclut le précédent et le dépasse.**`,
+        },
+        {
+          type: `p`,
+          text: `Cette échelle se lit de bas en haut. **L'amour** est le degré ouvert à tous les croyants : chaque verset « Allāh aime… » en indique une porte. **L'amour pur**, le wudd, en est la forme sans mélange, que le nom al-Wadūd exprime. **L'amitié intime** est le sommet, celle d'Abraham, dont Ibn ʿUthaymīn dit qu'elle « s'infiltre dans le cours des veines ». Personne ne prétend atteindre ce sommet, mais l'échelle montre que l'amour de Dieu n'est pas une notion vague : **il a des degrés, et l'on peut y monter**.`,
+        },
+        {
+          type: `h2`,
+          text: `« Un peuple qu'Il aime et qui L'aime »`,
+        },
+        {
+          type: `p`,
+          text: `Un verset de la sourate al-Māʾida décrit précisément ceux qu'Allāh aime, avec quatre traits concrets. Il a été révélé avec un avertissement : si certains abandonnent la religion, Allāh fera venir à leur place un autre peuple.`,
+        },
+        {
+          type: `verse`,
+          arabic: `يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ مَن يَرْتَدَّ مِنكُمْ عَن دِينِهِۦ فَسَوْفَ يَأْتِى ٱللَّهُ بِقَوْمٍ **يُحِبُّهُمْ وَيُحِبُّونَهُۥٓ** أَذِلَّةٍ عَلَى ٱلْمُؤْمِنِينَ أَعِزَّةٍ عَلَى ٱلْكَٰفِرِينَ يُجَٰهِدُونَ فِى سَبِيلِ ٱللَّهِ وَلَا يَخَافُونَ لَوْمَةَ لَآئِمٍ`,
+          translation: `Ô vous qui croyez ! Quiconque d'entre vous renie sa religion, Allāh fera venir un peuple **qu'Il aime et qui L'aime**, humble envers les croyants, fier face aux mécréants, qui lutte dans le sentier d'Allāh et ne craint le blâme de personne.`,
+          reference: `Coran, al-Māʾida, 5:54`,
+        },
+        {
+          type: `quote`,
+          text: `قَالَ الْحَسَنُ وَقَتَادَةُ وَغَيْرُهُمَا: **نَزَلَتْ فِي أَبِي بَكْرٍ الصِّدِّيقِ وَأَصْحَابِهِ** ... وَرَوَى الْحَاكِمُ أَبُو عَبْدِ اللَّهِ فِي "الْمُسْتَدْرَكِ" بِإِسْنَادِهِ: أَنَّ النَّبِيَّ ﷺ أَشَارَ إِلَى أَبِي مُوسَى الْأَشْعَرِيِّ لَمَّا نَزَلَتْ هَذِهِ الْآيَةُ فَقَالَ: (**هُمْ قَوْمُ هَذَا**) ... "أَذِلَّةٍ عَلَى الْمُؤْمِنِينَ" ... أَيْ **يَرْأَفُونَ بِالْمُؤْمِنِينَ وَيَرْحَمُونَهُمْ وَيَلِينُونَ لَهُمْ**، مِنْ قَوْلِهِمْ: دَابَّةٌ ذَلُولٌ أَيْ تَنْقَادُ سَهْلَةً، **وَلَيْسَ مِنَ الذُّلِّ فِي شَيْءٍ** ... قَالَ ابْنُ عَبَّاسٍ: **هُمْ لِلْمُؤْمِنِينَ كَالْوَالِدِ لِلْوَلَدِ**.
+
+Al-Hasan, Qatāda et d'autres ont dit : **ce verset est descendu au sujet d'Abū Bakr al-Siddīq et de ses compagnons** … Al-Hākim rapporte dans al-Mustadrak, avec sa chaîne, que le Prophète ﷺ, quand ce verset descendit, désigna Abū Mūsā al-Ashʿarī et dit : « **Ce sont les gens de celui-ci.** » … « Humbles envers les croyants » … c'est-à-dire **ils sont doux envers les croyants, miséricordieux et faciles avec eux**, comme on dit d'une monture qu'elle est dhalūl, docile et facile à mener ; **cela n'a rien à voir avec l'humiliation** … Ibn ʿAbbās a dit : **ils sont pour les croyants comme le père pour son enfant**.`,
+          source: `Al-Qurtubī, al-Jāmiʿ li-ahkām al-Qurʾān, 6/220, sur al-Māʾida 5:54`,
+        },
+        {
+          type: `p`,
+          text: `Les deux identifications rapportées par al-Qurtubī se complètent. **Abū Bakr et ses compagnons** sont ceux qui ont tenu ferme quand une grande partie des tribus arabes a abandonné l'islam après la mort du Prophète ﷺ. **Les gens d'Abū Mūsā al-Ashʿarī**, venus du Yémen, sont ceux qui ont porté l'islam dans les conquêtes de l'Irak. Al-Qurtubī rapporte que c'est l'avis le plus juste sur la cause de la révélation. Dans les deux cas, **ceux qu'Allāh aime sont identifiés par leur fidélité au moment où d'autres lâchaient**.`,
+        },
+        {
+          type: `schema`,
+          title: `Les quatre traits de ceux qu'Allāh aime (5:54)`,
+          arabic: `يحبهم ويحبونه`,
+          variant: `branch`,
+          nodes: [
+            {
+              label: `Doux envers les croyants`,
+              arabic: `أذلة على المؤمنين`,
+              note: `« Comme le père pour son enfant » (Ibn ʿAbbās) : non une humiliation, mais une douceur qui se plie pour servir.`,
+            },
+            {
+              label: `Fermes face à l'adversité`,
+              arabic: `أعزة على الكافرين`,
+              note: `Ils ne se laissent ni impressionner ni acheter par ceux qui combattent la religion.`,
+            },
+            {
+              label: `Qui font des efforts`,
+              arabic: `يجاهدون في سبيل الله`,
+              note: `L'amour ne reste pas un sentiment : il se traduit en effort, dans tous les domaines du bien.`,
+            },
+            {
+              label: `Qui ne craignent pas le blâme`,
+              arabic: `ولا يخافون لومة لائم`,
+              note: `« À l'inverse des hypocrites, qui craignent les revers » (al-Qurtubī) : l'approbation des gens ne les gouverne pas.`,
+            },
+          ],
+          caption: `Le verset ne décrit pas un sentiment intérieur ; **il décrit un comportement**, que l'on peut observer et travailler.`,
+        },
+        {
+          type: `p`,
+          text: `Ce schéma détaille les quatre traits, chacun avec une explication tirée d'al-Qurtubī. **La douceur envers les croyants** vient en premier : celui qui prétend aimer Allāh et méprise Ses serviteurs se contredit. **La fermeté** face à ceux qui combattent la religion montre que cette douceur n'est pas de la faiblesse. **L'effort** prouve que l'amour est actif. **L'indifférence au blâme** montre qu'il est sincère : on n'agit pas pour être vu ou approuvé. Ces quatre traits forment un portrait que chacun peut confronter à lui-même.`,
+        },
+        {
+          type: `objection`,
+          objection: `« Fier face aux mécréants » : ce verset n'encourage-t-il pas l'hostilité envers les non-musulmans ?`,
+          reponse: `Le contexte du verset est celui de l'apostasie armée qui a suivi la mort du Prophète ﷺ, et al-Qurtubī le relie au combat d'Abū Bakr contre ceux qui avaient pris les armes. La fierté dont il s'agit est celle de qui ne se soumet pas à ceux qui combattent la religion ; elle n'annule pas le verset 60:8, qui autorise la bonté et la justice envers ceux qui ne combattent pas. L'article consacré au verset 60:8, dans la rubrique Articles, développe ce point.`,
+        },
+        {
+          type: `comparaison`,
+          title: `Ce que disent les sources citées dans cette section`,
+          columns: [
+            `Ce qu'elles affirment`,
+            `Où le lire`,
+          ],
+          rows: [
+            {
+              criterion: `Hadith de ʿĀʾisha (Muslim)`,
+              cells: [
+                `L'homme qui aimait la sourate al-Ikhlās « parce qu'elle décrit le Tout Miséricordieux » : « Dites-lui qu'Allāh l'aime. »`,
+                `Al-Qurtubī, al-Jāmiʿ, 20/247-248`,
+              ],
+            },
+            {
+              criterion: `Ibn ʿUthaymīn`,
+              cells: [
+                `« Tout l'enjeu n'est pas que tu aimes Allāh, mais qu'Allāh t'aime. »`,
+                `Sharh al-Wāsitiyya, 1/226`,
+              ],
+            },
+            {
+              criterion: `Ibn ʿUthaymīn`,
+              cells: [
+                `Al-Wadūd : aimant et aimé ; la khulla, plus haut degré de l'amour.`,
+                `Sharh al-Wāsitiyya, 1/238`,
+              ],
+            },
+            {
+              criterion: `Al-Hasan, Qatāda, al-Hākim`,
+              cells: [
+                `Le peuple qu'Allāh aime : Abū Bakr et ses compagnons ; les gens d'Abū Mūsā al-Ashʿarī.`,
+                `Al-Qurtubī, al-Jāmiʿ, 6/220`,
+              ],
+            },
+            {
+              criterion: `Ibn ʿAbbās`,
+              cells: [
+                `Ceux qu'Allāh aime sont pour les croyants « comme le père pour son enfant ».`,
+                `Al-Qurtubī, al-Jāmiʿ, 6/220`,
+              ],
+            },
+          ],
+          caption: `Toutes ces sources convergent : **l'amour de Dieu s'obtient par l'amour de ce qui Le fait connaître, et se reconnaît à la manière dont on traite Ses serviteurs**.`,
+        },
         { type: `h2`, text: `Conséquences pratiques` },
         {
           type: `list`,
