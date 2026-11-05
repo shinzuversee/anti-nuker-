@@ -62576,6 +62576,331 @@ Abū Dharr a dit : J'ai demandé au Messager d'Allāh ﷺ : « As-tu vu ton Seig
           title: `Pourquoi ce débat me rassure`,
           text: `Que même le meilleur des hommes, au sommet de son Ascension, ait dit « **Lumière : comment pourrais-je Le voir ?** » me dit deux choses. D'abord, que la vision de Dieu n'est pas un exploit spirituel qu'on obtiendrait ici-bas par l'effort : **ceux qui prétendent L'avoir vu mentent**, dit ʿĀʾisha. Ensuite, que la promesse de Le voir dans l'au-delà est **un don immense**, réservé à un monde où nos yeux seront faits autrement.`,
         },
+        {
+          type: `h2`,
+          text: `Contexte : au pied du Sinaï`,
+        },
+        {
+          type: `p`,
+          text: `Revenons à la scène qui pose la question mieux que personne. Moïse a été appelé par son Seigneur sur le mont Sinaï. Il a entendu la parole divine, directement, sans intermédiaire. Et dans l'élan de cette proximité, il demande ce que tout cœur aimant demanderait : « **Seigneur, montre-Toi à moi, que je Te regarde.** »`,
+        },
+        {
+          type: `p`,
+          text: `La réponse est double, et chacune de ses deux parties compte : « **Tu ne Me verras pas** », mais « **regarde la montagne : si elle reste en place, alors tu Me verras** ». Puis Allāh Se manifeste à la montagne, elle s'effondre en poussière, et Moïse tombe évanoui. Tout le débat des savants sur la vision de Dieu est contenu dans ces quelques lignes.`,
+        },
+        {
+          type: `p`,
+          text: `Le grand savant malikite de Cordoue, **Ibn ʿAbd al-Barr** (m. 463 H), a tiré de ce récit un raisonnement d'une grande rigueur. Sa première remarque porte sur Moïse lui-même : un prophète de ce rang ne pouvait pas demander une chose impossible ou blasphématoire.`,
+        },
+        {
+          type: `quote`,
+          text: `وَلَا يَشُكُّ مُسْلِمٌ أَنَّ مُوسَى كَانَ عَارِفًا بِرَبِّهِ وَمَا يَجُوزُ عَلَيْهِ، **فَلَوْ كَانَ عِنْدَهُ مُسْتَحِيلًا لَمْ يَسْأَلْهُ ذَلِكَ، وَلَكَانَ بِسُؤَالِهِ إِيَّاهُ كَافِرًا** كَمَا لَوْ سَأَلَهُ أَنْ يَتَّخِذَ شَرِيكًا أَوْ صَاحِبَةً.
+
+Aucun musulman ne doute que Moïse connaissait son Seigneur et ce qui est possible à Son sujet. **Si cela avait été impossible à ses yeux, il ne l'aurait pas demandé ; et par une telle demande, il aurait été mécréant**, comme s'il Lui avait demandé de prendre un associé ou une compagne.`,
+          source: `Ibn ʿAbd al-Barr (m. 463 H), al-Tamhīd, 7/154`,
+        },
+        {
+          type: `p`,
+          text: `L'argument est simple et puissant. Personne n'imagine Moïse demander à Allāh d'avoir un fils : ce serait un blasphème. Or il a demandé à Le voir, et Allāh ne l'a pas blâmé pour sa demande comme on blâme un blasphème. **La vision de Dieu n'est donc pas une absurdité en soi.** La question devient : pourquoi pas maintenant ?`,
+        },
+        {
+          type: `quote`,
+          text: `وَفِي قَوْلِ اللَّهِ ﷿ "فَإِنِ اسْتَقَرَّ مَكَانَهُ فَسَوْفَ تَرَانِي" دَلَالَةٌ وَاضِحَةٌ لِمَنْ أَرَادَ اللَّهُ هُدَاهُ **أَنَّهُ يُرَى إِذَا شَاءَ**، وَلَمْ يَشَأْ ذَلِكَ فِي الدُّنْيَا بِقَوْلِهِ "لَا تُدْرِكُهُ الْأَبْصَارُ"، وَقَدْ شَاءَ ذَلِكَ فِي الْجَنَّةِ بِقَوْلِهِ "وُجُوهٌ يَوْمَئِذٍ نَاضِرَةٌ إِلَى رَبِّهَا نَاظِرَةٌ" ... وَفِي هَذَا بَيَانُ أَنَّهُ لَا يُرَى فِي الدُّنْيَا **لِأَنَّ أَبْصَارَ الْخَلَائِقِ لَمْ تُعْطَ فِي الدُّنْيَا تِلْكَ الْقُوَّةَ** ... وَلَوْ كَانَ مُحَالًا كَوْنُ الرُّؤْيَةِ **لَقَيَّدَهَا بِمَا يَسْتَحِيلُ وُجُودُهُ** كَمَا فَعَلَ بِدُخُولِ الْكَافِرِينَ الْجَنَّةَ.
+
+Dans la parole d'Allāh « si elle reste en place, alors tu Me verras », il y a une indication claire, pour celui qu'Allāh veut guider, **qu'Il peut être vu quand Il le veut**. Il ne l'a pas voulu ici-bas, comme le dit « les regards ne L'atteignent pas » ; et Il l'a voulu au Paradis, comme le dit « des visages, ce jour-là, seront resplendissants, regardant leur Seigneur » … Cela montre qu'Il n'est pas vu ici-bas **parce que les yeux des créatures n'ont pas reçu, en ce monde, cette force** … Et si la vision était impossible, **Il l'aurait suspendue à une chose impossible**, comme Il l'a fait pour l'entrée des mécréants au Paradis.`,
+          source: `Ibn ʿAbd al-Barr, al-Tamhīd, 7/153`,
+        },
+        {
+          type: `p`,
+          text: `Voilà la réponse exacte au titre de notre sujet : **« de ces yeux-ci », non**. Non parce que Dieu serait invisible par nature, mais parce que **nos yeux actuels n'ont pas la force de supporter cette vision**. La montagne elle-même, plus solide que tout corps humain, s'est effondrée. Le dernier argument d'Ibn ʿAbd al-Barr est très fin : quand le Coran veut dire qu'une chose n'arrivera jamais, il la suspend à une impossibilité, « jusqu'à ce que le chameau passe par le chas de l'aiguille » (7:40). Pour Moïse, il l'a suspendue à une chose possible : que la montagne tienne.`,
+        },
+        {
+          type: `schema`,
+          title: `Le raisonnement d'Ibn ʿAbd al-Barr sur la demande de Moïse`,
+          arabic: `رب أرني أنظر إليك`,
+          variant: `flow`,
+          nodes: [
+            {
+              label: `Moïse demande`,
+              arabic: `رَبِّ أَرِنِي`,
+              note: `Un prophète qui connaît son Seigneur ne demande pas l'impossible : la vision est donc possible en soi.`,
+            },
+            {
+              label: `Allāh répond « tu ne Me verras pas »`,
+              arabic: `لَنْ تَرَانِي`,
+              note: `Pas maintenant, pas dans cette condition : les yeux d'ici-bas « n'ont pas reçu cette force ».`,
+            },
+            {
+              label: `« Si la montagne tient… »`,
+              arabic: `فَإِنِ اسْتَقَرَّ مَكَانَهُ`,
+              note: `La vision est suspendue à une chose possible, non à une absurdité comme le chameau et le chas de l'aiguille.`,
+            },
+            {
+              label: `Au Paradis, Il le veut`,
+              arabic: `إِلَى رَبِّهَا نَاظِرَةٌ`,
+              note: `Ce qui n'a pas été donné ici-bas est promis là-bas, avec des yeux recréés pour cela.`,
+            },
+          ],
+          caption: `Quatre étapes, un seul principe : **la vision dépend de la volonté divine et de la force qu'Il donne à nos yeux**, non d'une impossibilité.`,
+        },
+        {
+          type: `p`,
+          text: `Ce schéma suit la logique du récit. **La demande de Moïse** prouve que la vision n'est pas un non-sens. **La réponse « tu ne Me verras pas »** concerne ce monde et ces yeux. **La condition de la montagne** montre qu'il ne s'agit pas d'une impossibilité absolue. **Et la dernière étape** donne la clé : au Paradis, Allāh « l'a voulu ». Les croyants recevront alors ce que Moïse n'a pas reçu sur le Sinaï.`,
+        },
+        {
+          type: `balance`,
+          title: `« De ces yeux-ci » : ce qui est vrai ici-bas, ce qui le sera là-bas`,
+          arabic: `في الدنيا وفي الآخرة`,
+          affirmLabel: `Dans l'au-delà, pour les croyants`,
+          denyLabel: `Ici-bas, pour tous`,
+          affirm: [
+            `Ils regarderont leur Seigneur, de leurs yeux (75:23).`,
+            `Allāh « Se manifeste à Ses amis » (Ibn ʿAbd al-Barr).`,
+            `C'est « le surcroît » (al-ziyāda) promis aux bienfaisants (10:26).`,
+          ],
+          deny: [
+            `Personne ne Le voit de ses yeux, pas même Moïse.`,
+            `Nos yeux actuels « n'ont pas reçu cette force ».`,
+            `Quiconque prétend L'avoir vu en ce monde se trompe (Ibn Taymiyya).`,
+          ],
+          caption: `La différence n'est pas en Dieu, qui ne change pas ; **elle est dans les yeux qui Le regarderont**.`,
+        },
+        {
+          type: `h2`,
+          text: `Une protection : « aucun de vous ne verra son Seigneur avant de mourir »`,
+        },
+        {
+          type: `p`,
+          text: `Cette question n'est pas seulement théorique. Elle protège le croyant contre un danger très concret : **ceux qui prétendent voir Dieu**, ou qui se présentent eux-mêmes comme Dieu. Le Prophète ﷺ l'a dit en parlant du plus grand imposteur de l'histoire, le Dajjāl.`,
+        },
+        {
+          type: `quote`,
+          text: `مَكْتُوبٌ بَيْنَ عَيْنَيْهِ كَافِرٌ، يَقْرَؤُهُ مَنْ كَرِهَ عَمَلَهُ، أَوْ يَقْرَؤُهُ كُلُّ مُؤْمِنٍ. وَقَالَ: **تَعَلَّمُوا أَنَّهُ لَنْ يَرَى أَحَدٌ مِنْكُمْ رَبَّهُ حَتَّى يَمُوتَ**.
+
+[Le Dajjāl] a écrit entre les yeux « mécréant » : le lit celui qui réprouve ses actes, ou : le lit tout croyant. Et il dit : « **Sachez qu'aucun d'entre vous ne verra son Seigneur avant de mourir.** »`,
+          source: `Rapporté par Muslim, d'après un Compagnon, par ʿUmar ibn Thābit al-Ansārī ; ʿAbd al-Haqq al-Ishbīlī (m. 581 H), al-Jamʿ bayna al-Sahīhayn, 4/208`,
+        },
+        {
+          type: `p`,
+          text: `Le Prophète ﷺ donne ici à chaque croyant **un critère infaillible** : si un être se présente à toi en ce monde en disant « je suis ton Seigneur », tu sais déjà qu'il ment, puisque personne ne verra son Seigneur avant la mort. La règle « on ne voit pas Dieu ici-bas » n'est pas une frustration : c'est **un bouclier**.`,
+        },
+        {
+          type: `p`,
+          text: `Ibn Taymiyya a vu, à son époque, ce danger prendre une forme plus discrète : des gens pieux, absorbés par une expérience spirituelle intense, finissaient par croire qu'ils avaient vu Dieu de leurs yeux.`,
+        },
+        {
+          type: `quote`,
+          text: `فَيَظُنُّونَ أَنَّ هَذَا هُوَ أَمْرٌ مَشْهُودٌ بِعُيُونِهِمْ **وَلَا يَكُونُ ذَلِكَ إلَّا فِي الْقَلْبِ**، وَلِهَذَا ظَنَّ كَثِيرٌ مِنْهُمْ أَنَّهُ يَرَى اللَّهَ بِعَيْنِهِ فِي الدُّنْيَا. وَهَذَا مِمَّا وَقَعَ لِجَمَاعَةٍ مِنْ الْمُتَقَدِّمِينَ وَالْمُتَأَخِّرِينَ **وَهُوَ غَلَطٌ مَحْضٌ** ... فَإِنَّ **أَئِمَّةَ السُّنَّةِ وَالْجَمَاعَةِ مُتَّفِقُونَ عَلَى أَنَّ اللَّهَ لَا يَرَاهُ أَحَدٌ بِعَيْنِهِ فِي الدُّنْيَا**، وَلَمْ يَتَنَازَعُوا إلَّا فِي نَبِيِّنَا ﷺ خَاصَّةً.
+
+Ils croient que c'est une chose contemplée par leurs yeux, **alors que cela ne se passe que dans le cœur** ; c'est pourquoi beaucoup d'entre eux ont cru voir Allāh de leurs yeux en ce monde. Cela est arrivé à un certain nombre d'anciens et de modernes, **et c'est une erreur pure** … Car **les imams de la Sunna et de la communauté sont d'accord pour dire que personne ne voit Allāh de ses yeux en ce monde** ; ils n'ont divergé qu'à propos de notre Prophète ﷺ en particulier.`,
+          source: `Ibn Taymiyya (m. 728 H), Majmūʿ al-fatāwā, 5/490`,
+        },
+        {
+          type: `p`,
+          text: `La distinction d'Ibn Taymiyya est précieuse : **ce que le cœur vit n'est pas ce que l'œil voit**. Un croyant peut ressentir une présence intense de Dieu dans la prière, une proximité bouleversante dans l'invocation. C'est réel, et c'est un bienfait. Mais c'est une expérience **du cœur**, que certains confondent avec une vision des yeux. Et la seule exception discutée par les savants est celle du Prophète ﷺ lors de l'Ascension, traitée plus haut dans cette page.`,
+        },
+        {
+          type: `focus`,
+          kind: `vigilance`,
+          title: `Un critère pour se protéger`,
+          text: `Si quelqu'un affirme avoir vu Allāh de ses yeux en ce monde, en rêve éveillé ou en extase, **la Sunna te donne la réponse** : « aucun de vous ne verra son Seigneur avant de mourir ». Les savants sont unanimes là-dessus. Aucune expérience, si émouvante soit-elle, ne passe au-dessus de cette parole.`,
+        },
+        {
+          type: `h2`,
+          text: `Voir sans cerner : al-Shinqītī et Ibn ʿUthaymīn`,
+        },
+        {
+          type: `p`,
+          text: `Une objection revient souvent : le Coran ne dit-il pas « **les regards ne L'atteignent pas** » (lā tudrikuhu l-absār, 6:103) ? Comment alors parler de vision au Paradis ? Al-Shinqītī répond en appliquant sa méthode, l'explication du Coran par le Coran :`,
+        },
+        {
+          type: `quote`,
+          text: `قَوْلُهُ تَعَالَى: لَا تُدْرِكُهُ الْأَبْصَارُ الْآيَةَ، أَشَارَ فِي مَوَاضِعَ أُخَرَ إِلَى أَنَّ **نَفْيَ الْإِدْرَاكِ الْمَذْكُورِ هُنَا لَا يَقْتَضِي نَفْيَ مُطْلَقِ الرُّؤْيَةِ**، كَقَوْلِهِ: وُجُوهٌ يَوْمَئِذٍ نَاضِرَةٌ إِلَى رَبِّهَا نَاظِرَةٌ، وَقَوْلِهِ: لِلَّذِينَ أَحْسَنُوا الْحُسْنَى وَزِيَادَةٌ، وَالْحُسْنَى الْجَنَّةُ، **وَالزِّيَادَةُ النَّظَرُ إِلَى وَجْهِ اللَّهِ الْكَرِيمِ**، وَقَوْلِهِ: كَلَّا إِنَّهُمْ عَنْ رَبِّهِمْ يَوْمَئِذٍ لَمَحْجُوبُونَ، **يُفْهَمُ مِنْهُ أَنَّ الْمُؤْمِنِينَ لَيْسُوا مَحْجُوبِينَ عَنْهُ**، وَهُوَ كَذَلِكَ.
+
+Sa parole « les regards ne L'atteignent pas » : Il a indiqué en d'autres passages que **la négation de « l'atteinte » (idrāk) ici n'implique pas la négation de toute vision**, comme Sa parole « des visages, ce jour-là, resplendissants, regardant leur Seigneur », et « à ceux qui font le bien, la meilleure récompense et un surcroît » : la meilleure récompense est le Paradis, **et le surcroît est le regard sur le noble Visage d'Allāh** ; et Sa parole « ce jour-là, ils seront voilés de leur Seigneur », dont on comprend **que les croyants, eux, ne seront pas voilés de Lui**, et il en est bien ainsi.`,
+          source: `Muhammad al-Amīn al-Shinqītī (m. 1393 H), Adwāʾ al-Bayān, 1/489, sur al-Anʿām 6:103`,
+        },
+        {
+          type: `p`,
+          text: `Le mot clé est **idrāk**. En arabe, il ne veut pas dire simplement « voir », mais « atteindre », « rattraper », « cerner entièrement ». On dit « adraka » pour celui qui rattrape quelqu'un qui fuyait. Le verset nie donc que les regards puissent **englober** Allāh, Le saisir dans Sa totalité ; il ne nie pas qu'ils puissent Le voir. Ibn ʿUthaymīn développe cette distinction avec une comparaison lumineuse :`,
+        },
+        {
+          type: `quote`,
+          text: `وَأَهْلُ السُّنَّةِ وَالْجَمَاعَةِ يَقُولُونَ: **إِنَّ النَّظَرَ هُنَا بِالْبَصَرِ حَقِيقَةً. وَلَا يَلْزَمُ مِنْهُ الْإِدْرَاكُ**؛ لِأَنَّ اللَّهَ تَعَالَى يَقُولُ: "لَا تُدْرِكُهُ الْأَبْصَارُ"؛ **كَمَا أَنَّ الْعِلْمَ بِالْقَلْبِ أَيْضًا لَا يَلْزَمُ مِنْهُ الْإِدْرَاكُ**؛ قَالَ اللَّهُ تَعَالَى: "وَلَا يُحِيطُونَ بِهِ عِلْمًا". وَنَحْنُ نَعْلَمُ رَبَّنَا بِقُلُوبِنَا، لَكِنْ لَا نُدْرِكُ كَيْفِيَّتَهُ وَحَقِيقَتَهُ.
+
+Les gens de la Sunna et de la communauté disent : **le regard dont il s'agit ici est un regard réel, avec les yeux. Et il n'implique pas de cerner (idrāk)**, puisqu'Allāh dit : « les regards ne L'atteignent pas » ; **de même que la connaissance par le cœur n'implique pas non plus de cerner**, puisqu'Allāh dit : « et ils ne L'embrassent pas de leur science ». Nous connaissons notre Seigneur par nos cœurs, mais nous ne cernons ni Sa modalité ni Sa réalité.`,
+          source: `Muhammad ibn Sālih al-ʿUthaymīn (m. 1421 H), Sharh al-ʿAqīda al-Wāsitiyya, 1/449`,
+        },
+        {
+          type: `comparaison`,
+          title: `Voir et cerner : deux choses différentes`,
+          columns: [
+            `La vision (ruʾya)`,
+            `Le fait de cerner (idrāk)`,
+          ],
+          rows: [
+            {
+              criterion: `Définition`,
+              cells: [
+                `Percevoir par les yeux.`,
+                `Englober entièrement, saisir dans sa totalité.`,
+              ],
+            },
+            {
+              criterion: `Au Paradis`,
+              cells: [
+                `Affirmée : « regardant leur Seigneur » (75:23).`,
+                `Niée : « les regards ne L'atteignent pas » (6:103).`,
+              ],
+            },
+            {
+              criterion: `Le parallèle de la connaissance`,
+              cells: [
+                `Nous connaissons Allāh par le cœur.`,
+                `« Ils ne L'embrassent pas de leur science » (20:110).`,
+              ],
+            },
+            {
+              criterion: `Une image pour comprendre`,
+              cells: [
+                `Tu vois le ciel.`,
+                `Tu n'en embrasses jamais l'étendue entière d'un seul regard.`,
+              ],
+            },
+          ],
+          caption: `D'après al-Shinqītī (Adwāʾ, 1/489) et Ibn ʿUthaymīn (Sharh al-Wāsitiyya, 1/449). **Les deux versets ne se contredisent pas : l'un affirme la vision, l'autre nie la saisie totale.**`,
+        },
+        {
+          type: `p`,
+          text: `Ce tableau dissout l'objection ligne par ligne. **La définition** montre que les deux mots ne disent pas la même chose. **La ligne du Paradis** montre que le Coran affirme l'un et nie l'autre, sans contradiction. **Le parallèle de la connaissance**, apporté par Ibn ʿUthaymīn, est le plus éclairant : personne ne dit que nous ignorons Allāh parce que nous ne L'embrassons pas de notre science. De même, ne pas Le cerner du regard n'empêche pas de Le voir. **La dernière ligne** donne une image : on voit le ciel, et pourtant on ne l'englobe jamais d'un seul coup d'œil. Et Allāh est infiniment plus grand que le ciel.`,
+        },
+        {
+          type: `p`,
+          text: `Ibn ʿUthaymīn ajoute une remarque très belle sur le verset 75:22-23 : les visages sont d'abord « **resplendissants** » (nādira, avec la lettre dād), puis « **regardant** » (nāzira, avec la lettre zāʾ). Allāh, dit-il, a rendu ces visages beaux et prêts pour regarder Son Visage, **et en Le regardant, ils gagnent encore en beauté**.`,
+        },
+        {
+          type: `quote`,
+          text: `فَنُفِيدُ الْآيَةَ الْكَرِيمَةَ: أَنَّ هَذِهِ الْوُجُوهَ النَّاضِرَةَ الْحَسَنَةَ تَنْظُرُ إِلَى رَبِّهَا ﷿، **فَتَزْدَادُ حُسْنًا إِلَى حُسْنِهَا**. وَانْظُرْ كَيْفَ جَعَلَ هَذِهِ الْوُجُوهَ **مُسْتَعِدَّةً مُتَهَيِّئَةً لِلنَّظَرِ إِلَى وَجْهِ اللَّهِ** ﷿؛ لِكَوْنِهَا نَضِرَةً حَسَنَةً.
+
+Le noble verset nous apprend que ces visages resplendissants et beaux regardent leur Seigneur, à Lui la puissance et la majesté, **et gagnent ainsi beauté sur beauté**. Et vois comment Il a rendu ces visages **prêts et disposés à regarder le Visage d'Allāh**, puisqu'ils sont resplendissants et beaux.`,
+          source: `Ibn ʿUthaymīn, Sharh al-ʿAqīda al-Wāsitiyya, 1/448`,
+        },
+        {
+          type: `p`,
+          text: `Rapproche cette remarque de celle d'Ibn ʿAbd al-Barr : ici-bas, nos yeux « n'ont pas reçu cette force ». Là-bas, les visages auront été **préparés** pour cela. Ce que Moïse n'a pas pu supporter sur le Sinaï, les croyants le recevront au Paradis, parce qu'Allāh les aura recréés pour cette vision.`,
+        },
+        {
+          type: `h2`,
+          text: `Mālik : « ils regarderont Allāh »`,
+        },
+        {
+          type: `p`,
+          text: `L'imam **Mālik** a été interrogé directement sur le verset 75:22-23. Sa réponse, transmise par son disciple Ashhab, est d'une sobriété typique de sa méthode : il ne s'engage dans aucune explication du « comment », il affirme ce que dit le texte, et il l'appuie sur un autre verset.`,
+        },
+        {
+          type: `quote`,
+          text: `وَإِنَّمَا يَحْتَجِبُ اللَّهُ عَنْ أَعْدَائِهِ الْمُكَذِّبِينَ **وَيَتَجَلَّى لِأَوْلِيَائِهِ الْمُؤْمِنِينَ**، وَهَذَا مَعْنَى قَوْلِ مَالِكٍ فِي تَفْسِيرِ هَذِهِ الْآيَةِ. وَأَمَّا قَوْلُهُ فِي تَأْوِيلِ قَوْلِ اللَّهِ ﷿ "وُجُوهٌ يَوْمَئِذٍ نَاضِرَةٌ إِلَى رَبِّهَا نَاظِرَةٌ"، فَإِنَّ أَشْهَبَ رَوَى عَنْ مَالِكٍ أَنَّهُ سَمِعَهُ وَسُئِلَ عَنْ قَوْلِ اللَّهِ تَعَالَى "وُجُوهٌ يَوْمَئِذٍ نَاضِرَةٌ إِلَى رَبِّهَا نَاظِرَةٌ" قَالَ: **يَنْظُرُونَ إِلَى اللَّهِ ﷿**، قَالَ مُوسَى: "رَبِّ أَرِنِي أَنْظُرْ إِلَيْكَ". **وَعَلَى هَذَا التَّأْوِيلِ فِي هَذِهِ الْآيَةِ جَمَاعَةُ أَهْلِ السُّنَّةِ وَأَئِمَّةِ الْحَدِيثِ وَالرَّأْيِ**.
+
+Allāh ne Se voile qu'à Ses ennemis qui ont démenti, **et Il Se manifeste à Ses amis croyants** : c'est le sens de la parole de Mālik dans l'explication de ce verset [83:15]. Quant à son explication de la parole d'Allāh « des visages, ce jour-là, resplendissants, regardant leur Seigneur », Ashhab rapporte qu'il a entendu Mālik, interrogé sur ce verset, répondre : « **Ils regarderont Allāh, à Lui la puissance et la majesté.** Moïse a dit : "Seigneur, montre-Toi à moi, que je Te regarde." » **C'est sur cette interprétation du verset que se trouve l'ensemble des gens de la Sunna et des imams du hadith et du raisonnement juridique.**`,
+          source: `Ibn ʿAbd al-Barr, al-Tamhīd, 7/154`,
+        },
+        {
+          type: `p`,
+          text: `Observe la réponse de Mālik. Il cite **la demande de Moïse** comme preuve. Son raisonnement implicite est celui qu'Ibn ʿAbd al-Barr développe ensuite : si Moïse a demandé à regarder Allāh, c'est que ce regard a un sens ; et ce que Moïse n'a pas obtenu ici-bas, les croyants l'obtiendront là-bas. Ibn ʿAbd al-Barr ajoute que **l'ensemble des gens de la Sunna, des spécialistes du hadith et des juristes** suivent cette interprétation.`,
+        },
+        {
+          type: `p`,
+          text: `Ibn ʿAbd al-Barr rapporte aussi, juste après, l'invocation d'un Compagnon, **ʿAmmār ibn Yāsir**, qui dirigeait la prière : « اللَّهُمَّ إِنِّي أَسْأَلُكَ **النَّظَرَ إِلَى وَجْهِكَ وَالشَّوْقَ إِلَى لِقَائِكَ** », « Ô Allāh, je Te demande **le regard sur Ton Visage, et le désir ardent de Te rencontrer** ». Pour les Compagnons, la vision de Dieu n'était pas une question de débat : c'était **un objet de désir et de prière**.`,
+        },
+        {
+          type: `cycle`,
+          title: `De la question à l'espérance`,
+          arabic: `النظر إلى وجهك والشوق إلى لقائك`,
+          center: `le Visage d'Allāh`,
+          steps: [
+            {
+              label: `La question`,
+              note: `« Peut-on Le voir ? » : la demande de Moïse sur le Sinaï.`,
+            },
+            {
+              label: `La réponse`,
+              note: `Pas de ces yeux-ci ; mais au Paradis, oui : « ils regarderont Allāh » (Mālik).`,
+            },
+            {
+              label: `Le désir`,
+              note: `« Je Te demande le regard sur Ton Visage et le désir de Te rencontrer » (ʿAmmār ibn Yāsir).`,
+            },
+            {
+              label: `Le chemin`,
+              note: `« À ceux qui font le bien, la meilleure récompense et un surcroît » (10:26) : le surcroît se prépare ici-bas.`,
+            },
+          ],
+          caption: `La vision de Dieu n'est pas seulement un point de croyance ; **c'est la plus haute espérance du croyant, et elle oriente toute sa vie**.`,
+        },
+        {
+          type: `p`,
+          text: `Ce cycle transforme notre question. **Elle commence** comme une interrogation intellectuelle, celle de Moïse et la nôtre. **La réponse** la tranche : pas ici-bas, mais au Paradis. Alors naît **le désir**, celui de ʿAmmār ibn Yāsir dans sa prière. Et ce désir indique **un chemin** : le verset 10:26 promet « le surcroît », c'est-à-dire la vision, « à ceux qui font le bien ». Celui qui espère voir Allāh demain apprend à vivre sous Son regard aujourd'hui.`,
+        },
+        {
+          type: `comparaison`,
+          title: `Ce que disent les savants cités dans cette section`,
+          columns: [
+            `Ce qu'ils affirment`,
+            `Où le lire`,
+          ],
+          rows: [
+            {
+              criterion: `Ibn ʿAbd al-Barr`,
+              cells: [
+                `Moïse n'aurait pas demandé l'impossible ; ici-bas, « les yeux des créatures n'ont pas reçu cette force ».`,
+                `Al-Tamhīd, 7/153-154`,
+              ],
+            },
+            {
+              criterion: `L'imam Mālik (rapporté par Ashhab)`,
+              cells: [
+                `« Ils regarderont Allāh » ; Il Se voile à Ses ennemis et Se manifeste à Ses amis.`,
+                `Al-Tamhīd, 7/154`,
+              ],
+            },
+            {
+              criterion: `ʿAmmār ibn Yāsir`,
+              cells: [
+                `« Je Te demande le regard sur Ton Visage et le désir de Te rencontrer. »`,
+                `Al-Tamhīd, 7/154`,
+              ],
+            },
+            {
+              criterion: `Hadith rapporté par Muslim`,
+              cells: [
+                `« Aucun de vous ne verra son Seigneur avant de mourir. »`,
+                `ʿAbd al-Haqq al-Ishbīlī, al-Jamʿ, 4/208`,
+              ],
+            },
+            {
+              criterion: `Ibn Taymiyya`,
+              cells: [
+                `Accord des imams : personne ne voit Allāh de ses yeux en ce monde ; ce qu'on croit voir n'est que dans le cœur.`,
+                `Majmūʿ al-fatāwā, 5/490`,
+              ],
+            },
+            {
+              criterion: `Al-Shinqītī`,
+              cells: [
+                `Nier l'idrāk n'est pas nier la vision ; « le surcroît » est le regard sur le Visage d'Allāh.`,
+                `Adwāʾ al-Bayān, 1/489`,
+              ],
+            },
+            {
+              criterion: `Ibn ʿUthaymīn`,
+              cells: [
+                `Regard réel avec les yeux, sans cerner, comme la connaissance du cœur sans englober.`,
+                `Sharh al-Wāsitiyya, 1/448-449`,
+              ],
+            },
+          ],
+          caption: `Malikites et hanbalites, anciens et contemporains, se rejoignent : **pas de vision de ces yeux-ci en ce monde, une vision réelle au Paradis, sans que les regards ne L'embrassent jamais**.`,
+        },
         { type: `h2`, text: `Conclusion` },
         {
           type: `p`,
